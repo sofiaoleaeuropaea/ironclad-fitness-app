@@ -38,18 +38,14 @@ const Navbar = () => {
 		<div className={`navbar ${scrollPosition > 60 ? 'navbar__scrolled' : ''}`}>
 			<div className="container">
 				<div className="navbar__wrapper">
-					<div className="logo">
-						
-					</div>
+					<div className="logo"></div>
 					<nav>
 						<ul className="navbar__menu">
-							{navigation.map((item) => {
-								<li>
-									<NavLink key={item.id} to={item.url}>
-										{item.title}
-									</NavLink>
-								</li>;
-							})}
+							{navigation.map((item) => (
+								<li key={item.id}>
+									<NavLink to={item.url}>{item.title}</NavLink>
+								</li>
+							))}
 						</ul>
 					</nav>
 					{/* <div className={menuBtn ? 'navbar__hamburger active' : 'navbar__hamburger'} onClick={toggleMenu}>

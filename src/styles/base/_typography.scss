@@ -43,14 +43,14 @@ h4,
 h5,
 h6,
 label,
-a,
+
 span {
 	font-family: $headings-font;
 	color: $text-dark;
 	font-weight: 800;
 }
 
-p {
+p, a {
 	font-size: 1rem;
 	font-family: $text-font;
 	color: $text-dark;
