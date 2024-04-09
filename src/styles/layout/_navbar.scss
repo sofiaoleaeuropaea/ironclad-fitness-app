@@ -1,1 +1,94 @@
 @use '../utils/' as *;
+
+.navbar {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 1rem 0;
+	background: transparent;
+	transition-duration: 500ms;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+
+	&__scrolled {
+		background-color: yellow;
+	}
+
+	&.active {
+		color: $primary-color;
+		transition-duration: 500ms;
+		transition-property: color;
+		transition-timing-function: ease-in-out;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+
+		li a {
+			padding: 1rem 0 1rem 1.5rem;
+
+			@include breakpoint(991px) {
+				display: inline-block;
+				font-size: 1.5rem;
+				padding: 2rem 0;
+			}
+		}
+
+		@include breakpoint(991px) {
+			position: fixed;
+			width: 0%;
+			height: 100%;
+			flex-direction: column;
+			text-align: center;
+			background: $primary-color;
+			top: 0;
+			right: -100%;
+			padding: 10rem 1rem;
+			transition: all 750ms ease;
+			opacity: 0;
+
+			&.active {
+				right: 0;
+				width: 50%;
+				height: 100%;
+				opacity: 1;
+			}
+		}
+	}
+
+	// &__hamburger {
+	// 	display: none;
+	// 	cursor: pointer;
+
+	// 	@include breakpoint(991px) {
+	// 		display: block;
+
+	// 		&.active .bar:nth-child(1) {
+	// 			transform: translateY(8px) rotate(45deg);
+	// 		}
+	// 		&.active .bar:nth-child(2) {
+	// 			opacity: 0;
+	// 		}
+	// 		&.active .bar:nth-child(3) {
+	// 			transform: translateY(-8px) rotate(-45deg);
+	// 		}
+	// 	}
+
+	// 	.bar {
+	// 		display: block;
+	// 		width: 25px;
+	// 		height: 3px;
+	// 		margin: 5px auto;
+	// 		transition: all 500ms ease-in-out;
+	// 		background-color: $color-light;
+	// 	}
+	// }
+}
