@@ -4,12 +4,12 @@
 
 body {
 	font-size: 16px;
-	// @include breakpoint('sm') {
-	// 	font-size: 14px;
-	// }
-	// @include breakpoint('md') {
-	// 	font-size: 12px;
-	// }
+	@include breakpoint('xl') {
+		font-size: 14px;
+	}
+	@include breakpoint('xs') {
+		font-size: 12px;
+	}
 }
 
 h1 {
@@ -42,15 +42,15 @@ h3,
 h4,
 h5,
 h6,
-label,
-
-span {
+label {
 	font-family: $headings-font;
 	color: $text-dark;
 	font-weight: 800;
 }
 
-p, a {
+p,
+a,
+span {
 	font-size: 1rem;
 	font-family: $text-font;
 	color: $text-dark;

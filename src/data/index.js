@@ -19,12 +19,7 @@ export const navigation = [
 		title: 'Contacts',
 		url: '/contacts',
 	},
-	{
-		id: '4',
-		title: 'Start now',
-		url: '/form',
-		onlyMobile: true,
-	},
+
 ];
 
 // export const pricing = [

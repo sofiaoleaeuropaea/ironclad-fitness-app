@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 import { navigation } from '../data';
+import Buttons from './Buttons';
 
 const Navbar = () => {
 	// const pathname = useLocation();
@@ -48,11 +49,8 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
-					{/* <div className={menuBtn ? 'navbar__hamburger active' : 'navbar__hamburger'} onClick={toggleMenu}>
-						<span className="bar"></span>
-						<span className="bar"></span>
-						<span className="bar"></span>
-					</div> */}
+					<Buttons href="/signup">Start now</Buttons>
+					<Buttons>Start now</Buttons>
 				</div>
 			</div>
 		</div>
