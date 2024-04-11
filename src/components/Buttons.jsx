@@ -1,16 +1,16 @@
-const Buttons = ({ href, onClick, children }) => {
-	// const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${px || 'px-7'} ${white ? 'text-n-8' : 'text-n-1'} ${className || ''}`;
+const Buttons = ({ href, onClick, children, className }) => {
+	const classes = `btn effect  ${className || ''}`;
 
 	// const spanClasses = `relative z-10`;
 
 	const renderButton = () => (
-		<button className="btn effect btn_reverse effect_reverse" onClick={onClick}>
+		<button className={classes} onClick={onClick}>
 			{children}
 		</button>
 	);
 
 	const renderLink = () => (
-		<a href={href} className="btn effect btn_message">
+		<a href={href} className={classes}>
 			{children}
 		</a>
 	);

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
+import 
 
 import { navigation } from '../data';
 import Buttons from './Buttons';
@@ -39,7 +40,11 @@ const Navbar = () => {
 		<div className={`navbar ${scrollPosition > 60 ? 'navbar__scrolled' : ''}`}>
 			<div className="container">
 				<div className="navbar__wrapper">
-					<div className="logo"></div>
+					<div className="logo">
+						<Link to="/">
+							<img src="../" alt="Ironclad Logo" />
+						</Link>
+					</div>
 					<nav>
 						<ul className="navbar__menu">
 							{navigation.map((item) => (
@@ -49,8 +54,9 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
-					<Buttons href="/signup">Start now</Buttons>
-					<Buttons>Start now</Buttons>
+					<Buttons href="/signup" className="btn_reverse effect_reverse">
+						Start now
+					</Buttons>
 				</div>
 			</div>
 		</div>
