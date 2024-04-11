@@ -1,27 +1,32 @@
-import React from 'react';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
-const NavbarLinks = (item) => {
-	const [btnHovered, setBtnHovered] = useState(false);
+const NavbarLinks = ({ item }) => {
+	const [isHovered, setIsHovered] = useState(false);
 	const handleMouseEnter = () => {
-		setBtnHovered(true);
+		if (!isHovered) {
+			setIsHovered(true);
+		}
 	};
 
 	const handleMouseLeave = () => {
-		setBtnHovered(false);
+		if (isHovered) {
+			setIsHovered(false);
+		}
 	};
-	const textTransform = {
-		transform: btnHovered ? 'rotateY(20deg)' : 'none',
+
+	const linkStyles = {
+		transform: isHovered ? 'rotate(-20deg)' : 'none',
 		transition: 'transform 0.2s ease-in-out',
+		display: 'inline-block',
 	};
+
 	return (
-		<div>
-			<li key={item.id}>
-				<NavLink to={item.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={textTransform}>
-					{item.title}
-				</NavLink>
-			</li>
-		</div>
+		<li key={item.id} style={{ visibility: 'visible' }}>
+			<NavLink to={item.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyles}>
+				{item.title}
+			</NavLink>
+		</li>
 	);
 };
-
 export default NavbarLinks;

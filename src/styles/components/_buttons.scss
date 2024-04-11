@@ -7,15 +7,15 @@
 	position: relative;
 	background-color: transparent;
 	cursor: pointer;
-	border: 2px solid $text-dark;
+	border: 2px solid $primary-color;
 	overflow: hidden;
 	border-radius: 30px;
-	color: $text-dark;
+	color: $primary-color;
 	transition: all 0.5s ease-in-out;
 
 	&:hover {
 		box-shadow: 1px 1px 200px #252525;
-		// border: none;
+
 		color: $white;
 	}
 
@@ -25,7 +25,7 @@
 		color: $background-light;
 		&:hover {
 			color: $primary-color;
-            background-color: transparent;
+			background-color: transparent;
 		}
 	}
 
@@ -36,7 +36,8 @@
 			left: 0;
 			top: 0;
 			transition: all 0.5s ease-in-out;
-			background-color: $text-dark;
+			background-color: $primary-color;
+
 			border-radius: 30px;
 			visibility: hidden;
 			height: 10px;
@@ -50,7 +51,5 @@
 		&_reverse::after {
 			background-color: transparent;
 		}
-	
 	}
-
 }

@@ -3,8 +3,9 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 import ironclad_logo from '../assets/ironclad_logo.png';
-
 import { navigation } from '../data';
+
+import NavbarLinks from './NavbarLinks';
 import Buttons from './Buttons';
 
 const Navbar = () => {
@@ -47,13 +48,11 @@ const Navbar = () => {
 					<nav>
 						<ul className="navbar__menu">
 							{navigation.map((item) => (
-								<li key={item.id}>
-									<NavLink to={item.url} item={item} />
-								</li>
+								<NavbarLinks key={item.id} item={item} />
 							))}
 						</ul>
 					</nav>
-					<Buttons href="/signup" className="btn_reverse effect_reverse">
+					<Buttons href="/signup" className="btn effect">
 						Start now
 					</Buttons>
 				</div>
