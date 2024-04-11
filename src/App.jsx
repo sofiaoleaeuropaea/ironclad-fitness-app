@@ -4,8 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Buttons from './components/Buttons';
 
-import Home from './pages/Home';
-import Contacts from './pages/Contacts';
+import Home from './pages/home/Home';
+import Contacts from './pages/contacts/Contacts';
 
 import './styles/main.scss';
 
