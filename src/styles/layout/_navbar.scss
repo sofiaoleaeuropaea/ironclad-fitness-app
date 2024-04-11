@@ -30,12 +30,18 @@
 		padding: 1rem 0;
 	}
 
+	.logo {
+		width: 150px;
+		max-width: 100%;
+		// height: auto;
+	}
+
 	&__menu {
 		display: flex;
 		align-items: center;
 
 		li a {
-			padding-left: 2rem;
+			padding: 0 1.25rem;
 
 			@include breakpoint(991px) {
 				display: inline-block;
