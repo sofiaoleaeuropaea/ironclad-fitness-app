@@ -38,7 +38,12 @@
 		}
 	}
 
-	&__social_media {
+	&__social {
 		display: flex;
+		gap: 10px;
+
+		.social_icons {
+			color: $text-dark;
+		}
 	}
 }

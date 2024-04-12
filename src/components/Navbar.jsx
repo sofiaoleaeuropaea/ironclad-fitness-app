@@ -44,17 +44,16 @@ const Navbar = () => {
 						<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
 					</Link>
 					<nav>
-						<ul className="navbar__menu">
+						<ul className={menuMobile ? 'navbar__menu active' : 'navbar__menu'}>
 							{navigation.map((item) => (
 								<NavbarLinks key={item.id} item={item} />
 							))}
 						</ul>
 					</nav>
-					{/* <div className={menuBtn ? 'navbar__hamburger active' : 'navbar__hamburger'} onClick={toggleMenu}>
+					<div className={` ${menuBtn ? 'navbar__burger active' : 'navbar__burger'}`} id="burger" onClick={toggleMenu}>
 						<span className="bar"></span>
 						<span className="bar"></span>
-						<span className="bar"></span>
-					</div> */}
+					</div>
 					<Buttons href="/signup" className="btn effect btn_hide">
 						Start now
 					</Buttons>

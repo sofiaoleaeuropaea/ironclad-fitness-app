@@ -4,10 +4,10 @@
 
 body {
 	font-size: 16px;
-	@include breakpoint('xl') {
+	@include breakpoint(1366) {
 		font-size: 14px;
 	}
-	@include breakpoint('xs') {
+	@include breakpoint(480) {
 		font-size: 12px;
 	}
 }
