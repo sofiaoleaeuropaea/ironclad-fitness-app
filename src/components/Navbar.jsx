@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 import ironclad_logo from '../assets/ironclad_logo.png';
@@ -11,19 +11,19 @@ import Buttons from './Buttons';
 const Navbar = () => {
 	// const pathname = useLocation();
 
-	// const [menuMobile, setMenuMobile] = useState(false);
+	const [menuMobile, setMenuMobile] = useState(false);
 
-	// const [menuBtn, setMenuBtn] = useState(false);
+	const [menuBtn, setMenuBtn] = useState(false);
 
-	// const toggleMenu = () => {
-	// 	setMenuMobile((active) => !active);
-	// 	setMenuBtn((active) => !active);
+	const toggleMenu = () => {
+		setMenuMobile((active) => !active);
+		setMenuBtn((active) => !active);
 
-	// 	const section = document.getElementById(id);
-	// 	if (section) {
-	// 		section.scrollIntoView({ behavior: 'smooth' });
-	// 	}
-	// };
+		const section = document.getElementById(id);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
 
 	const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -52,9 +52,15 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
+					<div className={menuBtn ? 'navbar__hamburger active' : 'navbar__hamburger'} onClick={toggleMenu}>
+						<span className="bar"></span>
+						<span className="bar"></span>
+						<span className="bar"></span>
+					</div>
 					<Buttons href="/signup" className="btn effect">
 						Start now
 					</Buttons>
+					
 				</div>
 			</div>
 		</div>
