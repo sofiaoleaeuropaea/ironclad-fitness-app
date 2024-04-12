@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import ironclad_logo from '../../assets/ironclad_logo.png';
+import ironclad_logo_branco from '../../assets/ironclad_logo.png';
 
 const ErrorPage = () => {
 	return (
@@ -15,7 +15,7 @@ const ErrorPage = () => {
 
 					<p className="error__message">Please, go back to our homepage</p>
 					<Link to="/">
-						<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
+						<img src={ironclad_logo_branco} className="img-fluid logo" alt="Ironclad Logo" />
 					</Link>
 				</div>
 			</div>
