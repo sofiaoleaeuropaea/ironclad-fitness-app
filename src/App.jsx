@@ -14,9 +14,7 @@ function App() {
 	return (
 		<>
 			<BrowserRouter>
-				<header>
-					<Navbar />
-				</header>
+				<Navbar />
 				<main>
 					<Routes>
 						<Route index element={<Home />} />
@@ -25,9 +23,7 @@ function App() {
 						<Route path="*" element={<ErrorPage />} />
 					</Routes>
 				</main>
-				<footer>
-					<Footer />
-				</footer>
+				<Footer />
 			</BrowserRouter>
 		</>
 	);

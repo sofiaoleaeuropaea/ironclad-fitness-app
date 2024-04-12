@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
 	return (
@@ -10,6 +10,7 @@ const ErrorPage = () => {
 							404 ERROR
 						</div>
 					</div>
+					<Link to="/">Go back to our homepage</Link>
 				</div>
 			</div>
 		</section>
