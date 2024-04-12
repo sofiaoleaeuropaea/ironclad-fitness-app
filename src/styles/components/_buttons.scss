@@ -15,7 +15,7 @@
 
 	&:hover {
 		box-shadow: 1px 1px 200px #252525;
-		color: $white;
+		color: $text-dark;
 	}
 
 	&.effect {
@@ -26,7 +26,6 @@
 			top: 0;
 			transition: all 0.5s ease-in-out;
 			background-color: $primary-color;
-
 			border-radius: 30px;
 			visibility: hidden;
 			height: 10px;
