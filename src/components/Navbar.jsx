@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 import ironclad_logo from '../assets/ironclad_logo.png';
@@ -8,9 +8,8 @@ import { navigation } from '../data';
 import NavbarLinks from './NavbarLinks';
 import Buttons from './Buttons';
 
-const Navbar = () => {
-	// const pathname = useLocation();
 
+const Navbar = () => {
 	const [menuMobile, setMenuMobile] = useState(false);
 
 	const [menuBtn, setMenuBtn] = useState(false);
@@ -40,7 +39,7 @@ const Navbar = () => {
 
 	return (
 		<div className={`navbar ${scrollPosition > 60 ? 'navbar__scrolled' : ''}`}>
-			<div className="container">
+			<div className="container container__xl">
 				<div className="navbar__wrapper">
 					<Link to="/">
 						<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
@@ -52,15 +51,14 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
-					<div className={menuBtn ? 'navbar__hamburger active' : 'navbar__hamburger'} onClick={toggleMenu}>
+					{/* <div className={menuBtn ? 'navbar__hamburger active' : 'navbar__hamburger'} onClick={toggleMenu}>
 						<span className="bar"></span>
 						<span className="bar"></span>
 						<span className="bar"></span>
-					</div>
-					<Buttons href="/signup" className="btn effect">
+					</div> */}
+					<Buttons href="/signup" className="btn effect btn_hide">
 						Start now
 					</Buttons>
-					
 				</div>
 			</div>
 		</div>

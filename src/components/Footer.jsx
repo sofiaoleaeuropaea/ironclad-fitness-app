@@ -1,40 +1,31 @@
 import { Link } from 'react-router-dom';
 
+import { footer } from '../data';
 import ironclad_logo from '../assets/ironclad_logo.png';
+
+import FooterLinks from './FooterLinks';
 
 const Footer = () => {
 	return (
 		<footer id="footer" className="footer">
-			<div className="container">
+			<div className="container  container__xl">
 				<div className="footer__wrapper">
-					<div className="footer__menu">
+					<div className="footer__wrapper_left">
 						<Link to="/">
 							<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
 						</Link>
 
-						<ul>
-							<li>
-								<a href="/privacy" target="_blank">
-									Privacy
-								</a>
-							</li>
-							<li>
-								<a href="#" target="_blank">
-									Terms
-								</a>
-							</li>
-							<li>
-								<a href="#" target="_blank">
-									Contacts
-								</a>
-							</li>
+						<ul className='footer__menu'>
+							{footer.map((item) => (
+								<FooterLinks key={item.id} item={item} />
+							))}
 						</ul>
 					</div>
-					<div className="social_media">
-						<a href="https://www.instagram.com/internationalhuntington/">
+					<div className="footer__social_media">
+						<a href="*">
 							<img src="images/instagram.png" />
 						</a>
-						<a href="https://www.instagram.com/internationalhuntington/">
+						<a href="*">
 							<img src="images/instagram.png" />
 						</a>
 					</div>

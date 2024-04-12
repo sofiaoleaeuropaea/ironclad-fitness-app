@@ -22,6 +22,24 @@ export const navigation = [
 
 ];
 
+export const footer = [
+	{
+		id: '0',
+		title: 'Privacy',
+		url: '/privacy',
+	},
+	{
+		id: '1',
+		title: 'Terms',
+		url: '/terms',
+	},
+	{
+		id: '2',
+		title: 'Contacts',
+		url: '/contacts',
+	},
+];
+
 // export const pricing = [
 // 	{
 // 		id: '0',

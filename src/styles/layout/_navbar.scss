@@ -7,7 +7,6 @@
 	left: 0;
 	padding: 1rem 0;
 	background: transparent;
-	// border-bottom: 1px solid $text-dark;
 	transition: all 5s ease-in-out;
 
 	// &__scrolled {
@@ -16,19 +15,18 @@
 	// 	backdrop-filter: blur(2.5px);
 	// 	-webkit-backdrop-filter: blur(2.5px);
 	// 	border-radius: 10px;
+	// border-bottom: 1px solid $text-dark;
 	// }
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 1rem 0;
 	}
 
 	.logo {
 		width: 150px;
 		max-width: 100%;
-	
 	}
 
 	&__menu {
@@ -37,15 +35,17 @@
 
 		li a {
 			padding: 0 1.25rem;
-
-			@include breakpoint(991px) {
+			&.active {
+				color: $primary-color;
+				transform: rotate(-20deg);
+			}
+			@include breakpoint(960px) {
 				display: inline-block;
-				font-size: 1.5rem;
 				padding: 2rem 0;
 			}
 		}
 
-		@include breakpoint(991px) {
+		@include breakpoint(960px) {
 			position: fixed;
 			width: 0%;
 			height: 100%;

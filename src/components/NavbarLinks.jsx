@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const NavbarLinks = ({ item }) => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -21,9 +21,14 @@ const NavbarLinks = ({ item }) => {
 		display: 'inline-block',
 	};
 
+	const pathname = useLocation();
+	const isActive = (hash) => {
+		return pathname.hash === hash;
+	};
+
 	return (
-		<li key={item.id} style={{ visibility: 'visible' }}>
-			<NavLink to={item.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyles}>
+		<li key={item.id}>
+			<NavLink to={item.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyles} className={isActive('item.url') ? 'active' : ''}>
 				{item.title}
 			</NavLink>
 		</li>

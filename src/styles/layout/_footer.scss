@@ -1,52 +1,44 @@
 @use '../utils/' as *;
+@use '../base/typography';
 
 .footer {
 	font-size: 1rem;
 	padding: 1.5rem 0;
 	border-top: 1px solid $terciary-color;
-	@include breakpoint(420px) {
-		padding: 1.5rem 0;
-	}
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-size: 1.25rem;
 
 		@include breakpoint(420px) {
 			display: block;
 			text-align: center;
 		}
 	}
-	&__menu {
+	&__wrapper_left {
 		display: flex;
 		align-items: center;
 		.logo {
 			width: 100px;
 			max-width: 100%;
 		}
-		p {
-			font-size: 0.75em;
-			@include breakpoint(420px) {
-				padding-bottom: 1rem;
+	}
+
+	&__menu {
+		display: flex;
+
+		li a {
+			padding: 1rem 0 1rem 1.5rem;
+
+			&.active {
+				color: $primary-color;
+				transform: rotate(-20deg);
 			}
 		}
+	}
 
-		ul {
-			display: flex;
-			@include breakpoint(420px) {
-				justify-content: center;
-			}
-
-			li a {
-				font-size: 0.75em;
-				padding: 1rem 0 1rem 1.5rem;
-
-				@include breakpoint(420px) {
-					padding: 1rem;
-				}
-			}
-		}
+	&__social_media {
+		display: flex;
 	}
 }
