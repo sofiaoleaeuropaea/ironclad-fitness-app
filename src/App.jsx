@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,7 +12,6 @@ import Contacts from './pages/contacts/Contacts';
 import ErrorPage from './pages/error_page/ErrorPage';
 
 import './styles/main.scss';
-
 
 function App() {
 	return (

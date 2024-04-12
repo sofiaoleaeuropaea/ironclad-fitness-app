@@ -8,7 +8,6 @@ import { navigation } from '../data';
 import NavbarLinks from './NavbarLinks';
 import Buttons from './Buttons';
 
-
 const Navbar = () => {
 	const [menuMobile, setMenuMobile] = useState(false);
 

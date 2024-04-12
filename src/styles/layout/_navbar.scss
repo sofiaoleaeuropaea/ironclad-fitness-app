@@ -37,7 +37,7 @@
 			padding: 0 1.25rem;
 			&.active {
 				color: $primary-color;
-				transform: rotate(-20deg);
+			
 			}
 			@include breakpoint(960px) {
 				display: inline-block;
