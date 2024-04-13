@@ -6,17 +6,16 @@ import ironclad_logo from '../assets/ironclad_logo.png';
 import { navigation } from '../data';
 
 import NavbarLinks from './NavbarLinks';
+
 import Buttons from './Buttons';
 
 const Navbar = () => {
 	const [menuMobile, setMenuMobile] = useState(false);
+	const [isChecked, setIsChecked] = useState(false);
 
-	const [menuBtn, setMenuBtn] = useState(false);
-
-	const toggleMenu = () => {
+	const handleCheckboxChange = () => {
 		setMenuMobile((active) => !active);
-		setMenuBtn((active) => !active);
-
+		setIsChecked(!isChecked);
 		const section = document.getElementById(id);
 		if (section) {
 			section.scrollIntoView({ behavior: 'smooth' });
@@ -50,10 +49,14 @@ const Navbar = () => {
 							))}
 						</ul>
 					</nav>
-					<div className={` ${menuBtn ? 'navbar__burger active' : 'navbar__burger'}`} id="burger" onClick={toggleMenu}>
-						<span className="bar"></span>
-						<span className="bar"></span>
-					</div>
+					<label className={`burger__wrapper ${isChecked ? 'checked' : ''}`}>
+						<input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+						<div className="burger__btn">
+							<span className="bar"></span>
+							<span className="bar"></span>
+							<span className="bar"></span>
+						</div>
+					</label>
 					<Buttons href="/signup" className="btn effect btn_hide">
 						Start now
 					</Buttons>

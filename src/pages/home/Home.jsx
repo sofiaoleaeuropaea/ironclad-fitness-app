@@ -1,8 +1,10 @@
+import Hero from './Hero';
+
 function Home() {
 	return (
-		<div>
-			<h1>Push yourself harder</h1>
-		</div>
+		<>
+			<Hero />
+		</>
 	);
 }
 

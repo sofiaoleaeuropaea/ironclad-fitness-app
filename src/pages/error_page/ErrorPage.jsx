@@ -13,7 +13,7 @@ const ErrorPage = () => {
 						</div>
 					</div>
 					<div className="error__info">
-						<p className="error__message">Please, go back to our homepage</p>
+						<p className="error__message">Please, go back to our homepage.</p>
 						<Link to="/">
 							<img src={ironclad_logo_branco} className="img-fluid logo" alt="Ironclad Logo" />
 						</Link>

@@ -66,34 +66,67 @@
 		}
 	}
 
-	&__burger {
-		display: none;
-		cursor: pointer;
-		width: 24px;
-		height: 12px;
-		transform: rotate(0deg);
-		transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-		user-select: none;
-		-webkit-tap-highlight-color: transparent;
-		@include breakpoint(991px) {
-			display: block;
+	.burger {
+		&__wrapper {
+			display: none;
+			cursor: pointer;
+			position: relative;
+			user-select: none;
 
-			&.active .bar:nth-child(1) {
-				transform: translateY(0px) rotate(0deg);
+			input {
+				position: absolute;
+				opacity: 0;
+				cursor: pointer;
+				height: 0;
+				width: 0;
 			}
-			&.active .bar:nth-child(2) {
-				transform: translateY(6px) rotate(0deg);
+
+			@include breakpoint(991px) {
+				display: block;
+			}
+
+			&.checked {
+				input:checked + .burger__btn span:nth-child(1) {
+					top: 50%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				input:checked + .burger__btn span:nth-child(2) {
+					top: 50%;
+					transform: translateY(-50%) rotate(-45deg);
+				}
+
+				input:checked + .burger__btn span:nth-child(3) {
+					transform: translateX(-50px);
+					opacity: 0;
+				}
 			}
 		}
+		&__btn {
+			position: relative;
+			top: 0;
+			left: 0;
+			height: 1.3em;
+			width: 1.3em;
+			.bar {
+				width: 32px;
+				height: 2px;
+				// margin: 5px auto;
+				position: absolute;
+				transition: all 0.3s ease-in-out;
+				background-color: $text-dark;
+				&:nth-child(1) {
+					top: 10%;
+				}
 
-		.bar {
-			display: block;
-			width: 100%;
-			height: 3px;
-			margin: 5px auto;
-			transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-			transition-delay: 0s;
-			background-color: $text-dark;
+				&:nth-child(2) {
+					top: 50%;
+				}
+
+				&:nth-child(3) {
+					top: 90%;
+				}
+			}
 		}
 	}
 }
