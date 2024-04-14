@@ -4,7 +4,9 @@ body {
 	background-color: $background-light;
 }
 main {
-	margin-top: 65px;
+	@include breakpoint(960px) {
+		margin-top: 65px;
+	}
 }
 
 .container {
@@ -12,7 +14,7 @@ main {
 	margin: 0 auto;
 	padding: 0 2rem;
 
-	&__xl{
+	&__xl {
 		max-width: 1700px;
 	}
 

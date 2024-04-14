@@ -19,7 +19,6 @@ export const navigation = [
 		title: 'Contacts',
 		url: '/contacts',
 	},
-
 ];
 
 export const footer = [
@@ -37,6 +36,39 @@ export const footer = [
 		id: '2',
 		title: 'Contacts',
 		url: '/contacts',
+	},
+];
+
+export const socialTracker = [
+	{
+		id: '0',
+		tracker: '25',
+		category: 'Expert Trainers',
+	},
+	{
+		id: '1',
+		tracker: '15k',
+		category: 'Happy Clients',
+	},
+	{
+		id: '2',
+		tracker: '30',
+		category: 'Partnerships',
+	},
+	{
+		id: '3',
+		tracker: '10+ Years',
+		category: 'Experience',
+	},
+	{
+		id: '4',
+		tracker: '+150',
+		category: 'Unique Machines',
+	},
+	{
+		id: '5',
+		tracker: '2000',
+		category: 'Square Meters',
 	},
 ];
 

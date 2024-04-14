@@ -1,7 +1,6 @@
 const Buttons = ({ href, onClick, children, className }) => {
 	const classes = `btn effect  ${className || ''}`;
 
-
 	const renderButton = () => (
 		<button className={classes} onClick={onClick}>
 			{children}

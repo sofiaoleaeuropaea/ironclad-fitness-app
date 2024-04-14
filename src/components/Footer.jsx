@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SlSocialInstagram, SlSocialFacebook, SlSocialYoutube } from 'react-icons/sl';
+import { SlSocialInstagram, SlSocialFacebook } from 'react-icons/sl';
 
 
 import { footer } from '../data';
@@ -26,10 +26,10 @@ const Footer = () => {
 					</div>
 					<div className="footer__social">
 						<Link to="*">
-							<SlSocialFacebook socialMediaStyle className='social_icons' />
+							<SlSocialFacebook className='social_icons' />
 						</Link>
 						<Link to="*">
-							<SlSocialInstagram socialMediaStyle className='social_icons'/>
+							<SlSocialInstagram  className='social_icons'/>
 						</Link>
 					
 					</div>

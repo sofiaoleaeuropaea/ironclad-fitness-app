@@ -1,22 +1,17 @@
 @use '../utils/' as *;
 
 .navbar {
-	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	padding: 1rem 0;
-	background: transparent;
-	transition: all 5s ease-in-out;
+	background-color: $background-light;
+	box-shadow: 0 8px 32px 0 rgba(99, 102, 128, 0.1);
+	border-bottom: 1px solid $text-dark;
 
-	// &__scrolled {
-	// 	background: rgba(237, 237, 237, 0.1);
-	// 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	// 	backdrop-filter: blur(2.5px);
-	// 	-webkit-backdrop-filter: blur(2.5px);
-	// 	border-radius: 10px;
-	// border-bottom: 1px solid $text-dark;
-	// }
+	@include breakpoint(960px) {
+		position: fixed;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -36,7 +31,7 @@
 		li a {
 			padding: 0 1.25rem;
 			&.active {
-				color: $primary-color;
+				border-bottom: 1px solid $primary-color;
 			}
 			@include breakpoint(960px) {
 				display: inline-block;
@@ -81,7 +76,7 @@
 				width: 0;
 			}
 
-			@include breakpoint(991px) {
+			@include breakpoint(960px) {
 				display: block;
 			}
 
@@ -111,7 +106,7 @@
 			.bar {
 				width: 32px;
 				height: 2px;
-				// margin: 5px auto;
+
 				position: absolute;
 				transition: all 0.3s ease-in-out;
 				background-color: $text-dark;

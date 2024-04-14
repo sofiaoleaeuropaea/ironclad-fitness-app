@@ -1,1 +1,24 @@
 @use '../utils/' as *;
+
+.hero {
+	height: calc(100vh - 135px);
+	display: flex;
+	align-items: center;
+
+	&__content {
+		margin-top: 150px;
+
+		p {
+			margin-top: 70px;
+			line-height: 1.5em;
+		}
+	}
+
+	img {
+		float: right;
+		shape-outside: url(/src/assets/hero_image.png);
+		max-width: 400px;
+
+		shape-margin: 10px;
+	}
+}

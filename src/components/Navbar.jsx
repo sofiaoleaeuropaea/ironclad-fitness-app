@@ -57,7 +57,7 @@ const Navbar = () => {
 							<span className="bar"></span>
 						</div>
 					</label>
-					<Buttons href="/signup" className="btn effect btn_hide">
+					<Buttons href="/signup" className="btn__hide">
 						Start now
 					</Buttons>
 				</div>
