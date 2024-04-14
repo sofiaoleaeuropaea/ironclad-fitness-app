@@ -5,9 +5,8 @@
 	top: 0;
 	left: 0;
 	padding: 1rem 0;
-	background-color: $background-light;
 	box-shadow: 0 8px 32px 0 rgba(99, 102, 128, 0.1);
-	border-bottom: 1px solid $text-dark;
+	border-bottom: 1px solid $terciary-color;
 
 	@include breakpoint(960px) {
 		position: fixed;

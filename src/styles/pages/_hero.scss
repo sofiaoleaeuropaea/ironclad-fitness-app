@@ -1,24 +1,29 @@
 @use '../utils/' as *;
 
 .hero {
-	height: calc(100vh - 135px);
-	display: flex;
-	align-items: center;
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
 
 	&__content {
-		margin-top: 150px;
+		margin: 3rem 3rem 0 0;
 
 		p {
-			margin-top: 70px;
-			line-height: 1.5em;
+			margin: 2rem 0 2.5rem;
+			line-height: 1.5rem;
 		}
 	}
 
 	img {
-		float: right;
-		shape-outside: url(/src/assets/hero_image.png);
-		max-width: 400px;
+		display: none;
+		@include sm {
+			display: unset;
+			max-width: 350px;
+		}
+		// float: right;
+		// shape-outside: url(/src/assets/hero_image.png);
 
-		shape-margin: 10px;
+		// shape-margin: 10px;
 	}
 }
