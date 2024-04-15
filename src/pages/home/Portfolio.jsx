@@ -22,7 +22,7 @@ function Portfolio() {
 							<h4>{item.title}</h4>
 							<p className="portfolio__card__description">{item.description}</p>
 						</div>
-						<img src={item.img} alt="" />
+						<img src={item.img} alt={item.title} />
 					</div>
 				))}
 			</div>
