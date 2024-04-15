@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Buttons from '../../components/Buttons';
+
 import { portfolio } from '../../data';
 
 function Portfolio() {
@@ -18,11 +20,13 @@ function Portfolio() {
 			<div className="container portfolio__wrapper">
 				{portfolio.map((item) => (
 					<div key={item.id} className={`portfolio__card ${item.className}`}>
-						<div className="portfolio__card__content">
+						<div className="card__content">
 							<h4>{item.title}</h4>
-							<p className="portfolio__card__description">{item.description}</p>
+							<p className="card__description">{item.description}</p>
+							<Buttons href="/signup">Start now</Buttons>
 						</div>
-						<img src={item.img} alt={item.title} />
+
+						{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} />}
 					</div>
 				))}
 			</div>

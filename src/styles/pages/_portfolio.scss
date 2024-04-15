@@ -1,19 +1,23 @@
 @use '../utils/' as *;
 
 .portfolio {
-    margin: 5rem 0;
-    &__wrapper {
+	margin: 5rem 0;
+	&__wrapper {
 		display: grid;
 		gap: 2rem;
-       grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 		grid-template-areas:
 			'programs'
+			'programs'
 			'avaliation'
-			'partners'
-            'pt';
+			'pt'
+			'pt'
+			'partners';
 
 		@include md {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
 			grid-template-areas:
 				'programs programs avaliation avaliation'
 				'programs programs pt pt'
@@ -22,6 +26,7 @@
 	}
 
 	&__card {
+		position: relative;
 		text-align: center;
 		background: rgba($terciary-color, 0.2);
 		padding: 3rem;
@@ -33,9 +38,17 @@
 		&:hover {
 			box-shadow: 0px 0px 10px rgba(0, 77, 32, 0.432);
 		}
+		.card {
+			&__description {
+				margin: 1rem 0 4rem 0;
+			}
 
-		&__description {
-			margin-top: 1rem;
+			&__img {
+				position: absolute;
+				max-width: 270px;
+                bottom: 0px;
+                right: 0px;
+			}
 		}
 	}
 

@@ -1,5 +1,4 @@
-import { pt1 } from '../assets/pt1.png';
-import { menSquat } from '../assets/menSquat.png';
+
 
 export const navigation = [
 	{
@@ -80,7 +79,7 @@ export const portfolio = [
 		id: '0',
 		title: 'Our Programs',
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
-		img: menSquat,
+		img: 'images/menSquat.png',
 		className: 'programs',
 	},
 	{
@@ -99,7 +98,7 @@ export const portfolio = [
 		id: '3',
 		title: 'Personal Trainers',
 		description: 'Meet your next',
-		img: pt1,
+		img: 'images/pt1.png',
 		className: 'pt',
 	},
 ];
