@@ -17,9 +17,12 @@ function Portfolio() {
 		<section id="portfolio" className="portfolio">
 			<div className="container portfolio__wrapper">
 				{portfolio.map((item) => (
-          <div key={item.id} className={`portfolio__card ${item.className}`}  >
-						<h4>{item.title}</h4>
-						<p className="portfolio__card__description">{item.description}</p>
+					<div key={item.id} className={`portfolio__card ${item.className}`}>
+						<div className="portfolio__card__content">
+							<h4>{item.title}</h4>
+							<p className="portfolio__card__description">{item.description}</p>
+						</div>
+						<img src={item.img} alt="" />
 					</div>
 				))}
 			</div>

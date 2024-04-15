@@ -1,3 +1,6 @@
+import { pt1 } from "../assets/pt1.png"
+import { men_squat } from '../assets/men_squat.png';
+
 export const navigation = [
 	{
 		id: '0',
@@ -77,6 +80,7 @@ export const portfolio = [
 		id: '0',
 		title: 'Our Programs',
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
+		img: men_squat,
 		className: 'programs',
 	},
 	{
@@ -84,6 +88,7 @@ export const portfolio = [
 		title: 'Fitness Avaliation',
 		description: 'With the help of our experts get your own pre-avaliation on-line.',
 		className: 'avaliation',
+		img: '../../assets/pt1.png',
 	},
 
 	{
@@ -91,12 +96,14 @@ export const portfolio = [
 		title: 'Partnerships',
 		description: 'Discover our partners and start saving with discounts on our services.',
 		className: 'partners',
+		img: '../../assets/pt1.png',
 	},
 	{
 		id: '3',
 		title: 'Personal Trainers',
 		description: 'Meet your next',
-		className: 'pt',
+		img: pt1,
+		className: '../../assets/pt1.png',
 	},
 ];
 // export const pricing = [
