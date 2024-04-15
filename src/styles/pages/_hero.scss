@@ -3,27 +3,36 @@
 .hero {
 	&__wrapper {
 		display: flex;
-		align-items: center;
+		padding-top: 7rem;
+
+		@include breakpoint(991px) {
+			flex-wrap: wrap;
+			padding-top: 3rem;
+		}
 	}
 
 	&__content {
-		margin: 3rem 3rem 0 0;
+		width: 65%;
+		padding: 10rem 3rem 0 0;
+		flex: 0 0 auto;
 
+		@include breakpoint(991px) {
+			width: 100%;
+			text-align: center;
+			padding: 0 0 3rem 0;
+		}
 		p {
-			margin: 2rem 0 2.5rem;
-			line-height: 1.5rem;
+			margin: 2rem 0 2.5rem 0;
+			line-height: 1.5;
 		}
 	}
 
-	img {
-		display: none;
-		@include sm {
-			display: unset;
-			max-width: 350px;
+	&__image {
+		width: 35%;
+		flex: 0 0 auto;
+		@include breakpoint(991px) {
+			width: 100%;
+			margin: 0 auto;
 		}
-		// float: right;
-		// shape-outside: url(/src/assets/hero_image.png);
-
-		// shape-margin: 10px;
 	}
 }

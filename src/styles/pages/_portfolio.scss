@@ -1,0 +1,54 @@
+@use '../utils/' as *;
+
+.portfolio {
+    margin: 5rem 0;
+    &__wrapper {
+		display: grid;
+		gap: 2rem;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			'programs'
+			'avaliation'
+			'partners'
+            'pt';
+
+		@include md {
+			grid-template-areas:
+				'programs programs avaliation avaliation'
+				'programs programs pt pt'
+				'partners partners  pt pt';
+		}
+	}
+
+	&__card {
+		text-align: center;
+		background: transparent;
+		padding: 3rem;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
+		border-radius: 10px;
+		border: 1px solid rgba(255, 255, 255, 0.222);
+		-webkit-backdrop-filter: blur(20px);
+		backdrop-filter: blur(20px);
+		&:hover {
+			box-shadow: 0px 0px 10px rgba(0, 77, 32, 0.432);
+		}
+
+		&__description {
+			margin-top: 1rem;
+		}
+	}
+
+	.programs {
+		grid-area: programs;
+	}
+	.pt {
+		grid-area: pt;
+	}
+	.partners {
+		grid-area: partners;
+	}
+	.avaliation {
+		grid-area: avaliation;
+	}
+}

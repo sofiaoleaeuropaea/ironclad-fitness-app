@@ -1,18 +1,30 @@
 @use '../utils/' as *;
-@use '../utils/' as *;
 
 .social-tracker {
 	width: 100%;
 	padding: 1.5rem 0;
 	border-top: 1px solid $terciary-color;
+	border-bottom: 1px solid $terciary-color;
+	overflow: hidden;
 
-	&__item {
+	&__list {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		animation: slide 15s linear infinite;
+
 		span {
 			font-size: 1.25rem;
 			font-weight: 700;
 		}
+	}
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
 	}
 }

@@ -72,26 +72,53 @@ export const socialTracker = [
 	},
 ];
 
+export const portfolio = [
+	{
+		id: '0',
+		title: 'Our Programs',
+		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
+		className: 'programs',
+	},
+	{
+		id: '1',
+		title: 'Fitness Avaliation',
+		description: 'With the help of our experts get your own pre-avaliation on-line.',
+		className: 'avaliation',
+	},
+
+	{
+		id: '2',
+		title: 'Partnerships',
+		description: 'Discover our partners and start saving with discounts on our services.',
+		className: 'partners',
+	},
+	{
+		id: '3',
+		title: 'Personal Trainers',
+		description: 'Meet your next',
+		className: 'pt',
+	},
+];
 // export const pricing = [
 // 	{
 // 		id: '0',
 // 		title: 'Basic',
 // 		description: 'AI chatbot, personalized recommendations',
 // 		price: '0',
-// 		features: ['An AI chatbot that can understand your queries', 'Personalized recommendations based on your preferences', 'Ability to explore the app and its features without any cost'],
+// 		portfolios: ['An AI chatbot that can understand your queries', 'Personalized recommendations based on your preferences', 'Ability to explore the app and its portfolios without any cost'],
 // 	},
 // 	{
 // 		id: '1',
 // 		title: 'Premium',
 // 		description: 'Advanced AI chatbot, priority support, analytics dashboard',
 // 		price: '9.99',
-// 		features: ['An advanced AI chatbot that can understand complex queries', 'An analytics dashboard to track your conversations', 'Priority support to solve issues quickly'],
+// 		portfolios: ['An advanced AI chatbot that can understand complex queries', 'An analytics dashboard to track your conversations', 'Priority support to solve issues quickly'],
 // 	},
 // 	{
 // 		id: '2',
 // 		title: 'Enterprise',
 // 		description: 'Custom AI chatbot, advanced analytics, dedicated account',
 // 		price: null,
-// 		features: ['An AI chatbot that can understand your queries', 'Personalized recommendations based on your preferences', 'Ability to explore the app and its features without any cost'],
+// 		portfolios: ['An AI chatbot that can understand your queries', 'Personalized recommendations based on your preferences', 'Ability to explore the app and its portfolios without any cost'],
 // 	},
 // ];

@@ -1,6 +1,5 @@
 import Buttons from '../../components/Buttons';
 
-
 import hero_image from '../../assets/hero_image.png';
 
 function Hero() {
@@ -15,14 +14,13 @@ function Hero() {
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam fuga reiciendis Lorem ipsum dong elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga
 							reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..
 						</p>
-						<Buttons href="/signup">
-							Start now
-						</Buttons>
+						<Buttons href="/signup">Start now</Buttons>
 					</div>
-					<img src={hero_image} alt="Strong men" />
+					<div className='hero__image'>
+						<img src={hero_image} alt="Strong men" />
+					</div>
 				</div>
 			</div>
-		
 		</section>
 	);
 }
