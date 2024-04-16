@@ -25,17 +25,20 @@ function FormContact() {
 return (
 	<div className="Form">
 		<form onSubmit={handleSubmit(submitForm)}>
-			<input type="text" name="fullName" placeholder="Enter your full name" {...register('fullName')} />
+			<label for="full_name">Name</label>
+			<input type="text" id="full_name" name="fullName" placeholder="Enter your full name" {...register('fullName')} />
 			{/* <p>{errors.firstName?.message || ' '}</p> */}
 			<p> {errors && errors.fullName && errors.fullName.message} </p>
-
-			<input type="email" name="email" placeholder="Enter you e-mail" {...register('email')} />
+			<label for="email">E-mail</label>
+			<input type="email" id="email" name="email" placeholder="Enter you e-mail" {...register('email')} />
 			<p> {errors && errors.email && errors.email.message} </p>
-
-			<input type="text" name="phone" placeholder="Enter your phone number" {...register('phone')} />
+			<label for="phone">Phone number</label>
+			<input type="text" id="phone" name="phone" placeholder="Enter your phone number" {...register('phone')} />
 			<p> {errors && errors.phone && errors.age.phone} </p>
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Write your message"></textarea>
 
-			<Buttons>Submit</Buttons>
+			<input type="submit" value="Submit" />
 		</form>
 
 		{/* {formData && (
