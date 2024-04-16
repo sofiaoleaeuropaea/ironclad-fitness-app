@@ -1,12 +1,13 @@
 @use '../utils/' as *;
 
 .portfolio {
+	display: flex;
 	margin: 5rem 0;
 	&__wrapper {
 		display: grid;
 		gap: 2rem;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: minmax(300px, 600px);
+		grid-template-rows: repeat(6, 1fr);
 		grid-template-areas:
 			'programs'
 			'programs'
@@ -15,39 +16,49 @@
 			'pt'
 			'partners';
 
-		@include md {
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-template-rows: 1fr 1fr 1fr;
+		@include breakpointDesktop(1000px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
 			grid-template-areas:
-				'programs programs avaliation avaliation'
-				'programs programs pt pt'
-				'partners partners  pt pt';
+				'programs avaliation '
+				'programs pt '
+				'partners pt ';
 		}
 	}
 
 	&__card {
 		position: relative;
-		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 		background: rgba($terciary-color, 0.2);
-		padding: 3rem;
+		padding: 2rem;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
 		border-radius: 10px;
 		border: 1px solid rgba(255, 255, 255, 0.222);
-		-webkit-backdrop-filter: blur(20px);
-		backdrop-filter: blur(20px);
+		overflow: hidden;
+		// -webkit-backdrop-filter: blur(20px);
+		// backdrop-filter: blur(20px);
+		@include md{
+			padding:3rem,
+		}
 		&:hover {
 			box-shadow: 0px 0px 10px rgba(0, 77, 32, 0.432);
 		}
 		.card {
+			&__content {
+				text-align: center;
+			}
 			&__description {
-				margin: 1rem 0 4rem 0;
+				margin: 1rem 0 3.5rem 0;
 			}
 
 			&__img {
-				position: absolute;
 				max-width: 270px;
-                bottom: 0px;
-                right: 0px;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
 			}
 		}
 	}

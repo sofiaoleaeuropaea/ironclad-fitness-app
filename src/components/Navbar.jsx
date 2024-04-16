@@ -22,21 +22,9 @@ const Navbar = () => {
 		}
 	};
 
-	const [scrollPosition, setScrollPosition] = useState(0);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			setScrollPosition(window.scrollY);
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
-
+	
 	return (
-		<div className={`navbar ${scrollPosition > 60 ? 'navbar__scrolled' : ''}`}>
+		<div className="navbar">
 			<div className="container container__xl">
 				<div className="navbar__wrapper">
 					<Link to="/">

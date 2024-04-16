@@ -12,7 +12,7 @@
 		justify-content: space-between;
 		align-items: center;
 
-		@include breakpoint(420px) {
+		@include breakpointMobile(420px) {
 			display: block;
 			text-align: center;
 		}

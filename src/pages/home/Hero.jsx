@@ -6,7 +6,6 @@ function Hero() {
 	return (
 		<section id="hero" className="hero">
 			<div className="container">
-				{/* <img src={hero_image} alt="Men " /> */}
 				<div className="hero__wrapper">
 					<div className="hero__content">
 						<h1> Push yourself harder</h1>
@@ -16,8 +15,8 @@ function Hero() {
 						</p>
 						<Buttons href="/signup">Start now</Buttons>
 					</div>
-					<div className='hero__image'>
-						<img src={hero_image} alt="Strong men" />
+					<div className="hero__image">
+						<img src={hero_image} className="image-fluid" alt="Strong men" />
 					</div>
 				</div>
 			</div>

@@ -5,7 +5,7 @@
 		display: flex;
 		padding-top: 7rem;
 
-		@include breakpoint(991px) {
+		@include breakpointMobile(991px) {
 			flex-wrap: wrap;
 			padding-top: 3rem;
 		}
@@ -16,7 +16,7 @@
 		padding: 10rem 3rem 0 0;
 		flex: 0 0 auto;
 
-		@include breakpoint(991px) {
+		@include breakpointMobile(991px) {
 			width: 100%;
 			text-align: center;
 			padding: 0 0 3rem 0;
@@ -30,8 +30,8 @@
 	&__image {
 		width: 35%;
 		flex: 0 0 auto;
-		@include breakpoint(991px) {
-			width: 100%;
+		@include breakpointMobile(991px) {
+			width: 50%;
 			margin: 0 auto;
 		}
 	}

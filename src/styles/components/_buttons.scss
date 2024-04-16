@@ -39,8 +39,12 @@
 	}
 
 	&__hide {
-		@include breakpoint(960px) {
+		@include breakpointMobile(960px) {
 			display: none;
 		}
+	}
+
+	&__card{
+		margin:0 2rem 0 auto;
 	}
 }

@@ -23,9 +23,8 @@ function Portfolio() {
 						<div className="card__content">
 							<h4>{item.title}</h4>
 							<p className="card__description">{item.description}</p>
-							<Buttons href="/signup">Start now</Buttons>
 						</div>
-
+						<Buttons href="/signup" className="btn__card">Start now</Buttons>
 						{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} />}
 					</div>
 				))}

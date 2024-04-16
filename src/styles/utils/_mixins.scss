@@ -35,8 +35,12 @@ $breakpoints: (
 		@content;
 	}
 }
-
-@mixin breakpoint($break: 0) {
+@mixin breakpointDesktop($break: 0) {
+	@media (min-width: $break) {
+		@content;
+	}
+}
+@mixin breakpointMobile($break: 0) {
 	@media (max-width: $break) {
 		@content;
 	}
