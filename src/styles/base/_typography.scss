@@ -57,6 +57,20 @@ li {
 	color: $text-dark;
 }
 
-.small {
+
+textarea,
+input {
 	font-size: 0.75rem;
+	font-family: $text-font;
+	color: $text-dark;
+	text-transform: uppercase;
+}
+
+span {
+	font-weight: 600;
+	
+}
+
+address, time {
+font-style: normal;
 }

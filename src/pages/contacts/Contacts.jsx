@@ -1,25 +1,49 @@
 import FormContact from './FormContact';
 const Contacts = () => {
 	return (
-		<section id="contact" className="contact">
-			<div className="container contact__wrapper">
-				<div className="contact__details">
-					<h3>How to find us</h3>
-					<p>Mon-Fri - 6:00 - 22:30 </p>
-					<p>Sat - 9:00 - 20:00</p>
-					<p>Sun - 10:00 - 18:00</p>
-					<p>Edifício Mirage, R. Dr. Eduardo Neves, Nº3 1050-077 Lisboa</p>
-					<p>querosabermais@flag.pt</p>
-					<p>239000000</p>
-					{/* insert map */}
+		<>
+			<section id="contact__information" className="contact__information">
+				<div className="container ">
+					<div className="contact__wrapper ">
+						<h3>How to find us</h3>
+						<div className="contact__details">
+							<div className="contact__details_schedule">
+								<p>
+									<span> Mon-Fri</span> <time datetime="T06:00">6:00 am</time> - <time datetime="T22:30">10:30 pm</time>
+								</p>
+
+								<p>
+									<span> Sat</span> <time datetime="T09:00">9:00 am</time> - <time datetime="T20:00">8:00 pm</time>
+								</p>
+
+								<p>
+									<span> Sun</span> <time datetime="T10:00">10:00 am</time> - <time datetime="T18:00">6:00 pm</time>
+								</p>
+							</div>
+							<address>
+								<a>Edifício Mirage, R. Dr. Eduardo Neves, Nº3 1050-077 Lisboa</a>
+							</address>
+							<address>
+								<a>querosabermais@flag.pt</a>
+							</address>
+							<address>
+								<a>(+351) 239000000</a>
+							</address>
+						</div>
+					</div>
 				</div>
-				<div className="contact__form">
-					<h3>We're here to help you</h3>
-					<p>Shot us a message if you have any question.</p>
-					<FormContact />
+			</section>
+
+			<section id="contact__form" className="contact__form">
+				<div className="container ">
+					<div className="contact__wrapper">
+						<h3>We're here to help you</h3>
+
+						<FormContact />
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 

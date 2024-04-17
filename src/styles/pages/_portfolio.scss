@@ -11,7 +11,7 @@
 		grid-template-areas:
 			'programs'
 			'programs'
-			'avaliation'
+			'evaluation'
 			'pt'
 			'pt'
 			'partners';
@@ -20,7 +20,7 @@
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(2, 1fr);
 			grid-template-areas:
-				'programs avaliation '
+				'programs evaluation '
 				'programs pt '
 				'partners pt ';
 		}
@@ -40,8 +40,8 @@
 		overflow: hidden;
 		// -webkit-backdrop-filter: blur(20px);
 		// backdrop-filter: blur(20px);
-		@include md{
-			padding:3rem,
+		@include md {
+			padding: 3rem;
 		}
 		&:hover {
 			box-shadow: 0px 0px 10px rgba(0, 77, 32, 0.432);
@@ -72,7 +72,7 @@
 	.partners {
 		grid-area: partners;
 	}
-	.avaliation {
-		grid-area: avaliation;
+	.evaluation {
+		grid-area: evaluation;
 	}
 }

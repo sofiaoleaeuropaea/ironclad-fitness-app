@@ -1,4 +1,4 @@
-const Buttons = ({ href, onClick, children, className }) => {
+const Buttons = ({ href, onClick, children, className, value }) => {
 	const classes = `btn effect  ${className || ''}`;
 
 	const renderButton = () => (
@@ -13,7 +13,19 @@ const Buttons = ({ href, onClick, children, className }) => {
 		</a>
 	);
 
-	return href ? renderLink() : renderButton();
+	const renderInput = () => <input type="submit" value={value} className={classes} />;
+
+	const renderComponent = () => {
+		if (href) {
+			return renderLink();
+		} else if (value) {
+			return renderInput();
+		} else {
+			return renderButton();
+		}
+	};
+
+	return renderComponent();
 };
 
 export default Buttons;

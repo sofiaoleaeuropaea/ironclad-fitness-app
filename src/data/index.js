@@ -1,5 +1,3 @@
-
-
 export const navigation = [
 	{
 		id: '0',
@@ -8,8 +6,8 @@ export const navigation = [
 	},
 	{
 		id: '1',
-		title: 'Pricing',
-		url: '/pricing',
+		title: 'Fitness Evaluation',
+		url: '/fitnessevaluation',
 	},
 	{
 		id: '2',
@@ -84,9 +82,9 @@ export const portfolio = [
 	},
 	{
 		id: '1',
-		title: 'Fitness Avaliation',
-		description: 'With the help of our experts get your own pre-avaliation on-line.',
-		className: 'avaliation',
+		title: 'Fitness Evaluation',
+		description: 'With the help of our experts get your own pre-evaluation on-line.',
+		className: 'evaluation',
 	},
 	{
 		id: '2',
@@ -102,26 +100,108 @@ export const portfolio = [
 		className: 'pt',
 	},
 ];
-// export const pricing = [
-// 	{
-// 		id: '0',
-// 		title: 'Basic',
-// 		description: 'AI chatbot, personalized recommendations',
-// 		price: '0',
-// 		portfolios: ['An AI chatbot that can understand your queries', 'Personalized recommendations based on your preferences', 'Ability to explore the app and its portfolios without any cost'],
-// 	},
-// 	{
-// 		id: '1',
-// 		title: 'Premium',
-// 		description: 'Advanced AI chatbot, priority support, analytics dashboard',
-// 		price: '9.99',
-// 		portfolios: ['An advanced AI chatbot that can understand complex queries', 'An analytics dashboard to track your conversations', 'Priority support to solve issues quickly'],
-// 	},
-// 	{
-// 		id: '2',
-// 		title: 'Enterprise',
-// 		description: 'Custom AI chatbot, advanced analytics, dedicated account',
-// 		price: null,
-// 		portfolios: ['An AI chatbot that can understand your queries', 'Personalized recommendations based on your preferences', 'Ability to explore the app and its portfolios without any cost'],
-// 	},
-// ];
+export const pricing = [
+	{
+		id: '0',
+		title: 'Basic',
+		description: 'Weekend Access',
+		price: '30€/month',
+		features: ['Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+	},
+	{
+		id: '1',
+		title: 'Premium',
+		description: '3 times/week',
+		price: '40€/month',
+		features: ['Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+	},
+	{
+		id: '2',
+		title: 'Elite',
+		description: 'All access',
+		price: '55€/month',
+		features: ['Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+	},
+];
+
+
+export const testimonials = [
+	{
+		id: '0',
+		name: 'Sarah Johnson',
+		description: 'Trainers are supportive, classes are motivating. Never felt stronger or more confident. Best decision I made for my fitness journey!',
+	},
+	{
+		id: '1',
+		name: 'Michael Smith',
+		description: "Top-notch facilities, friendly staff. Can't imagine going elsewhere. It's like a second home. Highly recommend!",
+	},
+	{
+		id: '2',
+		name: 'Emily Rodriguez',
+		description: 'Achieved fitness goals I never thought possible. Supportive community, welcoming atmosphere. Proud of my progress!',
+	},
+	{
+		id: '3',
+		name: 'John Davis',
+		description: 'State-of-the-art equipment, dedicated trainers. Never felt better! Finally found the perfect fit after trying several gyms.',
+	},
+	{
+		id: '4',
+		name: 'Jennifer Lee',
+		description: 'Nervous at first, but staff quickly put my fears to rest. Knowledgeable, approachable. Made great friends. Amazing journey!',
+	},
+];
+
+
+const personalTrainers = [
+	{
+		id: '0',
+		name: 'Jessica Martinez',
+		photo: 'images/pt1.png',
+		description: '"Success starts with the decision to try. Let\'s work together to make your fitness goals a reality."',
+		modalities: 'HIIT, Strength Training, Nutrition Coaching',
+	},
+	{
+		id: '1',
+		name: 'Alex Johnson',
+		photo: 'images/pt2.png',
+		description: '"Yoga and Pilates not only transform the body but also renew the mind and spirit. Let me guide you on this journey."',
+		modalities: 'Yoga, Pilates, Stress Management',
+	},
+	{
+		id: '2',
+		name: 'Ryan Thompson',
+		photo: 'images/pt3.png',
+		description: '"Your journey to a healthier you begins here. Together, we\'ll overcome obstacles and reach new heights."',
+		modalities: 'Functional Training, Injury Rehabilitation',
+	},
+	{
+		id: '3',
+		name: 'Emily Harris',
+		photo: 'images/pt4.png',
+		description: '"Find your strength, both inside and out. Let\'s push limits, break barriers, and achieve greatness together."',
+		modalities: 'Group Fitness, Cardio Workouts',
+	},
+	{
+		id: '4',
+		name: 'David Lee',
+		photo: 'images/pt5.png',
+		description: "\"Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.\"",
+		modalities: 'Weightlifting, Bodybuilding, Nutrition Counseling',
+	},
+	{
+		id: '5',
+		name: 'Rachel Garcia',
+		photo: 'images/pt6.png',
+		description: '"Challenge yourself, and the results will follow. Let\'s embrace the journey and celebrate every milestone together."',
+		modalities: 'CrossFit, Functional Training, Meal Planning',
+	},
+	{
+		id: '6',
+		name: 'Michael Nguyen',
+		photo: 'images/pt7.png',
+		description: '"Every step forward is a step closer to your goals. Let\'s conquer obstacles and achieve greatness, one day at a time."',
+		modalities: 'Endurance Training, Marathon Preparation, Injury Prevention',
+	},
+];

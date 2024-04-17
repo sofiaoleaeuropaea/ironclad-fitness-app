@@ -1,0 +1,54 @@
+@use '../utils/' as *;
+
+.sign-up {
+	min-height: calc(100vh - 135px);
+	&__wrapper {
+		position: relative;
+		#title {
+			position: absolute;
+			right: 5%;
+			bottom: 10%;
+			color: $background-light;
+		}
+	}
+
+	&__form {
+		position: relative;
+        margin: 5rem 0;
+	}
+	#sign-up__title {
+		position: absolute;
+		left: -1rem;
+		top: -2.25rem;
+		color: $primary-color;
+	}
+
+	@include sm {
+		&__form {
+			margin: 5rem 3rem 5rem 3rem;
+		}
+	}
+
+	@include md {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: auto;
+
+		&__img {
+			display: none;
+		}
+
+		&__wrapper {
+			background-image: url('images/gymforfun.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		
+		#sign-title {
+			grid-column: 1 / 4;
+		}
+		#sign-form {
+			grid-column: 4 / 6;
+		}
+	}
+}
