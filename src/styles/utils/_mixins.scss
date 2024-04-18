@@ -1,3 +1,5 @@
+// @use '../utils/variables';
+
 $breakpoints: (
 	'xs': 0,
 	'sm': 480px,
@@ -44,4 +46,18 @@ $breakpoints: (
 	@media (max-width: $break) {
 		@content;
 	}
+}
+
+@mixin card($pdg: 2rem) {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background: rgba(#727272, 0.2);
+	padding: $pdg;
+
+	border-radius: 10px;
+	border: 1px solid #727272;
+	overflow: hidden;
 }

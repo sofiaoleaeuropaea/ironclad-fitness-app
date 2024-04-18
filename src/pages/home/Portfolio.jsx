@@ -21,7 +21,7 @@ function Portfolio() {
 				{portfolio.map((item) => (
 					<div key={item.id} className={`portfolio__card ${item.className}`}>
 						<div className="card__content">
-							<h4>{item.title}</h4>
+							<h2>{item.title}</h2>
 							<p className="card__description">{item.description}</p>
 						</div>
 						<Buttons href="/signup" className="btn__card">Start now</Buttons>

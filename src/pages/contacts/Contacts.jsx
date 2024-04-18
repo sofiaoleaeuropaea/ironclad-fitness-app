@@ -5,7 +5,7 @@ const Contacts = () => {
 			<section id="contact__information" className="contact__information">
 				<div className="container ">
 					<div className="contact__wrapper ">
-						<h3>How to find us</h3>
+						<h2>How to find us</h2>
 						<div className="contact__details">
 							<div className="contact__details_schedule">
 								<p>
@@ -37,7 +37,7 @@ const Contacts = () => {
 			<section id="contact__form" className="contact__form">
 				<div className="container ">
 					<div className="contact__wrapper">
-						<h3>We're here to help you</h3>
+						<h2>We're here to help you</h2>
 
 						<FormContact />
 					</div>

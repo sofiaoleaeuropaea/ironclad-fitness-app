@@ -5,17 +5,22 @@
 	padding: 1.5rem 0;
 	border-top: 1px solid $terciary-color;
 	border-bottom: 1px solid $terciary-color;
-	overflow: hidden;
+
 
 	&__list {
+		width: 100%;
+		overflow-x: hidden;
 		display: flex;
 		align-items: center;
+
 		justify-content: space-between;
 		animation: slide 15s linear infinite;
-
-		span {
-			font-size: 1.25rem;
-			font-weight: 700;
+		li {
+			font-size: 1.56rem;
+			span {
+				font-size: 1.56rem;
+				font-weight: 700;
+			}
 		}
 	}
 }

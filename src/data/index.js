@@ -57,8 +57,8 @@ export const socialTracker = [
 	},
 	{
 		id: '3',
-		tracker: '10+ Years',
-		category: 'Experience',
+		tracker: '10+',
+		category: ' Years Experience',
 	},
 	{
 		id: '4',
@@ -82,7 +82,7 @@ export const portfolio = [
 	},
 	{
 		id: '1',
-		title: 'Fitness Evaluation',
+		title: 'Fit Evaluation',
 		description: 'With the help of our experts get your own pre-evaluation on-line.',
 		className: 'evaluation',
 	},
@@ -94,7 +94,7 @@ export const portfolio = [
 	},
 	{
 		id: '3',
-		title: 'Personal Trainers',
+		title: 'Personal Trainer',
 		description: 'Meet your next',
 		img: 'images/pt1.png',
 		className: 'pt',
@@ -104,55 +104,59 @@ export const pricing = [
 	{
 		id: '0',
 		title: 'Basic',
-		description: 'Weekend Access',
+
 		price: '30€/month',
-		features: ['Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+		features: ['Weekend Access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 	},
 	{
 		id: '1',
 		title: 'Premium',
-		description: '3 times/week',
+
 		price: '40€/month',
-		features: ['Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+		features: ['3 Times/week', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 	},
 	{
 		id: '2',
 		title: 'Elite',
-		description: 'All access',
+
 		price: '55€/month',
-		features: ['Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+	},
+	{
+		id: '2',
+		title: 'Family',
+		price: '45€/month/person',
+		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 	},
 ];
-
 
 export const testimonials = [
 	{
 		id: '0',
 		name: 'Sarah Johnson',
-		description: 'Trainers are supportive, classes are motivating. Never felt stronger or more confident. Best decision I made for my fitness journey!',
+		description: '"Trainers are supportive, classes are motivating. Never felt stronger or more confident. Best decision I made for my fitness journey!"',
 	},
 	{
 		id: '1',
 		name: 'Michael Smith',
-		description: "Top-notch facilities, friendly staff. Can't imagine going elsewhere. It's like a second home. Highly recommend!",
+		description: '"Top-notch facilities, friendly staff. Can\'t imagine going elsewhere. It\'s like a second home. Highly recommend!"',
 	},
 	{
 		id: '2',
 		name: 'Emily Rodriguez',
-		description: 'Achieved fitness goals I never thought possible. Supportive community, welcoming atmosphere. Proud of my progress!',
+		description: '"Achieved fitness goals I never thought possible. Supportive community, welcoming atmosphere. Proud of my progress!"',
 	},
 	{
 		id: '3',
 		name: 'John Davis',
-		description: 'State-of-the-art equipment, dedicated trainers. Never felt better! Finally found the perfect fit after trying several gyms.',
+		description: '"State-of-the-art equipment, dedicated trainers. Never felt better! Finally found the perfect fit after trying several gyms."',
 	},
 	{
 		id: '4',
 		name: 'Jennifer Lee',
-		description: 'Nervous at first, but staff quickly put my fears to rest. Knowledgeable, approachable. Made great friends. Amazing journey!',
+		description: '"Nervous at first, but staff quickly put my fears to rest. Knowledgeable, approachable. Made great friends. Amazing journey!"',
 	},
 ];
-
 
 const personalTrainers = [
 	{

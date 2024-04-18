@@ -9,6 +9,7 @@
 			right: 5%;
 			bottom: 10%;
 			color: $background-light;
+			font-size: 3.82rem;
 		}
 	}
 
@@ -48,6 +49,7 @@
 			grid-column: 1 / 4;
 		}
 		#sign-form {
+			align-self: center;
 			grid-column: 4 / 6;
 		}
 	}

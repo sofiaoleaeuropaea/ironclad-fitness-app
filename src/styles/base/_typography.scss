@@ -17,22 +17,18 @@ h1 {
 }
 
 h2 {
-	font-size: 3.05rem;
-}
-
-h3 {
 	font-size: 2.44rem;
 }
 
-h4 {
+h3 {
 	font-size: 1.95rem;
 }
 
-h5 {
+h4 {
 	font-size: 1.56rem;
 }
 
-h6 {
+h5 {
 	font-size: 1.25rem;
 }
 
@@ -41,7 +37,6 @@ h2,
 h3,
 h4,
 h5,
-h6,
 label {
 	font-family: $headings-font;
 	color: $text-dark;
@@ -57,20 +52,24 @@ li {
 	color: $text-dark;
 }
 
-
+cite,
 textarea,
 input {
 	font-size: 0.75rem;
 	font-family: $text-font;
 	color: $text-dark;
+}
+
+textarea,
+input {
 	text-transform: uppercase;
 }
 
 span {
 	font-weight: 600;
-	
 }
 
-address, time {
-font-style: normal;
+address,
+time, cite {
+	font-style: normal;
 }

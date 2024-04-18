@@ -16,7 +16,7 @@ function SignUp() {
 			</div>
 			<div className="container" id="sign-form">
 				<div className="sign-up__form">
-					<h3 id='sign-up__title'>Sign up</h3>
+					<h2 id='sign-up__title'>Sign up</h2>
 					<FormSignUp />
 				</div>
 			</div>

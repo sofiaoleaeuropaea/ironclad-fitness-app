@@ -6,7 +6,7 @@ function SocialTracker() {
 	
 	return (
 		<section id="social-tracker" className="social-tracker">
-			<div className="container container__xl">
+			{/* <div className="container container__xl"> */}
 				<ul className="social-tracker__list">
 					{socialTracker.map((item) => (
 						<li key={item.id} className="social-tracker__item">
@@ -16,7 +16,7 @@ function SocialTracker() {
 					))}
 				</ul>
 				
-			</div>
+			{/* </div> */}
 		</section>
 	);
 }
