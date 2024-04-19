@@ -1,8 +1,8 @@
 export const navigation = [
 	{
 		id: '0',
-		title: 'Programs',
-		url: '/programs',
+		title: 'Membership',
+		url: '/membership',
 	},
 	{
 		id: '1',
@@ -75,10 +75,10 @@ export const socialTracker = [
 export const portfolio = [
 	{
 		id: '0',
-		title: 'Our Programs',
+		title: 'Our Membership',
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
 		img: 'images/menSquat.png',
-		className: 'programs',
+		className: 'membership',
 	},
 	{
 		id: '1',
@@ -107,6 +107,7 @@ export const pricing = [
 
 		price: '30€/month',
 		features: ['Weekend Access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+		className: "basic"
 	},
 	{
 		id: '1',
@@ -114,6 +115,7 @@ export const pricing = [
 
 		price: '40€/month',
 		features: ['3 Times/week', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+		className: "premium"
 	},
 	{
 		id: '2',
@@ -121,12 +123,14 @@ export const pricing = [
 
 		price: '55€/month',
 		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+		className: "elite"
 	},
 	{
 		id: '2',
 		title: 'Family',
 		price: '45€/month/person',
 		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
+	className: "family"
 	},
 ];
 

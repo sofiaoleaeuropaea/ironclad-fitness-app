@@ -20,10 +20,10 @@
 
 		p {
 			margin: 2rem 0 4rem 0;
-			line-height: 1.5;
+			
 		}
 		@include lg {
-			width: 65%;
+			width: 70%;
 			text-align: unset;
 			padding-right: 6rem;
 		}
@@ -31,7 +31,7 @@
 
 	&__image {
 		@include lg {
-			width: 35%;
+			width: 30%;
 		}
 	}
 }

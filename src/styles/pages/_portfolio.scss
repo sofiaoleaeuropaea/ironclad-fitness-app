@@ -1,16 +1,31 @@
 @use '../utils/' as *;
 
 .portfolio {
-	display: flex;
-	margin: 10rem 0;
+	width: 100%;
+	padding: 10rem 0;
+
+
+	&__heading {
+		width: 100%;
+		padding-bottom: 10rem;
+		border-bottom: $background-bd;
+
+		&__content {
+			margin: 0 auto;
+			text-align: center;
+			max-width: 1060px;
+		}
+	}
 	&__wrapper {
+		padding-top: 10rem;
+
 		display: grid;
 		gap: 2rem;
 		grid-template-columns: minmax(300px, 600px);
 		grid-template-rows: repeat(6, 1fr);
 		grid-template-areas:
-			'programs'
-			'programs'
+			'membership'
+			'membership'
 			'evaluation'
 			'pt'
 			'pt'
@@ -20,14 +35,26 @@
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(2, 1fr);
 			grid-template-areas:
-				'programs evaluation '
-				'programs pt '
+				'membership evaluation '
+				'membership pt '
 				'partners pt ';
+		}
+		#membership {
+			grid-area: membership;
+		}
+		#pt {
+			grid-area: pt;
+		}
+		#partners {
+			grid-area: partners;
+		}
+		#evaluation {
+			grid-area: evaluation;
 		}
 	}
 
 	&__card {
-@include card;
+		@include card;
 		// -webkit-backdrop-filter: blur(20px);
 		// backdrop-filter: blur(20px);
 		@include md {
@@ -51,18 +78,5 @@
 				left: 0px;
 			}
 		}
-	}
-
-	.programs {
-		grid-area: programs;
-	}
-	.pt {
-		grid-area: pt;
-	}
-	.partners {
-		grid-area: partners;
-	}
-	.evaluation {
-		grid-area: evaluation;
 	}
 }

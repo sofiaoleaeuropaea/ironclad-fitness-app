@@ -16,19 +16,22 @@ h1 {
 	font-size: 3.82rem;
 }
 
-h2 {
+h2{
+	font-size: 3.05rem;
+}
+h3 {
 	font-size: 2.44rem;
 }
 
-h3 {
+h4 {
 	font-size: 1.95rem;
 }
 
-h4 {
+h5 {
 	font-size: 1.56rem;
 }
 
-h5 {
+h6 {
 	font-size: 1.25rem;
 }
 
@@ -40,7 +43,7 @@ h5,
 label {
 	font-family: $headings-font;
 	color: $text-dark;
-	font-weight: 800;
+	font-weight: 700;
 }
 
 p,
@@ -72,4 +75,8 @@ span {
 address,
 time, cite {
 	font-style: normal;
+}
+
+p{
+	line-height: 1.5
 }

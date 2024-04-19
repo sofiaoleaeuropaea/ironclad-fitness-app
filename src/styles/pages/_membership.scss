@@ -1,0 +1,77 @@
+@use '../utils/' as *;
+
+.membership {
+display: flex;
+flex-direction: column;
+	width: 100%;
+	padding: 10rem 0;
+	border-bottom: $background-bd;
+	&__heading {
+		width: 100%;
+		padding-bottom: 10rem;
+		border-bottom: $background-bd;
+		&__content {
+			text-align: center;
+			max-width: 1060px;
+			margin: 0 auto;
+		}
+	}
+
+	&__wrapper {
+     
+		padding-top: 10rem;
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: minmax(270px, 300px);
+		grid-template-rows: auto;
+		grid-template-areas:
+			'basic'
+			'premium'
+			'elite'
+			'family';
+
+		@include breakpointDesktop(800px) {
+            		grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'basic premium'
+				'elite family';
+		}
+
+		@include breakpointDesktop(1200px) {
+			grid-template-columns: repeat(4, 1fr);
+            	grid-template-areas:
+				'basic premium elite family';
+				
+
+		}
+		#basic {
+			grid-area: basic;
+		}
+		#premium {
+			grid-area: premium;
+		}
+		#elite {
+			grid-area: elite;
+		}
+		#family {
+			grid-area: family;
+		}
+	}
+	&__card {
+		@include card;
+      
+
+		@include breakpointDesktop(800px) {
+			@include card($pdg: 3rem);
+            max-width: 300px;
+		}
+		.card {
+			&__content {
+				text-align: center;
+			}
+			&__description {
+				margin: 1rem 0 3.5rem 0;
+			}
+		}
+	}
+}

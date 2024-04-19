@@ -1,0 +1,24 @@
+@use '../utils/' as *;
+
+.faqs {
+    padding-top: 10rem;
+position: relative;
+    &__wrapper{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+   text-align: center;
+   h4{
+    margin-bottom: 3rem;
+   }
+
+   &__img{
+
+    max-width: 500px;
+   }
+
+}
+
+
+}

@@ -17,17 +17,33 @@ function Portfolio() {
 
 	return (
 		<section id="portfolio" className="portfolio">
-			<div className="container portfolio__wrapper">
-				{portfolio.map((item) => (
-					<div key={item.id} className={`portfolio__card ${item.className}`}>
-						<div className="card__content">
-							<h2>{item.title}</h2>
-							<p className="card__description">{item.description}</p>
-						</div>
-						<Buttons href="/signup" className="btn__card">Start now</Buttons>
-						{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} />}
+			<div className="portfolio__heading">
+				<div className="container ">
+					<div className="portfolio__heading__content">
+						<h2> A different gym experience</h2>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod modi ad quisquam unde! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint
+							assumenda! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint assumenda! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis
+							quisquam sapiente quia sint assumenda!
+						</p>
 					</div>
-				))}
+				</div>
+			</div>
+			<div className="container ">
+				<div className="portfolio__wrapper">
+					{portfolio.map((item) => (
+						<div key={item.id} className={`portfolio__card`} id={`${item.className}`}>
+							<div className="card__content">
+								<h3>{item.title}</h3>
+								<p className="card__description">{item.description}</p>
+							</div>
+							<Buttons href="/signup" className="btn__card">
+								Start now
+							</Buttons>
+							{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} />}
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
 	);
