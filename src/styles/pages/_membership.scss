@@ -1,25 +1,14 @@
 @use '../utils/' as *;
 
 .membership {
-display: flex;
-flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
-	padding: 10rem 0;
 	border-bottom: $background-bd;
-	&__heading {
-		width: 100%;
-		padding-bottom: 10rem;
-		border-bottom: $background-bd;
-		&__content {
-			text-align: center;
-			max-width: 1060px;
-			margin: 0 auto;
-		}
-	}
+
 
 	&__wrapper {
-     
-		padding-top: 10rem;
+		margin-top: 10rem;
 		display: grid;
 		gap: 2rem;
 		grid-template-columns: minmax(270px, 300px);
@@ -31,7 +20,7 @@ flex-direction: column;
 			'family';
 
 		@include breakpointDesktop(800px) {
-            		grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 			grid-template-areas:
 				'basic premium'
 				'elite family';
@@ -39,10 +28,7 @@ flex-direction: column;
 
 		@include breakpointDesktop(1200px) {
 			grid-template-columns: repeat(4, 1fr);
-            	grid-template-areas:
-				'basic premium elite family';
-				
-
+			grid-template-areas: 'basic premium elite family';
 		}
 		#basic {
 			grid-area: basic;
@@ -59,11 +45,10 @@ flex-direction: column;
 	}
 	&__card {
 		@include card;
-      
-
 		@include breakpointDesktop(800px) {
 			@include card($pdg: 3rem);
-            max-width: 300px;
+		
+			max-width: 300px;
 		}
 		.card {
 			&__content {
@@ -71,6 +56,48 @@ flex-direction: column;
 			}
 			&__description {
 				margin: 1rem 0 3.5rem 0;
+			}
+		}
+	}
+
+	.pt {
+		&__wrapper {
+			position: relative;
+			@include cardTransparent($pdg: 2rem);
+			text-align: center;
+			margin: 10rem 0;
+
+			@include lg {
+				@include cardTransparent($pdg: 3rem);
+				display: flex;
+				align-items: center;
+				gap: 3rem;
+				text-align: unset;
+			}
+		}
+		&__content {
+			@include lg {
+				width: 60%;
+			}
+			p {
+				margin: 1rem 0 7rem 0;
+				@include lg {
+					margin-bottom: 0;
+				}
+			}
+
+			&__img {
+				position: absolute;
+				max-width: 140px;
+				bottom: -3%;
+				right: -2%;
+
+				@include sm {
+					max-width: 160px;
+				}
+				@include lg {
+					max-width: 200px;
+				}
 			}
 		}
 	}

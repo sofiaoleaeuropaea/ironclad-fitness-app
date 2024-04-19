@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Heading from '../../components/Heading';
 import Buttons from '../../components/Buttons';
 
 import { portfolio } from '../../data';
@@ -17,18 +18,13 @@ function Portfolio() {
 
 	return (
 		<section id="portfolio" className="portfolio">
-			<div className="portfolio__heading">
-				<div className="container ">
-					<div className="portfolio__heading__content">
-						<h2> A different gym experience</h2>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod modi ad quisquam unde! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint
+			<Heading
+				title=" A different gym experience"
+				paragraph="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod modi ad quisquam unde! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint
 							assumenda! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint assumenda! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis
-							quisquam sapiente quia sint assumenda!
-						</p>
-					</div>
-				</div>
-			</div>
+							quisquam sapiente quia sint assumenda!"
+			/>
+
 			<div className="container ">
 				<div className="portfolio__wrapper">
 					{portfolio.map((item) => (

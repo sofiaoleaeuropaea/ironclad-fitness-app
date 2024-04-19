@@ -9,15 +9,12 @@
 	}
 
 	&__card {
+		@include cardTransparent($pdg: 3rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		background: transparent;
-		padding: 3rem;
-		border-radius: 10px;
-		border: 1px solid $terciary-color;
-		overflow: hidden;
+	
 		max-width: 400px;
 		min-width: 300px;
 		blockquote p {

@@ -1,4 +1,5 @@
 import { pricing } from '../../data';
+import Heading from '../../components/Heading';
 import Buttons from '../../components/Buttons';
 
 import Faqs from './Faqs';
@@ -7,20 +8,14 @@ const Membership = () => {
 	return (
 		<>
 			<section id="membership" className="membership">
-				<div className="membership__heading">
-					<div className="container ">
-						<div className="membership__heading__content">
-							<h2>Membership</h2>
-							<p>
-								We aim to cultivate an ever-growing community, spreading the message of health and wellness to the wider world. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
-								aliquam quam, recusandae ipsa molestias molestiae, doloribus, modi accusantium fugiat qui repellat cupiditate vero. Voluptate facilis expedita ex nesciunt officia!
-							</p>
-						</div>
-					</div>
-				</div>
+				<Heading
+					title="Membership"
+					paragraph="We aim to cultivate an ever-growing community, spreading the message of health and wellness to the wider world. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
+							aliquam quam, recusandae ipsa molestias molestiae, doloribus, modi accusantium fugiat qui repellat cupiditate vero. Voluptate facilis expedita ex nesciunt officia!"
+				/>
+
 				<div className="container ">
 					<div className="membership__wrapper">
-					
 						{pricing.map((item) => (
 							<div key={item.id} className="membership__card" id={`${item.className}`}>
 								<div className="card__content">
@@ -28,15 +23,21 @@ const Membership = () => {
 									<p>{item.price}</p>
 									<p className="card__description">{item.features}</p>
 								</div>
-								<Buttons href="/signup" className="btn__card">
-									Start now
-								</Buttons>
+								<Buttons href="/signup">Start now</Buttons>
 							</div>
 						))}
 					</div>
+					<div className="pt__wrapper">
+						<div className="pt__content">
+							<h3>Looking for a personal trainer?</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste totam porro, neque vitae laudantium adipisci sapiente corrupti maxime.</p>
+						</div>
+						<Buttons href="/signup">Say hello</Buttons>
+						<img className="img-fluid pt__content__img" src="images/pesos.png" alt="" />
+					</div>
 				</div>
 			</section>
-			<Faqs/>
+			<Faqs />
 		</>
 	);
 };

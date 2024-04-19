@@ -61,3 +61,11 @@ $breakpoints: (
 	border: 1px solid #727272;
 	overflow: hidden;
 }
+
+@mixin cardTransparent($pdg: 2rem) {
+	background: transparent;
+	padding: $pdg;
+	border-radius: 10px;
+	border: 1px solid #727272;
+	overflow: hidden;
+}
