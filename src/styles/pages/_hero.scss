@@ -5,33 +5,33 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding-top: 5rem;
+		padding-top: 7rem;
 
 		@include lg {
 			flex-direction: row;
-			padding-top: 7rem;
+	
 		}
 	}
 
 	&__content {
 		text-align: center;
 
-		padding: 3rem 0;
+		padding-bottom: 4rem; 
 
 		p {
 			margin: 2rem 0 4rem 0;
 			
 		}
 		@include lg {
-			width: 70%;
+			width: 65%;
 			text-align: unset;
-			padding-right: 6rem;
+			padding: 3rem 4.25rem 3rem 0;
 		}
 	}
 
 	&__image {
 		@include lg {
-			width: 30%;
+			width: 35%;
 		}
 	}
 }

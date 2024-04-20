@@ -3,12 +3,8 @@
 .portfolio {
 	width: 100%;
 
-
-
-	
 	&__wrapper {
 		padding-top: 10rem;
-
 		display: grid;
 		gap: 2rem;
 		grid-template-columns: minmax(300px, 600px);

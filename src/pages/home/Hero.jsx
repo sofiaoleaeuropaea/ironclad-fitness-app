@@ -16,7 +16,7 @@ function Hero() {
 						<Buttons href="/signup">Start now</Buttons>
 					</div>
 					<div className="hero__image">
-						<img src={hero_image} className="image-fluid" alt="Strong men" />
+						<img src={hero_image} className="img-fluid" alt="Strong men" />
 					</div>
 				</div>
 			</div>

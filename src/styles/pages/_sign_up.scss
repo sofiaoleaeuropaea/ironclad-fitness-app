@@ -6,8 +6,8 @@
 		position: relative;
 		#title {
 			position: absolute;
-			right: 5%;
-			bottom: 10%;
+			right: 10%;
+			bottom: 5%;
 			color: $background-light;
 			font-size: 3.82rem;
 		}
@@ -32,7 +32,7 @@
 
 	@include md {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: auto;
 
 		&__img {
@@ -46,11 +46,11 @@
 		}
 		
 		#sign-title {
-			grid-column: 1 / 4;
+			grid-column: 1 / 3;
 		}
 		#sign-form {
 			align-self: center;
-			grid-column: 4 / 6;
+			grid-column: 3 / 5;
 		}
 	}
 }

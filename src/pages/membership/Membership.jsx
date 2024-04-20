@@ -1,9 +1,9 @@
 import { pricing } from '../../data';
+
 import Heading from '../../components/Heading';
-import Buttons from '../../components/Buttons';
-
 import Faqs from './Faqs';
-
+import Buttons from '../../components/Buttons';
+		
 const Membership = () => {
 	return (
 		<>
@@ -21,7 +21,13 @@ const Membership = () => {
 								<div className="card__content">
 									<h3>{item.title}</h3>
 									<p>{item.price}</p>
-									<p className="card__description">{item.features}</p>
+									<div>
+										<ul className="card__description">
+											{item.features.map((feature, index) => (
+												<li key={index}>{feature}</li>
+											))}
+										</ul>
+									</div>
 								</div>
 								<Buttons href="/signup">Start now</Buttons>
 							</div>
