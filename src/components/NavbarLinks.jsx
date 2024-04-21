@@ -3,6 +3,8 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 const NavbarLinks = ({ item }) => {
 	const [isHovered, setIsHovered] = useState(false);
+	const pathname = useLocation();
+
 	const handleMouseEnter = () => {
 		if (!isHovered) {
 			setIsHovered(true);
@@ -21,13 +23,12 @@ const NavbarLinks = ({ item }) => {
 		display: 'inline-block',
 	};
 
-	const pathname = useLocation();
 	const isActive = (hash) => {
 		return pathname.hash === hash;
 	};
 
 	return (
-		<li key={item.id}>
+		<li>
 			<NavLink to={item.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyles} className={isActive('item.url') ? 'active' : ''}>
 				{item.title}
 			</NavLink>

@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom';
 import { SlSocialInstagram, SlSocialFacebook } from 'react-icons/sl';
 
-
 import { footer } from '../data';
 import ironclad_logo from '../assets/ironclad_logo.png';
 
 import FooterLinks from './FooterLinks';
 
 const Footer = () => {
-
 	return (
 		<footer id="footer" className="footer">
 			<div className="container  container__xl">
@@ -26,12 +24,11 @@ const Footer = () => {
 					</div>
 					<div className="footer__social">
 						<Link to="*">
-							<SlSocialFacebook className='social_icons' />
+							<SlSocialFacebook className="social_icons" />
 						</Link>
 						<Link to="*">
-							<SlSocialInstagram  className='social_icons'/>
+							<SlSocialInstagram className="social_icons" />
 						</Link>
-					
 					</div>
 				</div>
 			</div>

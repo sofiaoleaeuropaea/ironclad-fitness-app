@@ -6,7 +6,7 @@ const FooterLinks = ({ item }) => {
 		return pathname.hash === hash;
 	};
 	return (
-		<li key={item.id}>
+		<li>
 			<NavLink to={item.url} className={`small ${isActive('item.url') ? 'active' : ''}`}>
 				{item.title}
 			</NavLink>

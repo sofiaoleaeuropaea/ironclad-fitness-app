@@ -9,15 +9,15 @@ const Contacts = () => {
 						<div className="contact__details">
 							<div className="contact__details_schedule">
 								<p>
-									<span> Mon-Fri</span> <time datetime="T06:00">6:00 am</time> - <time datetime="T22:30">10:30 pm</time>
+									<span> Mon-Fri</span> <time dateTime="T06:00">6:00 am</time> - <time dateTime="T22:30">10:30 pm</time>
 								</p>
 
 								<p>
-									<span> Sat</span> <time datetime="T09:00">9:00 am</time> - <time datetime="T20:00">8:00 pm</time>
+									<span> Sat</span> <time dateTime="T09:00">9:00 am</time> - <time dateTime="T20:00">8:00 pm</time>
 								</p>
 
 								<p>
-									<span> Sun</span> <time datetime="T10:00">10:00 am</time> - <time datetime="T18:00">6:00 pm</time>
+									<span> Sun</span> <time dateTime="T10:00">10:00 am</time> - <time dateTime="T18:00">6:00 pm</time>
 								</p>
 							</div>
 							<address>
