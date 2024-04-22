@@ -1,6 +1,42 @@
 @use '../utils/' as *;
 
 .trainer {
-    margin: 10rem auto;
-    text-align: center;
+	padding: 10rem 0;
+	text-align: center;
+	border-bottom:  $background-bd;
+	h2 {
+		margin-bottom: 10rem;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+        align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		gap: 4rem 2rem;
+	}
+
+	&__card {
+		max-width: 80%;
+		text-align: left;
+		
+        @include md {
+max-width: 45%;
+        }
+        @include xl {
+            max-width: 30%;
+        }
+		h3 {
+			font-size: 1.56rem;
+			padding-top: 1.25rem;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+	}
+
+	&__img {
+		border-radius: 10px;
+		border: 1px solid #727272;
+		overflow: hidden;
+	}
 }

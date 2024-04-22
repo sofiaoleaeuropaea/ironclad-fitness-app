@@ -1,6 +1,7 @@
-import Buttons from '../../components/Buttons';
+
 import Heading from '../../components/Heading';
 import Trainers from './Trainers';
+import Partnership from "./Partners"
 
 const About = () => {
 	return (
@@ -13,6 +14,7 @@ const About = () => {
 				/>
 			</section>
 			<Trainers />
+			<Partnership/>
 		</>
 	);
 };

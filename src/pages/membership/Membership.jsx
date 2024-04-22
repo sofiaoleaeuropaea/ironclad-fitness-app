@@ -23,8 +23,8 @@ const Membership = () => {
 									<p>{item.price}</p>
 									<div>
 										<ul className="card__description">
-											{item.features.map((feature, index) => (
-												<li key={index}>{feature}</li>
+											{item.features.map((feature, id) => (
+												<li key={id}>{feature}</li>
 											))}
 										</ul>
 									</div>

@@ -28,7 +28,7 @@ function Portfolio() {
 			<div className="container ">
 				<div className="portfolio__wrapper">
 					{portfolio.map((item) => (
-						<div key={item.id} className={`portfolio__card`} id={`${item.className}`}>
+						<div key={item.id} className="portfolio__card" id={`${item.className}`}>
 							<div className="card__content">
 								<h3>{item.title}</h3>
 								<p className="card__description">{item.description}</p>
@@ -36,7 +36,7 @@ function Portfolio() {
 							<Buttons href="/signup" className="btn__card">
 								Start now
 							</Buttons>
-							{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} />}
+							{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} loading="lazy" />}
 						</div>
 					))}
 				</div>

@@ -162,54 +162,100 @@ export const testimonials = [
 	},
 ];
 
-const personalTrainers = [
+export const personalTrainers = [
 	{
 		id: 0,
-		name: 'Jessica Martinez',
-		photo: 'images/pt1.png',
-		description: '"Success starts with the decision to try. Let\'s work together to make your fitness goals a reality."',
-		modalities: 'HIIT, Strength Training, Nutrition Coaching',
+		name: 'David Lee',
+		img: 'images/pt2.jpg',
+		description: "Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.",
+		modalities: 'Weightlifting, Bodybuilding, Nutrition Counseling',
 	},
 	{
 		id: 1,
-		name: 'Alex Johnson',
-		photo: 'images/pt2.png',
-		description: '"Yoga and Pilates not only transform the body but also renew the mind and spirit. Let me guide you on this journey."',
-		modalities: 'Yoga, Pilates, Stress Management',
-	},
-	{
-		id: 2,
-		name: 'Ryan Thompson',
-		photo: 'images/pt3.png',
-		description: '"Your journey to a healthier you begins here. Together, we\'ll overcome obstacles and reach new heights."',
-		modalities: 'Functional Training, Injury Rehabilitation',
-	},
-	{
-		id: 3,
 		name: 'Emily Harris',
-		photo: 'images/pt4.png',
+		img: 'images/pt3.jpg',
 		description: "Find your strength, both inside and out. Let's push limits, break barriers, and achieve greatness together",
 		modalities: 'Group Fitness, Cardio Workouts',
 	},
 	{
-		id: 4,
-		name: 'David Lee',
-		photo: 'images/pt5.png',
-		description: "\"Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.\"",
-		modalities: 'Weightlifting, Bodybuilding, Nutrition Counseling',
+		id: 2,
+		name: 'Jessica Martinez',
+		img: 'images/pt4.jpg',
+		description: "Success starts with the decision to try. Let's work together to make your fitness goals a reality.",
+		modalities: 'HIIT, Strength Training, Nutrition Coaching',
+	},
+
+	{
+		id: 3,
+		name: 'Michael Nguyen',
+		img: 'images/pt5.jpg',
+		description: "Every step forward is a step closer to your goals. Let's conquer obstacles and achieve greatness, one day at a time.",
+		modalities: 'Endurance Training, Marathon Preparation, Injury Prevention',
 	},
 	{
-		id: 5,
+		id: 4,
 		name: 'Rachel Garcia',
-		photo: 'images/pt6.png',
-		description: '"Challenge yourself, and the results will follow. Let\'s embrace the journey and celebrate every milestone together."',
+		img: 'images/pt6.jpg',
+		description: "Challenge yourself, and the results will follow. Let's embrace the journey and celebrate every milestone together.",
 		modalities: 'CrossFit, Functional Training, Meal Planning',
 	},
+
 	{
-		id: 6,
-		name: 'Michael Nguyen',
-		photo: 'images/pt7.png',
-		description: '"Every step forward is a step closer to your goals. Let\'s conquer obstacles and achieve greatness, one day at a time."',
-		modalities: 'Endurance Training, Marathon Preparation, Injury Prevention',
+		id: 5,
+		name: 'Ryan Thompson',
+		img: 'images/pt2.jpg',
+		description: "Your journey to a healthier you begins here. Together, we'll overcome obstacles and reach new heights.",
+		modalities: 'Functional Training, Injury Rehabilitation',
+	},
+];
+
+export const partners = [
+	{
+		id: 0,
+		title: 'Nutrition',
+		brands: [
+			{
+				logo: 'images/prozis.png',
+				name: 'Prozis',
+				url: 'https://www.prozis.com',
+			},
+			{
+				logo: 'images/raw.png',
+				name: 'Raw',
+				url: 'https://getrawnutrition.com',
+			},
+			{
+				logo: 'images/eu-nutrition.png',
+				name: 'EuNutrition',
+				url: 'https://eunutrition.com',
+			},
+		],
+	},
+	{
+		id: 1,
+		title: 'Machines',
+		brands: [
+			{
+				logo: 'images/matrix.png',
+				name: 'Matrix',
+				url: 'https://www.matrixfitness.com/',
+			},
+			{
+				logo: 'images/hammer-strength.png',
+				name: 'Hammer Strength',
+				url: 'https://www.lifefitness.com/en-eu/brands/hammer-strength',
+			},
+		],
+	},
+	{
+		id: 2,
+		title: 'Wellness',
+		brands: [
+			{
+				logo: 'images/fisiogaspar.png',
+				name: 'Fisiogaspar',
+				url: 'https://www.fisiogaspar.pt',
+			},
+		],
 	},
 ];
