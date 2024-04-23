@@ -10,6 +10,7 @@
 	&__accordion {
 		width: 50%;
 		margin-bottom: 1rem;
+
 		&__title {
 			width: 100%;
 			@include card($pdg: 1rem 1.5rem);
@@ -22,21 +23,31 @@
 			}
 
 			.arrow {
-				transition: all 0.35s ease-in-out;
-				&.active {
-					rotate: 90deg;
+				display: block;
+				position: relative;
+				&.active .bar:nth-child(1) {
+					transform: translateY(-50%) rotate(90deg);
 				}
+				.bar {
+					display: block;
+					width: 14px;
+					height: 2px;
+					transform: translateY(-50%);
+					position: absolute;
+					right: 7px;
+					background-color: $text-dark;
+					transition:  transform 0.7s cubic-bezier(0, 1, 0.33, 1.2), background 0.4s;
+				}
+
 			}
 		}
 		&__content {
-			display: none;
-			border: 1px solid #727272;
-			border-radius: 10px;
-			margin-top: -0.25rem;
+			overflow: hidden;
+			height: 0;
+transition: all 0.35s ease-in-out ;
 
-			// transition: all 0.7s ease-in-out;
 			&.active {
-				display: flex;
+				height: auto;
 			}
 			ul {
 				display: flex;

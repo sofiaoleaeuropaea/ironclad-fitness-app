@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
 
@@ -7,8 +7,9 @@ import Heading from '../../components/Heading';
 import { partners } from '../../data';
 
 const Partnership = () => {
+	const contentEl = useRef(null)
 	const [accordionOpen, setAccordionOpen] = useState(null);
-	const onItemClick = (index) => {
+	const handleToggle= (index) => {
 		setAccordionOpen(index === accordionOpen ? null : index);
 	};
 
@@ -22,16 +23,15 @@ const Partnership = () => {
 				<div className="partner__wrapper">
 					{partners.map((item, index) => (
 						<div key={item.id} className="partner__accordion">
-							<button className="partner__accordion__title" onClick={() => onItemClick(index)}>
+							<button className="partner__accordion__title" onClick={() => handleToggle(index)}>
 								<span>{item.title}</span>
-								<div >
-									<span></span>
-									<span></span>
+								<div className={` arrow ${accordionOpen === index ? 'active' : ''}`}>
+									<span className="bar"></span>
+									<span className="bar"></span>
 								</div>
-								{/* <IoIosArrowForward className={` arrow ${accordionOpen === index ? 'active' : ''}`} /> */}
 							</button>
 
-							<div className={`partner__accordion__content ${accordionOpen === index ? 'active' : ''}`}>
+							<div ref={contentEl} className={`partner__accordion__content ${accordionOpen === index ? 'active' : ''}`} style={accordionOpen === index ? {height: contentEl.current.scrollHeight} : {height: "0px"}}>
 								<ul>
 									{item.brands.map((brands, index) => (
 										<li key={index}>
