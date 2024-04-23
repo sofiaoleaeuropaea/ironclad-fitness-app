@@ -1,63 +1,10 @@
 @use '../utils/' as *;
 
 .partner {
-	&__wrapper {
+	&__accordion {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 10rem 0 5rem 0;
-	}
-	&__accordion {
-		width: 50%;
-		margin-bottom: 1rem;
-
-		&__title {
-			width: 100%;
-			@include card($pdg: 1rem 1.5rem);
-			flex-direction: row;
-			span {
-				font-family: $headings-font;
-				font-size: 1.56rem;
-				color: $text-dark;
-				font-weight: 700;
-			}
-
-			.arrow {
-				display: block;
-				position: relative;
-				&.active .bar:nth-child(1) {
-					transform: translateY(-50%) rotate(90deg);
-				}
-				.bar {
-					display: block;
-					width: 14px;
-					height: 2px;
-					transform: translateY(-50%);
-					position: absolute;
-					right: 7px;
-					background-color: $text-dark;
-					transition:  transform 0.7s cubic-bezier(0, 1, 0.33, 1.2), background 0.4s;
-				}
-
-			}
-		}
-		&__content {
-			overflow: hidden;
-			height: 0;
-transition: all 0.35s ease-in-out ;
-
-			&.active {
-				height: auto;
-			}
-			ul {
-				display: flex;
-				justify-content: space-around;
-				align-items: center;
-				padding: 3rem 1rem;
-				li {
-					width: 25%;
-				}
-			}
-		}
+		padding: 10rem 0 10rem 0;
 	}
 }

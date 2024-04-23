@@ -1,0 +1,71 @@
+@use '../utils/' as *;
+
+.accordion {
+	width: 100%;
+
+	@include md {
+		width: 50%;
+	}
+
+	&__heading {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1.5rem 1.5rem;
+		border: none;
+		border-bottom: 2px solid $terciary-color;
+		background-color: $background-light;
+
+		&__title {
+			font-family: $headings-font;
+			font-size: 1.25rem;
+			color: $text-dark;
+			font-weight: 700;
+			text-transform: uppercase;
+			transition: all 0.35s ease-in-out;
+			&.active {
+				color: $primary-color;
+			}
+		}
+		&__arrow {
+			display: block;
+			position: relative;
+			&.active .bar:nth-child(1) {
+				transform: translateY(-50%);
+			}
+			.bar {
+				display: block;
+				width: 20px;
+				height: 1px;
+				position: absolute;
+				right: 10px;
+				background-color: $text-dark;
+				transition: transform 0.7s cubic-bezier(0, 1, 0.33, 1.2), background 0.35s;
+
+				&:nth-child(1) {
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+
+	&__content {
+		overflow: hidden;
+		height: 0;
+		transition: all 0.35s ease-in-out;
+
+		&.active {
+			height: auto;
+		}
+		ul {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 3rem 1rem;
+			li {
+				width: 25%;
+			}
+		}
+	}
+}
