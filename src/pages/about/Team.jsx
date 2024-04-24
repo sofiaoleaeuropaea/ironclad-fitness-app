@@ -4,14 +4,14 @@ import { personalTrainers } from '../../data';
 
 const Trainers = () => {
 	return (
-		<section id="trainer" className="trainer">
+		<section id="team" className="team">
 			<div className="container">
 				<h2>Meet our trainers</h2>
-				<div className="trainer__wrapper">
+				<div className="team__wrapper">
 					{personalTrainers.map((personalTrainer) => (
-						<div key={personalTrainer.id} className="trainer__card">
+						<div key={personalTrainer.id} className="team__card">
 							<Link to={`/about/${personalTrainer.id}`}>
-								<div className="trainer__img effect">
+								<div className="team__img effect">
 									<img src={personalTrainer.img} className="img-fluid " alt={personalTrainer.name} loading="lazy" />
 								</div>
 								<h3>{personalTrainer.name}</h3>

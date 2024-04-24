@@ -1,9 +1,9 @@
 import { useRef } from 'react';
-const Accordion = ({ id, handleToggle, index, accordionOpen, title, content }) => {
+const Accordion = ({ handleToggle, index, accordionOpen, title, content }) => {
 	const contentEl = useRef(null);
 
 	return (
-		<div key={id} className="accordion">
+		<div className="accordion">
 			<button className="accordion__heading" onClick={() => handleToggle(index)}>
 				<span className={`accordion__heading__title ${accordionOpen === index ? 'active' : ''}`}>{title}</span>
 				<div className={`accordion__heading__arrow ${accordionOpen === index ? 'active' : ''}`}>

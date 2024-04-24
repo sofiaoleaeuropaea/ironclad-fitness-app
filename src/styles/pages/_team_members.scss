@@ -1,0 +1,53 @@
+@use '../utils/' as *;
+
+.member {
+	margin: 2rem 0;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		@include lg {
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	}
+	&__intro,
+	&__biography {
+		@include cardTransparent;
+
+		@include sm {
+			width: 80%;
+		}
+		@include lg {
+			width: 47%;
+		}
+	}
+
+	&__intro {
+		background-color: $primary-color;
+
+		&__modality {
+			margin: 5rem 0 2rem 0;
+
+			.modality {
+				padding: 0.625rem 1.25rem;
+				margin-right: 0.5rem;
+				border: 2px solid $text-dark;
+				border-radius: 30px;
+			}
+		}
+
+		&__quote {
+            margin: 2rem 0;
+			text-align: center;
+			font-weight: 600;
+		}
+	}
+
+    &__biography__title{
+        margin-bottom: 3rem;
+    }
+}

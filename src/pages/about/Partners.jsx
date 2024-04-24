@@ -37,7 +37,7 @@ const Partnership = () => {
 				<div className="partner__accordion">
 					{partners.map((partner, index) => (
 						<Accordion
-							id={partner.id}
+							key={partner.id}
 							title={partner.title}
 							content={partner.brands.map((brand, index) => (
 								<li key={index}>

@@ -3,8 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Buttons from '../../components/Buttons';
-import FormValidation from '../contacts/FormValidation';
-
+import FormValidation from '../../components/FormValidation';
 function FormSignUp() {
 	const [formData, setFormData] = useState(null);
 
@@ -26,16 +25,14 @@ function FormSignUp() {
 		<div className="form">
 			<form onSubmit={handleSubmit(submitForm)}>
 				<input className="form__information" type="text" name="fullName" placeholder="Full name" {...register('fullName')} />
-				{/* <p>{errors.firstName?.message || ' '}</p> */}
 				<p> {errors && errors.fullName && errors.fullName.message} </p>
 				<input className="form__information" type="date" name="birthdate" placeholder="Date of birth" {...register('birthdate')} />
-				<p> {errors && errors.age && errors.age.age} </p>
+				<p> {errors && errors.birthdate && errors.birthdate.message} </p>
 				<input className="form__information" type="email" name="email" placeholder="E-mail" {...register('email')} />
 				<p> {errors && errors.email && errors.email.message} </p>
 				<input className="form__information" type="tel" name="phone" placeholder="Phone number" {...register('phone')} />
-				<p> {errors && errors.phone && errors.age.phone} </p>
-				<input className="form__information" type="number" name="gender" placeholder="Gender" {...register('phone')} />
-				<p> {errors && errors.phone && errors.age.phone} </p>
+				<p> {errors && errors.phone && errors.phone.message} </p>
+			
 				<Buttons value="Submit" className="btn__form" />
 			</form>
 

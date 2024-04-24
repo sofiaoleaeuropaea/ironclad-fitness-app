@@ -77,7 +77,7 @@ export const portfolio = [
 		id: 0,
 		title: 'Our Membership',
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
-		img: 'images/menSquat.png',
+		img: '/images/menSquat.png',
 		className: 'membership',
 	},
 	{
@@ -96,7 +96,7 @@ export const portfolio = [
 		id: 3,
 		title: 'Personal Trainer',
 		description: 'Meet your next',
-		img: 'images/pt1.png',
+		img: '/images/pt1.png',
 		className: 'pt',
 	},
 ];
@@ -166,46 +166,56 @@ export const personalTrainers = [
 	{
 		id: 0,
 		name: 'David Lee',
-		img: 'images/pt2.jpg',
-		description: "Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.",
-		modalities: 'Weightlifting, Bodybuilding, Nutrition Counseling',
+		img: '/images/pt2.jpg',
+		quote: "Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.",
+		modalities: ['Weightlifting', 'Bodybuilding', 'Nutrition'],
+		biography:
+			"David Lee is a certified personal trainer with over a decade of experience in the fitness industry. He holds a Bachelor's degree in Exercise Science and is deeply passionate about helping individuals achieve their health and wellness goals. David's approach to training is holistic, focusing not only on physical strength but also on mental well-being and emotional balance. With expertise in weightlifting, bodybuilding, and nutrition, he creates personalized workout and nutrition plans tailored to each client's needs. David believes in empowering his clients to make lasting lifestyle changes and cultivates a supportive and encouraging environment for their fitness journey.",
 	},
 	{
 		id: 1,
 		name: 'Emily Harris',
-		img: 'images/pt3.jpg',
-		description: "Find your strength, both inside and out. Let's push limits, break barriers, and achieve greatness together",
-		modalities: 'Group Fitness, Cardio Workouts',
+		img: '/images/pt3.jpg',
+		quote: "Find your strength, both inside and out. Let's push limits, break barriers, and achieve greatness together",
+		modalities: ['Group Fitness', 'Cardio Workouts'],
+		biography:
+			"Emily Harris is a dedicated personal trainer with a mission to inspire others to discover their inner strength and unlock their full potential. With over eight years of experience in the fitness industry, Emily holds certifications in group fitness instruction and cardiovascular training. She believes in creating dynamic and engaging workout experiences that challenge the body and invigorate the spirit. Emily specializes in group fitness classes and high-intensity cardio workouts, using her infectious energy and motivational coaching style to encourage her clients to push beyond their limits and achieve their fitness goals. With Emily as your guide, you'll discover newfound confidence and resilience as you embark on your fitness journey.",
 	},
 	{
 		id: 2,
 		name: 'Jessica Martinez',
-		img: 'images/pt4.jpg',
-		description: "Success starts with the decision to try. Let's work together to make your fitness goals a reality.",
-		modalities: 'HIIT, Strength Training, Nutrition Coaching',
+		img: '/images/pt4.jpg',
+		quote: "Success starts with the decision to try. Let's work together to make your fitness goals a reality.",
+		modalities: ['HIIT', 'Strength Training', 'Boxe'],
+		biography:
+			"Jessica Martinez is a highly experienced personal trainer dedicated to helping individuals transform their lives through fitness and wellness. With a background in exercise science and over twelve years of practical experience, Jessica brings a wealth of knowledge and expertise to her coaching practice. Specializing in high-intensity interval training (HIIT), strength training, and boxing, she designs innovative and effective workout programs that deliver results. Jessica's compassionate and motivational approach empowers her clients to overcome obstacles, break through plateaus, and achieve their fitness goals. Whether you're a beginner or a seasoned athlete, Jessica is committed to guiding you on your journey to optimal health and well-being.",
 	},
-
 	{
 		id: 3,
 		name: 'Michael Nguyen',
-		img: 'images/pt5.jpg',
-		description: "Every step forward is a step closer to your goals. Let's conquer obstacles and achieve greatness, one day at a time.",
-		modalities: 'Endurance Training, Marathon Preparation, Injury Prevention',
+		img: '/images/pt5.jpg',
+		quote: "Every step forward is a step closer to your goals. Let's conquer obstacles and achieve greatness, one day at a time.",
+		modalities: ['Endurance Training', 'HIIT'],
+		biography:
+			"Michael Nguyen is a seasoned personal trainer with a passion for helping individuals reach their full potential through fitness and endurance training. With over fifteen years of experience in the industry, Michael holds certifications in endurance coaching and marathon preparation. He believes in the power of consistency, dedication, and hard work to achieve success in both fitness and life. Michael specializes in endurance training, marathon preparation, and high-intensity interval training (HIIT), using a results-driven approach to help his clients surpass their fitness goals. With Michael as your coach, you'll discover a newfound sense of strength, resilience, and determination as you strive to conquer challenges and achieve greatness.",
 	},
 	{
 		id: 4,
 		name: 'Rachel Garcia',
-		img: 'images/pt6.jpg',
-		description: "Challenge yourself, and the results will follow. Let's embrace the journey and celebrate every milestone together.",
-		modalities: 'CrossFit, Functional Training, Meal Planning',
+		img: '/images/pt6.jpg',
+		quote: "Challenge yourself, and the results will follow. Let's embrace the journey and celebrate every milestone together.",
+		modalities: ['CrossFit', 'Functional Training', 'Bodybuilding'],
+		biography:
+			"Rachel Garcia is a dedicated personal trainer with a passion for helping individuals transform their bodies and lives through fitness. With a background in exercise physiology and over a decade of experience in the industry, Rachel brings a wealth of knowledge and expertise to her coaching practice. She specializes in CrossFit, functional training, and bodybuilding, designing customized workout programs that challenge her clients both physically and mentally. Rachel's positive energy, enthusiasm, and encouragement inspire her clients to push past their limits, overcome obstacles, and achieve extraordinary results. With Rachel as your coach, you'll embark on a transformative journey of self-discovery, empowerment, and personal growth.",
 	},
-
 	{
 		id: 5,
 		name: 'Ryan Thompson',
-		img: 'images/pt2.jpg',
-		description: "Your journey to a healthier you begins here. Together, we'll overcome obstacles and reach new heights.",
-		modalities: 'Functional Training, Injury Rehabilitation',
+		img: '/images/pt7.jpg',
+		quote: "Your journey to a healthier you begins here. Together, we'll overcome obstacles and reach new heights.",
+		modalities: ['Functional Training', 'CrossFit'],
+		biography:
+			"Ryan Thompson is a dedicated personal trainer committed to helping his clients achieve optimal health and well-being through functional training and injury rehabilitation. With a background in kinesiology and over a decade of practical experience, Ryan brings a unique blend of expertise and empathy to his coaching practice. He specializes in functional training and injury rehabilitation, using a holistic approach to address each client's specific needs and goals. Ryan's compassionate and supportive coaching style empowers individuals to overcome physical limitations, build strength, and regain confidence in their bodies. Whether you're recovering from an injury or seeking to improve your overall fitness, Ryan is here to guide and support you every step of the way.",
 	},
 ];
 
@@ -215,17 +225,17 @@ export const partners = [
 		title: 'Nutrition',
 		brands: [
 			{
-				logo: 'images/prozis.png',
+				logo: '/images/prozis.png',
 				name: 'Prozis',
 				url: 'https://www.prozis.com',
 			},
 			{
-				logo: 'images/raw.png',
+				logo: '/images/raw.png',
 				name: 'Raw',
 				url: 'https://getrawnutrition.com',
 			},
 			{
-				logo: 'images/eu-nutrition.png',
+				logo: '/images/eu-nutrition.png',
 				name: 'EuNutrition',
 				url: 'https://eunutrition.com',
 			},
@@ -236,12 +246,12 @@ export const partners = [
 		title: 'Machines',
 		brands: [
 			{
-				logo: 'images/matrix.png',
+				logo: '/images/matrix.png',
 				name: 'Matrix',
 				url: 'https://www.matrixfitness.com/',
 			},
 			{
-				logo: 'images/hammer-strength.png',
+				logo: '/images/hammer-strength.png',
 				name: 'Hammer Strength',
 				url: 'https://www.lifefitness.com/en-eu/brands/hammer-strength',
 			},
@@ -252,7 +262,7 @@ export const partners = [
 		title: 'Wellness',
 		brands: [
 			{
-				logo: 'images/fisiogaspar.png',
+				logo: '/images/fisiogaspar.png',
 				name: 'Fisiogaspar',
 				url: 'https://www.fisiogaspar.pt',
 			},

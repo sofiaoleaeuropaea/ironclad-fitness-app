@@ -1,6 +1,6 @@
 @use '../utils/' as *;
 
-.trainer {
+.team {
 	padding: 10rem 0;
 	text-align: center;
 	border-bottom: $background-bd;
@@ -52,8 +52,8 @@
 			background-color: $primary-color;
 			visibility: hidden;
 			border-radius: 50%;
-			height: 6rem;
-			width: 6rem;
+			padding: 2.5rem 1.5rem;
+
 			z-index: 2;
 		}
 
