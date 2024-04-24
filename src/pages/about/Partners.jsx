@@ -15,7 +15,7 @@ const Partnership = () => {
 		setAccordionOpen((prevIndex) => (prevIndex === index ? null : index));
 	};
 
-	// const brandList = () => {
+	// const brandList = () => ()
 	// 	return 
 	// 		item.brands.map((brand, index) => (
 	// 			<li key={index}>

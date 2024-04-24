@@ -1,0 +1,72 @@
+@use '../utils/' as *;
+
+.trainer {
+	padding: 10rem 0;
+	text-align: center;
+	border-bottom: $background-bd;
+
+	h2 {
+		margin-bottom: 10rem;
+	}
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		flex-wrap: wrap;
+		gap: 4rem 2rem;
+	}
+
+	&__card {
+		max-width: 80%;
+		text-align: left;
+
+		@include md {
+			max-width: 45%;
+		}
+		@include xl {
+			max-width: 30%;
+		}
+		h3 {
+			font-size: 1.56rem;
+			padding-top: 1.25rem;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+	}
+	&__img {
+		position: relative;
+		border-radius: 10px;
+		border: 1px solid #727272;
+		overflow: hidden;
+
+		&.effect::after {
+			content: 'MEET';
+			text-align: center;
+			font-family: $headings-font;
+			color: $text-dark;
+			font-weight: 700;
+			position: absolute;
+			top: calc(50% - 3rem);
+			left: calc(50% - 3rem);
+			background-color: $primary-color;
+			visibility: hidden;
+			border-radius: 50%;
+			height: 6rem;
+			width: 6rem;
+			z-index: 2;
+		}
+
+		&.effect:hover::after {
+			visibility: visible;
+		}
+
+		&:hover img {
+			transform: scale(1.05);
+			overflow: hidden;
+		}
+		img {
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+}

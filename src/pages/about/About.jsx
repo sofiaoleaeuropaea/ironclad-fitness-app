@@ -1,6 +1,6 @@
 
 import Heading from '../../components/Heading';
-import Trainers from './Trainers';
+import Trainers from './Team';
 import Partnership from "./Partners"
 
 const About = () => {

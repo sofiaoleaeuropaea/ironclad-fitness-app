@@ -1,4 +1,4 @@
-import { useRef} from 'react';
+import { useRef } from 'react';
 const Accordion = ({ id, handleToggle, index, accordionOpen, title, content }) => {
 	const contentEl = useRef(null);
 
