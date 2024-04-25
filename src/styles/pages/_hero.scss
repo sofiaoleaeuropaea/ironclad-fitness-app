@@ -30,6 +30,17 @@
 	}
 
 	&__image {
+		#hero-img_desktop {
+		display: none;
+	}
+	@include md {
+		#hero-img_desktop {
+			display: block;
+		}
+		#hero-img_mobile {
+			display: none;
+		}
+	}
 		@include lg {
 			width: 35%;
 		}

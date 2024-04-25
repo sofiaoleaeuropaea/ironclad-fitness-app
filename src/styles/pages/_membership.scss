@@ -7,12 +7,12 @@
 	width: 100%;
 	border-bottom: $background-bd;
 
-
 	&__wrapper {
 		margin-top: 10rem;
-		display: grid;
-		
+
 		gap: 2rem;
+		display: grid;
+		justify-content: space-evenly;
 		grid-template-columns: minmax(270px, 300px);
 		grid-template-rows: auto;
 		grid-template-areas:
@@ -22,7 +22,9 @@
 			'family';
 
 		@include breakpointDesktop(650px) {
-			grid-template-columns: repeat(2, 1fr);
+	
+		
+			grid-template-columns: repeat(2, 270px);
 			grid-template-areas:
 				'basic premium'
 				'elite family';
@@ -34,33 +36,27 @@
 		}
 		#basic {
 			grid-area: basic;
-			
+
 		}
 		#premium {
 			grid-area: premium;
 				}
 		#elite {
 			grid-area: elite;
-			
+
 		}
 		#family {
 			grid-area: family;
-				
+
 		}
 	}
 	&__card {
 		@include card;
 
-		@include breakpointDesktop(800px) {
-			@include card($pdg: 3rem);
-		
-			max-width: 300px;
-		}
 		.card {
 			&__content {
-				
 				text-align: center;
-				p{
+				p {
 					font-weight: 600;
 					font-size: 1.3rem;
 					margin-top: 0.5rem;

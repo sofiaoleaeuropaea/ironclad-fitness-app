@@ -1,6 +1,7 @@
 import Buttons from '../../components/Buttons';
 
-import hero_image from '../../assets/hero_image.png';
+import hero_mobile from '../../assets/hero_mobile.png';
+import hero_desktop from '../../assets/hero_desktop.png';
 
 function Hero() {
 	return (
@@ -16,7 +17,8 @@ function Hero() {
 						<Buttons href="/signup">Start now</Buttons>
 					</div>
 					<div className="hero__image">
-						<img src={hero_image} className="img-fluid" alt="Strong men" loading="lazy" />
+						<img src={hero_mobile} className="img-fluid" id="hero-img_mobile" alt="Strong men" loading="lazy" />
+						<img src={hero_desktop} className="img-fluid" id="hero-img_desktop" alt="Strong men" loading="lazy" />
 					</div>
 				</div>
 			</div>

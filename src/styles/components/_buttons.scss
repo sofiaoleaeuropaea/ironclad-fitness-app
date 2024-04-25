@@ -52,4 +52,9 @@
 		margin: 0 2rem 0 auto;
 		display: flex;
 	}
+
+	&__mg-left {
+		@include breakpointMobile(493px){
+margin-left: -7rem;}
+	}
 }

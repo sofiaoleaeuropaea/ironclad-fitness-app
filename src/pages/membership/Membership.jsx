@@ -38,7 +38,7 @@ const Membership = () => {
 							<h3>Looking for a personal trainer?</h3>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste totam porro, neque vitae laudantium adipisci sapiente corrupti maxime.</p>
 						</div>
-						<Buttons href="/signup">Say hello</Buttons>
+						<Buttons href="/signup" className="btn__mg-left">Say hello</Buttons>
 						<img className="img-fluid pt__content__img" src="images/pesos.png" alt="" />
 					</div>
 				</div>
