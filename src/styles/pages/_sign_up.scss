@@ -15,19 +15,14 @@
 
 	&__form {
 		position: relative;
-        margin: 5rem 0;
+		margin: 7rem auto;
+		max-width: 280px;
 	}
 	#sign-up__title {
 		position: absolute;
 		left: -0.75rem;
 		top: -2.76rem;
 		color: $primary-color;
-	}
-
-	@include sm {
-		&__form {
-			margin: 5rem 3rem 5rem 3rem;
-		}
 	}
 
 	@include md {
@@ -44,7 +39,7 @@
 			background-size: cover;
 			background-position: center;
 		}
-		
+
 		#sign-title {
 			grid-column: 1 / 3;
 		}

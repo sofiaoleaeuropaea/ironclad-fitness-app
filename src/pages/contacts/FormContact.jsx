@@ -2,11 +2,13 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
+import { MdOutlineErrorOutline } from 'react-icons/md';
+
 import Buttons from '../../components/Buttons';
 import FormValidation from '../../components/FormValidation';
 
 const FormContact = () => {
-	const [formData, setFormData] = useState(null);
+	// const [formData, setFormData] = useState(null);
 
 	const {
 		register,
@@ -18,7 +20,8 @@ const FormContact = () => {
 	});
 
 	const submitForm = (data) => {
-		setFormData(data);
+		console.log(data);
+		// setFormData(data);
 		reset();
 	};
 	return (
@@ -26,13 +29,29 @@ const FormContact = () => {
 			<p className="form__description">Shot us a message if you have questions</p>
 			<form onSubmit={handleSubmit(submitForm)}>
 				<input className="form__information" type="text" name="fullName" placeholder="Full name" {...register('fullName')} />
-				<p> {errors && errors.fullName && errors.fullName.message} </p>
+				{errors && errors.fullName && (
+					<p className="form__error">
+						<MdOutlineErrorOutline /> {errors.fullName.message}
+					</p>
+				)}
 				<input className="form__information" type="email" name="email" placeholder="E-mail" {...register('email')} />
-				<p> {errors && errors.email && errors.email.message} </p>
+				{errors && errors.email && (
+					<p className="form__error">
+						<MdOutlineErrorOutline /> {errors.email.message}
+					</p>
+				)}
 				<input className="form__information" type="text" name="phone" placeholder="Phone number" {...register('phone')} />
-				<p> {errors && errors.phone && errors.phone.message} </p>
+				{errors && errors.phone && (
+					<p className="form__error">
+						<MdOutlineErrorOutline /> {errors.phone.message}
+					</p>
+				)}
 				<textarea className="form__information" name="message" placeholder="Message" {...register('message')}></textarea>
-				<p> {errors && errors.message && errors.message.message} </p>
+				{errors && errors.message && (
+					<p className="form__error">
+						<MdOutlineErrorOutline /> {errors.message.message}{' '}
+					</p>
+				)}
 
 				<Buttons value="Submit" className="btn__form" />
 			</form>
@@ -47,6 +66,6 @@ const FormContact = () => {
 		)} */}
 		</div>
 	);
-}
+};
 
 export default FormContact;

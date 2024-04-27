@@ -57,7 +57,7 @@ li {
 
 cite,
 textarea,
-input {
+input, .form__error {
 	font-size: 0.75rem;
 	font-family: $text-font;
 	color: $text-dark;

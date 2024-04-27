@@ -5,9 +5,8 @@
 	flex-direction: column;
 
 	background: rgba($terciary-color, 0.2);
-		border: 1px solid $terciary-color;
+	border: 1px solid $terciary-color;
 	padding: 2rem;
-	
 	border-radius: 10px;
 	margin: 0 auto;
 
@@ -36,7 +35,10 @@
 			margin-bottom: 2rem;
 		}
 	}
-
+&__error {
+color: $alert-color;
+margin: -1.25rem 0 1.5rem 0;
+}
 	textarea {
 		width: 100%;
 		padding: 1rem;
@@ -46,7 +48,7 @@
 		background: transparent;
 		border: 2px solid $text-dark;
 		border-radius: 8px;
-        @include md {
+		@include md {
 			margin-bottom: 2.5rem;
 		}
 	}

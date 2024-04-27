@@ -41,6 +41,10 @@
 
 	&__card {
 		@include card;
+		@include breakpointMobile(390px){
+			justify-content: flex-start;
+		}
+
 		// -webkit-backdrop-filter: blur(20px);
 		// backdrop-filter: blur(20px);
 		@include md {
@@ -58,10 +62,14 @@
 			}
 
 			&__img {
-				max-width: 270px;
+				max-width: 220px;
 				position: absolute;
 				bottom: 0px;
 				left: 0px;
+
+				@include md {
+					max-width: 270px;
+				}
 			}
 		}
 	}

@@ -44,8 +44,9 @@
 		}
 	}
 
-	&__card {
-		margin: 0 2rem 0 auto;
+	&__mg-right {
+		@include breakpointDesktop(390px){
+		margin: 0 2rem 0 auto;}
 	}
 
 	&__form {
