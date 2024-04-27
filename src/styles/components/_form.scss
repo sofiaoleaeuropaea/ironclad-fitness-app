@@ -3,12 +3,13 @@
 .form {
 	display: flex;
 	flex-direction: column;
-
+	max-width: 500px;
+	min-width: 300px;
 	background: rgba($terciary-color, 0.2);
 	border: 1px solid $terciary-color;
 	padding: 2rem;
 	border-radius: 10px;
-	margin: 0 auto;
+
 
 	@include md {
 		padding: 3rem;
@@ -35,10 +36,10 @@
 			margin-bottom: 2rem;
 		}
 	}
-&__error {
-color: $alert-color;
-margin: -1.25rem 0 1.5rem 0;
-}
+	&__error {
+		color: $alert-color;
+		margin: -1.25rem 0 1.5rem 0;
+	}
 	textarea {
 		width: 100%;
 		padding: 1rem;
