@@ -2,24 +2,34 @@
 
 .social-tracker {
 	width: 100%;
+	overflow: hidden;
 	padding: 1.5rem 0;
 	border-top: $background-bd;
 	border-bottom: $background-bd;
-
+	
+	&__slider {
+		display: flex;
+		animation: slide 18s linear infinite;
+	}
 
 	&__list {
-		width: 100%;
-		overflow-x: hidden;
 		display: flex;
-		align-items: center;
+		flex-shrink: 0;
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+	
+		p {
+			font-family: $headings-font;
+			font-size: 1.3rem;
+			margin-right: 3rem;
+font-weight: 500;
 
-		justify-content: space-between;
-		animation: slide 15s linear infinite;
-		li {
-			font-size: 1.56rem;
 			span {
-				font-size: 1.56rem;
-				font-weight: 700;
+				font-family: $headings-font;
+				font-size: 1.3rem;
+				font-weight: 500;
 			}
 		}
 	}
