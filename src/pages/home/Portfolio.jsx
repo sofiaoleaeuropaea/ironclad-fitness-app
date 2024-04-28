@@ -27,14 +27,14 @@ function Portfolio() {
 
 			<div className="container ">
 				<div className="portfolio__wrapper">
-					{portfolio.map((item) => (
-						<div key={item.id} className="portfolio__card" id={`${item.className}`}>
+					{portfolio.map((item, index) => (
+						<div key={index} className="portfolio__card" id={`${item.className}`}>
 							<div className="card__content">
 								<h3>{item.title}</h3>
 								<p className="card__description">{item.description}</p>
 							</div>
-							<Buttons href="/signup" className="btn__mg-right">
-								Start now
+							<Buttons href={item.url} className="btn__mg-right">
+								Know more
 							</Buttons>
 							{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} loading="lazy" />}
 						</div>
