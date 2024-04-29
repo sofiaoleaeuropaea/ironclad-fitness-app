@@ -3,20 +3,21 @@
 .testimonials {
 	margin: 20rem 0 10rem 0;
 	&__wrapper {
-		display: flex;
-		gap: 2rem;
-		overflow-x: hide;
+		overflow-x: hidden;
+	}
+
+	.splide__pagination__page.is-visible.is-active.costum__color {
+		background: $primary-color;
 	}
 
 	&__card {
+		margin: 0 1px;
+		height: 100%;
 		@include cardTransparent($pdg: 3rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-	
-		max-width: 400px;
-		min-width: 300px;
 		blockquote p {
 			margin-bottom: 1rem;
 		}

@@ -79,12 +79,13 @@ export const portfolio = [
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
 		img: '/images/menSquat.png',
 		className: 'membership',
+		id: 'membership__img',
 		url: '/membership',
 	},
 	{
 		id: 1,
 		title: 'Fit Evaluation',
-		description: 'With the help of our experts get your own pre-evaluation on-line.',
+		description: 'With the help of our experts get your own evaluation online.',
 		className: 'evaluation',
 		url: '/fitnessevaluation',
 	},
@@ -101,6 +102,7 @@ export const portfolio = [
 		description: 'Meet your next',
 		img: '/images/pt1.png',
 		className: 'pt',
+		id: 'pt__img',
 		url: '/about',
 	},
 ];

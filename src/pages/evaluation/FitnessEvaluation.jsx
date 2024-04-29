@@ -26,7 +26,7 @@ const FitnessEvaluation = () => {
 			<>
 				<section id="evaluation" className="evaluation">
 					<div className="container">
-						<div className="form form__bg-color">
+						<div className="form form__bg-transparent">
 							<form onSubmit={handleSubmit(submitForm)}>
 								<input className="form__information" type="text" name="age" placeholder="Age" {...register('age')} />
 								{errors && errors.age && (

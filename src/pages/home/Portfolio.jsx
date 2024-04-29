@@ -36,7 +36,7 @@ function Portfolio() {
 							<Buttons href={item.url} className="btn__mg-right">
 								Know more
 							</Buttons>
-							{item.img && <img src={item.img} className="img-fluid card__img" alt={item.title} loading="lazy" />}
+							{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} loading="lazy" />}
 						</div>
 					))}
 				</div>
