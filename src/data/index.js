@@ -275,3 +275,70 @@ export const partners = [
 		],
 	},
 ];
+
+export const bmiDescription = [
+	{
+		scale: 'Underweight',
+		description:
+			'Being underweight may indicate insufficient body fat and muscle mass relative to height, potentially leading to health risks such as weakened immune function, nutrient deficiencies, and osteoporosis.',
+	},
+	{
+		scale: 'Normal weight',
+		description:
+			'Falling within the normal weight category generally suggests a balanced body composition relative to height, which is associated with reduced risk of chronic diseases and overall good health.',
+	},
+	{
+		scale: 'Overweight',
+		description:
+			'Obesity is characterized by excess body fat accumulation, which can lead to various health problems including heart disease, type 2 diabetes, stroke, and certain cancers. It is often associated with lifestyle factors such as poor diet and lack of physical activity.',
+	},
+	{
+		scale: 'Obese',
+		description:
+			'Being overweight indicates a higher-than-ideal amount of body fat relative to height, which can increase the risk of developing health issues such as hypertension, high cholesterol, and joint problems. However, it may not carry the same health risks as obesity and can often be managed through lifestyle changes like diet and exercise.',
+	},
+];
+
+export const trainingPlans = {
+	underweight: {
+		title: 'Underweight Training Plan',
+		description: 'This training plan is designed to help underweight individuals build muscle mass and improve overall strength and fitness levels.',
+		exercises: [
+			{ name: 'Barbell Bench Press', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Dumbbell Lunges', repetitions: '3 sets of 10-12 reps per leg' },
+			{ name: 'Lat Pulldowns', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Leg Press', repetitions: '3 sets of 10-12 reps' },
+		],
+	},
+	normalWeight: {
+		title: 'Normal Weight Training Plan',
+		description: 'This training plan is suitable for individuals with a normal body mass index (BMI) who want to maintain their current weight and improve overall fitness.',
+		exercises: [
+			{ name: 'Barbell Squats', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Deadlifts', repetitions: '3 sets of 8-10 reps' },
+			{ name: 'Military Press', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Seated Cable Rows', repetitions: '3 sets of 8-12 reps' },
+		],
+	},
+	obese: {
+		title: 'Obese Training Plan',
+		description: 'This training plan is tailored for individuals with obesity to promote weight loss, improve cardiovascular health, and increase physical activity levels.',
+		exercises: [
+			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
+			{ name: 'Leg Extension Machine', repetitions: '3 sets of 10-12 reps' },
+			{ name: 'Chest Press Machine', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Hamstring Curls', repetitions: '3 sets of 10-12 reps' },
+		],
+	},
+	overweight: {
+		title: 'Overweight Training Plan',
+		description: 'This training plan is aimed at overweight individuals looking to shed excess body fat, increase muscle tone, and improve overall health and fitness.',
+		exercises: [
+			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Leg Press Machine', repetitions: '3 sets of 10-12 reps' },
+			{ name: 'Plank', repetitions: '3 sets, hold for 30-60 seconds each' },
+		],
+	},
+};
+

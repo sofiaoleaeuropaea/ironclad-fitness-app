@@ -6,10 +6,11 @@ import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Buttons from '../../components/Buttons';
 import FormValidation from '../../components/FormValidation';
+import { bmiDescription } from '../../data';
 
 const FitnessEvaluation = () => {
-	const [heightValue, setHeightValue] = useState("");
-	const [weightValue, setWeightValue] = useState("");
+	const [heightValue, setHeightValue] = useState('');
+	const [weightValue, setWeightValue] = useState('');
 	const [bmiValue, setBmiValue] = useState('');
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 
@@ -28,21 +29,44 @@ const FitnessEvaluation = () => {
 		reset();
 	};
 
+	// const bmiDescription = [
+	// 	{
+	// 		scale: 'Underweight',
+	// 		description:
+	// 			'Being underweight may indicate insufficient body fat and muscle mass relative to height, potentially leading to health risks such as weakened immune function, nutrient deficiencies, and osteoporosis.',
+	// 	},
+	// 	{
+	// 		scale: 'Normal weight',
+	// 		description:
+	// 			'Falling within the normal weight category generally suggests a balanced body composition relative to height, which is associated with reduced risk of chronic diseases and overall good health.',
+	// 	},
+	// 	{
+	// 		scale: 'Overweight',
+	// 		description:
+	// 			'Obesity is characterized by excess body fat accumulation, which can lead to various health problems including heart disease, type 2 diabetes, stroke, and certain cancers. It is often associated with lifestyle factors such as poor diet and lack of physical activity.',
+	// 	},
+	// 	{
+	// 		scale: 'Obese',
+	// 		description:
+	// 			'Being overweight indicates a higher-than-ideal amount of body fat relative to height, which can increase the risk of developing health issues such as hypertension, high cholesterol, and joint problems. However, it may not carry the same health risks as obesity and can often be managed through lifestyle changes like diet and exercise.',
+	// 	},
+	// ];
+
 	const calculateBmi = () => {
 		const heightInMeters = heightValue / 100;
 		const bmi = (weightValue / (heightInMeters * heightInMeters)).toFixed(2);
 		setBmiValue(bmi);
 
-		let bmiInterpretation = '';
+		let bmiInterpretation = {};
 
 		if (bmi < 18.5) {
-			bmiInterpretation = 'Underweight';
+			bmiInterpretation = bmiDescription[0];
 		} else if (bmi >= 18.5 && bmi < 25) {
-			bmiInterpretation = 'Normal weight';
+			bmiInterpretation = bmiDescription[1];
 		} else if (bmi >= 25 && bmi < 30) {
-			bmiInterpretation = 'Overweight';
+			bmiInterpretation = bmiDescription[2];
 		} else {
-			bmiInterpretation = 'Obese';
+			bmiInterpretation = bmiDescription[3];
 		}
 		setBmiInterpretation(bmiInterpretation);
 	};
@@ -112,16 +136,15 @@ const FitnessEvaluation = () => {
 							<Buttons value="Submit" className="btn__form" />
 						</form>
 					</div>
-					{bmiValue && bmiInterpretation && (
-						<div className="result">
-							<p>
-								Your BMI: <span className="bmi-value">{bmiValue}</span>
-							</p>
-							<p>
-								Result: <span className="bmi-message">{bmiInterpretation}</span>
-							</p>
-						</div>
-					)}
+
+					<div className="bmi__wrapper">
+						<h2>Your BMI result</h2>
+						<p>{bmiValue}</p>
+						<p>
+							Result: <span className="bmi__message">{bmiInterpretation.scale}</span>
+						</p>
+						<p>{bmiInterpretation.description}</p>
+					</div>
 				</div>
 			</section>
 		</>

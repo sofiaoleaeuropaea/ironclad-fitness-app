@@ -3,5 +3,7 @@
 .evaluation {
     margin: 10rem 0;
 
-   
+   .bmi__wrapper {
+    @include cardTransparent
+   }
 }
