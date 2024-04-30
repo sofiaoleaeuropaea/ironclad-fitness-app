@@ -10,7 +10,7 @@ function Faqs() {
 						Get in touch
 					</Buttons>
 
-					<img className="img-fluid faqs__wrapper__img" src="images/membership.png" alt="" />
+					<img className="img-fluid faqs__wrapper__img" src="images/membership.png" alt="Woman lifting" />
 				</div>
 			</div>
 		</section>

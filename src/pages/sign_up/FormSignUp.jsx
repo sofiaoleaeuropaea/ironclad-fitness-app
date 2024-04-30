@@ -42,15 +42,14 @@ function FormSignUp() {
 				<input className="form__information" type="email" name="email" placeholder="E-mail" {...register('email')} />
 				{errors && errors.email && (
 					<p className="form__error">
-				
 						<MdOutlineErrorOutline /> {errors.email.message}
 					</p>
 				)}{' '}
 				<input className="form__information" type="tel" name="phone" placeholder="Phone number" {...register('phone')} />
-				{errors && errors.message && (
+				{errors && errors.phone && (
 					<p className="form__error">
 						{' '}
-						<MdOutlineErrorOutline /> {errors.message.message}{' '}
+						<MdOutlineErrorOutline /> {errors.phone.message}{' '}
 					</p>
 				)}{' '}
 				<Buttons value="Submit" className="btn__form" />
