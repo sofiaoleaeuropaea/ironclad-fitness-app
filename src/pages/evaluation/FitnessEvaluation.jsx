@@ -6,13 +6,14 @@ import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Buttons from '../../components/Buttons';
 import FormValidation from '../../components/FormValidation';
-import { bmiDescription } from '../../data';
+import { bmiDescription, trainingPlans } from '../../data';
 
 const FitnessEvaluation = () => {
 	const [heightValue, setHeightValue] = useState('');
 	const [weightValue, setWeightValue] = useState('');
 	const [bmiValue, setBmiValue] = useState('');
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
+	const [fitnessPlan, setFitnessPlan] = useState('');
 
 	const {
 		register,
@@ -29,47 +30,31 @@ const FitnessEvaluation = () => {
 		reset();
 	};
 
-	// const bmiDescription = [
-	// 	{
-	// 		scale: 'Underweight',
-	// 		description:
-	// 			'Being underweight may indicate insufficient body fat and muscle mass relative to height, potentially leading to health risks such as weakened immune function, nutrient deficiencies, and osteoporosis.',
-	// 	},
-	// 	{
-	// 		scale: 'Normal weight',
-	// 		description:
-	// 			'Falling within the normal weight category generally suggests a balanced body composition relative to height, which is associated with reduced risk of chronic diseases and overall good health.',
-	// 	},
-	// 	{
-	// 		scale: 'Overweight',
-	// 		description:
-	// 			'Obesity is characterized by excess body fat accumulation, which can lead to various health problems including heart disease, type 2 diabetes, stroke, and certain cancers. It is often associated with lifestyle factors such as poor diet and lack of physical activity.',
-	// 	},
-	// 	{
-	// 		scale: 'Obese',
-	// 		description:
-	// 			'Being overweight indicates a higher-than-ideal amount of body fat relative to height, which can increase the risk of developing health issues such as hypertension, high cholesterol, and joint problems. However, it may not carry the same health risks as obesity and can often be managed through lifestyle changes like diet and exercise.',
-	// 	},
-	// ];
-
 	const calculateBmi = () => {
 		const heightInMeters = heightValue / 100;
 		const bmi = (weightValue / (heightInMeters * heightInMeters)).toFixed(2);
 		setBmiValue(bmi);
 
 		let bmiInterpretation = {};
-
+		let fitnessPlan = {};
 		if (bmi < 18.5) {
 			bmiInterpretation = bmiDescription[0];
+			fitnessPlan = trainingPlans[0];
 		} else if (bmi >= 18.5 && bmi < 25) {
 			bmiInterpretation = bmiDescription[1];
+			fitnessPlan = trainingPlans[1];
 		} else if (bmi >= 25 && bmi < 30) {
 			bmiInterpretation = bmiDescription[2];
+			fitnessPlan = trainingPlans[2];
 		} else {
 			bmiInterpretation = bmiDescription[3];
+			fitnessPlan = trainingPlans[3];
 		}
 		setBmiInterpretation(bmiInterpretation);
+		setFitnessPlan(fitnessPlan);
 	};
+
+	console.log(bmiInterpretation);
 
 	return (
 		<>
@@ -113,21 +98,21 @@ const FitnessEvaluation = () => {
 
 								<div>
 									<label>
-										<input type="radio" id="weight_reduction" name="fitness_goal" value="Weight reduction" defaultChecked />
+										<input type="radio" id="weight_reduction" name="weight_reduction" value="Weight reduction" defaultChecked />
 										Weight reduction
 									</label>
 								</div>
 
 								<div>
 									<label>
-										<input type="radio" id="muscle_gain" name="fitness_goal" value="Muscle gain" />
+										<input type="radio" id="muscle_gain" name="muscle_gain" value="Muscle gain" />
 										Increase strength
 									</label>
 								</div>
 
 								<div>
 									<label>
-										<input type="radio" id="hipertrophy" name="fitness_goal" value="Hipertrophy" />
+										<input type="radio" id="hipertrophy" name="hipertrophy" value="Hipertrophy" />
 										Hipertrophy
 									</label>
 								</div>
@@ -144,6 +129,10 @@ const FitnessEvaluation = () => {
 							Result: <span className="bmi__message">{bmiInterpretation.scale}</span>
 						</p>
 						<p>{bmiInterpretation.description}</p>
+					</div>
+					<div>
+						<h3>Training Plan</h3>
+						<p>{fitnessPlan.description}</p>
 					</div>
 				</div>
 			</section>

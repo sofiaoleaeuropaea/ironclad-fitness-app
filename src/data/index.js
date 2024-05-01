@@ -299,8 +299,8 @@ export const bmiDescription = [
 	},
 ];
 
-export const trainingPlans = {
-	underweight: {
+export const trainingPlans = [
+	{
 		title: 'Underweight Training Plan',
 		description: 'This training plan is designed to help underweight individuals build muscle mass and improve overall strength and fitness levels.',
 		exercises: [
@@ -310,7 +310,7 @@ export const trainingPlans = {
 			{ name: 'Leg Press', repetitions: '3 sets of 10-12 reps' },
 		],
 	},
-	normalWeight: {
+	{
 		title: 'Normal Weight Training Plan',
 		description: 'This training plan is suitable for individuals with a normal body mass index (BMI) who want to maintain their current weight and improve overall fitness.',
 		exercises: [
@@ -320,7 +320,7 @@ export const trainingPlans = {
 			{ name: 'Seated Cable Rows', repetitions: '3 sets of 8-12 reps' },
 		],
 	},
-	obese: {
+	{
 		title: 'Obese Training Plan',
 		description: 'This training plan is tailored for individuals with obesity to promote weight loss, improve cardiovascular health, and increase physical activity levels.',
 		exercises: [
@@ -330,7 +330,7 @@ export const trainingPlans = {
 			{ name: 'Hamstring Curls', repetitions: '3 sets of 10-12 reps' },
 		],
 	},
-	overweight: {
+	{
 		title: 'Overweight Training Plan',
 		description: 'This training plan is aimed at overweight individuals looking to shed excess body fat, increase muscle tone, and improve overall health and fitness.',
 		exercises: [
@@ -339,6 +339,6 @@ export const trainingPlans = {
 			{ name: 'Leg Press Machine', repetitions: '3 sets of 10-12 reps' },
 			{ name: 'Plank', repetitions: '3 sets, hold for 30-60 seconds each' },
 		],
-	},
-};
+	}
+]
 
