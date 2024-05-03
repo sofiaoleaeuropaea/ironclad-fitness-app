@@ -301,8 +301,16 @@ export const bmiDescription = [
 
 export const trainingPlans = [
 	{
-		
-		description: 'This training plan is designed to help underweight individuals build muscle mass and improve overall strength and fitness levels.',
+		description: 'This training plan is designed for underweight individuals aiming to reduce body fat while maintaining muscle mass and improving overall health.',
+		exercises: [
+			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
+			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
+			{ name: 'Plank', repetitions: '3 x 30-60 seconds' },
+			{ name: 'Chest Press Machine', repetitions: '3 x 8-12 reps' },
+		],
+	},
+	{
+		description: 'This training plan is tailored for underweight individuals aiming to build muscle mass and increase strength while maintaining overall health.',
 		exercises: [
 			{ name: 'Barbell Bench Press', repetitions: '3 x 8-12 reps' },
 			{ name: 'Dumbbell Lunges', repetitions: '3 x 10-12 reps per leg' },
@@ -311,8 +319,62 @@ export const trainingPlans = [
 		],
 	},
 	{
-		
-		description: 'This training plan is suitable for individuals with a normal body mass index (BMI) who want to maintain their current weight and improve overall fitness.',
+		description: 'This training plan is aimed at underweight individuals looking to maximize muscle hypertrophy and increase muscle size and definition.',
+		exercises: [
+			{ name: 'Barbell Squats', repetitions: '3 x 8-12 reps' },
+			{ name: 'Deadlifts', repetitions: '3 x 8-10 reps' },
+			{ name: 'Military Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 x 8-12 reps' },
+		],
+	},
+	{
+		description: 'This training plan is suitable for individuals with a normal BMI aiming to reduce body fat and improve overall fitness levels.',
+		exercises: [
+			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
+			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
+			{ name: 'Plank', repetitions: '3 x 30-60 seconds' },
+			{ name: 'Leg Extension Machine', repetitions: '3 x 10-12 reps' },
+		],
+	},
+	{
+		description: 'This training plan is designed for individuals with a normal BMI aiming to build muscle mass and increase strength.',
+		exercises: [
+			{ name: 'Barbell Bench Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Deadlifts', repetitions: '3 x 8-10 reps' },
+			{ name: 'Military Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Seated Cable Rows', repetitions: '3 x 8-12 reps' },
+		],
+	},
+	{
+		description: 'This training plan is tailored for individuals with a normal BMI aiming to maximize muscle hypertrophy and increase muscle size and definition.',
+		exercises: [
+			{ name: 'Barbell Squats', repetitions: '3 x 8-12 reps' },
+			{ name: 'Leg Press Machine', repetitions: '3 x 10-12 reps' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 x 8-12 reps' },
+			{ name: 'Hamstring Curls', repetitions: '3 x 10-12 reps' },
+		],
+	},
+	{
+		description:
+			'This training plan is designed for overweight individuals aiming to reduce body fat and improve cardiovascular health while increasing physical activity levels.',
+		exercises: [
+			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
+			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
+			{ name: 'Plank', repetitions: '3 x 30-60 seconds' },
+			{ name: 'Chest Press Machine', repetitions: '3 x 8-12 reps' },
+		],
+	},
+	{
+		description: 'This training plan is tailored for overweight individuals aiming to build muscle mass and increase strength while promoting overall health.',
+		exercises: [
+			{ name: 'Barbell Bench Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Lat Pulldowns', repetitions: '3 x 8-12 reps' },
+			{ name: 'Leg Press Machine', repetitions: '3 x 10-12 reps' },
+			{ name: 'Plank', repetitions: '3 x 30-60 seconds' },
+		],
+	},
+	{
+		description: 'This training plan is aimed at overweight individuals looking to maximize muscle hypertrophy and increase muscle size and definition.',
 		exercises: [
 			{ name: 'Barbell Squats', repetitions: '3 x 8-12 reps' },
 			{ name: 'Deadlifts', repetitions: '3 x 8-10 reps' },
@@ -321,24 +383,29 @@ export const trainingPlans = [
 		],
 	},
 	{
-		
-		description: 'This training plan is tailored for individuals with obesity to promote weight loss, improve cardiovascular health, and increase physical activity levels.',
+		description: 'This training plan is designed for obese individuals aiming to reduce body weight, improve cardiovascular health, and increase physical activity levels.',
 		exercises: [
 			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
+			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
 			{ name: 'Leg Extension Machine', repetitions: '3 x 10-12 reps' },
-			{ name: 'Chest Press Machine', repetitions: '3 x 8-12 reps' },
 			{ name: 'Hamstring Curls', repetitions: '3 x 10-12 reps' },
 		],
 	},
 	{
-		
-		description: 'This training plan is aimed at overweight individuals looking to shed excess body fat, increase muscle tone, and improve overall health and fitness.',
+		description: 'This training plan is tailored for obese individuals aiming to build muscle mass, increase strength, and promote overall health.',
 		exercises: [
-			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
+			{ name: 'Barbell Bench Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Dumbbell Lunges', repetitions: '3 x 10-12 reps per leg' },
+			{ name: 'Lat Pulldowns', repetitions: '3 x 8-12 reps' },
 			{ name: 'Assisted Pull-ups', repetitions: '3 x 8-12 reps' },
-			{ name: 'Leg Press Machine', repetitions: '3 x 10-12 reps' },
-			{ name: 'Plank', repetitions: '3 x 30-60 seconds' },
 		],
-	}
-]
-
+	},
+	{
+		description: 'This training plan is aimed at obese individuals looking to maximize muscle hypertrophy and increase muscle size and definition.',
+		exercises: [
+			{ name: 'Barbell Squats', repetitions: '3 x 8-12 reps' },
+			{ name: 'Deadlifts', repetitions: '3 x 8-10 reps' },
+			{ name: 'Military Press', repetitions: '3 x 8-12 reps' },
+		],
+	},
+];

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
@@ -9,12 +11,17 @@ import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 
 const FitnessEvaluation = () => {
+	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState("weight_reduction")
 	const [heightValue, setHeightValue] = useState('');
 	const [weightValue, setWeightValue] = useState('');
 	const [bmiValue, setBmiValue] = useState(0);
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 	const [fitnessPlan, setFitnessPlan] = useState('');
 
+    const handleRadioChange = (value) => {
+			setSelectedFitnessGoal(value);
+	};
+	
 	const {
 		register,
 		handleSubmit,
@@ -37,24 +44,58 @@ const FitnessEvaluation = () => {
 
 		let bmiInterpretation = {};
 		let fitnessPlan = {};
-		if (bmi < 18.5) {
+		if (bmi < 18.5 && selectedFitnessGoal === 'weight_reduction') {
 			bmiInterpretation = bmiDescription[0];
 			fitnessPlan = trainingPlans[0];
-		} else if (bmi >= 18.5 && bmi < 25) {
-			bmiInterpretation = bmiDescription[1];
+		} else if (bmi < 18.5 && selectedFitnessGoal === 'muscle_gain') {
+			bmiInterpretation = bmiDescription[0];
 			fitnessPlan = trainingPlans[1];
-		} else if (bmi >= 25 && bmi < 30) {
-			bmiInterpretation = bmiDescription[2];
+		} else if (bmi < 18.5 && selectedFitnessGoal === 'hipertrophy') {
+			bmiInterpretation = bmiDescription[0];
 			fitnessPlan = trainingPlans[2];
-		} else {
-			bmiInterpretation = bmiDescription[3];
+		} else if (bmi >= 18.5 && bmi < 25 && selectedFitnessGoal === 'weight_reduction') {
+			bmiInterpretation = bmiDescription[1];
 			fitnessPlan = trainingPlans[3];
+		} else if (bmi >= 18.5 && bmi < 25 && selectedFitnessGoal === 'muscle_gain') {
+			bmiInterpretation = bmiDescription[1];
+			fitnessPlan = trainingPlans[4];
+		} else if (bmi >= 18.5 && bmi < 25 && selectedFitnessGoal === 'hipertrophy') {
+			bmiInterpretation = bmiDescription[1];
+			fitnessPlan = trainingPlans[5];
+		} else if (bmi >= 25 && bmi < 30 && selectedFitnessGoal === 'weight_reduction') {
+			bmiInterpretation = bmiDescription[2];
+			fitnessPlan = trainingPlans[6];
+		} else if (bmi >= 25 && bmi < 30 && selectedFitnessGoal === 'muscle_gain') {
+			bmiInterpretation = bmiDescription[2];
+			fitnessPlan = trainingPlans[7];
+		} else if (bmi >= 25 && bmi < 30 && selectedFitnessGoal === 'hipertrophy') {
+			bmiInterpretation = bmiDescription[2];
+			fitnessPlan = trainingPlans[8];
+		} else if (bmi >= 30 && selectedFitnessGoal === 'weight_reduction') {
+			bmiInterpretation = bmiDescription[2];
+			fitnessPlan = trainingPlans[9];
+		} else if (bmi >= 30 && selectedFitnessGoal === 'muscle_gain') {
+			bmiInterpretation = bmiDescription[2];
+			fitnessPlan = trainingPlans[10];
+		} else if (bmi >= 30 && selectedFitnessGoal === 'hipertrophy') {
+			bmiInterpretation = bmiDescription[3];
+			fitnessPlan = trainingPlans[11];
 		}
 		setBmiInterpretation(bmiInterpretation);
 		setFitnessPlan(fitnessPlan);
 	};
 
-	console.log(fitnessPlan.exercises);
+	  const handleDownloadPDF = () => {
+			const FitnessPlanPDF = document.getElementById('fitness_plan_exercises');
+			
+			html2canvas(FitnessPlanPDF).then((canvas) => {
+				const imgData = canvas.toDataURL('image/png');
+				const pdf = new jsPDF();
+				pdf.addImage(imgData, 'PNG', 0, 0);
+				pdf.save('ironclad-fitness-plan.pdf');
+				
+			});
+		};
 
 	return (
 		<>
@@ -98,24 +139,25 @@ const FitnessEvaluation = () => {
 									<legend>Select your fitness goal:</legend>
 
 									<div>
-										<label>
-											<input type="radio" id="weight_reduction" name="weight_reduction" value="Weight reduction" defaultChecked />
-											Weight reduction
-										</label>
+										<input
+											type="radio"
+											id="weight_reduction"
+											name="fitness_goal"
+											value="weight_reduction"
+											checked={selectedFitnessGoal === 'weight_reduction'}
+											onChange={() => handleRadioChange('weight_reduction')}
+										/>
+										<label htmlFor="weight_reduction"> Weight reduction</label>
 									</div>
 
 									<div>
-										<label>
-											<input type="radio" id="muscle_gain" name="muscle_gain" value="Muscle gain" />
-											Increase strength
-										</label>
+										<input type="radio" id="muscle_gain" name="fitness_goal" value="muscle_gain" checked={selectedFitnessGoal === 'muscle_gain'} onChange={() => handleRadioChange('muscle_gain')} />
+										<label htmlFor="muscle_gain"> Muscle gain</label>
 									</div>
 
 									<div>
-										<label>
-											<input type="radio" id="hipertrophy" name="hipertrophy" value="Hipertrophy" />
-											Hipertrophy
-										</label>
+										<input type="radio" id="hipertrophy" name="fitness_goal" value="hipertrophy" checked={selectedFitnessGoal === 'hipertrophy'} onChange={() => handleRadioChange('hipertrophy')} />
+										<label htmlFor="hipertrophy"> Hipertrophy</label>
 									</div>
 								</div>
 
@@ -125,10 +167,12 @@ const FitnessEvaluation = () => {
 
 						<div className="bmi__wrapper" id="bmi_info">
 							<h2>Your BMI result</h2>
-							<p>{bmiValue}</p>
-							<p>
-								You are <span className="bmi__message">{bmiInterpretation.scale}</span>.
-							</p>
+							<div>
+								<p id="bmi__value">{bmiValue}</p>
+								<p id="bmi__message">
+									You are <span>{bmiInterpretation.scale}</span>.
+								</p>
+							</div>
 							<p>{bmiInterpretation.description}</p>
 						</div>
 						{fitnessPlan && (
@@ -143,6 +187,7 @@ const FitnessEvaluation = () => {
 										</li>
 									))}
 								</ul>
+								<Buttons onClick={handleDownloadPDF}>Save it for later</Buttons>
 							</div>
 						)}
 					</div>
