@@ -1,9 +1,38 @@
 @use '../utils/' as *;
 
 .evaluation {
-    margin: 10rem 0;
+	margin: 10rem 0;
+	&__wrapper {
+		display: grid;
+		justify-content: center;
 
-   .bmi__wrapper {
-    @include cardTransparent
-   }
+		gap: 2rem;
+		grid-template-columns: minmax(300px, 600px);
+		grid-template-rows: auto;
+		grid-template-areas:
+			'form'
+			'bmi'
+			'exercises';
+
+		@include breakpointDesktop(1000px) {
+			grid-template-columns: repeat(3, 1fr);
+		
+			grid-template-areas:
+				'form bmi bmi '
+				'exercises exercises exercises';
+		}
+		.bmi__wrapper,
+		.fitness-plan__wrapper {
+			@include cardTransparent;
+		}
+		#fitness_evaluation_form {
+			grid-area: form;
+		}
+		#bmi_info {
+			grid-area: bmi;
+		}
+		#fitness_plan_exercises {
+			grid-area: exercises;
+		}
+	}
 }

@@ -301,43 +301,43 @@ export const bmiDescription = [
 
 export const trainingPlans = [
 	{
-		title: 'Underweight Training Plan',
+		
 		description: 'This training plan is designed to help underweight individuals build muscle mass and improve overall strength and fitness levels.',
 		exercises: [
-			{ name: 'Barbell Bench Press', repetitions: '3 sets of 8-12 reps' },
-			{ name: 'Dumbbell Lunges', repetitions: '3 sets of 10-12 reps per leg' },
-			{ name: 'Lat Pulldowns', repetitions: '3 sets of 8-12 reps' },
-			{ name: 'Leg Press', repetitions: '3 sets of 10-12 reps' },
+			{ name: 'Barbell Bench Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Dumbbell Lunges', repetitions: '3 x 10-12 reps per leg' },
+			{ name: 'Lat Pulldowns', repetitions: '3 x 8-12 reps' },
+			{ name: 'Leg Press', repetitions: '3 x 10-12 reps' },
 		],
 	},
 	{
-		title: 'Normal Weight Training Plan',
+		
 		description: 'This training plan is suitable for individuals with a normal body mass index (BMI) who want to maintain their current weight and improve overall fitness.',
 		exercises: [
-			{ name: 'Barbell Squats', repetitions: '3 sets of 8-12 reps' },
-			{ name: 'Deadlifts', repetitions: '3 sets of 8-10 reps' },
-			{ name: 'Military Press', repetitions: '3 sets of 8-12 reps' },
-			{ name: 'Seated Cable Rows', repetitions: '3 sets of 8-12 reps' },
+			{ name: 'Barbell Squats', repetitions: '3 x 8-12 reps' },
+			{ name: 'Deadlifts', repetitions: '3 x 8-10 reps' },
+			{ name: 'Military Press', repetitions: '3 x 8-12 reps' },
+			{ name: 'Seated Cable Rows', repetitions: '3 x 8-12 reps' },
 		],
 	},
 	{
-		title: 'Obese Training Plan',
+		
 		description: 'This training plan is tailored for individuals with obesity to promote weight loss, improve cardiovascular health, and increase physical activity levels.',
 		exercises: [
 			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
-			{ name: 'Leg Extension Machine', repetitions: '3 sets of 10-12 reps' },
-			{ name: 'Chest Press Machine', repetitions: '3 sets of 8-12 reps' },
-			{ name: 'Hamstring Curls', repetitions: '3 sets of 10-12 reps' },
+			{ name: 'Leg Extension Machine', repetitions: '3 x 10-12 reps' },
+			{ name: 'Chest Press Machine', repetitions: '3 x 8-12 reps' },
+			{ name: 'Hamstring Curls', repetitions: '3 x 10-12 reps' },
 		],
 	},
 	{
-		title: 'Overweight Training Plan',
+		
 		description: 'This training plan is aimed at overweight individuals looking to shed excess body fat, increase muscle tone, and improve overall health and fitness.',
 		exercises: [
 			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },
-			{ name: 'Assisted Pull-ups', repetitions: '3 sets of 8-12 reps' },
-			{ name: 'Leg Press Machine', repetitions: '3 sets of 10-12 reps' },
-			{ name: 'Plank', repetitions: '3 sets, hold for 30-60 seconds each' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 x 8-12 reps' },
+			{ name: 'Leg Press Machine', repetitions: '3 x 10-12 reps' },
+			{ name: 'Plank', repetitions: '3 x 30-60 seconds' },
 		],
 	}
 ]
