@@ -9,7 +9,7 @@
 
 	&__slider {
 		display: flex;
-		animation: slide 18s linear infinite;
+		animation: slide 20s linear infinite;
 	}
 
 	&__list {
@@ -37,10 +37,7 @@
 }
 
 @keyframes slide {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-100%);
+	to {
+		translate: calc(-6 * 200px);
 	}
 }

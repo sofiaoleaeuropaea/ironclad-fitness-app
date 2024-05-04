@@ -17,8 +17,6 @@
 		height: 100%;
 	}
 
-	
-
 	.glitch {
 		position: relative;
 		font-size: 5em;
@@ -47,7 +45,7 @@
 
 	.glitch:after {
 		animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
-		color: #04a463;
+		color: $tertiary-color;
 		z-index: -2;
 	}
 
@@ -134,5 +132,9 @@
 	.logo {
 		width: 230px;
 		max-width: 100%;
+	}
+
+	@include breakpointMobile(504px) {
+text-align: center;
 	}
 }

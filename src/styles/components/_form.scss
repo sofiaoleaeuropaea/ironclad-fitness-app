@@ -5,21 +5,20 @@
 	flex-direction: column;
 	max-width: 500px;
 	min-width: 300px;
-	background: rgba($terciary-color, 0.2);
-	border: 1px solid $terciary-color;
+	background: rgba($secondary-color, 0.2);
+	border: 1px solid $secondary-color;
 	padding: 2rem;
 	border-radius: 10px;
-
 
 	@include md {
 		padding: 3rem;
 	}
 
-	&__bg-transparent{
+	&__bg-transparent {
 		background: transparent;
 	}
 
-	&__bg-color{
+	&__bg-color {
 		background: $primary-color;
 	}
 
@@ -48,10 +47,9 @@
 	&__selector {
 		margin-bottom: 2rem;
 		line-height: 1.5;
-		
 	}
 	&__error {
-		color: $alert-color;
+		color: $error-color;
 		margin: -1.25rem 0 1.5rem 0;
 	}
 	textarea {

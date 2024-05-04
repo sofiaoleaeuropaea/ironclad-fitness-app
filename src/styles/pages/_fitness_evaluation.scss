@@ -16,7 +16,7 @@
 
 		@include breakpointDesktop(1000px) {
 			grid-template-columns: repeat(3, 1fr);
-		
+
 			grid-template-areas:
 				'form bmi bmi '
 				'exercises exercises exercises';
@@ -33,6 +33,43 @@
 		}
 		#fitness_plan_exercises {
 			grid-area: exercises;
+		}
+		.bmi-value__wrapper {
+			text-align: center;
+			margin: 4rem 0 4rem 0;
+			#bmi__value {
+				font-weight: 700;
+				font-size: 3.05rem;
+			}
+			.underweight {
+				color: $scale-low-color;
+			}
+			.normal-weight {
+				color: $tertiary-color;
+			}
+			.overweight {
+				color: $primary-color;
+			}
+			.obese {
+				color: $scale-high-color;
+			}
+		}
+
+		.fitness-plan__wrapper {
+			p,
+			ol {
+				margin: 1rem 0 3rem 0;
+			}
+
+			li {
+				line-height: 1.75;
+				list-style-position: inside;
+
+				&::marker {
+					font-family: $headings-font;
+					font-weight: 700;
+				}
+			}
 		}
 	}
 }

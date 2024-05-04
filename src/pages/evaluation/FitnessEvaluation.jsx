@@ -72,10 +72,10 @@ const FitnessEvaluation = () => {
 			bmiInterpretation = bmiDescription[2];
 			fitnessPlan = trainingPlans[8];
 		} else if (bmi >= 30 && selectedFitnessGoal === 'weight_reduction') {
-			bmiInterpretation = bmiDescription[2];
+			bmiInterpretation = bmiDescription[3];
 			fitnessPlan = trainingPlans[9];
 		} else if (bmi >= 30 && selectedFitnessGoal === 'muscle_gain') {
-			bmiInterpretation = bmiDescription[2];
+			bmiInterpretation = bmiDescription[3];
 			fitnessPlan = trainingPlans[10];
 		} else if (bmi >= 30 && selectedFitnessGoal === 'hipertrophy') {
 			bmiInterpretation = bmiDescription[3];
@@ -102,7 +102,7 @@ const FitnessEvaluation = () => {
 			<section id="evaluation" className="evaluation">
 				<div className="container">
 					<div className="evaluation__wrapper">
-						<div className="form form__bg-color" id="fitness_evaluation_form">
+						<div className="form " id="fitness_evaluation_form">
 							<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
 								<input
 									className="form__information"
@@ -111,14 +111,14 @@ const FitnessEvaluation = () => {
 									placeholder="Height (cm)"
 									id="height"
 									value={heightValue}
-									onChange={(e) => setHeightValue(e.target.value)}
-									// {...register('height')}
+									onInput={(e) => setHeightValue(e.target.value)}
+									{...register('height')}
 								/>
-								{/* {errors && errors.height && (
-								<p className="form__error">
-									<MdOutlineErrorOutline /> {errors.height.message}{' '}
-								</p>
-							)} */}
+								{errors && errors.height && (
+									<p className="form__error">
+										<MdOutlineErrorOutline /> {errors.height.message}{' '}
+									</p>
+								)}
 								<input
 									className="form__information"
 									type="number"
@@ -126,14 +126,14 @@ const FitnessEvaluation = () => {
 									placeholder="Weight (kg)"
 									id="weight"
 									value={weightValue}
-									onChange={(e) => setWeightValue(e.target.value)}
-									// {...register('weight')}
+									onInput={(e) => setWeightValue(e.target.value)}
+									{...register('weight')}
 								/>
-								{/* {errors && errors.weight && (
-								<p className="form__error">
-									<MdOutlineErrorOutline /> {errors.weight.message}{' '}
-								</p>
-							)} */}
+								{errors && errors.weight && (
+									<p className="form__error">
+										<MdOutlineErrorOutline /> {errors.weight.message}{' '}
+									</p>
+								)}
 
 								<div className="form__selector">
 									<legend>Select your fitness goal:</legend>
@@ -167,26 +167,28 @@ const FitnessEvaluation = () => {
 
 						<div className="bmi__wrapper" id="bmi_info">
 							<h2>Your BMI result</h2>
-							<div>
-								<p id="bmi__value">{bmiValue}</p>
-								<p id="bmi__message">
-									You are <span>{bmiInterpretation.scale}</span>.
+							<div className="bmi-value__wrapper">
+								<p id="bmi__value" className={bmiInterpretation.classname}>
+									{bmiValue}
+								</p>
+								<p>
+									You are <span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>.
 								</p>
 							</div>
 							<p>{bmiInterpretation.description}</p>
 						</div>
-						{fitnessPlan && (
+						{fitnessPlan && fitnessPlan.exercises && (
 							<div className="fitness-plan__wrapper" id="fitness_plan_exercises">
 								<h3>Fitness Plan</h3>
 								<p>{fitnessPlan.description}</p>
 								<h4>Exercises</h4>
-								<ul>
+								<ol>
 									{fitnessPlan.exercises.map((exercise, index) => (
 										<li key={index}>
 											{exercise.name} ({exercise.repetitions})
 										</li>
 									))}
-								</ul>
+								</ol>
 								<Buttons onClick={handleDownloadPDF}>Save it for later</Buttons>
 							</div>
 						)}

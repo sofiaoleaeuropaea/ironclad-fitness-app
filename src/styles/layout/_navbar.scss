@@ -6,7 +6,7 @@
 	left: 0;
 	padding: 1rem 0;
 	box-shadow: 0 8px 32px 0 rgba(99, 102, 128, 0.1);
-	border-bottom: 1px solid $terciary-color;
+	border-bottom: 1px solid $secondary-color;
 	z-index: 999;
 
 	@include breakpointMobile(960px) {
@@ -32,7 +32,7 @@
 		li a {
 			padding: 0 1.25rem;
 			&.active {
-				color:  $primary-color;
+				color: $primary-color;
 				font-weight: 600;
 			}
 			@include breakpointMobile(960px) {

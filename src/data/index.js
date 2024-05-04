@@ -32,11 +32,7 @@ export const footer = [
 		title: 'Terms',
 		url: '/terms',
 	},
-	{
-		id: 2,
-		title: 'Contacts',
-		url: '/contacts',
-	},
+	
 ];
 
 export const socialTracker = [
@@ -281,21 +277,25 @@ export const bmiDescription = [
 		scale: 'Underweight',
 		description:
 			'Being underweight may indicate insufficient body fat and muscle mass relative to height, potentially leading to health risks such as weakened immune function, nutrient deficiencies, and osteoporosis.',
+		classname: 'underweight',
 	},
 	{
 		scale: 'Normal weight',
 		description:
 			'Falling within the normal weight category generally suggests a balanced body composition relative to height, which is associated with reduced risk of chronic diseases and overall good health.',
+		classname: 'normal-weight',
 	},
 	{
 		scale: 'Overweight',
 		description:
 			'Obesity is characterized by excess body fat accumulation, which can lead to various health problems including heart disease, type 2 diabetes, stroke, and certain cancers. It is often associated with lifestyle factors such as poor diet and lack of physical activity.',
+		classname: 'overweight',
 	},
 	{
 		scale: 'Obese',
 		description:
 			'Being overweight indicates a higher-than-ideal amount of body fat relative to height, which can increase the risk of developing health issues such as hypertension, high cholesterol, and joint problems. However, it may not carry the same health risks as obesity and can often be managed through lifestyle changes like diet and exercise.',
+		classname: 'obese',
 	},
 ];
 

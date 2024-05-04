@@ -6,18 +6,12 @@ const portugalPhoneValidator = (phoneNumber) => {
 };
 const FormValidation = yup.object().shape({
 	fullName: yup.string().required('Full name is required'),
-	birthdate: yup
-		.date()
-		.max(new Date(), 'Provide a valid birthdate')
-		.test('valid-birthdate', 'Provide a valid birthdate', (birthdate) => {
-			const minDate = new Date();
-			minDate.setFullYear(minDate.getFullYear() - 130);
-			return birthdate && birthdate <= new Date() && birthdate >= minDate;
-		})
-		.required('Birthdate is required'),
+	birthdate: yup.date().required('Birthdate is required'),
 	email: yup.string().email('Provide a valid E-mail').required('E-mail is required'),
 	phone: yup.string().test('portugal-phone', 'Invalid Portuguese phone-number', portugalPhoneValidator).required('Phone number is required'),
 	message: yup.string().required('Message required'),
+	weight: yup.number().typeError('Weight must be a number').min(1, 'Weight must be greater than 0').required('Weight is required'),
+	height: yup.number().typeError('Height must be a number').min(1, 'Height must be greater than 0').required('Height is required'),
 });
 
 export default FormValidation;

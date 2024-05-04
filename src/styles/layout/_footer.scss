@@ -2,24 +2,31 @@
 @use '../base/typography';
 
 .footer {
-		width: 100%;
+	width: 100%;
 	font-size: 1rem;
 	padding: 1.5rem 0;
-	border-top: 1px solid $terciary-color;
+	border-top: 1px solid $secondary-color;
 
 	&__wrapper {
 		display: flex;
+		flex: 1;
+		flex-wrap: wrap;
+		gap: 2rem;
 		justify-content: space-between;
 		align-items: center;
 
 		@include breakpointMobile(420px) {
-			display: block;
-			text-align: center;
+			flex-direction: column;
 		}
 	}
 	&__wrapper_left {
 		display: flex;
 		align-items: center;
+		gap: 2rem;
+		@include breakpointMobile(420px) {
+			flex-direction: column;
+	
+		}
 		.logo {
 			width: 100px;
 			max-width: 100%;
@@ -28,20 +35,24 @@
 
 	&__menu {
 		display: flex;
+		gap: 1.5rem;
+			@include breakpointMobile(420px) {
+			flex-direction: column;
+	
+		}
 
-		li a {
-			padding: 1rem 0 1rem 1.5rem;
-
-			&.active {
-				color: $primary-color;
-				transform: rotate(-20deg);
-			}
+		li a .active {
+			color: $primary-color;
 		}
 	}
 
 	&__social {
 		display: flex;
-		gap: 10px;
+		gap: 1.5rem;
+			@include breakpointMobile(420px) {
+			flex-direction: column;
+	
+		}
 
 		.social_icons {
 			color: $text-dark;
