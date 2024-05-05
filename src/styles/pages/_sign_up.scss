@@ -1,7 +1,7 @@
 @use '../utils/' as *;
 
 .sign-up {
-	min-height: calc(100vh - 135px);
+	min-height: $min-height;
 	&__wrapper {
 		position: relative;
 		#title {

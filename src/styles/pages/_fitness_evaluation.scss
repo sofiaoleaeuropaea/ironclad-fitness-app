@@ -1,8 +1,9 @@
 @use '../utils/' as *;
 
 .evaluation {
-	padding: 2rem 0;
+	min-height: $min-height;
 	&__wrapper {
+		margin: 10rem 0;
 		display: grid;
 		justify-content: center;
 
@@ -19,7 +20,7 @@
 
 			grid-template-areas:
 				'form bmi bmi '
-				'exercises exercises exercises';
+				'0 exercises exercises';
 		}
 		.bmi__wrapper,
 		.fitness-plan__wrapper {
@@ -37,9 +38,13 @@
 		.bmi-value__wrapper {
 			text-align: center;
 			margin: 4rem 0 4rem 0;
-			#bmi__value {
+			p {
 				font-weight: 700;
 				font-size: 3.05rem;
+				margin-bottom: 0.5rem;
+			}
+			span{
+				text-transform: uppercase;
 			}
 			.underweight {
 				color: $scale-low-color;
@@ -56,6 +61,7 @@
 		}
 
 		.fitness-plan__wrapper {
+		
 			p,
 			ol {
 				margin: 1rem 0 3rem 0;

@@ -273,12 +273,7 @@ export const partners = [
 ];
 
 export const bmiDescription = [
-	{
-		scale: 'N/A',
-		description:
-			'',
-		classname: 'underweight',
-	},
+	
 	{
 		scale: 'Underweight',
 		description:

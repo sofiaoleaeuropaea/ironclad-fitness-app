@@ -6,22 +6,23 @@ import jsPDF from 'jspdf';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
+import Heading from '../../components/Heading';
 import Buttons from '../../components/Buttons';
 import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 
 const FitnessEvaluation = () => {
-	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState("weight_reduction")
+	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
 	const [heightValue, setHeightValue] = useState('');
 	const [weightValue, setWeightValue] = useState('');
 	const [bmiValue, setBmiValue] = useState(0);
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 	const [fitnessPlan, setFitnessPlan] = useState('');
 
-    const handleRadioChange = (value) => {
-			setSelectedFitnessGoal(value);
+	const handleRadioChange = (value) => {
+		setSelectedFitnessGoal(value);
 	};
-	
+
 	const {
 		register,
 		handleSubmit,
@@ -92,7 +93,7 @@ const FitnessEvaluation = () => {
 			const canvas = await html2canvasPromise(FitnessPlanPDF);
 			const imgData = canvas.toDataURL('image/png');
 			const pdf = new jsPDF({
-				orientation: 'landscape'
+				orientation: 'landscape',
 			});
 			pdf.addImage(imgData, 'PNG', 10, 10);
 			pdf.save('ironclad-fitness-plan.pdf');
@@ -116,6 +117,10 @@ const FitnessEvaluation = () => {
 	return (
 		<>
 			<section id="evaluation" className="evaluation">
+				<Heading
+					title="Fitness Evaluation"
+					paragraph="We're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle. With our BMI calculator, you can gain insights into your body composition and make informed decisions about your fitness journey. Whether you're looking to shed pounds, gain muscle, or improve your overall well-being, here, you can have access to personalized fitness plans are tailored to meet your unique needs."
+				/>
 				<div className="container">
 					<div className="evaluation__wrapper">
 						<div className="form " id="fitness_evaluation_form">
@@ -177,24 +182,20 @@ const FitnessEvaluation = () => {
 									</div>
 								</div>
 
-								<Buttons value="Submit" className="btn__form" />
+								<Buttons value="Submit" className="btn__mg-right" />
 							</form>
 						</div>
 
 						<div className="bmi__wrapper" id="bmi_info">
 							<h2>Your BMI result</h2>
 							<div className="bmi-value__wrapper">
-								<p id="bmi__value" className={bmiInterpretation.classname}>
-									{bmiValue}
-								</p>
-								<p>
-									You are <span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>.
-								</p>
+								<p className={bmiInterpretation.classname}>{bmiValue}</p>
+								<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
 							</div>
 							<p>{bmiInterpretation.description}</p>
 						</div>
 						{fitnessPlan && fitnessPlan.exercises && (
-							<div className="fitness-plan__wrapper"  id="fitness_plan_exercises">
+							<div className="fitness-plan__wrapper" id="fitness_plan_exercises">
 								<div id="fitness-plan__card">
 									<h3>Fitness Plan</h3>
 									<p>{fitnessPlan.description}</p>
@@ -207,7 +208,9 @@ const FitnessEvaluation = () => {
 										))}
 									</ol>
 								</div>
-								<Buttons onClick={handleDownloadPDF}>Save it for later</Buttons>
+								<Buttons onClick={handleDownloadPDF} className="btn__mg-right">
+									Save it for later
+								</Buttons>
 							</div>
 						)}
 					</div>

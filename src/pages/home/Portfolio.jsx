@@ -33,7 +33,7 @@ function Portfolio() {
 								<h3>{item.title}</h3>
 								<p className="card__description">{item.description}</p>
 							</div>
-							<Buttons href={item.url} className="btn__mg-right">
+							<Buttons href={item.url} className="btn__mg-right__desktop">
 								Know more
 							</Buttons>
 							{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} loading="lazy" />}

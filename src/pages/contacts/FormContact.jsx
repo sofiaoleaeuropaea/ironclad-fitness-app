@@ -53,7 +53,7 @@ const FormContact = () => {
 					</p>
 				)}
 
-				<Buttons value="Submit" className="btn__form" />
+				<Buttons value="Submit" className="btn__mg-right" />
 			</form>
 
 			{/* {formData && (
