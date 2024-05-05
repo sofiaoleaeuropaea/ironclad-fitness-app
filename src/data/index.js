@@ -274,6 +274,12 @@ export const partners = [
 
 export const bmiDescription = [
 	{
+		scale: 'N/A',
+		description:
+			'',
+		classname: 'underweight',
+	},
+	{
 		scale: 'Underweight',
 		description:
 			'Being underweight may indicate insufficient body fat and muscle mass relative to height, potentially leading to health risks such as weakened immune function, nutrient deficiencies, and osteoporosis.',
