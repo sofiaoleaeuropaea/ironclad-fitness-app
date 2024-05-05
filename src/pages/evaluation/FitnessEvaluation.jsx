@@ -85,17 +85,33 @@ const FitnessEvaluation = () => {
 		setFitnessPlan(fitnessPlan);
 	};
 
-	  const handleDownloadPDF = () => {
-			const FitnessPlanPDF = document.getElementById('fitness_plan_exercises');
-			
-			html2canvas(FitnessPlanPDF).then((canvas) => {
-				const imgData = canvas.toDataURL('image/png');
-				const pdf = new jsPDF();
-				pdf.addImage(imgData, 'PNG', 0, 0);
-				pdf.save('ironclad-fitness-plan.pdf');
-				
+	const handleDownloadPDF = async () => {
+		const FitnessPlanPDF = document.getElementById('fitness-plan__card');
+
+		try {
+			const canvas = await html2canvasPromise(FitnessPlanPDF);
+			const imgData = canvas.toDataURL('image/png');
+			const pdf = new jsPDF({
+				orientation: 'landscape'
 			});
-		};
+			pdf.addImage(imgData, 'PNG', 10, 10);
+			pdf.save('ironclad-fitness-plan.pdf');
+		} catch (error) {
+			console.error('Error generating PDF:', error);
+		}
+	};
+
+	const html2canvasPromise = (element) => {
+		return new Promise((resolve, reject) => {
+			html2canvas(element)
+				.then((canvas) => {
+					resolve(canvas);
+				})
+				.catch((error) => {
+					reject(error);
+				});
+		});
+	};
 
 	return (
 		<>
@@ -178,17 +194,19 @@ const FitnessEvaluation = () => {
 							<p>{bmiInterpretation.description}</p>
 						</div>
 						{fitnessPlan && fitnessPlan.exercises && (
-							<div className="fitness-plan__wrapper" id="fitness_plan_exercises">
-								<h3>Fitness Plan</h3>
-								<p>{fitnessPlan.description}</p>
-								<h4>Exercises</h4>
-								<ol>
-									{fitnessPlan.exercises.map((exercise, index) => (
-										<li key={index}>
-											{exercise.name} ({exercise.repetitions})
-										</li>
-									))}
-								</ol>
+							<div className="fitness-plan__wrapper"  id="fitness_plan_exercises">
+								<div id="fitness-plan__card">
+									<h3>Fitness Plan</h3>
+									<p>{fitnessPlan.description}</p>
+									<h4>Exercises</h4>
+									<ol>
+										{fitnessPlan.exercises.map((exercise, index) => (
+											<li key={index}>
+												{exercise.name} ({exercise.repetitions})
+											</li>
+										))}
+									</ol>
+								</div>
 								<Buttons onClick={handleDownloadPDF}>Save it for later</Buttons>
 							</div>
 						)}
