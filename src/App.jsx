@@ -12,6 +12,8 @@ import Contacts from './pages/contacts/Contacts';
 import SignUp from './pages/sign_up/SignUp';
 import ErrorPage from './pages/error_page/ErrorPage';
 
+import MouseTrail from './components/MouseTrail';
+
 
 import './styles/main.scss';
 
@@ -35,6 +37,7 @@ function App() {
 				</main>
 				<Footer />
 			</BrowserRouter>
+			<MouseTrail/>
 		</>
 	);
 }
