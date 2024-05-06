@@ -1,25 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import mouseTrailSVG from './mouseTrailSVG';
 
-const MouseTrail = () => {
-    const [mousePosition, useMousePosition] = useState({ x: 0, y: 0 });
-    useEffect(() => {
-			const setFromEvent = (e) => useMousePosition({ x: e.clientX, y: e.clientY });
-			window.addEventListener('mousemove', setFromEvent);
+export const MouseTrail = () => {
+	const svg = mouseTrailSVG;
+	const path = svg.querySelector('path');
 
-			return () => {
-				window.removeEventListener('mousemove', setFromEvent);
-			};
-		}, []);
-    const svg = document.querySelector("svg.trail")
-    const path = document.querySelector("path")
+	const [mousePosition, useMousePosition] = useState({ x: 0, y: 0 });
+	useEffect(() => {
+		const mouseMoveEvent = (e) => {
+			useMousePosition({ x: e.clientX, y: e.clientY });
+		};
+		window.addEventListener('mousemove', mouseMoveEvent);
 
-    const points = []
+		return () => {
+			window.removeEventListener('mousemove', mouseMoveEvent);
+		};
+	}, []);
 
-  return (
-      <svg className='trail' viewBox='0 0 400 400'>
-          <path d='M 100 100 L 200 200 L 300 100'/>  
-    </svg>
-  )
-}
+	// const move = () => {};
 
-export default MouseTrail
+	// document.addEventListener('mousemove', move);
+
+	return mousePosition;
+};
+
+export default MouseTrail;

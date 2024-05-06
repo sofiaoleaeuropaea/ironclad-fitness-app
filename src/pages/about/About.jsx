@@ -1,7 +1,7 @@
 
 import Heading from '../../components/Heading';
 import Trainers from './Team';
-import Partnership from "./Partners"
+import Partnership from './Partners';
 
 const About = () => {
 	return (
@@ -15,6 +15,7 @@ const About = () => {
 			</section>
 			<Trainers />
 			<Partnership/>
+	
 		</>
 	);
 };

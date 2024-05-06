@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import html2canvas from 'html2canvas';
@@ -18,6 +18,8 @@ const FitnessEvaluation = () => {
 	const [bmiValue, setBmiValue] = useState(0);
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 	const [fitnessPlan, setFitnessPlan] = useState('');
+
+	const fitnessPlanRef = useRef(null);
 
 	const handleRadioChange = (value) => {
 		setSelectedFitnessGoal(value);
@@ -43,75 +45,52 @@ const FitnessEvaluation = () => {
 		const bmi = (weightValue / (heightInMeters * heightInMeters)).toFixed(2);
 		setBmiValue(bmi);
 
-		let bmiInterpretation = {};
-		let fitnessPlan = {};
-		if (bmi < 18.5 && selectedFitnessGoal === 'weight_reduction') {
-			bmiInterpretation = bmiDescription[0];
-			fitnessPlan = trainingPlans[0];
-		} else if (bmi < 18.5 && selectedFitnessGoal === 'muscle_gain') {
-			bmiInterpretation = bmiDescription[0];
-			fitnessPlan = trainingPlans[1];
-		} else if (bmi < 18.5 && selectedFitnessGoal === 'hipertrophy') {
-			bmiInterpretation = bmiDescription[0];
-			fitnessPlan = trainingPlans[2];
-		} else if (bmi >= 18.5 && bmi < 25 && selectedFitnessGoal === 'weight_reduction') {
-			bmiInterpretation = bmiDescription[1];
-			fitnessPlan = trainingPlans[3];
-		} else if (bmi >= 18.5 && bmi < 25 && selectedFitnessGoal === 'muscle_gain') {
-			bmiInterpretation = bmiDescription[1];
-			fitnessPlan = trainingPlans[4];
-		} else if (bmi >= 18.5 && bmi < 25 && selectedFitnessGoal === 'hipertrophy') {
-			bmiInterpretation = bmiDescription[1];
-			fitnessPlan = trainingPlans[5];
-		} else if (bmi >= 25 && bmi < 30 && selectedFitnessGoal === 'weight_reduction') {
-			bmiInterpretation = bmiDescription[2];
-			fitnessPlan = trainingPlans[6];
-		} else if (bmi >= 25 && bmi < 30 && selectedFitnessGoal === 'muscle_gain') {
-			bmiInterpretation = bmiDescription[2];
-			fitnessPlan = trainingPlans[7];
-		} else if (bmi >= 25 && bmi < 30 && selectedFitnessGoal === 'hipertrophy') {
-			bmiInterpretation = bmiDescription[2];
-			fitnessPlan = trainingPlans[8];
-		} else if (bmi >= 30 && selectedFitnessGoal === 'weight_reduction') {
-			bmiInterpretation = bmiDescription[3];
-			fitnessPlan = trainingPlans[9];
-		} else if (bmi >= 30 && selectedFitnessGoal === 'muscle_gain') {
-			bmiInterpretation = bmiDescription[3];
-			fitnessPlan = trainingPlans[10];
-		} else if (bmi >= 30 && selectedFitnessGoal === 'hipertrophy') {
-			bmiInterpretation = bmiDescription[3];
-			fitnessPlan = trainingPlans[11];
+		const bmiRanges = [
+			{ min: 0, max: 18.5, interpretationIndex: 0 },
+			{ min: 18.5, max: 25, interpretationIndex: 1 },
+			{ min: 25, max: 30, interpretationIndex: 2 },
+			{ min: 30, max: Infinity, interpretationIndex: 3 },
+		];
+
+		const bmiIndex = bmiRanges.findIndex((range) => bmi >= range.min && bmi < range.max);
+
+		let fitnessPlanIndex;
+		switch (selectedFitnessGoal) {
+			case 'weight_reduction':
+				fitnessPlanIndex = bmiIndex * 3;
+				break;
+			case 'muscle_gain':
+				fitnessPlanIndex = bmiIndex * 3 + 1;
+				break;
+			case 'hipertrophy':
+				fitnessPlanIndex = bmiIndex * 3 + 2;
+				break;
+			default:
+				{
+				}
+
+				break;
 		}
+
+		const bmiInterpretation = bmiDescription[bmiRanges[bmiIndex].interpretationIndex];
+		const fitnessPlan = trainingPlans[fitnessPlanIndex];
+
 		setBmiInterpretation(bmiInterpretation);
 		setFitnessPlan(fitnessPlan);
 	};
 
 	const handleDownloadPDF = async () => {
-		const FitnessPlanPDF = document.getElementById('fitness-plan__card');
-
 		try {
-			const canvas = await html2canvasPromise(FitnessPlanPDF);
+			const canvas = await html2canvas(fitnessPlanRef.current);
 			const imgData = canvas.toDataURL('image/png');
 			const pdf = new jsPDF({
 				orientation: 'landscape',
 			});
-			pdf.addImage(imgData, 'PNG', 10, 10);
+			pdf.addImage(imgData, 'PNG', 0, 0);
 			pdf.save('ironclad-fitness-plan.pdf');
 		} catch (error) {
 			console.error('Error generating PDF:', error);
 		}
-	};
-
-	const html2canvasPromise = (element) => {
-		return new Promise((resolve, reject) => {
-			html2canvas(element)
-				.then((canvas) => {
-					resolve(canvas);
-				})
-				.catch((error) => {
-					reject(error);
-				});
-		});
 	};
 
 	return (
@@ -197,7 +176,7 @@ const FitnessEvaluation = () => {
 						</div>
 						{fitnessPlan && fitnessPlan.exercises && (
 							<div className="fitness-plan__wrapper" id="fitness_plan_exercises">
-								<div id="fitness-plan__card">
+								<div ref={fitnessPlanRef} id="fitness-plan__card">
 									<h3>Fitness Plan</h3>
 									<p>{fitnessPlan.description}</p>
 									<h4>Exercises</h4>

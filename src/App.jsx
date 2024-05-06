@@ -12,10 +12,11 @@ import Contacts from './pages/contacts/Contacts';
 import SignUp from './pages/sign_up/SignUp';
 import ErrorPage from './pages/error_page/ErrorPage';
 
-import MouseTrail from './components/MouseTrail';
 
+// const position = useMousePosition();
 
 import './styles/main.scss';
+
 
 function App() {
 	return (
@@ -27,7 +28,9 @@ function App() {
 						<Route index element={<Home />} />
 						<Route path="/membership" element={<Membership />} />
 						<Route path="/fitnessevaluation" element={<FitnessEvaluation />} />
-						<Route path="/about" element={<About />} />
+
+						<Route path="/about/*" element={<About />}/>
+					
 						<Route path="/about/:id" element={<TeamMember />} />
 						<Route path="/contacts" element={<Contacts />} />
 						<Route path="/signup" element={<SignUp />} />
@@ -37,7 +40,6 @@ function App() {
 				</main>
 				<Footer />
 			</BrowserRouter>
-			<MouseTrail/>
 		</>
 	);
 }
