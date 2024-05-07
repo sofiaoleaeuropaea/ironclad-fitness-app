@@ -1,15 +1,18 @@
 @use '../utils/' as *;
 
 .contact {
-    	
 	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		margin: 10rem 0;
-		
+		margin: 10rem 0 7rem 0;
 	}
+	&__information__wrapper {
+		display: flex;
 
-	&__details {
+		justify-content: space-between;
+	}
+	&-form__wrapper {
+		margin-bottom: 10rem;
+	}
+	&__information__details {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
