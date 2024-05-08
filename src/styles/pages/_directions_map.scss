@@ -1,43 +1,40 @@
 @use '../utils/' as *;
 
-.mapbox {
-	&-ctrl-directions {
-		max-width: 20%;
-		min-width: 250px;
-	}
-	&-ctrl-geocoder input {
-		text-transform: capitalize;
-	}
-	&-directions {
-		&-route-summary {
-			background-color: $white;
-			border-radius: 3px 3px 0 0;
-			span,
-			h1 {
-				color: $text-dark;
-			}
-		}
-		&-origin .mapbox-form-label {
-			background-color: #e07a5f;
-			color: $background-light;
-		}
-		&-destination .mapbox-form-label {
-			background-color: #006e90;
-			color: $background-light;
-		}
-		&-instructions {
-			overflow-x: unset;
-			overflow-y: scroll;
-			&-wrapper {
-				max-height: 300px;
-			}
-		}
+.mapboxgl-ctrl-directions {
+	max-width: 20%;
+	min-width: 250px;
+}
+.mapboxgl-ctrl-geocoder input {
+	text-transform: capitalize;
+}
+.mapbox-directions-route-summary {
+	background-color: $white;
+	border-radius: 3px 3px 0 0;
+	span,
+	h1 {
+		color: $text-dark;
 	}
 }
+.mapbox-directions-origin .mapbox-form-label {
+	background-color: #e07a5f;
+	color: $background-light;
+}
+.mapbox-directions-destination .mapbox-form-label {
+	background-color: #006e90;
+	color: $background-light;
+}
+.mapbox-directions-instructions {
+	overflow-x: unset;
+	overflow-y: scroll;
+}
+.mapbox-directions-instructions-wrapper {
+	max-height: 200px;
+}
+
 .directions-control {
 	font: 15px/ 20px $text-font;
 	color: $text-dark;
-	&.directions-control-directions {
-		border-radius: 3px;
-	}
+}
+.directions-control.directions-control-directions {
+	border-radius: 3px;
 }

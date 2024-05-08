@@ -176,7 +176,7 @@ const FitnessEvaluation = () => {
 						</div>
 						{fitnessPlan && fitnessPlan.exercises && (
 							<div className="fitness-plan__wrapper" id="fitness_plan_exercises">
-								<div ref={fitnessPlanRef} id="fitness-plan__card">
+								<div ref={fitnessPlanRef} className="fitness-plan__card" id="fitness-plan__card">
 									<h3>Fitness Plan</h3>
 									<p>{fitnessPlan.description}</p>
 									<h4>Exercises</h4>
