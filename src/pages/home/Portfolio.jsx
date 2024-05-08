@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Heading from '../../components/Heading';
-import Buttons from '../../components/Buttons';
+import Button from '../../components/Button';
 
 import { portfolio } from '../../data';
 
@@ -33,9 +33,9 @@ function Portfolio() {
 								<h3>{item.title}</h3>
 								<p className="card__description">{item.description}</p>
 							</div>
-							<Buttons href={item.url} className="btn__mg-right__desktop">
+							<Button href={item.url} className="btn__mg-right__desktop">
 								Know more
-							</Buttons>
+							</Button>
 							{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} loading="lazy" />}
 						</div>
 					))}

@@ -7,9 +7,10 @@ import jsPDF from 'jspdf';
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Heading from '../../components/Heading';
-import Buttons from '../../components/Buttons';
+import Button from '../../components/Button';
 import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
+import ButtonSave from '../../components/ButtonSave';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -162,7 +163,7 @@ const FitnessEvaluation = () => {
 									</div>
 								</div>
 
-								<Buttons value="Submit" className="btn__mg-right" />
+								<Button value="Submit" className="btn__mg-right" />
 							</form>
 						</div>
 
@@ -188,9 +189,8 @@ const FitnessEvaluation = () => {
 										))}
 									</ol>
 								</div>
-								<Buttons onClick={handleDownloadPDF} className="btn__mg-right">
-									Save it for later
-								</Buttons>
+
+								<ButtonSave onClick={handleDownloadPDF} />
 							</div>
 						)}
 					</div>

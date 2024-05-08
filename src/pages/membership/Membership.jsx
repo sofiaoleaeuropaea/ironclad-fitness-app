@@ -2,8 +2,8 @@ import { pricing } from '../../data';
 
 import Heading from '../../components/Heading';
 import Faqs from './Faqs';
-import Buttons from '../../components/Buttons';
-		
+import Button from '../../components/Button';
+
 const Membership = () => {
 	return (
 		<>
@@ -29,7 +29,7 @@ const Membership = () => {
 										</ul>
 									</div>
 								</div>
-								<Buttons href="/signup">Start now</Buttons>
+								<Button href="/signup">Start now</Button>
 							</div>
 						))}
 					</div>
@@ -38,7 +38,9 @@ const Membership = () => {
 							<h3>Looking for a personal trainer?</h3>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste totam porro, neque vitae laudantium adipisci sapiente corrupti maxime.</p>
 						</div>
-						<Buttons href="/about" className="btn__mg-left">Say hello</Buttons>
+						<Button href="/about" className="btn__mg-left">
+							Say hello
+						</Button>
 						<img className="img-fluid pt__content__img" src="images/pesos.png" alt="" />
 					</div>
 				</div>

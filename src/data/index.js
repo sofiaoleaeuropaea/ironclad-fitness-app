@@ -19,6 +19,12 @@ export const navigation = [
 		title: 'Contacts',
 		url: '/contacts',
 	},
+	{
+		id: 4,
+		title: 'Sign up',
+		url: '/signup',
+		className: 'navbarlink_mobile',
+	},
 ];
 
 export const footer = [
@@ -32,7 +38,6 @@ export const footer = [
 		title: 'Terms',
 		url: '/terms',
 	},
-	
 ];
 
 export const socialTracker = [
@@ -273,7 +278,6 @@ export const partners = [
 ];
 
 export const bmiDescription = [
-	
 	{
 		scale: 'Underweight',
 		description:
@@ -356,8 +360,7 @@ export const trainingPlans = [
 		],
 	},
 	{
-		description:
-			'This training plan is designed for overweight individuals aiming to reduce body fat and improve cardiovascular health while increasing physical activity levels.',
+		description: 'This training plan is designed for overweight individuals aiming to reduce body fat and improve cardiovascular health while increasing physical activity levels.',
 		exercises: [
 			{ name: 'Elliptical Trainer', repetitions: '30 minutes at a moderate pace' },
 			{ name: 'Treadmill Jogging', repetitions: '20 minutes at a moderate pace' },

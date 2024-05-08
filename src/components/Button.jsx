@@ -1,4 +1,4 @@
-const Buttons = ({ href, onClick, children, className, value }) => {
+const Button = ({ href, onClick, children, className, value }) => {
 	const classes = `btn effect  ${className || ''}`;
 
 	const renderButton = () => (
@@ -28,4 +28,4 @@ const Buttons = ({ href, onClick, children, className, value }) => {
 	return renderComponent();
 };
 
-export default Buttons;
+export default Button;

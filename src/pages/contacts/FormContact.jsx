@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
-import Buttons from '../../components/Buttons';
+import Button from '../../components/Button';
 import FormValidation from '../../components/FormValidation';
 
 const FormContact = () => {
@@ -53,7 +53,7 @@ const FormContact = () => {
 					</p>
 				)}
 
-				<Buttons value="Submit" className="btn__mg-right" />
+				<Button value="Submit" className="btn__mg-right" />
 			</form>
 
 			{/* {formData && (

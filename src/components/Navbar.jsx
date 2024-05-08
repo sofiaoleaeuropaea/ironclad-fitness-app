@@ -7,7 +7,7 @@ import { navigation } from '../data';
 
 import NavbarLinks from './NavbarLinks';
 
-import Buttons from './Buttons';
+import Button from './Button';
 
 const Navbar = () => {
 	const [menuMobile, setMenuMobile] = useState(false);
@@ -16,13 +16,8 @@ const Navbar = () => {
 	const handleCheckboxChange = () => {
 		setMenuMobile((active) => !active);
 		setIsChecked(!isChecked);
-		const section = document.getElementById(id);
-		if (section) {
-			section.scrollIntoView({ behavior: 'smooth' });
-		}
 	};
 
-	
 	return (
 		<div className="navbar">
 			<div className="container container__xl">
@@ -32,8 +27,8 @@ const Navbar = () => {
 					</Link>
 					<nav>
 						<ul className={menuMobile ? 'navbar__menu active' : 'navbar__menu'}>
-							{navigation.map((item) => (
-								<NavbarLinks key={item.id} item={item} />
+							{navigation.map((item, index) => (
+								<NavbarLinks key={index} item={item} onClick={handleCheckboxChange} />
 							))}
 						</ul>
 					</nav>
@@ -45,9 +40,9 @@ const Navbar = () => {
 							<span className="bar"></span>
 						</div>
 					</label>
-					<Buttons href="/signup" className="btn__hide">
+					<Button href="/signup" className="btn__hide">
 						Start now
-					</Buttons>
+					</Button>
 				</div>
 			</div>
 		</div>

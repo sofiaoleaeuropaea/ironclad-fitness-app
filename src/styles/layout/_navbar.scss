@@ -44,6 +44,7 @@
 				color: $background-light;
 				font-size: 1rem;
 			}
+			
 		}
 
 		@include breakpointMobile(960px) {
@@ -51,14 +52,13 @@
 			width: 100%;
 			height: 0;
 			flex-direction: column;
-			justify-content: center;
 			background: $text-dark;
 			top: 0;
 			right: -100%;
 			padding: 10rem 1rem;
 			transition: all 750ms ease;
 			opacity: 0;
-			transition: all 660ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+			transition: all 1s cubic-bezier(0.54, -0.81, 0.57, 0.57);
 
 			&.active {
 				right: 0;
@@ -66,6 +66,12 @@
 				height: 100%;
 				opacity: 1;
 				transition: all 660ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+			}
+		}
+		.navbarlink_mobile {
+			display: none;
+			@include breakpointMobile(960px) {
+				display: unset;
 			}
 		}
 	}
@@ -90,19 +96,22 @@
 			}
 
 			&.checked {
-				input:checked + .burger__btn span:nth-child(1) {
+				input:checked + .burger__btn .bar:nth-child(1) {
 					top: 50%;
 					transform: translateY(-50%) rotate(45deg);
+					background-color: $background-light;
 				}
 
-				input:checked + .burger__btn span:nth-child(2) {
+				input:checked + .burger__btn .bar:nth-child(2) {
 					top: 50%;
 					transform: translateY(-50%) rotate(-45deg);
+					background-color: $background-light;
 				}
 
-				input:checked + .burger__btn span:nth-child(3) {
+				input:checked + .burger__btn .bar:nth-child(3) {
 					transform: translateX(-50px);
 					opacity: 0;
+					background-color: $background-light;
 				}
 			}
 		}
@@ -132,5 +141,6 @@
 				}
 			}
 		}
+
 	}
 }

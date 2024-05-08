@@ -23,7 +23,7 @@
 				'exercises exercises exercises';
 		}
 		.bmi__wrapper,
-		.fitness-plan__card {
+		.fitness-plan__wrapper {
 			@include cardTransparent;
 		}
 		#fitness_evaluation_form {
@@ -61,12 +61,14 @@
 		}
 		.fitness-plan {
 			&__wrapper {
-				width: 100%;
-				display: flex;
-				align-items: flex-start;
+				width: 60%;
+				// display: flex;
+				// align-items: flex-start;
+				// gap: 2rem;
 			}
 			&__card {
-				width: 70%;
+				display: flex;
+				flex-direction: column;
 				p,
 				ol {
 					margin: 1rem 0 3rem 0;

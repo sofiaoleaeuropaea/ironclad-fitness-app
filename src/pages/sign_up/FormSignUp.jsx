@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
-import Buttons from '../../components/Buttons';
+import Button from '../../components/Button';
 import FormValidation from '../../components/FormValidation';
 function FormSignUp() {
 	// const [formData, setFormData] = useState(null);
@@ -52,7 +52,7 @@ function FormSignUp() {
 						<MdOutlineErrorOutline /> {errors.phone.message}{' '}
 					</p>
 				)}{' '}
-				<Buttons value="Submit" className="btn__mg-right" />
+				<Button value="Submit" className="btn__mg-right" />
 			</form>
 		</div>
 	);

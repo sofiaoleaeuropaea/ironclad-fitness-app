@@ -1,4 +1,4 @@
-import Buttons from '../../components/Buttons';
+import Button from '../../components/Button';
 
 import hero_mobile from '../../assets/hero_mobile.png';
 import hero_desktop from '../../assets/hero_desktop.png';
@@ -14,7 +14,7 @@ function Hero() {
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam fuga reiciendis Lorem ipsum dong elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga
 							reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..
 						</p>
-						<Buttons href="/signup">Start now</Buttons>
+						<Button href="/signup">Start now</Button>
 					</div>
 					<div className="hero__image">
 						<img src={hero_mobile} className="img-fluid" id="hero-img_mobile" alt="Strong men" loading="lazy" />
