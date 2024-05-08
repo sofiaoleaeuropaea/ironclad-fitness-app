@@ -21,6 +21,7 @@ const NavbarLinks = ({ item }) => {
 		transform: isHovered ? 'rotate(-15deg)' : 'none',
 		transition: 'transform 0.2s ease-in-out',
 		display: 'inline-block',
+	
 	};
 
 	const isActive = (hash) => {
