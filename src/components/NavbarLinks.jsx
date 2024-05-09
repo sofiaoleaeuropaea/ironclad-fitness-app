@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-const NavbarLinks = ({ item, onClick }) => {
+const NavbarLinks = ({ item, onClick, className }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	const pathname = useLocation();
 
@@ -22,13 +22,12 @@ const NavbarLinks = ({ item, onClick }) => {
 		transition: 'transform 0.2s ease-in-out',
 		display: 'inline-block',
 	};
-
 	const isActive = (hash) => {
 		return pathname.hash === hash;
 	};
 
 	return (
-		<li>
+		<li className={className}>
 			<NavLink to={item.url} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={linkStyles} className={isActive('item.url') ? 'active' : ''} onClick={onClick}>
 				{item.title}
 			</NavLink>

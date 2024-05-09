@@ -71,7 +71,7 @@
 		.navbarlink_mobile {
 			display: none;
 			@include breakpointMobile(960px) {
-				display: unset;
+				display: inline-block;
 			}
 		}
 	}

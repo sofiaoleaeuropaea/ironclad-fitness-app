@@ -25,42 +25,11 @@
 		border: 2px solid $primary-color;
 		border-top: unset;
 	}
-	// &__tooltip {
-	// 	position: absolute;
-	// 	right: -155px;
-	// 	opacity: 0;
-	// 	background-color: $text-dark;
-	// 	color: $background-light;
-	// 	padding: 5px 10px;
-	// 	border-radius: 5px;
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-	// 	transition-duration: 0.2s;
-	// 	pointer-events: none;
-	// 	letter-spacing: 0.5px;
-
-	// 	&::before {
-	// 		position: absolute;
-	// 		content: '';
-	// 		width: 10px;
-	// 		height: 10px;
-	// 		background-color: $text-dark;
-	// 		background-size: 1000%;
-	// 		background-position: center;
-	// 		transform: rotate(45deg);
-	// 		left: -3%;
-	// 		transition-duration: 0.3s;
-	// 	}
-	// }
 
 	&:hover {
 		background-color: $primary-color;
 		transition-duration: 0.3s;
-		// .btn__save__tooltip {
-		// 	opacity: 1;
-		// 	transition-duration: 0.3s;
-		// }
+		
 		.btn__save__icon {
 			border: 2px solid $background-light;
 			border-top: unset;

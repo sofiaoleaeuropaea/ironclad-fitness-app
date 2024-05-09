@@ -28,7 +28,7 @@ const Navbar = () => {
 					<nav>
 						<ul className={menuMobile ? 'navbar__menu active' : 'navbar__menu'}>
 							{navigation.map((item, index) => (
-								<NavbarLinks key={index} item={item} onClick={handleCheckboxChange} />
+								<NavbarLinks key={index} item={item} onClick={handleCheckboxChange} className={item.className} />
 							))}
 						</ul>
 					</nav>

@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom';
 const Button = ({ href, onClick, children, className, value }) => {
-	const classes = `btn effect  ${className || ''}`;
+	const btnClasses = `btn effect  ${className || ''}`;
 
 	const renderButton = () => (
-		<button className={classes} onClick={onClick}>
+		<button className={btnClasses} onClick={onClick}>
 			{children}
 		</button>
 	);
 
 	const renderLink = () => (
-		<Link to={href} className={classes}>
+		<Link to={href} className={btnClasses}>
 			{children}
 		</Link>
 	);
 
-	const renderInput = () => <input type="submit" value={value} className={classes} />;
+	const renderInput = () => <input type="submit" value={value} className={btnClasses} />;
 
 	const renderComponent = () => {
 		if (href) {

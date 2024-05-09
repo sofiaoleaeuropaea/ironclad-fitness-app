@@ -185,9 +185,12 @@ const FitnessEvaluation = () => {
 										<h4>Workout Plan</h4>
 										<ul>
 											{fitnessPlan.exercises.map((exercise, index) => (
-												<div key={index}>
-													<li>{exercise.name}</li>
-													<li className="small-text-size">{exercise.repetitions}</li>
+												<div key={index} className="workout-exercise__wrapper">
+													<div className="workout-exercise__img"></div>
+													<div>
+														<li>{exercise.name}</li>
+														<li className="small-text-size">{exercise.repetitions}</li>
+													</div>
 												</div>
 											))}
 										</ul>
