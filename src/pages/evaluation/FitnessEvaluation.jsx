@@ -12,6 +12,7 @@ import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
 import ExerciseDB from './ExerciseDB';
+import { ImInsertTemplate } from 'react-icons/im';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -85,10 +86,8 @@ const FitnessEvaluation = () => {
 		try {
 			const canvas = await html2canvas(fitnessPlanRef.current);
 			const imgData = canvas.toDataURL('image/png');
-			const pdf = new jsPDF({
-				orientation: 'landscape',
-			});
-			pdf.addImage(imgData, 'PNG', 1, 0);
+			const pdf = new jsPDF();
+			pdf.addImage(imgData, 'PNG', 1, 1);
 			pdf.save('ironclad-fitness-plan.pdf');
 		} catch (error) {
 			console.error('Error generating PDF:', error);
@@ -179,21 +178,23 @@ const FitnessEvaluation = () => {
 						{fitnessPlan && fitnessPlan.exercises && (
 							<div id="fitness_plan" className="fitness-plan__container">
 								<div className="fitness-plan__wrapper">
-									<div ref={fitnessPlanRef} className="fitness-plan__card">
+									<div className="fitness-plan__card">
 										<h3>Ready to workout?</h3>
 										<p>{fitnessPlan.description}</p>
-										<h4>Workout Plan</h4>
-										<ul>
-											{fitnessPlan.exercises.map((exercise, index) => (
-												<div key={index} className="workout-exercise__wrapper">
-													<div className="workout-exercise__img"></div>
-													<div>
-														<li>{exercise.name}</li>
-														<li className="small-text-size">{exercise.repetitions}</li>
+										<div ref={fitnessPlanRef}>
+											<h4>Workout Plan</h4>
+											<ul>
+												{fitnessPlan.exercises.map((exercise, index) => (
+													<div key={index} className="workout-exercise__wrapper">
+														<div className="workout-exercise__img"><img src={exercise.img} alt={exercise.name} /></div>
+														<div>
+															<li>{exercise.name}</li>
+															<li className="small-text-size">{exercise.repetitions}</li>
+														</div>
 													</div>
-												</div>
-											))}
-										</ul>
+												))}
+											</ul>
+										</div>
 									</div>
 									<ButtonSave onClick={handleDownloadPDF} />
 								</div>
