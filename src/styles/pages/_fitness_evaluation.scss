@@ -65,10 +65,19 @@
 				display: flex;
 				width: 100%;
 				gap: 2rem;
+				flex-direction: column;
+				@include breakpointDesktop(1000px) {
+					flex-direction: row;
+				}
 			}
+
 			&__wrapper {
-				width: 60%;
+				// background-color: $tertiary-color;
+				@include breakpointDesktop(1000px) {
+					width: 55%;
+				}
 			}
+
 			&__card {
 				display: flex;
 				flex-direction: column;
@@ -80,13 +89,14 @@
 				.workout-exercise {
 					&__wrapper {
 						line-height: 1.75;
-						margin-bottom: 1rem;
+						margin-bottom: 2rem;
 						display: flex;
 						gap: 1rem;
 						align-items: center;
 
 						li:nth-child(1) {
 							font-weight: 600;
+							
 						}
 					}
 					&__img {
@@ -95,7 +105,8 @@
 						border-radius: 7px;
 						// box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.11);
 						border: 2px solid $tertiary-color;
-						
+						background-color: rgba($tertiary-color, 0.7);
+
 						img {
 							width: 33px;
 							height: 100%;
