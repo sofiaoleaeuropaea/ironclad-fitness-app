@@ -308,9 +308,9 @@ export const trainingPlans = [
 	{
 		description: 'This training plan is designed for underweight individuals aiming to reduce body fat while maintaining muscle mass and improving overall health.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 min', img: '/images/bodyweight.svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 min', img: '/images/bodyweight.svg', id: 'bodyweight_svg'},
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
 		],
 	},
@@ -335,9 +335,9 @@ export const trainingPlans = [
 	{
 		description: 'This training plan is suitable for individuals with a normal BMI aiming to reduce body fat and improve overall fitness levels.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 			{ name: 'Leg Extension Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
 		],
 	},
@@ -362,9 +362,9 @@ export const trainingPlans = [
 	{
 		description: 'This training plan is designed for overweight individuals aiming to reduce body fat and improve cardiovascular health while increasing physical activity levels.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
 		],
 	},
@@ -374,7 +374,7 @@ export const trainingPlans = [
 			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
 			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine_cables.svg' },
 			{ name: 'Leg Press Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 		],
 	},
 	{
@@ -389,8 +389,8 @@ export const trainingPlans = [
 	{
 		description: 'This training plan is designed for obese individuals aiming to reduce body weight, improve cardiovascular health, and increase physical activity levels.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 			{ name: 'Leg Extension Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
 			{ name: 'Hamstring Curls', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine_cables.svg' },
 		],

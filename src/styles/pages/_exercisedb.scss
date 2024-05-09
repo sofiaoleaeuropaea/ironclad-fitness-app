@@ -1,11 +1,13 @@
 @use '../utils/' as *;
 
 .exercisedb__wrapper {
-width: 45%;
+	@include breakpointDesktop(1000px) {
+		width: 45%;
+	}
 	h4 {
 		text-align: center;
 	}
-    // &__exercises{
+	// &__exercises{
 
-    // }
+	// }
 }
