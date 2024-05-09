@@ -23,7 +23,8 @@
 				'exercises exercises exercises';
 		}
 		.bmi__wrapper,
-		.fitness-plan__wrapper {
+		.fitness-plan__wrapper,
+		.exercisedb__wrapper {
 			@include cardTransparent;
 		}
 		#fitness_evaluation_form {
@@ -32,7 +33,7 @@
 		#bmi_info {
 			grid-area: bmi;
 		}
-		#fitness_plan_exercises {
+		#fitness_plan {
 			grid-area: exercises;
 		}
 		.bmi-value__wrapper {
@@ -60,11 +61,14 @@
 			}
 		}
 		.fitness-plan {
+			&__container {
+				display: flex;
+				width: 100%;
+				gap: 2rem;
+				
+			}
 			&__wrapper {
 				width: 60%;
-				// display: flex;
-				// align-items: flex-start;
-				// gap: 2rem;
 			}
 			&__card {
 				display: flex;

@@ -11,6 +11,7 @@ import Button from '../../components/Button';
 import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
+import ExerciseDB from './ExerciseDB';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -87,7 +88,7 @@ const FitnessEvaluation = () => {
 			const pdf = new jsPDF({
 				orientation: 'landscape',
 			});
-			pdf.addImage(imgData, 'PNG', 0, 0);
+			pdf.addImage(imgData, 'PNG', 1, 0);
 			pdf.save('ironclad-fitness-plan.pdf');
 		} catch (error) {
 			console.error('Error generating PDF:', error);
@@ -163,7 +164,7 @@ const FitnessEvaluation = () => {
 									</div>
 								</div>
 
-								<Button value="Submit" className="btn__mg-right" />
+								<Button value="Submit" />
 							</form>
 						</div>
 
@@ -176,21 +177,24 @@ const FitnessEvaluation = () => {
 							<p>{bmiInterpretation.description}</p>
 						</div>
 						{fitnessPlan && fitnessPlan.exercises && (
-							<div className="fitness-plan__wrapper" id="fitness_plan_exercises">
-								<div ref={fitnessPlanRef} className="fitness-plan__card" id="fitness-plan__card">
-									<h3>Fitness Plan</h3>
-									<p>{fitnessPlan.description}</p>
-									<h4>Exercises</h4>
-									<ol>
-										{fitnessPlan.exercises.map((exercise, index) => (
-											<li key={index}>
-												{exercise.name} ({exercise.repetitions})
-											</li>
-										))}
-									</ol>
+							<div id="fitness_plan" className="fitness-plan__container">
+								<div className="fitness-plan__wrapper">
+									<div ref={fitnessPlanRef} className="fitness-plan__card">
+										<h3>Ready to workout?</h3>
+										<p>{fitnessPlan.description}</p>
+										<h4>Workout Plan</h4>
+										<ul>
+											{fitnessPlan.exercises.map((exercise, index) => (
+												<div key={index}>
+													<li>{exercise.name}</li>
+													<li className="small-text-size">{exercise.repetitions}</li>
+												</div>
+											))}
+										</ul>
+									</div>
+									<ButtonSave onClick={handleDownloadPDF} />
 								</div>
-
-								<ButtonSave onClick={handleDownloadPDF} />
+								<ExerciseDB />
 							</div>
 						)}
 					</div>

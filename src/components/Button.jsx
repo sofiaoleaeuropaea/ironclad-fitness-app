@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 const Button = ({ href, onClick, children, className, value }) => {
 	const classes = `btn effect  ${className || ''}`;
 
@@ -8,9 +9,9 @@ const Button = ({ href, onClick, children, className, value }) => {
 	);
 
 	const renderLink = () => (
-		<a href={href} className={classes}>
+		<Link to={href} className={classes}>
 			{children}
-		</a>
+		</Link>
 	);
 
 	const renderInput = () => <input type="submit" value={value} className={classes} />;

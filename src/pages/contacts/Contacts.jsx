@@ -41,7 +41,7 @@ const Contacts = () => {
 			<section id="contact__form" className="contact__form">
 				<div className="container ">
 					<div className="contact-form__wrapper">
-						<h2>We're here to help you</h2>
+						<h2>Let's talk</h2>
 
 						<FormContact />
 					</div>

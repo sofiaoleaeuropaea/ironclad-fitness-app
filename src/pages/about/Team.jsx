@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 
+
 import { personalTrainers } from '../../data';
 
 const Trainers = () => {
+
 	return (
 		<section id="team" className="team">
 			<div className="container">

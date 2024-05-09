@@ -45,8 +45,9 @@
 	}
 
 	&__mg-right__desktop {
-		@include breakpointDesktop(390px){
-		margin: 0 2rem 0 auto;}
+		@include breakpointDesktop(390px) {
+			margin: 0 2rem 0 auto;
+		}
 	}
 
 	&__mg-right {
@@ -55,8 +56,12 @@
 	}
 
 	&__mg-left {
-		@include breakpointMobile(493px){
-margin-left: -7rem;}
+		@include breakpointMobile(493px) {
+			margin-left: -7rem;
+		}
 	}
 
+	&__mg-top {
+		margin-top: 2rem;
+	}
 }

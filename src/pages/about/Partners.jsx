@@ -6,26 +6,11 @@ import { partners } from '../../data';
 import Heading from '../../components/Heading';
 import Accordion from '../../components/Accordion';
 
-
-
 const Partnership = () => {
-
 	const [accordionOpen, setAccordionOpen] = useState(null);
-	const handleToggle= (index) => {
+	const handleToggle = (index) => {
 		setAccordionOpen((prevIndex) => (prevIndex === index ? null : index));
 	};
-
-	// const brandList = () => ()
-	// 	return 
-	// 		item.brands.map((brand, index) => (
-	// 			<li key={index}>
-	// 			<NavLink to={brand.url}>
-	// 			<img src={brand.logo} alt={brand.name} className="img-fluid partner__img" />
-	// 			</NavLink>
-	// 			</li>
-	// 		))
-	
-	// }
 
 	return (
 		<section id="partner" className="partner">
@@ -49,7 +34,7 @@ const Partnership = () => {
 							index={index}
 							accordionOpen={accordionOpen}
 							handleToggle={handleToggle}
-						/>	
+						/>
 					))}
 				</div>
 			</div>

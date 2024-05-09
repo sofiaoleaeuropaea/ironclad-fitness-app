@@ -5,13 +5,13 @@
 	flex-direction: column;
 	max-width: 500px;
 	min-width: 300px;
-	background: rgba($secondary-color, 0.2);
-	border: 1px solid $secondary-color;
+	// background: rgba($secondary-color, 0.2);
+	// border: 1px solid $secondary-color;
 	padding: 2rem;
-	border-radius: 10px;
+	// border-radius: 10px;
 
 	@include md {
-		padding: 3rem;
+		padding: unset;
 	}
 
 	&__bg-transparent {
@@ -31,17 +31,17 @@
 	&__information {
 		width: 100%;
 		padding: 1rem;
-		margin-bottom: 1rem;
+		margin-bottom: 2rem;
 		outline: none;
 		border: none;
 		background: transparent;
-		border-left: 2px solid $text-dark;
+		border-left: 1.5px solid $text-dark;
 		border-bottom: 2px solid $text-dark;
 		transition: 0.1s;
 		border-bottom-left-radius: 8px;
-		@include md {
-			margin-bottom: 2rem;
-		}
+		// @include md {
+		// 	margin-bottom: 3rem;
+		// }
 	}
 
 	&__selector {

@@ -95,7 +95,7 @@ export const portfolio = [
 		title: 'Partnerships',
 		description: 'Discover our partners and start saving with discounts on our services.',
 		className: 'partners',
-		url: '/about',
+		url: '/about#partner',
 	},
 	{
 		id: 3,
@@ -104,7 +104,7 @@ export const portfolio = [
 		img: '/images/pt1.png',
 		className: 'pt',
 		id: 'pt__img',
-		url: '/about',
+		url: '/about#team',
 	},
 ];
 export const pricing = [

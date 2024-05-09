@@ -4,8 +4,9 @@ import Heading from '../../components/Heading';
 import Button from '../../components/Button';
 
 import { portfolio } from '../../data';
+import { Link } from 'react-router-dom';
 
-function Portfolio() {
+const Portfolio = () => {
 	// const [isHovered, setIsHovered] = useState(false);
 
 	// const handleMouseEnter = () => {
@@ -33,6 +34,7 @@ function Portfolio() {
 								<h3>{item.title}</h3>
 								<p className="card__description">{item.description}</p>
 							</div>
+
 							<Button href={item.url} className="btn__mg-right__desktop">
 								Know more
 							</Button>
@@ -43,6 +45,6 @@ function Portfolio() {
 			</div>
 		</section>
 	);
-}
+};
 
 export default Portfolio;

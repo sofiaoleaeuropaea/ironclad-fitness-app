@@ -16,8 +16,8 @@ const Membership = () => {
 
 				<div className="container ">
 					<div className="membership__wrapper">
-						{pricing.map((item) => (
-							<div key={item.id} className="membership__card" id={`${item.className}`}>
+						{pricing.map((item, index) => (
+							<div key={index} className="membership__card" id={`${item.className}`}>
 								<div className="card__content">
 									<h3>{item.title}</h3>
 									<p>{item.price}</p>
@@ -38,10 +38,10 @@ const Membership = () => {
 							<h3>Looking for a personal trainer?</h3>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iste totam porro, neque vitae laudantium adipisci sapiente corrupti maxime.</p>
 						</div>
-						<Button href="/about" className="btn__mg-left">
+						<Button href="/about#team" className="btn__mg-left">
 							Say hello
 						</Button>
-						<img className="img-fluid pt__content__img" src="images/pesos.png" alt="" />
+						<img className="img-fluid pt__content__img" src="images/gym-weights.png" alt="Gym weights" />
 					</div>
 				</div>
 			</section>
