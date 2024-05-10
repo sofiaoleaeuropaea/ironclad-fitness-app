@@ -175,7 +175,8 @@ const FitnessEvaluation = () => {
 							</div>
 							<p>{bmiInterpretation.description}</p>
 						</div>
-						{fitnessPlan && fitnessPlan.exercises && (
+
+						{fitnessPlan && (
 							<div id="fitness_plan" className="fitness-plan__container">
 								<div className="fitness-plan__wrapper">
 									<div className="fitness-plan__card">
@@ -186,7 +187,9 @@ const FitnessEvaluation = () => {
 											<ul>
 												{fitnessPlan.exercises.map((exercise, index) => (
 													<div key={index} className="workout-exercise__wrapper">
-														<div className="workout-exercise__img"><img src={exercise.img} alt={exercise.name} id={exercise.id } /></div>
+														<div className="workout-exercise__img">
+															<img src={exercise.img} alt={exercise.name} id={exercise.id} />
+														</div>
 														<div>
 															<li>{exercise.name}</li>
 															<li className="small-text-size">{exercise.repetitions}</li>
