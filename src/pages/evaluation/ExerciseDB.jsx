@@ -9,7 +9,7 @@ const ExerciseDB = () => {
 
 	const exerciseDBoptions = {
 		method: 'GET',
-		params: { limit: '1' },
+		params: { limit: '1300' },
 		headers: {
 			'X-RapidAPI-Key': '8abd9ce163mshe02598f387d31f5p123801jsn5ed79f2c6d34',
 			'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
@@ -20,9 +20,10 @@ const ExerciseDB = () => {
 		const fetchExerciseDB = async () => {
 			try {
 				const response = await fetch(exercisedbURL, exerciseDBoptions);
+				console.log(response);
 				const data = await response.json();
 				setExerciseInfo(data);
-				setFilteredExercise(data.slice(0, 0)); 
+				setFilteredExercise(data.slice(0, 1));
 			} catch (err) {
 				console.log(err);
 			}
@@ -36,10 +37,8 @@ const ExerciseDB = () => {
 				exercise.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				exercise.target.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				exercise.bodyPart.toLowerCase().includes(searchQuery.toLowerCase())
-			// exercise.instructions.toLowerCase().includes(searchQuery.toLowerCase()) ||
-			// exercise.gifUrl.includes(searchQuery)
 		);
-		setFilteredExercise(filterExercise);
+		setFilteredExercise(filterExercise.length > 0 ? [filterExercise[0]] : []);
 	}, [searchQuery, exerciseInfo]);
 
 	const handleSearch = (event) => {
@@ -51,15 +50,17 @@ const ExerciseDB = () => {
 			<h3>Your virtual helper</h3>
 			<form>
 				<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
-				<div id="exerciseDetail">
+				<div className="exercise__card">
 					{filteredExercise.map((exercise, index) => (
 						<div key={index}>
-							<img src={exercise.gifUrl} alt={exercise.name} />
-							<div>
-								<span>{exercise.bodyPart}</span> <span>{exercise.target}</span>
+							<div className="exercise__details">
+								<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
+								<div className="exercise__targets small-text-size">
+									<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
+								</div>
 							</div>
 							<h4>{exercise.name}</h4>
-							<p>{exercise.instructions}</p>
+							<p>{exercise.instructions.join(' ')}</p>
 						</div>
 					))}
 				</div>

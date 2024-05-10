@@ -4,10 +4,37 @@
 	@include breakpointDesktop(1000px) {
 		width: 45%;
 	}
-	h4 {
+	h3 {
 		text-align: center;
 	}
-	// &__exercises{
-
-	// }
+	.exercise {
+		&__card {
+			img {
+				width: 270px;
+				border-radius: 7px;
+			}
+			h4{
+				text-transform: capitalize;
+			}
+		}
+		&__details {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+		&__targets {
+			display: flex;
+			margin: 1rem 0 2rem 0;
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 0.5rem;
+			text-transform: capitalize;
+			span {
+				padding: 0.625rem 1.25rem;
+				margin-right: 0.5rem;
+				border: 2px solid $text-dark;
+				border-radius: 30px;
+			}
+		}
+	}
 }

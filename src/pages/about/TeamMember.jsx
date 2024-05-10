@@ -21,7 +21,7 @@ const TeamMember = () => {
 							))}
 						</div>
 
-						<img src={member.img} className="img-fluid " alt={member.name} loading="lazy" />
+						<img src={member.img} className="img-fluid " alt={member.name}/>
 
 						<blockquote className="member__intro__quote">
 							<p>"{member.quote}"</p>
