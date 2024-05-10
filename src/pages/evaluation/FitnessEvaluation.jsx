@@ -179,10 +179,10 @@ const FitnessEvaluation = () => {
 							<div id="fitness_plan" className="fitness-plan__container">
 								<div className="fitness-plan__wrapper">
 									<div className="fitness-plan__card">
-										<h3>Ready to workout?</h3>
+										<h2>Ready to workout?</h2>
 										<p>{fitnessPlan.description}</p>
 										<div ref={fitnessPlanRef}>
-											<h4>Workout Plan</h4>
+											<h3>Workout Plan</h3>
 											<ul>
 												{fitnessPlan.exercises.map((exercise, index) => (
 													<div key={index} className="workout-exercise__wrapper">
