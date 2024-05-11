@@ -19,7 +19,8 @@
 			grid-template-columns: repeat(3, 1fr);
 
 			grid-template-areas:
-				'form bmi bmi '
+				'form form form'
+				'bmi bmi bmi'
 				'exercises exercises exercises';
 		}
 		.bmi__wrapper,
@@ -72,7 +73,6 @@
 			}
 
 			&__wrapper {
-			
 				@include breakpointDesktop(1000px) {
 					width: 55%;
 				}
@@ -109,7 +109,7 @@
 						border: 2px solid $tertiary-color;
 						background-color: rgba($tertiary-color, 0.7);
 
-						&:hover{
+						&:hover {
 							opacity: 90%;
 						}
 

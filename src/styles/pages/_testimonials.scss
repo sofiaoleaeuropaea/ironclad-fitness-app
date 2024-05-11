@@ -1,26 +1,45 @@
 @use '../utils/' as *;
 
 .testimonials {
-	margin: 20rem 0 10rem 0;
+	margin: 10rem 0 10rem 0;
 	&__wrapper {
+		margin-top: 5rem;
 		overflow-x: hidden;
-		
-	}
-
-	.splide__pagination__page.is-visible.is-active.costum__color {
-		background: $primary-color;
 	}
 
 	&__card {
 		margin: 0 1px;
 		height: 100%;
-		@include cardTransparent($pdg: 3rem);
+		@include card($pdg: 3rem);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		blockquote p {
-			margin-bottom: 1rem;
+
+		.testimonial__details {
+			&__quote,
+			&__rating {
+				display: flex;
+				justify-content: space-between;
+			}
+			&__quote {
+				border-bottom: 1px solid $text-dark;
+				
+				p {
+					width: 85%;
+					margin-bottom: 1.25rem;
+				}
+				.quote__icon {
+					font-size: 1.75rem;
+					color: rgba(#202020, 0.8);
+				}
+			}
+			&__rating {
+				margin-top: 1.25rem;
+				cite {
+					font-weight: 600;
+				}
+			}
 		}
 	}
 }

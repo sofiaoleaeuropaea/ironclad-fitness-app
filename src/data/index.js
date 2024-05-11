@@ -146,26 +146,31 @@ export const testimonials = [
 		id: 0,
 		name: 'Sarah Johnson',
 		description: 'Trainers are supportive, classes are motivating. Never felt stronger or more confident. Best decision I made for my fitness journey!',
+		rating: 4.5,
 	},
 	{
 		id: 1,
 		name: 'Michael Smith',
 		description: "Top-notch facilities, friendly staff. Can't imagine going elsewhere. It's like a second home. Highly recommend!",
+		rating: 5,
 	},
 	{
 		id: 2,
 		name: 'Emily Rodriguez',
 		description: 'Achieved fitness goals I never thought possible. Supportive community, welcoming atmosphere. Proud of my progress!',
+		rating: 4,
 	},
 	{
 		id: 3,
 		name: 'John Davis',
 		description: 'State-of-the-art equipment, dedicated trainers. Never felt better! Finally found the perfect fit after trying several gyms.',
+		rating: 5,
 	},
 	{
 		id: 4,
 		name: 'Jennifer Lee',
 		description: 'Nervous at first, but staff quickly put my fears to rest. Knowledgeable, approachable. Made great friends. Amazing journey!',
+		rating: 4.5,
 	},
 ];
 
