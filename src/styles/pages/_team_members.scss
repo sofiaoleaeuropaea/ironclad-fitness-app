@@ -25,9 +25,11 @@
 			width: 47%;
 		}
 	}
-
+	&__biography {
+		background: rgba(#727272, 0.15);
+	}
 	&__intro {
-		background-color: $primary-color;
+		background-color: rgba($primary-color, 0.8);
 
 		&__modality {
 			margin: 5rem 0 2rem 0;
@@ -38,19 +40,20 @@
 			.modality {
 				padding: 0.625rem 1.25rem;
 				margin-right: 0.5rem;
-				border: 2px solid $text-dark;
+				border: 1px solid $text-dark;
 				border-radius: 30px;
+		
 			}
 		}
 
 		&__quote {
-            margin: 2rem 0;
+			margin: 2rem 0;
 			text-align: center;
 			font-weight: 600;
 		}
 	}
 
-    &__biography__title{
-        margin-bottom: 3rem;
-    }
+	&__biography__title {
+		margin-bottom: 3rem;
+	}
 }

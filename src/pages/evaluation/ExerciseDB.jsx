@@ -46,26 +46,30 @@ const ExerciseDB = () => {
 	};
 
 	return (
-		<div className="exercisedb__wrapper">
-			<h3>Your virtual helper</h3>
-			<form>
-				<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
-				<div className="exercise__card">
-					{filteredExercise.map((exercise, index) => (
-						<div key={index}>
-							<div className="exercise__details">
-								<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
-								<div className="exercise__targets small-text-size">
-									<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
+		<section id="exercisedb__info" className="exercisedb__info">
+			<div className="container">
+				<div className="exercisedb__wrapper">
+					<h2>Your virtual helper</h2>
+					<form>
+						<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
+						<div className="exercise__card">
+							{filteredExercise.map((exercise, index) => (
+								<div key={index}>
+									<div className="exercise__details">
+										<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
+										<div className="exercise__targets small-text-size">
+											<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
+										</div>
+									</div>
+									<h4>{exercise.name}</h4>
+									<p>{exercise.instructions.join(' ')}</p>
 								</div>
-							</div>
-							<h4>{exercise.name}</h4>
-							<p>{exercise.instructions.join(' ')}</p>
+							))}
 						</div>
-					))}
+					</form>
 				</div>
-			</form>
-		</div>
+			</div>
+		</section>
 	);
 };
 
