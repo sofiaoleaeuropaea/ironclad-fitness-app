@@ -3,24 +3,26 @@
 .exercisedb {
 	&__info {
 		width: 100%;
-		padding-bottom: 10rem;
+		padding: 10rem 0;
+		border-top: $background-bd;
 	}
 	&__wrapper {
+		h2 {
+			text-align: center;
+		}
 		.exercise {
 			&__card {
 				img {
-					width: 270px;
+					box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.11);
 					border-radius: 7px;
+					
 				}
 				h4 {
-					text-transform: capitalize;
+					text-transform: uppercase;
+					font-size: 1.125rem
 				}
 			}
-			&__details {
-				display: flex;
-				align-items: center;
-				flex-direction: column;
-			}
+
 			&__targets {
 				display: flex;
 				margin: 1rem 0 2rem 0;
@@ -31,9 +33,48 @@
 				span {
 					padding: 0.625rem 1.25rem;
 					margin-right: 0.5rem;
-					border: 2px solid $text-dark;
+					
+					border: 1px solid $secondary-color;
 					border-radius: 30px;
+					background: rgba(#727272, 0.15)
 				}
+			}
+		}
+		.searchbar {
+			&__wrapper {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				position: relative;
+				max-width: 270px;
+				margin: 5rem 0;
+				&:focus {
+					border-color: $primary-color;
+					outline: none;
+				}
+				:focus + .searchbar__underline {
+					transform: scaleX(1);
+				}
+				#searchbar__exercises {
+					padding: 10px 0;
+					border: none;
+					outline: none;
+					border-bottom: 2px solid $text-dark;
+					width: 100%;
+					background-color: transparent;
+					transition: border-color 0.3s ease-in-out;
+				}
+			}
+
+			&__underline {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: $primary-color;
+				transform: scaleX(0);
+				transition: transform 0.3s ease-in-out;
 			}
 		}
 	}

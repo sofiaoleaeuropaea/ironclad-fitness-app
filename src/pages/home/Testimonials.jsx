@@ -7,7 +7,7 @@ import { IoIosStar, IoIosStarHalf } from 'react-icons/io';
 import { testimonials } from '../../data';
 
 const Testimonials = () => {
-	const options = {
+	const optionsSlideTestimonials = {
 		perPage: 3,
 		perMove: 1,
 		arrows: false,
@@ -47,7 +47,7 @@ const Testimonials = () => {
 					about our service
 				</h2>
 				<div className="testimonials__wrapper">
-					<Splide options={options}>
+					<Splide options={optionsSlideTestimonials}>
 						{testimonials.map((testimonial, index) => (
 							<SplideSlide key={index}>
 								<div className="testimonials__card">

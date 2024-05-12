@@ -173,6 +173,7 @@ const FitnessEvaluation = () => {
 									<p className={bmiInterpretation.classname}>{bmiValue}</p>
 									<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
 								</div>
+								<h3>Let's explain</h3>
 								<p>{bmiInterpretation.description}</p>
 							</div>
 						)}

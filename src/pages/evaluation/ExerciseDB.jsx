@@ -1,10 +1,25 @@
 import { useEffect, useState } from 'react';
+import '@splidejs/splide/css';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const ExerciseDB = () => {
 	const [exerciseInfo, setExerciseInfo] = useState([]);
 	const [filteredExercise, setFilteredExercise] = useState([]);
 	const [searchQuery, setSearchQuery] = useState('');
 
+	const optionsSliderExercises = {
+		perPage: 4,
+		perMove: 1,
+		
+		arrows: false,
+		gap: '2.5rem',
+		pagination: false,
+		wheel: true,
+		breakpoints: {
+			992: { perPage: 3 },
+			650: { perPage: 1 },
+		},
+	};
 	const exercisedbURL = 'https://exercisedb.p.rapidapi.com/exercises';
 
 	const exerciseDBoptions = {
@@ -38,7 +53,7 @@ const ExerciseDB = () => {
 				exercise.target.toLowerCase().includes(searchQuery.toLowerCase()) ||
 				exercise.bodyPart.toLowerCase().includes(searchQuery.toLowerCase())
 		);
-		setFilteredExercise(filterExercise.length > 0 ? [filterExercise[0]] : []);
+		setFilteredExercise(filterExercise);
 	}, [searchQuery, exerciseInfo]);
 
 	const handleSearch = (event) => {
@@ -49,12 +64,20 @@ const ExerciseDB = () => {
 		<section id="exercisedb__info" className="exercisedb__info">
 			<div className="container">
 				<div className="exercisedb__wrapper">
-					<h2>Your virtual helper</h2>
+					<h2>Train like a pro</h2>
+
 					<form>
-						<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
-						<div className="exercise__card">
+						<div className="searchbar__wrapper">
+							<img src="images/search_icon.svg" alt="Search Icon" />
+							<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
+							<span className="searchbar__underline"></span>
+						</div>
+					</form>
+
+					<div className="exercise__card">
+						<Splide options={optionsSliderExercises}>
 							{filteredExercise.map((exercise, index) => (
-								<div key={index}>
+								<SplideSlide key={index}>
 									<div className="exercise__details">
 										<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
 										<div className="exercise__targets small-text-size">
@@ -62,11 +85,11 @@ const ExerciseDB = () => {
 										</div>
 									</div>
 									<h4>{exercise.name}</h4>
-									<p>{exercise.instructions.join(' ')}</p>
-								</div>
+									{/* <p>{exercise.instructions.join(' ')}</p> */}
+								</SplideSlide>
 							))}
-						</div>
-					</form>
+						</Splide>
+					</div>
 				</div>
 			</div>
 		</section>

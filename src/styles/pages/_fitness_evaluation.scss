@@ -14,16 +14,17 @@
 			'form'
 			'bmi'
 			'exercises';
-		
 
 		@include breakpointDesktop(1000px) {
 			grid-template-columns: repeat(5, 1fr);
+			grid-template-rows: repeat(5, 1fr);
 
 			grid-template-areas:
 				'form form form form form'
+				'form form form form form'
 				'bmi bmi exercises exercises exercises'
-			
-				
+				'bmi bmi exercises exercises exercises'
+				'0 0 exercises exercises exercises';
 		}
 		.bmi__wrapper,
 		.fitness-plan__wrapper,
@@ -39,16 +40,22 @@
 		#fitness_plan {
 			grid-area: exercises;
 		}
-		// #exercisedb_info{
-		// 	grid-area: exercisedb;
-		// }
+
 		.bmi-value__wrapper {
-			text-align: center;
-			margin: 4rem 0 4rem 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			padding: 3rem 0 3rem 0;
+			border-bottom: 1px solid $text-dark;
+			margin-bottom: 3rem;
 			p {
+				text-align: center;
 				font-weight: 700;
 				font-size: 3.05rem;
 				margin-bottom: 0.5rem;
+				
 			}
 			span {
 				text-transform: uppercase;
@@ -67,14 +74,15 @@
 			}
 		}
 		.fitness-plan {
-		
 			&__card {
 				display: flex;
 				flex-direction: column;
 
-				p,
+				p {
+					margin: 2rem 0 5rem 0;
+				}
 				ul {
-					margin: 2rem 0 3rem 0;
+					margin: 3rem 0;
 				}
 				.workout-exercise {
 					&__wrapper {
