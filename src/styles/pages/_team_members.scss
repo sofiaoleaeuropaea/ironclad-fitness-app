@@ -29,7 +29,7 @@
 		background: rgba(#727272, 0.15);
 	}
 	&__intro {
-		background-color: rgba($primary-color, 0.8);
+		background-color: $primary-color;
 
 		&__modality {
 			margin: 5rem 0 2rem 0;

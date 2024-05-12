@@ -1,8 +1,8 @@
-$primary-color: #fe763c;
+$primary-color: #ef8d3d;
 $secondary-color: #727272;
-$tertiary-color: #04a463;
-$scale-low-color:#F1CD2A;
-$scale-high-color:#D60B30;
+$tertiary-color: #61b77e;
+$scale-low-color: #f1cd2a;
+$scale-high-color: #d60b30;
 $text-dark: #202020;
 $background-light: #ededed;
 $error-color: #cb321b;
@@ -11,8 +11,11 @@ $white: #ffffff;
 $black: #03001c;
 
 $background-bd: 2px solid rgba(#202020, 0.13);
+$line-border: 1px solid rgba(#202020, 0.3);
+$card-border: 1px solid #727272;
+$card-bg-grey: rgba(#727272, 0.15);
 
 $text-font: 'Inter', sans-serif;
 $headings-font: 'Syne', sans-serif;
 
-$min-height:calc(100vh - 146.84px);
+$min-height: calc(100vh - 146.84px);

@@ -9,7 +9,6 @@
 
 	&__wrapper {
 		margin-top: 10rem;
-
 		gap: 2rem;
 		display: grid;
 		justify-content: space-evenly;
@@ -22,8 +21,6 @@
 			'family';
 
 		@include breakpointDesktop(650px) {
-	
-		
 			grid-template-columns: repeat(2, 270px);
 			grid-template-areas:
 				'basic premium'
@@ -36,18 +33,15 @@
 		}
 		#basic {
 			grid-area: basic;
-
 		}
 		#premium {
 			grid-area: premium;
-				}
+		}
 		#elite {
 			grid-area: elite;
-
 		}
 		#family {
 			grid-area: family;
-
 		}
 	}
 	&__card {
@@ -55,16 +49,31 @@
 
 		.card {
 			&__content {
-				text-align: center;
+				width: 100%;
+			}
+			&__heading {
+				border-bottom: $line-border;
+				h3 {
+					font-size: 1.3rem;
+				}
 				p {
 					font-weight: 600;
-					font-size: 1.3rem;
-					margin-top: 0.5rem;
+					font-size: 2.44rem;
+					padding: 0.5rem 0 1rem 0;
 				}
 			}
 			&__description {
 				margin: 1.5rem 0 3rem 0;
-				line-height: 2;
+				line-height: 2.25;
+			}
+			&__item {
+				display: flex;
+				gap: 0.25rem;
+				align-items: center;
+				.check-circle__icon {
+					font-size: 1.25rem;
+					color: $primary-color;
+				}
 			}
 		}
 	}

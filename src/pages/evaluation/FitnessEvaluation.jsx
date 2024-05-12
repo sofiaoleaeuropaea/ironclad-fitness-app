@@ -103,8 +103,9 @@ const FitnessEvaluation = () => {
 				/>
 
 				<div className="container">
-					<div className="evaluation__wrapper">
-						<div className="form " id="fitness_evaluation_form">
+					<div className="form__wrapper">
+						<img src="images/woman_running.jpg" alt="Woman running" className="img-fluid" />
+						<div className="form form__evaluation">
 							<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
 								<input
 									className="form__information"
@@ -166,47 +167,46 @@ const FitnessEvaluation = () => {
 								<Button value="Submit" />
 							</form>
 						</div>
-						{fitnessPlan && (
-							<div className="bmi__wrapper" id="bmi_info">
+					</div>
+				</div>
+				{fitnessPlan && (
+					<div className="form-output__wrapper">
+						<div className="container form-output__cards">
+							<div className="bmi__wrapper">
 								<h2>BMI result</h2>
 								<div className="bmi-value__wrapper">
 									<p className={bmiInterpretation.classname}>{bmiValue}</p>
 									<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
 								</div>
-								<h3>Let's explain</h3>
+
 								<p>{bmiInterpretation.description}</p>
 							</div>
-						)}
-						{fitnessPlan && (
-							<div id="fitness_plan" className="fitness-plan__wrapper">
-								<div className="fitness-plan__card">
-									<h2>Ready to workout?</h2>
-									<p>{fitnessPlan.description}</p>
-									<div ref={fitnessPlanRef}>
-										<h3>Workout Plan</h3>
-										<ul>
-											{fitnessPlan.exercises.map((exercise, index) => (
-												<div key={index} className="workout-exercise__wrapper">
-													<div className="workout-exercise__img">
-														<img src={exercise.img} alt={exercise.name} id={exercise.id} />
-													</div>
-													<div>
-														<li>{exercise.name}</li>
-														<li className="small-text-size">{exercise.repetitions}</li>
-													</div>
+							<div className="fitness-plan__wrapper">
+								<h2>Workout Plan</h2>
+								<p>{fitnessPlan.description}</p>
+								<div ref={fitnessPlanRef}>
+									<h3>Ready to workout?</h3>
+									<ul>
+										{fitnessPlan.exercises.map((exercise, index) => (
+											<div key={index} className="workout-exercise__wrapper">
+												<div className="workout-exercise__img">
+													<img src={exercise.img} alt={exercise.name} id={exercise.id} />
 												</div>
-											))}
-										</ul>
-									</div>
+												<div>
+													<li>{exercise.name}</li>
+													<li className="small-text-size">{exercise.repetitions}</li>
+												</div>
+											</div>
+										))}
+									</ul>
 								</div>
 								<ButtonSave onClick={handleDownloadPDF} />
 							</div>
-						)}
-						
+						</div>
 					</div>
-				</div>
+				)}
 			</section>
-			<ExerciseDB/>
+			<ExerciseDB />
 		</>
 	);
 };

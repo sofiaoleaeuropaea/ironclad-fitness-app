@@ -19,7 +19,8 @@
 				}
 				h4 {
 					text-transform: uppercase;
-					font-size: 1.125rem
+					font-size: 1.125rem;
+						font-weight: 600;
 				}
 			}
 
@@ -33,10 +34,11 @@
 				span {
 					padding: 0.625rem 1.25rem;
 					margin-right: 0.5rem;
-					
+					color: $background-light;
+					background-color: $text-dark;
 					border: 1px solid $secondary-color;
 					border-radius: 30px;
-					background: rgba(#727272, 0.15)
+				
 				}
 			}
 		}

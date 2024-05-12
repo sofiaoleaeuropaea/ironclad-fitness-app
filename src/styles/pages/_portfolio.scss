@@ -51,6 +51,7 @@
 		// backdrop-filter: blur(20px);
 		@include md {
 			@include card($pdg: 3rem);
+			background-color: $primary-color;
 		}
 		
 		.card {

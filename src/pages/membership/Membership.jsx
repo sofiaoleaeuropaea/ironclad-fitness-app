@@ -1,3 +1,4 @@
+import { HiCheckCircle } from 'react-icons/hi';
 import { pricing } from '../../data';
 
 import Heading from '../../components/Heading';
@@ -19,15 +20,18 @@ const Membership = () => {
 						{pricing.map((item, index) => (
 							<div key={index} className="membership__card" id={`${item.className}`}>
 								<div className="card__content">
-									<h3>{item.title}</h3>
-									<p>{item.price}</p>
-									<div>
-										<ul className="card__description">
-											{item.features.map((feature, id) => (
-												<li key={id}>{feature}</li>
-											))}
-										</ul>
+									<div className="card__heading">
+										<h3>{item.title}</h3>
+										<p>{item.price}</p>
 									</div>
+
+									<ul className="card__description">
+										{item.features.map((feature, id) => (
+											<div key={id} className='card__item'>
+												<HiCheckCircle className="check-circle__icon" /> <li>{feature}</li>
+											</div>
+										))}
+									</ul>
 								</div>
 								<Button href="/signup">Start now</Button>
 							</div>
