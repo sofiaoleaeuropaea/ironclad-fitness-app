@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import html2canvas from 'html2canvas';
@@ -12,7 +12,6 @@ import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
 // import ExerciseDB from './ExerciseDB';
-import { ImInsertTemplate } from 'react-icons/im';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -40,10 +39,10 @@ const FitnessEvaluation = () => {
 	const submitForm = (data) => {
 		console.log(data);
 		// setFormData(data);
-		reset();
 	};
 
 	const handleReset = () => {
+		reset();
 		setHeightValue('');
 		setWeightValue('');
 		setBmiValue(0);
@@ -179,41 +178,65 @@ const FitnessEvaluation = () => {
 						</div>
 					</div>
 				</div>
-				{fitnessPlan && (
-					<div className="form-output__wrapper">
-						<div className="container form-output__cards">
-							<div className="bmi__wrapper">
-								<h2>BMI result</h2>
-								<div className="bmi-value">
-									<p className={bmiInterpretation.classname}>{bmiValue}</p>
-									<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
-								</div>
-								<p>{bmiInterpretation.description}</p>
-							</div>
-							<div className="fitness-plan__wrapper">
-								<h2>Workout Plan</h2>
-								<p>{fitnessPlan.description}</p>
-								<div ref={fitnessPlanRef}>
-									<h3>Ready to workout?</h3>
-									<ul>
-										{fitnessPlan.exercises.map((exercise, index) => (
-											<div key={index} className="workout-exercise__wrapper">
-												<div className="workout-exercise__img">
-													<img src={exercise.img} alt={exercise.name} id={exercise.id} />
+
+				<div className="form-output__wrapper">
+					<div className="container form-output__cards">
+						<div className="bmi__wrapper">
+							<h2>BMI result</h2>
+							{!fitnessPlan && (
+								<>
+									<p>
+										BMI, or Body Mass Index, is a simple tool that helps gauge your body fat based on your height and weight. It gives you an idea of whether you're at a healthy weight for your
+										height. It's a handy way to track your fitness journey and make informed choices about your health.
+									</p>
+								</>
+							)}
+							{fitnessPlan && (
+								<>
+									<div className="bmi-value">
+										<p className={bmiInterpretation.classname}>{bmiValue}</p>
+										<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
+									</div>
+									<p>{bmiInterpretation.description}</p>
+								</>
+							)}
+						</div>
+						<div className="fitness-plan__wrapper">
+							<h2>Workout Plan</h2>
+							{!fitnessPlan && (
+								<>
+									<p>
+										Get ready for a personalized fitness journey tailored just for you! We'll use your BMI along with your fitness goals to craft a plan designed to help you succeed. Let's reach those
+										goals together!
+									</p>
+								</>
+							)}
+							{fitnessPlan && (
+								<>
+									<p>{fitnessPlan.description}</p>
+
+									<div ref={fitnessPlanRef}>
+										<h3>Ready to workout?</h3>
+										<ul>
+											{fitnessPlan.exercises.map((exercise, index) => (
+												<div key={index} className="workout-exercise__wrapper">
+													<div className="workout-exercise__img">
+														<img src={exercise.img} alt={exercise.name} id={exercise.id} />
+													</div>
+													<div>
+														<li>{exercise.name}</li>
+														<li className="small-text-size">{exercise.repetitions}</li>
+													</div>
 												</div>
-												<div>
-													<li>{exercise.name}</li>
-													<li className="small-text-size">{exercise.repetitions}</li>
-												</div>
-											</div>
-										))}
-									</ul>
-								</div>
-								<ButtonSave onClick={handleDownloadPDF} />
-							</div>
+											))}
+										</ul>
+									</div>
+									<ButtonSave onClick={handleDownloadPDF} />
+								</>
+							)}
 						</div>
 					</div>
-				)}
+				</div>
 			</section>
 			{/* <ExerciseDB /> */}
 		</>
