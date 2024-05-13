@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import html2canvas from 'html2canvas';
@@ -41,6 +41,14 @@ const FitnessEvaluation = () => {
 		console.log(data);
 		// setFormData(data);
 		reset();
+	};
+
+	const handleReset = () => {
+		setHeightValue('');
+		setWeightValue('');
+		setBmiValue(0);
+		setBmiInterpretation('');
+		setFitnessPlan('');
 	};
 
 	const calculateBmi = () => {
@@ -106,6 +114,7 @@ const FitnessEvaluation = () => {
 					<div className="form__wrapper">
 						<img src="images/woman_running.jpg" alt="Woman running" className="img-fluid" />
 						<div className="form form__evaluation">
+							<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
 							<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
 								<input
 									className="form__information"
@@ -165,6 +174,7 @@ const FitnessEvaluation = () => {
 								</div>
 
 								<Button value="Submit" />
+								<Button onClick={handleReset}>Reset</Button>
 							</form>
 						</div>
 					</div>
