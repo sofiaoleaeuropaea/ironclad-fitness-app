@@ -112,7 +112,7 @@ export const pricing = [
 		id: 0,
 		title: 'Basic',
 
-		price: '30€/month',
+		price: '30€/Month',
 		features: ['Weekend Access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'basic',
 	},
@@ -120,22 +120,21 @@ export const pricing = [
 		id: 1,
 		title: 'Premium',
 
-		price: '40€/month',
+		price: '40€/Month',
 		features: ['3 Times/week', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'premium',
 	},
 	{
 		id: 2,
 		title: 'Elite',
-
-		price: '55€/month',
+		price: '55€/Month',
 		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'elite',
 	},
 	{
 		id: 2,
 		title: 'Family',
-		price: '45€/month/person',
+		price: '45€/Month',
 		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'family',
 	},

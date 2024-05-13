@@ -11,7 +11,7 @@ import Button from '../../components/Button';
 import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
-import ExerciseDB from './ExerciseDB';
+// import ExerciseDB from './ExerciseDB';
 import { ImInsertTemplate } from 'react-icons/im';
 
 const FitnessEvaluation = () => {
@@ -174,11 +174,10 @@ const FitnessEvaluation = () => {
 						<div className="container form-output__cards">
 							<div className="bmi__wrapper">
 								<h2>BMI result</h2>
-								<div className="bmi-value__wrapper">
+								<div className="bmi-value">
 									<p className={bmiInterpretation.classname}>{bmiValue}</p>
 									<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
 								</div>
-
 								<p>{bmiInterpretation.description}</p>
 							</div>
 							<div className="fitness-plan__wrapper">
@@ -206,7 +205,7 @@ const FitnessEvaluation = () => {
 					</div>
 				)}
 			</section>
-			<ExerciseDB />
+			{/* <ExerciseDB /> */}
 		</>
 	);
 };

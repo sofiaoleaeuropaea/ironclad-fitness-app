@@ -22,12 +22,15 @@ const Membership = () => {
 								<div className="card__content">
 									<div className="card__heading">
 										<h3>{item.title}</h3>
-										<p>{item.price}</p>
+										<p>
+											<span className="price">{item.price.split('/')[0]}</span>
+											<span className="price-unit">{`/${item.price.split('/')[1]}`}</span>
+										</p>
 									</div>
 
 									<ul className="card__description">
 										{item.features.map((feature, id) => (
-											<div key={id} className='card__item'>
+											<div key={id} className="card__item">
 												<HiCheckCircle className="check-circle__icon" /> <li>{feature}</li>
 											</div>
 										))}

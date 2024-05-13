@@ -47,11 +47,10 @@
 			justify-content: flex-start;
 		}
 
-		// -webkit-backdrop-filter: blur(20px);
-		// backdrop-filter: blur(20px);
+
 		@include md {
 			@include card($pdg: 3rem);
-			background-color: $primary-color;
+background-color:$tertiary-color;
 		}
 		
 		.card {

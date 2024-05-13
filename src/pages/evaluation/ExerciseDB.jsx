@@ -3,62 +3,62 @@ import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const ExerciseDB = () => {
-	const [exerciseInfo, setExerciseInfo] = useState([]);
-	const [filteredExercise, setFilteredExercise] = useState([]);
-	const [searchQuery, setSearchQuery] = useState('');
+	// const [exerciseInfo, setExerciseInfo] = useState([]);
+	// const [filteredExercise, setFilteredExercise] = useState([]);
+	// const [searchQuery, setSearchQuery] = useState('');
 
-	const optionsSliderExercises = {
-		perPage: 4,
-		perMove: 1,
-		
-		arrows: false,
-		gap: '2.5rem',
-		pagination: false,
-		wheel: true,
-		breakpoints: {
-			992: { perPage: 3 },
-			650: { perPage: 1 },
-		},
-	};
-	const exercisedbURL = 'https://exercisedb.p.rapidapi.com/exercises';
+	// const optionsSliderExercises = {
+	// 	perPage: 4,
+	// 	perMove: 1,
 
-	const exerciseDBoptions = {
-		method: 'GET',
-		params: { limit: '1300' },
-		headers: {
-			'X-RapidAPI-Key': '8abd9ce163mshe02598f387d31f5p123801jsn5ed79f2c6d34',
-			'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-		},
-	};
+	// 	arrows: false,
+	// 	gap: '2.5rem',
+	// 	pagination: false,
+	// 	wheel: true,
+	// 	breakpoints: {
+	// 		992: { perPage: 3 },
+	// 		650: { perPage: 1 },
+	// 	},
+	// };
+	// const exercisedbURL = 'https://exercisedb.p.rapidapi.com/exercises';
 
-	useEffect(() => {
-		const fetchExerciseDB = async () => {
-			try {
-				const response = await fetch(exercisedbURL, exerciseDBoptions);
-				console.log(response);
-				const data = await response.json();
-				setExerciseInfo(data);
-				setFilteredExercise(data.slice(0, 1));
-			} catch (err) {
-				console.log(err);
-			}
-		};
-		fetchExerciseDB();
-	}, []);
+	// const exerciseDBoptions = {
+	// 	method: 'GET',
+	// 	params: { limit: '1300' },
+	// 	headers: {
+	// 		'X-RapidAPI-Key': 'a5691cb3edmsh6cdb4305a974b00p152d61jsnf0538c513575',
+	// 		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
+	// 	},
+	// };
 
-	useEffect(() => {
-		const filterExercise = exerciseInfo.filter(
-			(exercise) =>
-				exercise.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				exercise.target.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				exercise.bodyPart.toLowerCase().includes(searchQuery.toLowerCase())
-		);
-		setFilteredExercise(filterExercise);
-	}, [searchQuery, exerciseInfo]);
+	// useEffect(() => {
+	// 	const fetchExerciseDB = async () => {
+	// 		try {
+	// 			const response = await fetch(exercisedbURL, exerciseDBoptions);
+	// 			console.log(response);
+	// 			const data = await response.json();
+	// 			setExerciseInfo(data);
+	// 			setFilteredExercise(data.slice(0, 1));
+	// 		} catch (err) {
+	// 			console.log(err);
+	// 		}
+	// 	};
+	// 	fetchExerciseDB();
+	// }, []);
 
-	const handleSearch = (event) => {
-		setSearchQuery(event.target.value);
-	};
+	// useEffect(() => {
+	// 	const filterExercise = exerciseInfo.filter(
+	// 		(exercise) =>
+	// 			exercise.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+	// 			exercise.target.toLowerCase().includes(searchQuery.toLowerCase()) ||
+	// 			exercise.bodyPart.toLowerCase().includes(searchQuery.toLowerCase())
+	// 	);
+	// 	setFilteredExercise(filterExercise);
+	// }, [searchQuery, exerciseInfo]);
+
+	// const handleSearch = (event) => {
+	// 	setSearchQuery(event.target.value);
+	// };
 
 	return (
 		<section id="exercisedb__info" className="exercisedb__info">

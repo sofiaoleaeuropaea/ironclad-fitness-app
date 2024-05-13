@@ -7,7 +7,7 @@
 	position: relative;
 	background-color: $background-light;
 	cursor: pointer;
-	border: 1px solid $text-dark;
+	border: $card-border;
 	overflow: hidden;
 	border-radius: 30px;
 	color: $text-dark;
@@ -30,7 +30,7 @@
 	&:hover {
 		box-shadow: 1px 1px 200px #252525;
 		color: $text-dark;
-		// border: 1px solid $tertiary-color;
+		
 		background-color: $tertiary-color;
 	}
 	&.effect:hover::after {
