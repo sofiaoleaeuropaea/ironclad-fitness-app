@@ -12,8 +12,9 @@ body {
 	}
 }
 
-h1 {
+h1, .span-heading {
 	font-size: 3.82rem;
+	
 }
 
 h2{
@@ -40,7 +41,7 @@ h1,
 h2,
 h3,
 h4,
-h5{
+h5, .span-heading{
 	font-family: $headings-font;
 	color: $text-dark;
 	font-weight: 700;

@@ -9,10 +9,12 @@ function Hero() {
 			<div className="container">
 				<div className="hero__wrapper">
 					<div className="hero__content">
-						<h1>Were strength meets inspiration</h1>
+						<h1>
+							Push <span className="span-heading">yourself</span> harder, be <span className="span-heading">better</span>!
+						</h1>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam fuga reiciendis Lorem ipsum dong elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga
-							reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..
+							reici..elit. Inventore ullam fuga reiciendis ipsum- dong elit. Inventore ullam fuga reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..
 						</p>
 						<Button href="/signup">Start now</Button>
 					</div>

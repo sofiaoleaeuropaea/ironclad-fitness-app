@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -11,12 +11,11 @@ import TeamMember from './pages/about/TeamMember';
 import Contacts from './pages/contacts/Contacts';
 import SignUp from './pages/sign_up/SignUp';
 import ErrorPage from './pages/error_page/ErrorPage';
-
+import ExercisesInstructions from './pages/evaluation/ExercisesInstructions';
 
 // const position = useMousePosition();
 
 import './styles/main.scss';
-
 
 function App() {
 	return (
@@ -27,10 +26,10 @@ function App() {
 					<Routes>
 						<Route index element={<Home />} />
 						<Route path="/membership" element={<Membership />} />
-						<Route path="/fitnessevaluation" element={<FitnessEvaluation />} />
-
-						<Route path="/about/*" element={<About />}/>
-					
+						<Route path="/fitnessevaluation/*" element={<FitnessEvaluation />}>
+							<Route path=":id" element={<ExercisesInstructions />} />
+						</Route>
+						<Route path="/about" element={<About />} />
 						<Route path="/about/:id" element={<TeamMember />} />
 						<Route path="/contacts" element={<Contacts />} />
 						<Route path="/signup" element={<SignUp />} />

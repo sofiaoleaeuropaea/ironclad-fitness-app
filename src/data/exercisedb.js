@@ -1,4 +1,4 @@
-[
+export const exercisesDataBase = [
 	{
 		"bodyPart": "waist",
 		"equipment": "body weight",

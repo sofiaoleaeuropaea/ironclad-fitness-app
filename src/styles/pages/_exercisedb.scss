@@ -1,47 +1,10 @@
 @use '../utils/' as *;
 
-.exercisedb {
+.exercises {
 	&__info {
 		width: 100%;
 		padding: 10rem 0;
 		border-top: $background-bd;
-	}
-	&__wrapper {
-		h2 {
-			text-align: center;
-		}
-		.exercise {
-			&__card {
-				img {
-					box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.11);
-					border-radius: 7px;
-					
-				}
-				h4 {
-					text-transform: uppercase;
-					font-size: 1.125rem;
-						font-weight: 600;
-				}
-			}
-
-			&__targets {
-				display: flex;
-				margin: 1rem 0 2rem 0;
-				display: flex;
-				flex-wrap: wrap;
-				row-gap: 0.5rem;
-				text-transform: capitalize;
-				span {
-					padding: 0.625rem 1.25rem;
-					margin-right: 0.5rem;
-					color: $background-light;
-					background-color: $text-dark;
-					border: 1px solid $secondary-color;
-					border-radius: 30px;
-				
-				}
-			}
-		}
 		.searchbar {
 			&__wrapper {
 				display: flex;
@@ -78,6 +41,39 @@
 				transform: scaleX(0);
 				transition: transform 0.3s ease-in-out;
 			}
+		}
+	}
+	&__wrapper {
+		h2 {
+			text-align: center;
+		}
+	}
+	&__card {
+		img {
+			box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.11);
+			border-radius: 7px;
+		}
+		h4 {
+			text-transform: uppercase;
+			font-size: 1.125rem;
+			font-weight: 600;
+		}
+	}
+
+	&__targets {
+		display: flex;
+		margin: 1rem 0 2rem 0;
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 0.5rem;
+		text-transform: capitalize;
+		span {
+			padding: 0.625rem 1.25rem;
+			margin-right: 0.5rem;
+			color: $background-light;
+			background-color: $text-dark;
+			border: 1px solid $secondary-color;
+			border-radius: 30px;
 		}
 	}
 }

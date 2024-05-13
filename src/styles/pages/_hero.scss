@@ -9,18 +9,17 @@
 
 		@include lg {
 			flex-direction: row;
-	
 		}
 	}
 
 	&__content {
 		text-align: center;
-
-		padding-bottom: 4rem; 
-
+		padding-bottom: 4rem;
+.span-heading{
+	color: $fourth-color;
+}
 		p {
 			margin: 2rem 0 4rem 0;
-			
 		}
 		@include lg {
 			width: 65%;
@@ -31,16 +30,16 @@
 
 	&__image {
 		#hero-img_desktop {
-		display: none;
-	}
-	@include md {
-		#hero-img_desktop {
-			display: block;
-		}
-		#hero-img_mobile {
 			display: none;
 		}
-	}
+		@include md {
+			#hero-img_desktop {
+				display: block;
+			}
+			#hero-img_mobile {
+				display: none;
+			}
+		}
 		@include lg {
 			width: 35%;
 		}

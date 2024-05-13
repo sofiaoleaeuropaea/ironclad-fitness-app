@@ -11,7 +11,7 @@ import Button from '../../components/Button';
 import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
-// import ExerciseDB from './ExerciseDB';
+import ExerciseDB from './ExerciseDB';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -182,7 +182,7 @@ const FitnessEvaluation = () => {
 				<div className="form-output__wrapper">
 					<div className="container form-output__cards">
 						<div className="bmi__wrapper">
-							<h2>BMI result</h2>
+							<h2>BMI Result</h2>
 							{!fitnessPlan && (
 								<>
 									<p>
@@ -205,7 +205,7 @@ const FitnessEvaluation = () => {
 							<h2>Workout Plan</h2>
 							{!fitnessPlan && (
 								<>
-									<p>
+									<p className="fitness-plan__description">
 										Get ready for a personalized fitness journey tailored just for you! We'll use your BMI along with your fitness goals to craft a plan designed to help you succeed. Let's reach those
 										goals together!
 									</p>
@@ -213,21 +213,21 @@ const FitnessEvaluation = () => {
 							)}
 							{fitnessPlan && (
 								<>
-									<p>{fitnessPlan.description}</p>
+									<p className="fitness-plan__description">{fitnessPlan.description}</p>
 
 									<div ref={fitnessPlanRef}>
 										<h3>Ready to workout?</h3>
 										<ul>
 											{fitnessPlan.exercises.map((exercise, index) => (
-												<div key={index} className="workout-exercise__wrapper">
-													<div className="workout-exercise__img">
+												<li key={index} className="workout-exercise__wrapper">
+													<figure className="workout-exercise__img">
 														<img src={exercise.img} alt={exercise.name} id={exercise.id} />
-													</div>
+													</figure>
 													<div>
-														<li>{exercise.name}</li>
-														<li className="small-text-size">{exercise.repetitions}</li>
+														<p>{exercise.name}</p>
+														<p className="small-text-size">{exercise.repetitions}</p>
 													</div>
-												</div>
+												</li>
 											))}
 										</ul>
 									</div>
@@ -238,7 +238,7 @@ const FitnessEvaluation = () => {
 					</div>
 				</div>
 			</section>
-			{/* <ExerciseDB /> */}
+			<ExerciseDB />
 		</>
 	);
 };

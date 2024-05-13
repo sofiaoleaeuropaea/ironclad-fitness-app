@@ -3,6 +3,7 @@
 .btn {
 	display: inline-block;
 	font-size: 1rem;
+	font-weight: 600;
 	padding: 0.625em 1.25em;
 	position: relative;
 	background-color: $background-light;
@@ -12,6 +13,7 @@
 	border-radius: 30px;
 	color: $text-dark;
 	transition: all 0.5s ease-in-out;
+	
 
 	&.effect::after {
 		content: '';
@@ -19,7 +21,7 @@
 		left: 0;
 		top: 0;
 		transition: all 0.5s ease-in-out;
-		background-color: $tertiary-color;
+		background-color: $fourth-color;
 		border-radius: 30px;
 		visibility: hidden;
 		height: 10px;
@@ -31,7 +33,7 @@
 		box-shadow: 1px 1px 200px #252525;
 		color: $text-dark;
 		
-		background-color: $tertiary-color;
+		background-color: $fourth-color;
 	}
 	&.effect:hover::after {
 		visibility: visible;
