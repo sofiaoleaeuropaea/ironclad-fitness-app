@@ -8,29 +8,59 @@
 		@include md {
 			flex-direction: row;
 		}
+		h3,
+		h4 {
+			text-transform: capitalize;
+			margin-bottom: 3rem;
+		}
 	}
 	&-intro__card,
 	&-instructions__card {
 		@include cardTransparent;
 	}
-	&-intro__card {
-		background-color: $tertiary-color;
+	&-intro {
+		&__card {
+			background-color: $tertiary-color;
+			@include md {
+				width: 43%;
+			}
+		}
+		&__targets {
+			display: flex;
+			margin: 1rem 0 2rem 0;
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 0.5rem;
+			text-transform: capitalize;
+			span {
+				padding: 0.625rem 1.25rem;
+				margin-right: 0.5rem;
+
+				border: 1px solid $text-dark;
+				border-radius: 30px;
+			}
+		}
+	}
+	&-instructions__card {
+		@include md {
+			width: 57%;
+		}
 	}
 }
+
 .instructions {
 	&__wrapper {
-		position: relative;
+		display: flex;
+		padding-bottom: 1.5rem;
+		align-content: flex-start;
+		gap: 0.75rem;
 	}
 	&__number {
-		position: absolute;
-		top: -25%;
-		left: 0px;
 		opacity: 0.7;
-		color: rgba($fourth-color, 1);
-		z-index: -1;
+		color: $fourth-color;
+		line-height: 0.75;
 		font-family: $headings-font;
 		font-weight: 500;
 		font-size: 2rem;
-		line-height: 1;
 	}
 }

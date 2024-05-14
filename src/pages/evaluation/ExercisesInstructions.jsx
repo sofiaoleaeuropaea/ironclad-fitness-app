@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 
 import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
 import { useEffect, useState } from 'react';
+import Loader from '../../components/Loader';
 
 const ExercisesInstructions = () => {
 	const [exerciseInfo, setExerciseInfo] = useState([]);
@@ -26,10 +27,9 @@ const ExercisesInstructions = () => {
 		return exercise.id === id;
 	});
 	if (!exerciseInstruction) {
-		return <div>Loading...</div>;
+		return <Loader />;
 	}
 
-	console.log(exerciseInstruction);
 	return (
 		<div className="exercise__wrapper">
 			<div className="exercise-intro__card">

@@ -12,6 +12,7 @@ import Contacts from './pages/contacts/Contacts';
 import SignUp from './pages/sign_up/SignUp';
 import ErrorPage from './pages/error_page/ErrorPage';
 import ExercisesInstructions from './pages/evaluation/ExercisesInstructions';
+import ScrollToAnchor from './components/ScrollToAnchor';
 
 // const position = useMousePosition();
 
@@ -38,6 +39,7 @@ function App() {
 					</Routes>
 				</main>
 				<Footer />
+				<ScrollToAnchor />
 			</BrowserRouter>
 		</>
 	);

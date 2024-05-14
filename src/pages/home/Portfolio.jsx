@@ -38,7 +38,7 @@ const Portfolio = () => {
 							<Button href={item.url} className="btn__mg-right__desktop">
 								Know more
 							</Button>
-							{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} loading="lazy" />}
+							{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} />}
 						</div>
 					))}
 				</div>

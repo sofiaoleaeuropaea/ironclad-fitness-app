@@ -117,12 +117,16 @@ const FitnessEvaluation = () => {
 							<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
 								<input
 									className="form__information"
-									type="number"
+									type="text"
 									name="height"
 									placeholder="Height (cm)"
 									id="height"
 									value={heightValue}
-									onInput={(e) => setHeightValue(e.target.value)}
+									onInput={(e) => {
+										const val = e.target.value;
+										if (val === ' ' || isNaN(val) || val === '0') return;
+										setHeightValue(val);
+									}}
 									{...register('height')}
 								/>
 								{errors && errors.height && (
@@ -137,7 +141,11 @@ const FitnessEvaluation = () => {
 									placeholder="Weight (kg)"
 									id="weight"
 									value={weightValue}
-									onInput={(e) => setWeightValue(e.target.value)}
+									onInput={(e) => {
+										const val = e.target.value;
+										if (val === ' ' || isNaN(val) || val === '0') return;
+										setWeightValue(val);
+									}}
 									{...register('weight')}
 								/>
 								{errors && errors.weight && (
