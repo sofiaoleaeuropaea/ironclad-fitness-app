@@ -1,22 +1,9 @@
-import { useState } from 'react';
-
 import Heading from '../../components/Heading';
 import Button from '../../components/Button';
 
 import { portfolio } from '../../data';
-import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
-	// const [isHovered, setIsHovered] = useState(false);
-
-	// const handleMouseEnter = () => {
-	// 	setIsHovered(true);
-	// };
-
-	// const handleMouseLeave = () => {
-	// 	setIsHovered(false);
-	// };
-
 	return (
 		<section id="portfolio" className="portfolio">
 			<Heading

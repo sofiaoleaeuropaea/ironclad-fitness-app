@@ -40,7 +40,10 @@
 		#elite {
 			grid-area: elite;
 			background: $tertiary-color;
-			margin: -2rem 0 2rem 0;		}
+			@include breakpointDesktop(1200px) {
+				margin: -2rem 0 2rem 0;
+			}
+		}
 		#family {
 			grid-area: family;
 		}
@@ -53,18 +56,17 @@
 				width: 100%;
 			}
 			&__heading {
-				
 				border-bottom: $line-border;
 				h3 {
 					font-size: 1.3rem;
-				
 				}
 				.price {
-			
 					font-weight: 600;
 					font-size: 2.44rem;
 					line-height: 2;
-					&-unit{font-size: 1.3rem;}
+					&-unit {
+						font-size: 1.3rem;
+					}
 				}
 			}
 			&__description {

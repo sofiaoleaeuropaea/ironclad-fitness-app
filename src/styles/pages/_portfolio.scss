@@ -47,12 +47,11 @@
 			justify-content: flex-start;
 		}
 
-
 		@include md {
 			@include card($pdg: 3rem);
-background-color:$tertiary-color;
+			background-color: $tertiary-color;
 		}
-		
+
 		.card {
 			&__content {
 				text-align: center;
@@ -79,5 +78,3 @@ background-color:$tertiary-color;
 		}
 	}
 }
-
-

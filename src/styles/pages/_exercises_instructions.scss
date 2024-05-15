@@ -3,6 +3,7 @@
 	&__wrapper {
 		margin-top: 10rem;
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
 		gap: 2rem;
 		@include md {

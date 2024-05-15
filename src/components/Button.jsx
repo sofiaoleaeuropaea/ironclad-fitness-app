@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 const Button = ({ href, onClick, children, className, value }) => {
-	const btnClasses = `btn effect  ${className || ''}`;
+	const btnClasses = `btn effect small-text-size ${className || ''}`;
 
 	const renderButton = () => (
 		<button className={btnClasses} onClick={onClick}>

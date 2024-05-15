@@ -19,7 +19,8 @@ const ExerciseDB = () => {
 		wheel: true,
 		breakpoints: {
 			992: { perPage: 3 },
-			650: { perPage: 1 },
+			650: { perPage: 2 },
+			490: { perPage: 1 },
 		},
 	};
 
@@ -66,23 +67,24 @@ const ExerciseDB = () => {
 						</div>
 					</form>
 
-					<div className="exercises__card">
-						<Splide options={optionsSliderExercises}>
-							{filteredExercise.map((exercise, index) => (
-								<SplideSlide key={index}>
+					<Splide options={optionsSliderExercises}>
+						{filteredExercise.map((exercise, index) => (
+							<SplideSlide key={index}>
+								<div className="exercises__card">
 									<Link to={`${exercise.id}`}>
-										<div>
+										<div className="exercises__img">
 											<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
-											<div className="exercises__targets">
-												<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
-											</div>
 										</div>
+										<div className="exercises__targets">
+											<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
+										</div>
+
 										<h4>{exercise.name}</h4>
 									</Link>
-								</SplideSlide>
-							))}
-						</Splide>
-					</div>
+								</div>
+							</SplideSlide>
+						))}
+					</Splide>
 				</div>
 				<Outlet />
 			</div>

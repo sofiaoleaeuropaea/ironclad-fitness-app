@@ -1,7 +1,9 @@
 @use '../utils/' as *;
 
 .testimonials {
+	border-top: $background-bd;
 	margin: 10rem 0 10rem 0;
+	padding-top: 10rem;
 	&__wrapper {
 		margin-top: 5rem;
 		overflow-x: hidden;

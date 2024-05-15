@@ -29,7 +29,7 @@
 		background: rgba(#727272, 0.15);
 	}
 	&__intro {
-		background-color: $primary-color;
+		background-color: $tertiary-color;
 
 		&__modality {
 			margin: 5rem 0 2rem 0;
@@ -42,7 +42,6 @@
 				margin-right: 0.5rem;
 				border: 1px solid $text-dark;
 				border-radius: 30px;
-		
 			}
 		}
 

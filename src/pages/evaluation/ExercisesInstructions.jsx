@@ -26,6 +26,7 @@ const ExercisesInstructions = () => {
 	const exerciseInstruction = exerciseInfo.find((exercise) => {
 		return exercise.id === id;
 	});
+
 	if (!exerciseInstruction) {
 		return <Loader />;
 	}

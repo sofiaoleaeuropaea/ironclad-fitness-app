@@ -49,7 +49,7 @@
 			position: absolute;
 			top: calc(50% - 3rem);
 			left: calc(50% - 3rem);
-			background-color: $primary-color;
+			background-color: $tertiary-color;
 			visibility: hidden;
 			border-radius: 50%;
 			padding: 2.5rem 1.5rem;
@@ -62,7 +62,6 @@
 
 		&:hover img {
 			transform: scale(1.05);
-			overflow: hidden;
 		}
 		img {
 			transition: transform 0.5s ease-in-out;

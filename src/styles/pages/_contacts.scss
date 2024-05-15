@@ -1,13 +1,18 @@
 @use '../utils/' as *;
 
 .contact {
-	&__wrapper {
-		margin: 10rem 0 7rem 0;
-	}
 	&__information__wrapper {
+		margin: 10rem 0 7rem 0;
 		display: flex;
-
+		flex-wrap: wrap;
+		gap: 3rem;
 		justify-content: space-between;
+
+		#map {
+			@include breakpointMobile(1145px) {
+				margin: 0 auto;
+			}
+		}
 	}
 	&-form__wrapper {
 		margin-bottom: 10rem;
