@@ -5,10 +5,8 @@
 	flex-direction: column;
 	max-width: 500px;
 	min-width: 300px;
-	// background: rgba($secondary-color, 0.2);
-	// border: 1px solid $secondary-color;
+
 	padding: 2rem;
-	// border-radius: 10px;
 
 	@include md {
 		padding: unset;
@@ -39,9 +37,6 @@
 		border-bottom: 2px solid $text-dark;
 		transition: 0.1s;
 		border-bottom-left-radius: 8px;
-		// @include md {
-		// 	margin-bottom: 3rem;
-		// }
 	}
 
 	&__selector {
@@ -64,5 +59,12 @@
 		@include md {
 			margin-bottom: 2.5rem;
 		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: flex-end;
+		gap: 0.5rem;
+		margin-right: 1rem;
 	}
 }

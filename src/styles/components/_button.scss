@@ -21,7 +21,7 @@
 		left: 0;
 		top: 0;
 		transition: all 0.5s ease-in-out;
-		background-color: $fourth-color;
+		background-color: $primary-color;
 		border-radius: 30px;
 		visibility: hidden;
 		height: 10px;
@@ -33,7 +33,7 @@
 		box-shadow: 1px 1px 200px #252525;
 		color: $text-dark;
 
-		background-color: $fourth-color;
+		background-color: $primary-color;
 	}
 	&.effect:hover::after {
 		visibility: visible;
@@ -53,8 +53,8 @@
 	}
 
 	&__mg-right {
+		display: flex;
 		margin: 0 2rem 0 auto;
-		// display: flex;
 	}
 
 	&__mg-left {

@@ -3,7 +3,7 @@
 
 .footer {
 	width: 100%;
-	font-size: 1rem;
+
 	padding: 1.5rem 0;
 	border-top: 1px solid $secondary-color;
 
@@ -25,7 +25,6 @@
 		gap: 2rem;
 		@include breakpointMobile(420px) {
 			flex-direction: column;
-	
 		}
 		.logo {
 			width: 100px;
@@ -36,9 +35,8 @@
 	&__menu {
 		display: flex;
 		gap: 1.5rem;
-			@include breakpointMobile(420px) {
+		@include breakpointMobile(420px) {
 			flex-direction: column;
-	
 		}
 
 		li a .active {
@@ -49,9 +47,8 @@
 	&__social {
 		display: flex;
 		gap: 1.5rem;
-			@include breakpointMobile(420px) {
+		@include breakpointMobile(420px) {
 			flex-direction: column;
-	
 		}
 
 		.social_icons {

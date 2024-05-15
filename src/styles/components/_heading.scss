@@ -1,12 +1,17 @@
 @use '../utils/' as *;
 
 .heading {
-		width: 100%;
-		padding: 10rem 0;
-		border-bottom: $background-bd;
-		&__content {
-			text-align: center;
-			max-width: 1060px;
-			margin: 0 auto;
+	width: 100%;
+	padding: 10rem 0;
+	border-bottom: $background-bd;
+	&__content {
+		text-align: center;
+		max-width: 1060px;
+		margin: 0 auto;
+		@include breakpointMobile(396px) {
+			.mobile_resize {
+				font-size: 2.9rem;
+			}
 		}
 	}
+}

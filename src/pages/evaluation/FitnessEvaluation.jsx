@@ -179,16 +179,15 @@ const FitnessEvaluation = () => {
 										<label htmlFor="hipertrophy"> Hipertrophy</label>
 									</div>
 								</div>
-
-								<Button value="Submit" />
-								<Button onClick={handleReset}>Reset</Button>
+								<div className="form__btn">
+									<Button value="Submit" />
+									<Button onClick={handleReset}>Reset</Button>
+								</div>
 							</form>
 						</div>
 					</div>
-				</div>
 
-				<div className="form-output__wrapper">
-					<div className="container form-output__cards">
+					<div className="form-output__wrapper">
 						<div className="bmi__wrapper">
 							<h2>BMI Result</h2>
 							{!fitnessPlan && (
@@ -239,14 +238,14 @@ const FitnessEvaluation = () => {
 											))}
 										</ul>
 									</div>
-									<ButtonSave onClick={handleDownloadPDF} />
+									<ButtonSave onClick={handleDownloadPDF} className="btn-save__mg-top__mobile" />
 								</>
 							)}
 						</div>
 					</div>
 				</div>
 			</section>
-			<ExerciseDB />
+			{/* <ExerciseDB /> */}
 		</>
 	);
 };

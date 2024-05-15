@@ -3,7 +3,6 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { IoMdQuote } from 'react-icons/io';
 import { IoIosStar, IoIosStarHalf } from 'react-icons/io';
 
-
 import { testimonials } from '../../data';
 
 const Testimonials = () => {
@@ -29,12 +28,12 @@ const Testimonials = () => {
 		}
 
 		if (hasHalfStar) {
-			stars.push(<IoIosStarHalf key="half" style={{ color: '#04a463',  marginRight: mgRightRize}} />);
+			stars.push(<IoIosStarHalf key="half" style={{ color: '#04a463', marginRight: mgRightRize }} />);
 		}
 
 		const remainingStars = 5 - stars.length;
 		for (let i = 0; i < remainingStars; i++) {
-			stars.push(<IoIosStar key={`empty-${i}`} style={{ color: '#727272',  marginRight: mgRightRize }} />);
+			stars.push(<IoIosStar key={`empty-${i}`} style={{ color: '#727272', marginRight: mgRightRize }} />);
 		}
 
 		return stars;
@@ -42,10 +41,7 @@ const Testimonials = () => {
 	return (
 		<section id="testimonials" className="testimonials">
 			<div className="container">
-				<h2>
-					What people think <br />
-					about our service
-				</h2>
+				<h2>What people think about our service</h2>
 				<div className="testimonials__wrapper">
 					<Splide options={optionsSlideTestimonials}>
 						{testimonials.map((testimonial, index) => (

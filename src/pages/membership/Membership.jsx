@@ -13,6 +13,7 @@ const Membership = () => {
 					title="Membership"
 					paragraph="We aim to cultivate an ever-growing community, spreading the message of health and wellness to the wider world. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim pariatur
 							aliquam quam, recusandae ipsa molestias molestiae, doloribus, modi accusantium fugiat qui repellat cupiditate vero. Voluptate facilis expedita ex nesciunt officia!"
+					className="mobile_resize"
 				/>
 
 				<div className="container ">

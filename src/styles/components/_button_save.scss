@@ -1,6 +1,6 @@
 @use '../utils/' as *;
 
-.btn__save {
+.btn-save {
 	margin: -3rem 1.5rem 0 auto;
 	width: 50px;
 	height: 50px;
@@ -15,26 +15,25 @@
 	position: relative;
 	transition-duration: 0.3s;
 
-
 	&__svg {
 		fill: $background-light;
 	}
 	&__icon {
 		width: 18px;
 		height: 5px;
-		border: 2px solid $fourth-color;
+		border: 2px solid $primary-color;
 		border-top: unset;
 	}
 
 	&:hover {
-		background-color: $fourth-color;
+		background-color: $primary-color;
 		transition-duration: 0.3s;
-		
-		.btn__save__icon {
+
+		.btn-save__icon {
 			border: 2px solid $background-light;
 			border-top: unset;
 		}
-		.btn__save__svg {
+		.btn-save__svg {
 			fill: $background-light;
 			animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 		}
@@ -48,6 +47,11 @@
 		100% {
 			transform: translateY(0px);
 			opacity: 1;
+		}
+	}
+	&__mg-top__mobile {
+		@include breakpointMobile(443px) {
+			margin-top: 0;
 		}
 	}
 }

@@ -14,8 +14,6 @@ import ErrorPage from './pages/error_page/ErrorPage';
 import ExercisesInstructions from './pages/evaluation/ExercisesInstructions';
 import ScrollToAnchor from './components/ScrollToAnchor';
 
-// const position = useMousePosition();
-
 import './styles/main.scss';
 
 function App() {

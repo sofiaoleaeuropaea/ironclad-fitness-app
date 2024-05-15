@@ -52,7 +52,7 @@ function FormSignUp() {
 						<MdOutlineErrorOutline /> {errors.phone.message}{' '}
 					</p>
 				)}{' '}
-				<Button value="Submit" className='btn__mg-top' />
+				<Button value="Submit" className="btn__mg-right btn__mg-top" />
 			</form>
 		</div>
 	);
