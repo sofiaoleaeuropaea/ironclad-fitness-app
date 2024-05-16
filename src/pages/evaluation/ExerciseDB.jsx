@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
+import SearchIcon from '../../assets/search_icon.svg';
 
 const ExerciseDB = () => {
 	const [exerciseInfo, setExerciseInfo] = useState([]);
@@ -61,7 +62,7 @@ const ExerciseDB = () => {
 
 					<form>
 						<div className="searchbar__wrapper">
-							<img src="images/search_icon.svg" alt="Search Icon" />
+							<img src={SearchIcon} alt="Search Icon" />
 							<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
 							<span className="searchbar__underline"></span>
 						</div>

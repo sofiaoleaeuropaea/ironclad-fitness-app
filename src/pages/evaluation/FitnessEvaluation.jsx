@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import WomanRunning from '../../assets/woman_running.jpg';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
@@ -111,7 +112,7 @@ const FitnessEvaluation = () => {
 
 				<div className="container">
 					<div className="form__wrapper">
-						<img src="images/woman_running.jpg" alt="Woman running" className="img-fluid" />
+						<img src={WomanRunning} alt="Woman running" className="img-fluid" />
 						<div className="form form__evaluation">
 							<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
 							<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
@@ -245,7 +246,7 @@ const FitnessEvaluation = () => {
 					</div>
 				</div>
 			</section>
-			{/* <ExerciseDB /> */}
+			<ExerciseDB />
 		</>
 	);
 };
