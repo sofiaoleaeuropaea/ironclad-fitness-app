@@ -43,6 +43,7 @@
 
 	&__card {
 		@include card;
+		background-color: $tertiary-color;
 		@include breakpointMobile(390px) {
 			justify-content: flex-start;
 		}

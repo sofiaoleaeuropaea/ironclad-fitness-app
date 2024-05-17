@@ -1,5 +1,6 @@
 import Heading from '../../components/Heading';
 import Button from '../../components/Button';
+import ScrollReveal from '../../components/ScrollReveal';
 
 import { portfolio } from '../../data';
 
@@ -14,21 +15,24 @@ const Portfolio = () => {
 			/>
 
 			<div className="container ">
-				<div className="portfolio__wrapper">
-					{portfolio.map((item, index) => (
-						<div key={index} className="portfolio__card" id={`${item.className}`}>
-							<div className="card__content">
-								<h3>{item.title}</h3>
-								<p className="card__description">{item.description}</p>
+				<ScrollReveal>
+					<div className="portfolio__wrapper">
+						{portfolio.map((item, index) => (
+							<div key={index} className="portfolio__card" id={`${item.className}`}>
+								<ScrollReveal>
+									<div className="card__content">
+										<h3>{item.title}</h3>
+										<p className="card__description">{item.description}</p>
+									</div>
+								</ScrollReveal>
+								<Button href={item.url} className="btn__mg-right__desktop">
+									Know more
+								</Button>
+								{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} />}
 							</div>
-
-							<Button href={item.url} className="btn__mg-right__desktop">
-								Know more
-							</Button>
-							{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} />}
-						</div>
-					))}
-				</div>
+						))}
+					</div>
+				</ScrollReveal>
 			</div>
 		</section>
 	);

@@ -6,7 +6,6 @@ import ironclad_logo from '../assets/ironclad_logo.png';
 import { navigation } from '../data';
 
 import NavbarLinks from './NavbarLinks';
-
 import Button from './Button';
 
 const Navbar = () => {
@@ -15,9 +14,23 @@ const Navbar = () => {
 
 	const handleCheckboxChange = () => {
 		setMenuMobile((active) => !active);
-		setIsChecked(!isChecked);
+		setIsChecked((checked) => !checked);
 	};
 
+	useEffect(() => {
+		if (menuMobile) {
+			disablePageScroll();
+		} else {
+			enablePageScroll();
+		}
+	}, [menuMobile]);
+
+	const handleLinkMobileClick = () => {
+		if (menuMobile) {
+			setMenuMobile(false);
+			setIsChecked(false);
+		}
+	};
 	return (
 		<div className="navbar">
 			<div className="container container__xl">
@@ -25,10 +38,11 @@ const Navbar = () => {
 					<Link to="/">
 						<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
 					</Link>
+
 					<nav>
 						<ul className={menuMobile ? 'navbar__menu active' : 'navbar__menu'}>
 							{navigation.map((item, index) => (
-								<NavbarLinks key={index} item={item} onClick={handleCheckboxChange} className={item.className} />
+								<NavbarLinks key={index} item={item} onClick={handleLinkMobileClick} className={item.className} />
 							))}
 						</ul>
 					</nav>
@@ -40,6 +54,7 @@ const Navbar = () => {
 							<span className="bar"></span>
 						</div>
 					</label>
+
 					<Button href="/signup" className="btn__hide">
 						Start now
 					</Button>

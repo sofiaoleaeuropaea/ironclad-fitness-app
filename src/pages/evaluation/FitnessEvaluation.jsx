@@ -13,6 +13,7 @@ import FormValidation from '../../components/FormValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
 import ExerciseDB from './ExerciseDB';
+import ScrollReveal from '../../components/ScrollReveal';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -111,142 +112,164 @@ const FitnessEvaluation = () => {
 				/>
 
 				<div className="container">
-					<div className="form__wrapper">
-						<img src={WomanRunning} alt="Woman running" className="img-fluid" />
-						<div className="form form__evaluation">
-							<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
-							<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
-								<input
-									className="form__information"
-									type="text"
-									name="height"
-									placeholder="Height (cm)"
-									id="height"
-									value={heightValue}
-									onInput={(e) => {
-										const val = e.target.value;
-										if (val === ' ' || isNaN(val) || val === '0') return;
-										setHeightValue(val);
-									}}
-									{...register('height')}
-								/>
-								{errors && errors.height && (
-									<p className="form__error">
-										<MdOutlineErrorOutline /> {errors.height.message}{' '}
-									</p>
-								)}
-								<input
-									className="form__information"
-									type="number"
-									name="weight"
-									placeholder="Weight (kg)"
-									id="weight"
-									value={weightValue}
-									onInput={(e) => {
-										const val = e.target.value;
-										if (val === ' ' || isNaN(val) || val === '0') return;
-										setWeightValue(val);
-									}}
-									{...register('weight')}
-								/>
-								{errors && errors.weight && (
-									<p className="form__error">
-										<MdOutlineErrorOutline /> {errors.weight.message}{' '}
-									</p>
-								)}
-
-								<div className="form__selector">
-									<legend>Select your fitness goal:</legend>
-
-									<div>
+					<ScrollReveal>
+						<div className="form__wrapper">
+							<img src={WomanRunning} alt="Woman running" className="img-fluid" />
+							<div className="form form__evaluation">
+								<ScrollReveal>
+									<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
+									<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
 										<input
-											type="radio"
-											id="weight_reduction"
-											name="fitness_goal"
-											value="weight_reduction"
-											checked={selectedFitnessGoal === 'weight_reduction'}
-											onChange={() => handleRadioChange('weight_reduction')}
+											className="form__information"
+											type="text"
+											name="height"
+											placeholder="Height (cm)"
+											id="height"
+											value={heightValue}
+											onInput={(e) => {
+												const val = e.target.value;
+												if (val === ' ' || isNaN(val) || val === '0') return;
+												setHeightValue(val);
+											}}
+											{...register('height')}
 										/>
-										<label htmlFor="weight_reduction"> Weight reduction</label>
-									</div>
+										{errors && errors.height && (
+											<p className="form__error">
+												<MdOutlineErrorOutline /> {errors.height.message}{' '}
+											</p>
+										)}
+										<input
+											className="form__information"
+											type="number"
+											name="weight"
+											placeholder="Weight (kg)"
+											id="weight"
+											value={weightValue}
+											onInput={(e) => {
+												const val = e.target.value;
+												if (val === ' ' || isNaN(val) || val === '0') return;
+												setWeightValue(val);
+											}}
+											{...register('weight')}
+										/>
+										{errors && errors.weight && (
+											<p className="form__error">
+												<MdOutlineErrorOutline /> {errors.weight.message}{' '}
+											</p>
+										)}
 
-									<div>
-										<input type="radio" id="muscle_gain" name="fitness_goal" value="muscle_gain" checked={selectedFitnessGoal === 'muscle_gain'} onChange={() => handleRadioChange('muscle_gain')} />
-										<label htmlFor="muscle_gain"> Muscle gain</label>
-									</div>
+										<div className="form__selector">
+											<legend>Select your fitness goal:</legend>
 
-									<div>
-										<input type="radio" id="hipertrophy" name="fitness_goal" value="hipertrophy" checked={selectedFitnessGoal === 'hipertrophy'} onChange={() => handleRadioChange('hipertrophy')} />
-										<label htmlFor="hipertrophy"> Hipertrophy</label>
-									</div>
-								</div>
-								<div className="form__btn">
-									<Button value="Submit" />
-									<Button onClick={handleReset}>Reset</Button>
-								</div>
-							</form>
+											<div>
+												<input
+													type="radio"
+													id="weight_reduction"
+													name="fitness_goal"
+													value="weight_reduction"
+													checked={selectedFitnessGoal === 'weight_reduction'}
+													onChange={() => handleRadioChange('weight_reduction')}
+												/>
+												<label htmlFor="weight_reduction"> Weight reduction</label>
+											</div>
+
+											<div>
+												<input
+													type="radio"
+													id="muscle_gain"
+													name="fitness_goal"
+													value="muscle_gain"
+													checked={selectedFitnessGoal === 'muscle_gain'}
+													onChange={() => handleRadioChange('muscle_gain')}
+												/>
+												<label htmlFor="muscle_gain"> Muscle gain</label>
+											</div>
+
+											<div>
+												<input
+													type="radio"
+													id="hipertrophy"
+													name="fitness_goal"
+													value="hipertrophy"
+													checked={selectedFitnessGoal === 'hipertrophy'}
+													onChange={() => handleRadioChange('hipertrophy')}
+												/>
+												<label htmlFor="hipertrophy"> Hipertrophy</label>
+											</div>
+										</div>
+										<div className="form__btn">
+											<Button value="Submit" />
+											<Button onClick={handleReset}>Reset</Button>
+										</div>
+									</form>
+								</ScrollReveal>
+							</div>
 						</div>
-					</div>
 
-					<div className="form-output__wrapper">
-						<div className="bmi__wrapper">
-							<h2>BMI Result</h2>
-							{!fitnessPlan && (
-								<>
-									<p>
-										BMI, or Body Mass Index, is a simple tool that helps gauge your body fat based on your height and weight. It gives you an idea of whether you're at a healthy weight for your
-										height. It's a handy way to track your fitness journey and make informed choices about your health.
-									</p>
-								</>
-							)}
-							{fitnessPlan && (
-								<>
-									<div className="bmi-value">
-										<p className={bmiInterpretation.classname}>{bmiValue}</p>
-										<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
-									</div>
-									<p>{bmiInterpretation.description}</p>
-								</>
-							)}
-						</div>
-						<div className="fitness-plan__wrapper">
-							<h2>Workout Plan</h2>
-							{!fitnessPlan && (
-								<>
-									<p className="fitness-plan__description">
-										Get ready for a personalized fitness journey tailored just for you! We'll use your BMI along with your fitness goals to craft a plan designed to help you succeed. Let's reach those
-										goals together!
-									</p>
-								</>
-							)}
-							{fitnessPlan && (
-								<>
-									<p className="fitness-plan__description">{fitnessPlan.description}</p>
+						<div className="form-output__wrapper">
+							<div className="bmi__wrapper">
+								<ScrollReveal>
+									<h2>BMI Result</h2>
+									{!fitnessPlan && (
+										<>
+											<p>
+												BMI, or Body Mass Index, is a simple tool that helps gauge your body fat based on your height and weight. It gives you an idea of whether you're at a healthy weight for your
+												height. It's a handy way to track your fitness journey and make informed choices about your health.
+											</p>
+										</>
+									)}
+									{fitnessPlan && (
+										<>
+											<div className="bmi-value">
+												<p className={bmiInterpretation.classname}>{bmiValue}</p>
+												<span className={bmiInterpretation.classname}>{bmiInterpretation.scale}</span>
+											</div>
+											<p>{bmiInterpretation.description}</p>
+										</>
+									)}
+								</ScrollReveal>
+							</div>
+							<div className="fitness-plan__wrapper">
+								<ScrollReveal>
+									<h2>Workout Plan</h2>
+									{!fitnessPlan && (
+										<>
+											<p className="fitness-plan__description">
+												Get ready for a personalized fitness journey tailored just for you! We'll use your BMI along with your fitness goals to craft a plan designed to help you succeed. Let's reach
+												those goals together!
+											</p>
+										</>
+									)}
+									{fitnessPlan && (
+										<>
+											<p className="fitness-plan__description">{fitnessPlan.description}</p>
 
-									<div ref={fitnessPlanRef}>
-										<h3>Ready to workout?</h3>
-										<ul>
-											{fitnessPlan.exercises.map((exercise, index) => (
-												<li key={index} className="workout-exercise__wrapper">
-													<figure className="workout-exercise__img">
-														<img src={exercise.img} alt={exercise.name} id={exercise.id} />
-													</figure>
-													<div>
-														<p>{exercise.name}</p>
-														<p className="small-text-size">{exercise.repetitions}</p>
-													</div>
-												</li>
-											))}
-										</ul>
-									</div>
-									<ButtonSave onClick={handleDownloadPDF} className="btn-save__mg-top__mobile" />
-								</>
-							)}
+											<div ref={fitnessPlanRef}>
+												<h3>Ready to workout?</h3>
+												<ul>
+													{fitnessPlan.exercises.map((exercise, index) => (
+														<li key={index} className="workout-exercise__wrapper">
+															<figure className="workout-exercise__img">
+																<img src={exercise.img} alt={exercise.name} id={exercise.id} />
+															</figure>
+															<div>
+																<p>{exercise.name}</p>
+																<p className="small-text-size">{exercise.repetitions}</p>
+															</div>
+														</li>
+													))}
+												</ul>
+											</div>
+											<ButtonSave onClick={handleDownloadPDF} className="btn-save__mg-top__mobile" />
+										</>
+									)}
+								</ScrollReveal>
+							</div>
 						</div>
-					</div>
+					</ScrollReveal>
 				</div>
 			</section>
-			<ExerciseDB />
+			{/* <ExerciseDB /> */}
 		</>
 	);
 };

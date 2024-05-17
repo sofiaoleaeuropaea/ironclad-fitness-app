@@ -2,6 +2,7 @@ import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { IoMdQuote } from 'react-icons/io';
 import { IoIosStar, IoIosStarHalf } from 'react-icons/io';
+import ScrollReveal from '../../components/ScrollReveal';
 
 import { testimonials } from '../../data';
 
@@ -41,27 +42,33 @@ const Testimonials = () => {
 	return (
 		<section id="testimonials" className="testimonials">
 			<div className="container">
-				<h2>What people think about our service</h2>
-				<div className="testimonials__wrapper">
-					<Splide options={optionsSlideTestimonials}>
-						{testimonials.map((testimonial, index) => (
-							<SplideSlide key={index}>
-								<div className="testimonials__card">
-									<blockquote className="testimonial__details">
-										<div className="testimonial__details__quote">
-											<p>{testimonial.description}</p>
-											<IoMdQuote className="quote__icon" />
-										</div>
-										<div className="testimonial__details__rating">
-											<cite>{testimonial.name}</cite>
-											<div>{renderStarRating(testimonial.rating, '4px')}</div>
-										</div>
-									</blockquote>
-								</div>
-							</SplideSlide>
-						))}
-					</Splide>
-				</div>
+				<ScrollReveal>
+					<h2>What people think about our service</h2>
+				</ScrollReveal>
+				<ScrollReveal>
+					<div className="testimonials__wrapper">
+						<Splide options={optionsSlideTestimonials}>
+							{testimonials.map((testimonial, index) => (
+								<SplideSlide key={index}>
+									<div className="testimonials__card">
+										<ScrollReveal>
+											<blockquote className="testimonial__details">
+												<div className="testimonial__details__quote">
+													<p>{testimonial.description}</p>
+													<IoMdQuote className="quote__icon" />
+												</div>
+												<div className="testimonial__details__rating">
+													<cite>{testimonial.name}</cite>
+													<div>{renderStarRating(testimonial.rating, '4px')}</div>
+												</div>
+											</blockquote>
+										</ScrollReveal>
+									</div>
+								</SplideSlide>
+							))}
+						</Splide>
+					</div>
+				</ScrollReveal>
 			</div>
 		</section>
 	);

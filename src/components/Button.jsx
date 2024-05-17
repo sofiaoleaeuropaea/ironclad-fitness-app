@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import ScrollReveal from './ScrollReveal';
 const Button = ({ href, onClick, children, className, value }) => {
 	const btnClasses = `btn effect small-text-size ${className || ''}`;
 

@@ -1,4 +1,3 @@
-
 import Heading from '../../components/Heading';
 import Trainers from './Team';
 import Partnership from './Partners';
@@ -14,8 +13,7 @@ const About = () => {
 				/>
 			</section>
 			<Trainers />
-			<Partnership/>
-	
+			<Partnership />
 		</>
 	);
 };

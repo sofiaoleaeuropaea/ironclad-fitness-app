@@ -1,5 +1,6 @@
 import FormContact from './FormContact';
 import DirectionsMap from './DirectionsMap';
+import ScrollReveal from '../../components/ScrollReveal';
 const Contacts = () => {
 	return (
 		<>
@@ -7,30 +8,41 @@ const Contacts = () => {
 				<div className="container ">
 					<div className="contact__information__wrapper ">
 						<div className="contact__information__details">
-							<h2>How to find us</h2>
+							<ScrollReveal>
+								<h2>How to find us</h2>
+							</ScrollReveal>
 							<div className="contact__details_schedule">
-								<p>
-									<span> Mon-Fri</span> <time dateTime="T06:00">6:00 am</time> - <time dateTime="T22:30">10:30 pm</time>
-								</p>
+								<ScrollReveal>
+									<p>
+										<span> Mon-Fri</span> <time dateTime="T06:00">6:00 am</time> - <time dateTime="T22:30">10:30 pm</time>
+									</p>
 
-								<p>
-									<span> Sat</span> <time dateTime="T09:00">9:00 am</time> - <time dateTime="T20:00">8:00 pm</time>
-								</p>
+									<p>
+										<span> Sat</span> <time dateTime="T09:00">9:00 am</time> - <time dateTime="T20:00">8:00 pm</time>
+									</p>
 
-								<p>
-									<span> Sun</span> <time dateTime="T10:00">10:00 am</time> - <time dateTime="T18:00">6:00 pm</time>
-								</p>
+									<p>
+										<span> Sun</span> <time dateTime="T10:00">10:00 am</time> - <time dateTime="T18:00">6:00 pm</time>
+									</p>
+								</ScrollReveal>
 							</div>
-							<address>
-								<a>Edifício Mirage, R. Dr. Eduardo Neves, Nº3 1050-077 Lisboa</a>
-							</address>
-							<address>
-								<a>querosabermais@flag.pt</a>
-							</address>
-							<address>
-								<a>(+351) 239000000</a>
-							</address>
+							<ScrollReveal>
+								<address>
+									<a>Edifício Mirage, R. Dr. Eduardo Neves, Nº3 1050-077 Lisboa</a>
+								</address>
+							</ScrollReveal>
+							<ScrollReveal>
+								<address>
+									<a>querosabermais@flag.pt</a>
+								</address>
+							</ScrollReveal>
+							<ScrollReveal>
+								<address>
+									<a>(+351) 239000000</a>
+								</address>
+							</ScrollReveal>
 						</div>
+
 						<DirectionsMap />
 					</div>
 				</div>
@@ -39,9 +51,12 @@ const Contacts = () => {
 			<section id="contact__form" className="contact__form">
 				<div className="container ">
 					<div className="contact-form__wrapper">
-						<h2>Let's talk</h2>
-
-						<FormContact />
+						<ScrollReveal>
+							<h2>Let's talk</h2>
+						</ScrollReveal>
+						<ScrollReveal>
+							<FormContact />
+						</ScrollReveal>
 					</div>
 				</div>
 			</section>

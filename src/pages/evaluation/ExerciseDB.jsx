@@ -4,6 +4,7 @@ import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
 import SearchIcon from '../../assets/search_icon.svg';
+import ScrollReveal from '../../components/ScrollReveal';
 
 const ExerciseDB = () => {
 	const [exerciseInfo, setExerciseInfo] = useState([]);
@@ -58,29 +59,33 @@ const ExerciseDB = () => {
 		<section id="exercises__info" className="exercises__info">
 			<div className="container">
 				<div className="exercises__wrapper">
-					<h2>Train like a pro</h2>
+					<ScrollReveal>
+						<h2>Train like a pro</h2>
 
-					<form>
-						<div className="searchbar__wrapper">
-							<img src={SearchIcon} alt="Search Icon" />
-							<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
-							<span className="searchbar__underline"></span>
-						</div>
-					</form>
+						<form>
+							<div className="searchbar__wrapper">
+								<img src={SearchIcon} alt="Search Icon" />
+								<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
+								<span className="searchbar__underline"></span>
+							</div>
+						</form>
+					</ScrollReveal>
 
 					<Splide options={optionsSliderExercises}>
 						{filteredExercise.map((exercise, index) => (
 							<SplideSlide key={index}>
 								<div className="exercises__card">
 									<Link to={`${exercise.id}`}>
-										<div className="exercises__img">
-											<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
-										</div>
-										<div className="exercises__targets">
-											<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
-										</div>
+										<ScrollReveal>
+											<div className="exercises__img">
+												<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
+											</div>
+											<div className="exercises__targets">
+												<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
+											</div>
 
-										<h4>{exercise.name}</h4>
+											<h4>{exercise.name}</h4>
+										</ScrollReveal>
 									</Link>
 								</div>
 							</SplideSlide>
