@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import FormContact from './FormContact';
 import DirectionsMap from './DirectionsMap';
 import ScrollReveal from '../../components/ScrollReveal';
@@ -28,17 +30,17 @@ const Contacts = () => {
 							</div>
 							<ScrollReveal>
 								<address>
-									<a>Edifício Mirage, R. Dr. Eduardo Neves, Nº3 1050-077 Lisboa</a>
+									<a>Edifício Mirage, R. Dr. Eduardo Neves, Nº3, 1050-077 Lisboa</a>
 								</address>
 							</ScrollReveal>
 							<ScrollReveal>
 								<address>
-									<a>querosabermais@flag.pt</a>
+									<a href="mailto:querosabermais@flag.pt">querosabermais@flag.pt</a>
 								</address>
 							</ScrollReveal>
 							<ScrollReveal>
 								<address>
-									<a>(+351) 239000000</a>
+									<a href="tel:+351239000000">(+351) 239000000</a>
 								</address>
 							</ScrollReveal>
 						</div>

@@ -46,7 +46,9 @@ const FormContact = () => {
 						<MdOutlineErrorOutline /> {errors.phone.message}
 					</p>
 				)}
-				<textarea className="form__information" name="message" placeholder="Message" {...register('message')}></textarea>
+				<div>
+					<textarea className="form__information textarea__custom" name="message" placeholder="Message" maxLength={200} {...register('message')} />
+				</div>
 				{errors && errors.message && (
 					<p className="form__error">
 						<MdOutlineErrorOutline /> {errors.message.message}{' '}

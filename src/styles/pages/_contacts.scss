@@ -21,8 +21,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
-		&_schedule {
-			line-height: 2;
-		}
+	}
+	&__details_schedule p {
+		line-height: 1.75;
 	}
 }
