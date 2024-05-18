@@ -3,8 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+
 import WomanRunning from '../../assets/woman_running.jpg';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
@@ -90,18 +89,6 @@ const FitnessEvaluation = () => {
 		setBmiInterpretation(bmiInterpretation);
 		setFitnessPlan(fitnessPlan);
 	};
-
-	// const handleDownloadPDF = async () => {
-	// 	try {
-	// 		const canvas = await html2canvas(fitnessPlanRef.current);
-	// 		const imgData = canvas.toDataURL('image/png');
-	// 		const pdf = new jsPDF();
-	// 		pdf.addImage(imgData, 'PNG', 1, 1);
-	// 		pdf.save('ironclad-fitness-plan.pdf');
-	// 	} catch (error) {
-	// 		console.error('Error generating PDF:', error);
-	// 	}
-	// };
 
 	return (
 		<>
@@ -266,7 +253,7 @@ const FitnessEvaluation = () => {
 												</ul>
 											</div>
 											<PDFDownloadLink document={<WorkoutPlanDownload fitnessPlan={fitnessPlan} />} fileName="Ironclad_workout_plan.pdf">
-												{({ loading }) => (loading ? 'Generating PDF...' : <ButtonSave className="btn-save__mg-top__mobile">Save as PDF</ButtonSave>)}
+												{({ loading }) => (loading ? 'Generating PDF...' : <ButtonSave className="btn-save__mg-top__mobile" />)}
 											</PDFDownloadLink>
 										</>
 									)}
@@ -276,7 +263,7 @@ const FitnessEvaluation = () => {
 					</ScrollReveal>
 				</div>
 			</section>
-			{/* <ExerciseDB /> */}
+			<ExerciseDB />
 		</>
 	);
 };
