@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import WomanRunning from '../../assets/woman_running.jpg';
@@ -9,12 +11,12 @@ import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Heading from '../../components/Heading';
 import Button from '../../components/Button';
-
+import FormEvaluationValidation from './FormEvaluationValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
 import ExerciseDB from './ExerciseDB';
 import ScrollReveal from '../../components/ScrollReveal';
-import FormEvaluationValidation from './FormEvaluationValidation';
+import WorkoutPlanDownload from './WorkoutPlanDownload';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -23,8 +25,6 @@ const FitnessEvaluation = () => {
 	const [bmiValue, setBmiValue] = useState(0);
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 	const [fitnessPlan, setFitnessPlan] = useState('');
-
-	const fitnessPlanRef = useRef(null);
 
 	const handleRadioChange = (value) => {
 		setSelectedFitnessGoal(value);
@@ -38,6 +38,19 @@ const FitnessEvaluation = () => {
 	} = useForm({
 		resolver: yupResolver(FormEvaluationValidation),
 	});
+	const submitForm = (data) => {
+		calculateBmi(data);
+	};
+
+	const handleReset = () => {
+		reset();
+		setHeightValue('');
+		setWeightValue('');
+		setBmiValue(0);
+		setBmiInterpretation('');
+		setFitnessPlan('');
+		setSelectedFitnessGoal('weight_reduction');
+	};
 
 	const calculateBmi = () => {
 		const heightInMeters = heightValue / 100;
@@ -78,30 +91,17 @@ const FitnessEvaluation = () => {
 		setFitnessPlan(fitnessPlan);
 	};
 
-	const submitForm = (data) => {
-		calculateBmi();
-		console.log(data);
-	};
-
-	const handleReset = () => {
-		reset();
-		setHeightValue('');
-		setWeightValue('');
-		setBmiValue(0);
-		setBmiInterpretation('');
-		setFitnessPlan('');
-	};
-	const handleDownloadPDF = async () => {
-		try {
-			const canvas = await html2canvas(fitnessPlanRef.current);
-			const imgData = canvas.toDataURL('image/png');
-			const pdf = new jsPDF();
-			pdf.addImage(imgData, 'PNG', 1, 1);
-			pdf.save('ironclad-fitness-plan.pdf');
-		} catch (error) {
-			console.error('Error generating PDF:', error);
-		}
-	};
+	// const handleDownloadPDF = async () => {
+	// 	try {
+	// 		const canvas = await html2canvas(fitnessPlanRef.current);
+	// 		const imgData = canvas.toDataURL('image/png');
+	// 		const pdf = new jsPDF();
+	// 		pdf.addImage(imgData, 'PNG', 1, 1);
+	// 		pdf.save('ironclad-fitness-plan.pdf');
+	// 	} catch (error) {
+	// 		console.error('Error generating PDF:', error);
+	// 	}
+	// };
 
 	return (
 		<>
@@ -118,7 +118,7 @@ const FitnessEvaluation = () => {
 							<div className="form form__evaluation">
 								<ScrollReveal>
 									<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
-									<form onSubmit={handleSubmit(submitForm)}>
+									<form onSubmit={handleSubmit(submitForm, handleReset)}>
 										<input
 											className="form__information"
 											type="text"
@@ -249,7 +249,7 @@ const FitnessEvaluation = () => {
 										<>
 											<p className="fitness-plan__description">{fitnessPlan.description}</p>
 
-											<div ref={fitnessPlanRef}>
+											<div>
 												<h3>Ready to workout?</h3>
 												<ul>
 													{fitnessPlan.exercises.map((exercise, index) => (
@@ -265,7 +265,9 @@ const FitnessEvaluation = () => {
 													))}
 												</ul>
 											</div>
-											<ButtonSave onClick={handleDownloadPDF} className="btn-save__mg-top__mobile" />
+											<PDFDownloadLink document={<WorkoutPlanDownload fitnessPlan={fitnessPlan} />} fileName="Ironclad_workout_plan.pdf">
+												{({ loading }) => (loading ? 'Generating PDF...' : <ButtonSave className="btn-save__mg-top__mobile">Save as PDF</ButtonSave>)}
+											</PDFDownloadLink>
 										</>
 									)}
 								</ScrollReveal>
