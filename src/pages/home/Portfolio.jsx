@@ -25,7 +25,7 @@ const Portfolio = () => {
 										<p className="card__description">{item.description}</p>
 									</div>
 								</ScrollReveal>
-								<Button href={item.url} className="btn__mg-right__desktop">
+								<Button href={item.url} className="btn__mg-right__desktop btn__white-bg">
 									Know more
 								</Button>
 								{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} />}

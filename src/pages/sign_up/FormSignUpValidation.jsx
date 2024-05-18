@@ -1,7 +1,7 @@
 import * as yup from 'yup';
 
 const portugalPhoneValidator = (phoneNumber) => {
-	const phoneRegex = /^(?:\+?351)?9[1236]\d{7}$/;
+	const phoneRegex = /^(91|92|93|96)\d{7}$/;
 	return phoneRegex.test(phoneNumber);
 };
 

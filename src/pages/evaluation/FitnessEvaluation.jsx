@@ -39,19 +39,6 @@ const FitnessEvaluation = () => {
 		resolver: yupResolver(FormEvaluationValidation),
 	});
 
-	const submitForm = (data) => {
-		console.log(data);
-	};
-
-	const handleReset = () => {
-		reset();
-		setHeightValue('');
-		setWeightValue('');
-		setBmiValue(0);
-		setBmiInterpretation('');
-		setFitnessPlan('');
-	};
-
 	const calculateBmi = () => {
 		const heightInMeters = heightValue / 100;
 		const bmi = (weightValue / (heightInMeters * heightInMeters)).toFixed(2);
@@ -91,6 +78,19 @@ const FitnessEvaluation = () => {
 		setFitnessPlan(fitnessPlan);
 	};
 
+	const submitForm = (data) => {
+		calculateBmi();
+		console.log(data);
+	};
+
+	const handleReset = () => {
+		reset();
+		setHeightValue('');
+		setWeightValue('');
+		setBmiValue(0);
+		setBmiInterpretation('');
+		setFitnessPlan('');
+	};
 	const handleDownloadPDF = async () => {
 		try {
 			const canvas = await html2canvas(fitnessPlanRef.current);
@@ -118,7 +118,7 @@ const FitnessEvaluation = () => {
 							<div className="form form__evaluation">
 								<ScrollReveal>
 									<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
-									<form onSubmit={handleSubmit(submitForm, calculateBmi)}>
+									<form onSubmit={handleSubmit(submitForm)}>
 										<input
 											className="form__information"
 											type="text"
@@ -162,39 +162,44 @@ const FitnessEvaluation = () => {
 											<legend>Select your fitness goal:</legend>
 
 											<div>
-												<input
-													type="radio"
-													id="weight_reduction"
-													name="fitness_goal"
-													value="weight_reduction"
-													checked={selectedFitnessGoal === 'weight_reduction'}
-													onChange={() => handleRadioChange('weight_reduction')}
-												/>
-												<label htmlFor="weight_reduction"> Weight reduction</label>
-											</div>
+												<label className="radio-button">
+													<input
+														type="radio"
+														id="weight_reduction"
+														name="fitness_goal"
+														value="weight_reduction"
+														checked={selectedFitnessGoal === 'weight_reduction'}
+														onChange={() => handleRadioChange('weight_reduction')}
+													/>
+													<div className="radio-circle"></div>
+													<span className="radio-label">Weight reduction</span>
+												</label>
 
-											<div>
-												<input
-													type="radio"
-													id="muscle_gain"
-													name="fitness_goal"
-													value="muscle_gain"
-													checked={selectedFitnessGoal === 'muscle_gain'}
-													onChange={() => handleRadioChange('muscle_gain')}
-												/>
-												<label htmlFor="muscle_gain"> Muscle gain</label>
-											</div>
+												<label className="radio-button">
+													<input
+														type="radio"
+														id="muscle_gain"
+														name="fitness_goal"
+														value="muscle_gain"
+														checked={selectedFitnessGoal === 'muscle_gain'}
+														onChange={() => handleRadioChange('muscle_gain')}
+													/>
+													<div className="radio-circle"></div>
+													<span className="radio-label">Muscle gain</span>
+												</label>
 
-											<div>
-												<input
-													type="radio"
-													id="hipertrophy"
-													name="fitness_goal"
-													value="hipertrophy"
-													checked={selectedFitnessGoal === 'hipertrophy'}
-													onChange={() => handleRadioChange('hipertrophy')}
-												/>
-												<label htmlFor="hipertrophy"> Hipertrophy</label>
+												<label className="radio-button">
+													<input
+														type="radio"
+														id="hipertrophy"
+														name="fitness_goal"
+														value="hipertrophy"
+														checked={selectedFitnessGoal === 'hipertrophy'}
+														onChange={() => handleRadioChange('hipertrophy')}
+													/>
+													<div className="radio-circle"></div>
+													<span className="radio-label">Hipertrophy</span>
+												</label>
 											</div>
 										</div>
 										<div className="form__btn">

@@ -54,7 +54,9 @@ const FormContact = () => {
 					</p>
 				)}
 
-				<Button value="Submit" className="btn__mg-right" />
+				<div className="form__btn">
+					<Button value="Submit" className="btn__mg-top" />
+				</div>
 			</form>
 		</div>
 	);

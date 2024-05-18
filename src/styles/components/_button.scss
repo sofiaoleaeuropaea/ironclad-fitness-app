@@ -6,19 +6,20 @@
 	font-weight: 600;
 	padding: 0.625em 1.25em;
 	position: relative;
-	background-color: transparent;
 	cursor: pointer;
 	border: $card-border;
+	background-color: $background-light;
 	overflow: hidden;
 	border-radius: 30px;
 	color: $text-dark;
-	transition: all 0.6s ease-in-out;
+	transition: all 0.6s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
 	position: relative;
+	z-index: 1;
 
 	& input[type='submit'] {
 		font-weight: 600;
 		font-size: 0.875rem;
-		background-color: transparent;
+		background-color: $background-light;
 		cursor: pointer;
 		border: none;
 		color: $text-dark;
@@ -27,18 +28,18 @@
 		-moz-appearance: none;
 	}
 
-	&.effect::after {
+	&::after {
 		content: '';
 		position: absolute;
 		left: 0;
 		top: 0;
-		transition: all 0.5s ease-in-out;
+		transition: all 0.6s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
 		background-color: $primary-color;
 		border-radius: 30px;
 		visibility: hidden;
 		height: 10px;
 		width: 10px;
-		z-index: -1;
+		z-index: 1;
 	}
 
 	&:hover {
@@ -46,9 +47,10 @@
 		color: $text-dark;
 		background-color: $primary-color;
 	}
-	&.effect:hover::after {
+	&:hover::after {
 		visibility: visible;
 		transform: scale(100) translateX(2px);
+		z-index: -1;
 	}
 
 	&__hide {
@@ -59,22 +61,20 @@
 
 	&__mg-right__desktop {
 		@include breakpointDesktop(390px) {
-			margin: 0 2rem 0 auto;
+			margin: 0 1rem 0 auto;
 		}
 	}
 
 	&__mg-right {
-		display: flex;
-		margin: 0 2rem 0 auto;
-	}
-
-	&__mg-left {
-		@include breakpointMobile(493px) {
-			margin-left: -7rem;
-		}
+		margin: 0 1rem 0 auto;
 	}
 
 	&__mg-top {
 		margin-top: 2rem;
+	}
+	&__mg-left {
+		@include breakpointMobile(493px) {
+			margin-left: -7rem;
+		}
 	}
 }
