@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -37,11 +37,15 @@ const FitnessEvaluation = () => {
 	} = useForm({
 		resolver: yupResolver(FormEvaluationValidation),
 	});
+
 	const submitForm = (data) => {
+		console.log('submited');
+		console.log(data, errors, reset());
 		calculateBmi(data);
 	};
 
 	const handleReset = () => {
+		console.log('reset');
 		reset();
 		setHeightValue('');
 		setWeightValue('');
@@ -105,7 +109,7 @@ const FitnessEvaluation = () => {
 							<div className="form form__evaluation">
 								<ScrollReveal>
 									<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
-									<form onSubmit={handleSubmit(submitForm, handleReset)}>
+									<form onSubmit={handleSubmit(submitForm)}>
 										<input
 											className="form__information"
 											type="text"
@@ -190,8 +194,10 @@ const FitnessEvaluation = () => {
 											</div>
 										</div>
 										<div className="form__btn">
-											<Button value="Submit" />
-											<Button onClick={handleReset}>Reset</Button>
+											<Button type="submit">Submit</Button>
+											<Button type="reset" onClick={handleReset}>
+												Reset
+											</Button>
 										</div>
 									</form>
 								</ScrollReveal>
@@ -201,7 +207,7 @@ const FitnessEvaluation = () => {
 						<div className="form-output__wrapper">
 							<div className="bmi__wrapper">
 								<ScrollReveal>
-									<h2>BMI Result</h2>
+									<h3>BMI Result</h3>
 									{!fitnessPlan && (
 										<>
 											<p>
@@ -223,7 +229,7 @@ const FitnessEvaluation = () => {
 							</div>
 							<div className="fitness-plan__wrapper">
 								<ScrollReveal>
-									<h2>Workout Plan</h2>
+									<h3>Workout Plan</h3>
 									{!fitnessPlan && (
 										<>
 											<p className="fitness-plan__description">
@@ -237,7 +243,7 @@ const FitnessEvaluation = () => {
 											<p className="fitness-plan__description">{fitnessPlan.description}</p>
 
 											<div>
-												<h3>Ready to workout?</h3>
+												<h4>Ready to workout?</h4>
 												<ul>
 													{fitnessPlan.exercises.map((exercise, index) => (
 														<li key={index} className="workout-exercise__wrapper">
@@ -263,7 +269,7 @@ const FitnessEvaluation = () => {
 					</ScrollReveal>
 				</div>
 			</section>
-			<ExerciseDB />
+			{/* <ExerciseDB /> */}
 		</>
 	);
 };

@@ -54,7 +54,9 @@ const FormContact = () => {
 				)}
 
 				<div className="form__btn">
-					<Button value="Submit" className="btn__mg-top" />
+					<Button className="btn__mg-top" type="submit">
+						Submit
+					</Button>
 				</div>
 			</form>
 		</div>

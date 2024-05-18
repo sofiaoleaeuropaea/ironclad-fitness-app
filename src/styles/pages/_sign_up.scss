@@ -4,7 +4,7 @@
 	min-height: $min-height;
 	&__wrapper {
 		position: relative;
-		#title {
+		#img-title {
 			position: absolute;
 			right: 10%;
 			bottom: 5%;
@@ -14,11 +14,16 @@
 	}
 
 	&__form {
-		margin: 3rem auto;
+		width: 90%;
+		margin: 5rem auto;
 	}
-	#sign-up__title {
+	#form__title {
 		color: $tertiary-color;
 		text-transform: uppercase;
+		padding-left: 2rem;
+		@include md {
+			padding-left: unset;
+		}
 	}
 
 	@include md {
@@ -40,7 +45,6 @@
 			grid-column: 1 / 3;
 		}
 		#sign-form {
-			align-self: center;
 			grid-column: 3 / 5;
 		}
 	}

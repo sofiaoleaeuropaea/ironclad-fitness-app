@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
-import { useEffect, useState } from 'react';
 import Loader from '../../components/Loader';
 import ScrollReveal from '../../components/ScrollReveal';
 

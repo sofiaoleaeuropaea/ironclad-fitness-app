@@ -6,8 +6,8 @@ export const navigation = [
 	},
 	{
 		id: 1,
-		title: 'Fitness Evaluation',
-		url: '/fitnessevaluation',
+		title: 'Services',
+		url: '/services',
 	},
 	{
 		id: 2,
@@ -313,7 +313,7 @@ export const trainingPlans = [
 		description: 'This training plan is designed for underweight individuals aiming to reduce body fat while maintaining muscle mass and improving overall health.',
 		exercises: [
 			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 min', img: '/images/bodyweight.svg', id: 'bodyweight_svg'},
+			{ name: 'Treadmill Jogging', repetitions: '20 min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
 			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
 		],

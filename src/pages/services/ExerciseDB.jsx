@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
 import SearchIcon from '../../assets/search_icon.svg';
 import ScrollReveal from '../../components/ScrollReveal';

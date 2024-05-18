@@ -53,7 +53,9 @@ function FormSignUp() {
 					</p>
 				)}{' '}
 				<div className="form__btn">
-					<Button value="Submit" className="btn__mg-top" />
+					<Button type="submit" className="btn__mg-top">
+						Submit
+					</Button>
 				</div>
 			</form>
 		</div>
