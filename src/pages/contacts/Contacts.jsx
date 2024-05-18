@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import FormContact from './FormContact';
 import DirectionsMap from './DirectionsMap';
 import ScrollReveal from '../../components/ScrollReveal';

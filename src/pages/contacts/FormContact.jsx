@@ -5,23 +5,22 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Button from '../../components/Button';
-import FormValidation from '../../components/FormValidation';
+
+import FormContactValidation from './FormContactValidation';
 
 const FormContact = () => {
-	// const [formData, setFormData] = useState(null);
-
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 		reset,
 	} = useForm({
-		resolver: yupResolver(FormValidation),
+		resolver: yupResolver(FormContactValidation),
 	});
 
 	const submitForm = (data) => {
 		console.log(data);
-		// setFormData(data);
+		window.alert(JSON.stringify(data, null, 2));
 		reset();
 	};
 	return (
@@ -46,9 +45,9 @@ const FormContact = () => {
 						<MdOutlineErrorOutline /> {errors.phone.message}
 					</p>
 				)}
-				<div>
-					<textarea className="form__information textarea__custom" name="message" placeholder="Message" maxLength={200} {...register('message')} />
-				</div>
+
+				<textarea className="form__information textarea__custom" name="message" placeholder="Message" maxLength={200} {...register('message')} />
+
 				{errors && errors.message && (
 					<p className="form__error">
 						<MdOutlineErrorOutline /> {errors.message.message}{' '}
@@ -57,15 +56,6 @@ const FormContact = () => {
 
 				<Button value="Submit" className="btn__mg-right" />
 			</form>
-
-			{/* {formData && (
-			<div className="submittedData">
-				<h2>Dados Enviados:</h2>
-				<pre>{JSON.stringify(formData, null, 2)}</pre>
-			</div>
-
-	
-		)} */}
 		</div>
 	);
 };

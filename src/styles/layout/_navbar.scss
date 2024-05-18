@@ -38,6 +38,7 @@
 			&.active {
 				color: $primary-color;
 			}
+
 			@include breakpointMobile(960px) {
 				display: inline-block;
 				padding: 2rem 0;

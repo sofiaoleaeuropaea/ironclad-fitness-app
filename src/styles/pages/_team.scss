@@ -1,12 +1,12 @@
 @use '../utils/' as *;
 
 .team {
-	padding: 10rem 0;
+	padding: 7rem 0 10rem;
 	text-align: center;
 	border-bottom: $background-bd;
 
 	h2 {
-		margin-bottom: 10rem;
+		margin-bottom: 7rem;
 	}
 	&__wrapper {
 		display: flex;

@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import ScrollReveal from './ScrollReveal';
+
 const Button = ({ href, onClick, children, className, value }) => {
 	const btnClasses = `btn effect small-text-size ${className || ''}`;
 
 	const renderButton = () => (
-		<button className={btnClasses} onClick={onClick}>
+		<button type="button" className={btnClasses} onClick={onClick}>
 			{children}
 		</button>
 	);
@@ -15,7 +15,11 @@ const Button = ({ href, onClick, children, className, value }) => {
 		</Link>
 	);
 
-	const renderInput = () => <input type="submit" value={value} className={btnClasses} />;
+	const renderInput = () => (
+		<div className={btnClasses}>
+			<input type="submit" value={value} />
+		</div>
+	);
 
 	const renderComponent = () => {
 		if (href) {

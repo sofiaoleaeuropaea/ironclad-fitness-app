@@ -9,11 +9,12 @@ import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Heading from '../../components/Heading';
 import Button from '../../components/Button';
-import FormValidation from '../../components/FormValidation';
+
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
 import ExerciseDB from './ExerciseDB';
 import ScrollReveal from '../../components/ScrollReveal';
+import FormEvaluationValidation from './FormEvaluationValidation';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -35,12 +36,11 @@ const FitnessEvaluation = () => {
 		formState: { errors },
 		reset,
 	} = useForm({
-		resolver: yupResolver(FormValidation),
+		resolver: yupResolver(FormEvaluationValidation),
 	});
 
 	const submitForm = (data) => {
 		console.log(data);
-		// setFormData(data);
 	};
 
 	const handleReset = () => {
@@ -140,7 +140,7 @@ const FitnessEvaluation = () => {
 										)}
 										<input
 											className="form__information"
-											type="number"
+											type="text"
 											name="weight"
 											placeholder="Weight (kg)"
 											id="weight"

@@ -4,7 +4,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 import MapboxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 import '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css';
-import ScrollReveal from '../../components/ScrollReveal';
 
 const DirectionsMap = () => {
 	useEffect(() => {
@@ -25,11 +24,7 @@ const DirectionsMap = () => {
 
 		return () => map.remove();
 	}, []);
-	return (
-		<ScrollReveal>
-			<div id="map" style={{ width: '600px', height: '400px', borderRadius: '5px' }}></div>
-		</ScrollReveal>
-	);
+	return <div id="map" style={{ width: '600px', height: '400px', borderRadius: '5px' }}></div>;
 };
 
 export default DirectionsMap;

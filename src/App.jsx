@@ -14,9 +14,13 @@ import ErrorPage from './pages/error_page/ErrorPage';
 import ExercisesInstructions from './pages/evaluation/ExercisesInstructions';
 import ScrollToAnchor from './components/ScrollToAnchor';
 
-import './styles/main.scss';
+import { useEffect } from 'react';
 
-function App() {
+import './styles/main.scss';
+const App = () => {
+	useEffect(() => {
+		window.history.scrollRestoration = 'manual';
+	}, []);
 	return (
 		<>
 			<BrowserRouter>
@@ -41,6 +45,6 @@ function App() {
 			</BrowserRouter>
 		</>
 	);
-}
+};
 
 export default App;

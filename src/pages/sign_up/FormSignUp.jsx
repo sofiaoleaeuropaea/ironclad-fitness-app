@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Button from '../../components/Button';
-import FormValidation from '../../components/FormValidation';
+import FormSignUpValidation from './FormSignUpValidation';
 function FormSignUp() {
 	// const [formData, setFormData] = useState(null);
 
@@ -15,16 +15,16 @@ function FormSignUp() {
 		formState: { errors },
 		reset,
 	} = useForm({
-		resolver: yupResolver(FormValidation),
+		resolver: yupResolver(FormSignUpValidation),
 	});
 
 	const submitForm = (data) => {
 		console.log(data);
-		// setFormData(data);
+		window.alert(JSON.stringify(data, null, 2));
 		reset();
 	};
 	return (
-		<div className="form">
+		<div className="form" id="form-signup">
 			<form onSubmit={handleSubmit(submitForm)}>
 				<input className="form__information" type="text" name="fullName" placeholder="Full name" {...register('fullName')} />
 				{errors && errors.fullName && (

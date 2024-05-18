@@ -3,7 +3,7 @@
 .exercises {
 	&__info {
 		width: 100%;
-		padding: 10rem 0;
+		padding: 7rem 0;
 		border-top: $background-bd;
 		.searchbar {
 			&__wrapper {
@@ -21,7 +21,7 @@
 					transform: scaleX(1);
 				}
 				#searchbar__exercises {
-					padding: 10px 0;
+					padding: 7px 0;
 					border: none;
 					outline: none;
 					border-bottom: 2px solid $text-dark;

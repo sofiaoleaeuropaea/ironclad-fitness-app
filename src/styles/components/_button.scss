@@ -2,18 +2,30 @@
 
 .btn {
 	display: inline-block;
-
 	text-transform: uppercase;
 	font-weight: 600;
 	padding: 0.625em 1.25em;
 	position: relative;
-	background-color: $background-light;
+	background-color: transparent;
 	cursor: pointer;
 	border: $card-border;
 	overflow: hidden;
 	border-radius: 30px;
 	color: $text-dark;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	position: relative;
+
+	& input[type='submit'] {
+		font-weight: 600;
+		font-size: 0.875rem;
+		background-color: transparent;
+		cursor: pointer;
+		border: none;
+		color: $text-dark;
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+	}
 
 	&.effect::after {
 		content: '';
@@ -30,9 +42,8 @@
 	}
 
 	&:hover {
-		box-shadow: 1px 1px 200px #252525;
+		box-shadow: 1px 1px 200px $text-dark;
 		color: $text-dark;
-
 		background-color: $primary-color;
 	}
 	&.effect:hover::after {
