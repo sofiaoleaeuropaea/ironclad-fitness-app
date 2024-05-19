@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
+import { fetchExerciseDB } from '../../data/exercisedbAPI';
 import Loader from '../../components/Loader';
 import ScrollReveal from '../../components/ScrollReveal';
 
@@ -11,17 +11,8 @@ const ExercisesInstructions = () => {
 	const { id } = useParams();
 
 	useEffect(() => {
-		const fetchExerciseDB = async () => {
-			try {
-				const response = await fetch(exercisedbURL, exerciseDBoptions);
-
-				const data = await response.json();
-				setExerciseInfo(data);
-			} catch (err) {
-				console.log(err);
-			}
-		};
-		fetchExerciseDB();
+		const state = { setExerciseInfo };
+		fetchExerciseDB(state);
 	}, []);
 
 	const exerciseInstruction = exerciseInfo.find((exercise) => {

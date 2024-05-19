@@ -75,7 +75,6 @@ export const socialTracker = [
 
 export const portfolio = [
 	{
-		id: 0,
 		title: 'Our Membership',
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
 		img: '/images/menSquat.png',
@@ -84,21 +83,18 @@ export const portfolio = [
 		url: '/membership',
 	},
 	{
-		id: 1,
 		title: 'Fit Evaluation',
 		description: 'With the help of our experts get your own evaluation online.',
 		className: 'evaluation',
 		url: '/fitnessevaluation',
 	},
 	{
-		id: 2,
 		title: 'Partnerships',
 		description: 'Discover our partners and start saving with discounts on our services.',
 		className: 'partners',
 		url: '/about#partner',
 	},
 	{
-		id: 3,
 		title: 'Personal Trainer',
 		description: 'Meet your next',
 		img: '/images/pt1.png',

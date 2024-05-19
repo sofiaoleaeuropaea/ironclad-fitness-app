@@ -25,6 +25,10 @@ const FitnessEvaluation = () => {
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 	const [fitnessPlan, setFitnessPlan] = useState('');
 
+	const title = 'Fitness evaluation';
+	const paragraph =
+		"We're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle. With our BMI calculator, you can gain insights into your body composition and make informed decisions about your fitness journey. Whether you're looking to shed pounds, gain muscle, or improve your overall well-being, here, you can have access to personalized fitness plans are tailored to meet your unique needs.";
+
 	const handleRadioChange = (value) => {
 		setSelectedFitnessGoal(value);
 	};
@@ -94,14 +98,37 @@ const FitnessEvaluation = () => {
 		setFitnessPlan(fitnessPlan);
 	};
 
+	const FitnessPlan = () => {
+		return (
+			<>
+				<p className="fitness-plan__description">{fitnessPlan.description}</p>
+
+				<div>
+					<h4>Ready to workout?</h4>
+					<ul>
+						{fitnessPlan.exercises.map((exercise, index) => (
+							<li key={index} className="workout-exercise__wrapper">
+								<figure className="workout-exercise__img">
+									<img src={exercise.img} alt={exercise.name} id={exercise.id} />
+								</figure>
+								<div>
+									<p>{exercise.name}</p>
+									<p className="small-text-size">{exercise.repetitions}</p>
+								</div>
+							</li>
+						))}
+					</ul>
+				</div>
+				<PDFDownloadLink document={<WorkoutPlanDownload fitnessPlan={fitnessPlan} />} fileName="Ironclad_workout_plan.pdf">
+					{({ loading }) => (loading ? 'Generating PDF...' : <ButtonSave className="btn-save__mg-top__mobile" />)}
+				</PDFDownloadLink>
+			</>
+		);
+	};
 	return (
 		<>
 			<section id="evaluation" className="evaluation">
-				<Heading
-					title="Fitness evaluation"
-					paragraph="We're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle. With our BMI calculator, you can gain insights into your body composition and make informed decisions about your fitness journey. Whether you're looking to shed pounds, gain muscle, or improve your overall well-being, here, you can have access to personalized fitness plans are tailored to meet your unique needs."
-				/>
-
+				<Heading title={title} paragraph={paragraph} />
 				<div className="container">
 					<ScrollReveal>
 						<div className="form__wrapper">
@@ -208,15 +235,14 @@ const FitnessEvaluation = () => {
 							<div className="bmi__wrapper">
 								<ScrollReveal>
 									<h3>BMI Result</h3>
-									{!fitnessPlan && (
+									{!fitnessPlan ? (
 										<>
 											<p>
 												BMI, or Body Mass Index, is a simple tool that helps gauge your body fat based on your height and weight. It gives you an idea of whether you're at a healthy weight for your
 												height. It's a handy way to track your fitness journey and make informed choices about your health.
 											</p>
 										</>
-									)}
-									{fitnessPlan && (
+									) : (
 										<>
 											<div className="bmi-value">
 												<p className={bmiInterpretation.classname}>{bmiValue}</p>
@@ -230,45 +256,32 @@ const FitnessEvaluation = () => {
 							<div className="fitness-plan__wrapper">
 								<ScrollReveal>
 									<h3>Workout Plan</h3>
-									{!fitnessPlan && (
+									{!fitnessPlan ? (
 										<>
 											<p className="fitness-plan__description">
 												Get ready for a personalized fitness journey tailored just for you! We'll use your BMI along with your fitness goals to craft a plan designed to help you succeed. Let's reach
 												those goals together!
 											</p>
 										</>
-									)}
-									{fitnessPlan && (
-										<>
-											<p className="fitness-plan__description">{fitnessPlan.description}</p>
-
-											<div>
-												<h4>Ready to workout?</h4>
-												<ul>
-													{fitnessPlan.exercises.map((exercise, index) => (
-														<li key={index} className="workout-exercise__wrapper">
-															<figure className="workout-exercise__img">
-																<img src={exercise.img} alt={exercise.name} id={exercise.id} />
-															</figure>
-															<div>
-																<p>{exercise.name}</p>
-																<p className="small-text-size">{exercise.repetitions}</p>
-															</div>
-														</li>
-													))}
-												</ul>
-											</div>
-											<PDFDownloadLink document={<WorkoutPlanDownload fitnessPlan={fitnessPlan} />} fileName="Ironclad_workout_plan.pdf">
-												{({ loading }) => (loading ? 'Generating PDF...' : <ButtonSave className="btn-save__mg-top__mobile" />)}
-											</PDFDownloadLink>
-										</>
+									) : (
+										<FitnessPlan />
 									)}
 								</ScrollReveal>
 							</div>
 						</div>
 					</ScrollReveal>
+					<div className="challenges__wrapper">
+						<ScrollReveal>
+							<h3>Ready, set go!</h3>
+							<p>We have challenges created by our experts just waiting for you</p>
+
+							<Button href="/services/challenges">Try now</Button>
+							{/* <img className="img-fluid faqs__wrapper__img" src="images/membership.png" alt="Woman lifting" /> */}
+						</ScrollReveal>
+					</div>
 				</div>
 			</section>
+
 			{/* <ExerciseDB /> */}
 		</>
 	);

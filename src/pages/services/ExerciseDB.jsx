@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-import { exercisedbURL, exerciseDBoptions } from '../../data/exercisedbAPI';
+import { fetchExerciseDB } from '../../data/exercisedbAPI';
 import SearchIcon from '../../assets/search_icon.svg';
 import ScrollReveal from '../../components/ScrollReveal';
 
@@ -28,18 +28,8 @@ const ExerciseDB = () => {
 	};
 
 	useEffect(() => {
-		const fetchExerciseDB = async () => {
-			try {
-				const response = await fetch(exercisedbURL, exerciseDBoptions);
-
-				const data = await response.json();
-				setExerciseInfo(data);
-				setFilteredExercise(data.slice(0, 1));
-			} catch (err) {
-				console.log(err);
-			}
-		};
-		fetchExerciseDB();
+		const state = { setExerciseInfo, setFilteredExercise };
+		fetchExerciseDB(state);
 	}, []);
 
 	useEffect(() => {
