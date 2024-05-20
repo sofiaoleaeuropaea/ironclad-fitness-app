@@ -4,28 +4,28 @@ Welcome to Ironclad, a comprehensive gym webpage designed to help you achieve yo
 
 ##Screenshots
 ![Main Page](image.png)
+
 ![Fitness Evaluation](image-1.png)
 
-
 ## Features
+
 - Main Page: Includes a testimonials section where members share their success stories and experiences at Ironclad.
 - Membership Page: Detailed information about our membership plans, pricing, and benefits.
-- Services Page: 
-    - BMI Calculation: Easily calculate your Body Mass Index (BMI), based on your height and weight to understand your current fitness level.
-    - Personalized Fitness Plans: Get tailored fitness plans based on your BMI and your specific fitness goals such as weight reduction, muscle gain, or hypertrophy.
-    - Exercise Tutorials: Learn how to perform exercises correctly with detailed animations and instructions.
+- Services Page:
+  - BMI Calculation: Easily calculate your Body Mass Index (BMI), based on your height and weight to understand your current fitness level.
+  - Personalized Fitness Plans: Get tailored fitness plans based on your BMI and your specific fitness goals such as weight reduction, muscle gain, or hypertrophy.
+  - Exercise Tutorials: Learn how to perform exercises correctly with detailed animations and instructions.
 - About Us Page: Meet our expert team and learn about our partners who help us bring the best services to you.
 - Contacts Page: Find detailed information about our location, including a map, and a form for any questions you may have.
 - Start Now Page: Sign up for a membership and start your fitness journey with our easy-to-use signup form.
 - Blog Page: Read posts from the Ironclan community about their fitness journeys, tips, and motivational stories.
-
 
 ## Getting Started
 
 1. Install Dependencies
 
 <pre>
-```bash
+```
 npm install
 ```
 </pre>
@@ -33,30 +33,33 @@ npm install
 2. Run JSON server on http://localhost:5000
 
 <pre>
-```bash
+```
 npm run server
 ```
 </pre>
 
 3. Open your browser and visit http://localhost:3000 to see the Ironclad webpage in action.
 <pre>
-```bash
-npm run dev 
+
 ```
+npm run dev
+```
+
 </pre>
 
-
 ## Technologies Used
+
 - React: For building the user interface.
 - JavaScript: For the dynamic functionality.
 - React: For building the user interface.
 - SCSS: For styling the components.
 
-### Some of the main dependencies used 
+### Some of the main dependencies used
+
 - JSON Server - json-server
 - Usehooks- @uidotdev/usehooks
 - Splide.js React - @splidejs/react-splide
-- Framer Motion - framer-motion 
+- Framer Motion - framer-motion
 - React Icons - react-icons
 - Scroll Lock - scroll-lock
 - React Hook Form - react-hook-form
@@ -66,10 +69,12 @@ npm run dev
 - React PDF Renderer - @react-pdf/renderer
 
 ### APIs used
+
 - Context API - used to help create the blog section and manage the creation, update, and deletion of posts.
 - ExerciseDB - database API containing 1300+ exercises with body part, target muscle, instructions and a follow-through animation.
 
 ## Next Steps
+
 - Improve UX/UI: Enhance the user experience and interface design to make navigation and interaction more intuitive and visually appealing.
 
 - Integrate Backend Services: Implement a backend to power the entire application, especially for handling forms and user data. This will ensure scalability, security, and better management of user interactions.
@@ -79,6 +84,3 @@ npm run dev
 - Implement Cookies, Privacy, and Terms: Ensure compliance with privacy regulations and enhance user trust by adding cookie consent functionality, a privacy policy, and terms of service. This will protect user data and provide transparency about how their information is used.
 
 By focusing on these next steps, Ironclad can continue to evolve and provide an even better experience for its users, helping them reach their fitness goals with confidence and ease.
-
-
-
