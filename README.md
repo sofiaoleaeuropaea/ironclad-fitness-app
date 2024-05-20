@@ -2,13 +2,11 @@
 
 Welcome to Ironclad, a comprehensive gym webpage designed to help you achieve your fitness goals. With a suite of features including BMI calculation, personalized fitness plans, exercise tutorials, and more, Ironclad provides all the tools you need to build a stronger body and mind.
 
-***
-
 ## Screenshots
+
 ![Main Page](image.png)
 
 ![Fitness Evaluation](image-1.png)
-
 
 ## Features
 
@@ -22,7 +20,6 @@ Welcome to Ironclad, a comprehensive gym webpage designed to help you achieve yo
 - Contacts Page: Find detailed information about our location, including a map, and a form for any questions you may have.
 - Start Now Page: Sign up for a membership and start your fitness journey with our easy-to-use signup form.
 - Blog Page: Read posts from the Ironclan community about their fitness journeys, tips, and motivational stories.
-
 
 ## Getting Started
 
@@ -42,13 +39,13 @@ npm run server
 
 </pre>
 
-3. Open your browser and visit http://localhost:3000 to see the Ironclad webpage in action.
+3. Open your browser and visit http://localhost:5173 to see the Ironclad webpage in action.
+
 <pre>
 
 npm run dev
 
 </pre>
-
 
 ## Technologies Used
 
@@ -57,28 +54,22 @@ npm run dev
 - React: For building the user interface.
 - SCSS: For styling the components.
 
-
 ### Some of the main dependencies used
 
 - JSON Server - json-server
-- Usehooks- @uidotdev/usehooks
-- Splide.js React - @splidejs/react-splide
-- Framer Motion - framer-motion
-- React Icons - react-icons
-- Scroll Lock - scroll-lock
-- React Hook Form - react-hook-form
-- Yup - yup
+- Usehooks- @uidotdev/usehooks (react utilities)
+- Splide.js React - @splidejs/react-splide (sliders)
+- Framer Motion - framer-motion (animations)
+- React Hook Form && Yup - react-hook-form && Yup (form validation)
 - [Mapbox Directions](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/) - @mapbox/mapbox-gl-directions
 - [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/api/) - mapbox-gl
 - React PDF Renderer - @react-pdf/renderer
-
 
 ### APIs used
 
 - Context API - used to help create the blog section and manage the creation, update, and deletion of posts.
 - [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb) - database API containing 1300+ exercises with body part, target muscle, instructions and a follow-through animation.
 - [Mapbox](https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-directions/) - to create a personalized map with Ironclad location and navigation features.
-
 
 ## Next Steps
 

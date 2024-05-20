@@ -57,7 +57,7 @@ $breakpoints: (
 	background: $bg;
 	padding: $pdg;
 	border-radius: 10px;
-	border: 1px solid #727272;
+	border: $prim-color2-border1;
 	overflow: hidden;
 }
 
@@ -65,7 +65,7 @@ $breakpoints: (
 	background: transparent;
 	padding: $pdg;
 	border-radius: 10px;
-	border: 1px solid #727272;
+	border: $prim-color2-border1;
 	overflow: hidden;
 	background: $bg;
 }
