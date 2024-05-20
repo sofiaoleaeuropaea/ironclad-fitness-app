@@ -4,8 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
-import WomanRunning from '../../assets/woman_running.jpg';
-import PackWeights from '../../assets/pack_weights.png';
+import WomanRunning from '../../assets/images/woman_running.jpg';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
@@ -14,7 +13,6 @@ import Button from '../../components/Button';
 import FormEvaluationValidation from './FormEvaluationValidation';
 import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
-import ExerciseDB from './ExerciseDB';
 import ScrollReveal from '../../components/ScrollReveal';
 import WorkoutPlanDownload from '../../components/WorkoutPlanDownload';
 
@@ -26,8 +24,8 @@ const FitnessEvaluation = () => {
 	const [bmiInterpretation, setBmiInterpretation] = useState('');
 	const [fitnessPlan, setFitnessPlan] = useState('');
 
-	const title = 'Fitness evaluation';
-	const paragraph =
+	const titleFitnessEvaluation = 'Fitness evaluation';
+	const paragraphFitnessEvaluation =
 		"We're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle. With our BMI calculator, you can gain insights into your body composition and make informed decisions about your fitness journey. Whether you're looking to shed pounds, gain muscle, or improve your overall well-being, here, you can have access to personalized fitness plans are tailored to meet your unique needs.";
 
 	const handleRadioChange = (value) => {
@@ -44,13 +42,10 @@ const FitnessEvaluation = () => {
 	});
 
 	const submitForm = (data) => {
-		console.log('submited');
-		console.log(data, errors, reset());
 		calculateBmi(data);
 	};
 
 	const handleReset = () => {
-		console.log('reset');
 		reset();
 		setHeightValue('');
 		setWeightValue('');
@@ -65,14 +60,7 @@ const FitnessEvaluation = () => {
 		const bmi = (weightValue / (heightInMeters * heightInMeters)).toFixed(2);
 		setBmiValue(bmi);
 
-		const bmiRanges = [
-			{ min: 0, max: 18.5, interpretationIndex: 0 },
-			{ min: 18.5, max: 25, interpretationIndex: 1 },
-			{ min: 25, max: 30, interpretationIndex: 2 },
-			{ min: 30, max: Infinity, interpretationIndex: 3 },
-		];
-
-		const bmiIndex = bmiRanges.findIndex((range) => bmi >= range.min && bmi < range.max);
+		const bmiIndex = bmiDescription.findIndex((range) => bmi >= range.min && bmi < range.max);
 
 		let fitnessPlanIndex;
 		switch (selectedFitnessGoal) {
@@ -88,11 +76,10 @@ const FitnessEvaluation = () => {
 			default:
 				{
 				}
-
 				break;
 		}
 
-		const bmiInterpretation = bmiDescription[bmiRanges[bmiIndex].interpretationIndex];
+		const bmiInterpretation = bmiDescription[bmiIndex];
 		const fitnessPlan = trainingPlans[fitnessPlanIndex];
 
 		setBmiInterpretation(bmiInterpretation);
@@ -109,7 +96,7 @@ const FitnessEvaluation = () => {
 					<ul>
 						{fitnessPlan.exercises.map((exercise, index) => (
 							<li key={index} className="workout-exercise__wrapper">
-								<figure className="workout-exercise__img">
+								<figure className="workout-exercise__img border-radius__theme">
 									<img src={exercise.img} alt={exercise.name} id={exercise.id} />
 								</figure>
 								<div>
@@ -126,14 +113,15 @@ const FitnessEvaluation = () => {
 			</>
 		);
 	};
+
 	return (
 		<>
 			<section id="evaluation" className="evaluation">
-				<Heading title={title} paragraph={paragraph} />
+				<Heading title={titleFitnessEvaluation} paragraph={paragraphFitnessEvaluation} />
 				<div className="container">
 					<ScrollReveal>
 						<div className="form__wrapper">
-							<img src={WomanRunning} alt="Woman running" className="img-fluid" />
+							<img src={WomanRunning} alt="Woman running" className="img-fluid border-radius__theme" />
 							<div className="form form__evaluation">
 								<ScrollReveal>
 									<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>
@@ -281,13 +269,10 @@ const FitnessEvaluation = () => {
 							<p>Share your evolution and workouts with our Ironclad community.</p>
 
 							<Button href="/services/blog">Try now</Button>
-							{/* <img className="img-fluid blog-teaser__img" src={PackWeights} alt="Pack of Weights" /> */}
 						</ScrollReveal>
 					</div>
 				</div>
 			</section>
-
-			{/* <ExerciseDB /> */}
 		</>
 	);
 };

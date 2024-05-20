@@ -1,3 +1,4 @@
+import WomanLifting from '../../assets/images/membership.png';
 import Button from '../../components/Button';
 import ScrollReveal from '../../components/ScrollReveal';
 
@@ -7,10 +8,12 @@ function Faqs() {
 			<div className="container">
 				<div className="faqs__wrapper">
 					<ScrollReveal>
-						<h4>YOU STILL HAVE QUESTIONS?</h4>
-						<Button href="/contacts#contact__form">Get in touch</Button>
+						<h2 className="medium-heading">You still have questions?</h2>
+						<Button href="/contacts#contact__form " className="btn__bg-color">
+							Get in touch
+						</Button>
 
-						<img className="img-fluid faqs__wrapper__img" src="images/membership.png" alt="Woman lifting" />
+						<img className="img-fluid faqs__wrapper__img" src={WomanLifting} alt="Woman lifting" />
 					</ScrollReveal>
 				</div>
 			</div>

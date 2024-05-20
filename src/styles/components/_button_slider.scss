@@ -1,0 +1,17 @@
+@use '../utils/' as *;
+
+.btn-slider {
+    margin-bottom: 1.5rem;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	padding: 0;
+    &:disabled {
+		opacity: 0.5; 
+		cursor: not-allowed; 
+	}
+	svg {
+		font-size: 27px;
+        color: $text-dark;
+	}
+}

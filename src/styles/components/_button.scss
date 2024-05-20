@@ -7,12 +7,12 @@
 	padding: 0.625em 1.25em;
 	position: relative;
 	cursor: pointer;
-	border: $card-border;
+	border: $prim-color2-border1;
 	background-color: $background-light;
 	overflow: hidden;
 	border-radius: 30px;
 	color: $text-dark;
-	transition: all 0.6s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+	transition: $transition-cubic-btn;
 	position: relative;
 	z-index: 1;
 
@@ -21,7 +21,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		transition: all 0.6s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+		transition: $transition-cubic-btn;
 		background-color: $primary-color;
 		border-radius: 30px;
 		visibility: hidden;
@@ -46,6 +46,24 @@
 		}
 		&:hover {
 			background-color: $tertiary-color;
+		}
+	}
+	&__bg-color {
+		background-color: $primary-color;
+		&::after {
+			background-color: $background-light;
+		}
+		&:hover {
+			background-color: $background-light;
+		}
+	}
+	&__bg-color__inverse{
+	background-color: $tertiary-color;
+		&::after {
+			background-color: $background-light;
+		}
+		&:hover {
+			background-color: $background-light;
 		}
 	}
 	&__round {

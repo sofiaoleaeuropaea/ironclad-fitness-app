@@ -1,11 +1,12 @@
 import FormSignUp from './FormSignUp';
 import ScrollReveal from '../../components/ScrollReveal';
+import GymForFun from '../../assets/images/gymforfun.jpg';
 
 function SignUp() {
 	return (
 		<section id="sign-up" className="sign-up">
 			<div className="sign-up__wrapper " id="sign-title">
-				<img src="images/gymforfun.jpg" alt="person in the gym" className="img-fluid sign-up__img" />
+				<img src={GymForFun} alt="person in the gym" className="img-fluid sign-up__img" />
 
 				<h2 id="img-title">
 					GYM <br />

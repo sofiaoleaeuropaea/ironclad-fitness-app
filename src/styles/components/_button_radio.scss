@@ -12,7 +12,7 @@
 		width: 16px;
 		height: 16px;
 		border-radius: 50%;
-		border: 1px solid $text-dark;
+		border: $prim-color2-border1;
 		position: relative;
 		margin-right: 10px;
 
@@ -27,7 +27,7 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%) scale(0);
-			transition: all 0.2s ease-in-out;
+			transition: $transition-cubic-btn;
 		}
 	}
 
@@ -44,7 +44,7 @@
 	}
 
 	&:hover .radio-circle {
-		border: $card-border;
+		border: $prim-color2-border1;
 	}
 
 	&:hover input[type='radio']:checked + .radio-circle::before {

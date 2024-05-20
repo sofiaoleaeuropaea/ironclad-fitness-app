@@ -7,7 +7,7 @@ const Accordion = ({ handleToggle, index, accordionOpen, title, content }) => {
 		<div className="accordion">
 			<ScrollReveal>
 				<button className="accordion__heading" onClick={() => handleToggle(index)}>
-					<span className={`accordion__heading__title ${accordionOpen === index ? 'active' : ''}`}>{title}</span>
+					<span className={`accordion__heading__title small-heading ${accordionOpen === index ? 'active' : ''}`}>{title}</span>
 					<div className={`accordion__heading__arrow ${accordionOpen === index ? 'active' : ''}`}>
 						<span className="bar"></span>
 						<span className="bar"></span>

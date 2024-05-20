@@ -6,17 +6,23 @@ $scale-normal-color: #397c49;
 $scale-medium-color: #f26135;
 $scale-high-color: #d60b30;
 $text-dark: #302f26;
-
 $background-light: rgb(255, 248, 241);
 $error-color: #cb321b;
 $white: #ffffff;
 
-$background-bd: 2px solid rgba(#302f26, 0.13);
-$line-border: 1px solid rgba(#302f26, 0.3);
-$card-border: 1px solid #727272;
-$card-bg-grey: rgba(#727272, 0.15);
+$background-color2: rgba($secondary-color, 0.2);
+
+$background-bd: 2px solid rgba($text-dark, 0.13);
+$line-border: 1px solid rgba($text-dark, 0.3);
+$prim-color1-border1: 1px solid $text-dark;
+$prim-color2-border1: 1px solid $secondary-color;
+$sec-color2-border2: 2px solid $secondary-color;
+
 
 $text-font: 'Inter', sans-serif;
 $headings-font: 'Syne', sans-serif;
+
+$transition-cubic: all 0.7s cubic-bezier(0, 1, 0.33, 1.2);
+$transition-cubic-btn: all 0.6s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
 
 $min-height: calc(100vh - 146.84px);

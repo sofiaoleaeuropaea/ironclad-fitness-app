@@ -1,6 +1,8 @@
 import Button from '../../components/Button';
+import heroDesktop from '../../assets/images/hero_desktop.png';
+import heroMobile from '../../assets/images/hero_mobile.png';
 import ScrollReveal from '../../components/ScrollReveal';
-function Hero() {
+const Hero = () => {
 	return (
 		<section id="hero" className="hero">
 			<div className="container">
@@ -13,24 +15,26 @@ function Hero() {
 						</ScrollReveal>
 						<ScrollReveal>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ullam fuga reiciendis Lorem ipsum dong elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga
-								reici..elit. Inventore ullam fuga reiciendis ipsum- dong elit. Inventore ullam fuga reici..elit. Inventore ullam fuga reiciendis ipsum dong elit. Inventore ullam fuga reici..
+								Welcome to Ironclad, where strength meets endurance. Our mission is to help you achieve your fitness goals with expert guidance and top-notch facilities. Join us to build your ironclad
+								body and mind. Start your journey today and discover the true potential within you. Empower yourself and thrive.
 							</p>
 						</ScrollReveal>
 						<ScrollReveal>
-							<Button href="/signup">Start now</Button>
+							<Button href="/signup" className="btn__bg-color__inverse">
+								Start now
+							</Button>
 						</ScrollReveal>
 					</div>
 					<div className="hero__image">
 						<ScrollReveal>
-							<img src="images/hero_mobile.png" className="img-fluid" id="hero-img_mobile" alt="Strong men" />
-							<img src="images/hero_desktop.png" className="img-fluid" id="hero-img_desktop" alt="Strong men" />
+							<img src={heroMobile} className="img-fluid" id="hero-img_mobile" alt="Strong men" />
+							<img src={heroDesktop} className="img-fluid" id="hero-img_desktop" alt="Strong men" />
 						</ScrollReveal>
 					</div>
 				</div>
 			</div>
 		</section>
 	);
-}
+};
 
 export default Hero;

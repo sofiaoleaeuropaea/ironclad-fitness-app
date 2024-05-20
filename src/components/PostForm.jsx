@@ -10,7 +10,7 @@ const PostForm = ({ action, title, name, description, onTitleChange, onDescripti
 			<div className="container">
 				<div className="post__wrapper">
 					<h3 id="post-title"> {action === 'update' ? 'Update Post' : action === 'delete' ? 'Delete Post' : 'Create Post'}</h3>
-					<form className="form" onSubmit={onSubmit}>
+					<form className="form form__post" onSubmit={onSubmit}>
 						<PhotoUpload onPhotoChange={onPhotoChange} />
 
 						<input className="form__information" placeholder="Title" type="text" value={title} onChange={(e) => onTitleChange(e.target.value)} required />

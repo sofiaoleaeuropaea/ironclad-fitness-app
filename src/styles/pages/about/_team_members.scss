@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 
 .member {
 	padding: 2rem 0;
@@ -16,7 +16,7 @@
 	}
 	&__intro,
 	&__biography {
-		@include cardTransparent;
+		@include card-noflex;
 
 		@include sm {
 			width: 80%;
@@ -26,23 +26,12 @@
 		}
 	}
 	&__biography {
-		background: rgba(#727272, 0.15);
+		@include card-noflex($bg: $background-color2);
 	}
 	&__intro {
-		background-color: $tertiary-color;
-
 		&__modality {
 			margin: 5rem 0 2rem 0;
-			display: flex;
-			flex-wrap: wrap;
-			row-gap: 0.5rem;
 
-			.modality {
-				padding: 0.625rem 1.25rem;
-				margin-right: 0.5rem;
-				border: 1px solid $text-dark;
-				border-radius: 30px;
-			}
 		}
 
 		&__quote {

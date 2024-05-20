@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 
 .faqs {
 	padding-top: 7rem;
@@ -8,7 +8,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		h4 {
+		h2 {
 			margin-bottom: 3rem;
 		}
 

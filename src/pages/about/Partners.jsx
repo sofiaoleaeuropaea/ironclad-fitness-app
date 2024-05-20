@@ -12,11 +12,14 @@ const Partnership = () => {
 		setAccordionOpen((prevIndex) => (prevIndex === index ? null : index));
 	};
 
+	const titlePartners = "Our partners"
+	const paragraphPartners= "At our fitness center, partnerships serve as the cornerstone of our dedication to cultivating a vibrant fitness community. We prioritize collaboration with top-tier brands and fitness authorities to elevate our members' gym experience. Through these partnerships, we provide exclusive perks, access to state-of-the-art equipment and training regimens, and thrilling events designed to ignite inspiration and motivation."
+
 	return (
 		<section id="partner" className="partner">
 			<Heading
-				title="Our partners"
-				paragraph="At our fitness center, partnerships serve as the cornerstone of our dedication to cultivating a vibrant fitness community. We prioritize collaboration with top-tier brands and fitness authorities to elevate our members' gym experience. Through these partnerships, we provide exclusive perks, access to state-of-the-art equipment and training regimens, and thrilling events designed to ignite inspiration and motivation."
+				title={titlePartners}
+				paragraph={paragraphPartners}
 			/>
 			<div className="container">
 				<div className="partner__accordion">

@@ -7,8 +7,6 @@ import { MdOutlineErrorOutline } from 'react-icons/md';
 import Button from '../../components/Button';
 import FormSignUpValidation from './FormSignUpValidation';
 function FormSignUp() {
-	// const [formData, setFormData] = useState(null);
-
 	const {
 		register,
 		handleSubmit,
@@ -18,9 +16,7 @@ function FormSignUp() {
 		resolver: yupResolver(FormSignUpValidation),
 	});
 
-	const submitForm = (data) => {
-		console.log(data);
-		window.alert(JSON.stringify(data, null, 2));
+	const submitForm = () => {
 		reset();
 	};
 	return (

@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 
 .membership {
 	font-size: 1em;
@@ -49,7 +49,7 @@
 		}
 	}
 	&__card {
-		@include card;
+		@include card-flex-center($bg: $background-color2);
 
 		.card {
 			&__content {
@@ -88,12 +88,12 @@
 	.pt {
 		&__wrapper {
 			position: relative;
-			@include cardTransparent($pdg: 2rem);
+			@include card-noflex($bg: transparent);
 			text-align: center;
 			margin: 10rem 0;
 
 			@include lg {
-				@include cardTransparent($pdg: 3rem);
+				@include card-noflex($pdg: 3rem, $bg: transparent);
 				display: flex;
 				align-items: center;
 				gap: 3rem;

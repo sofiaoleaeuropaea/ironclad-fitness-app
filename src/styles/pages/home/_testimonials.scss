@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 
 .testimonials {
 	border-top: $background-bd;
@@ -20,7 +20,8 @@
 	&__card {
 		margin: 0 1px;
 		height: 100%;
-		@include card($pdg: 3rem);
+		@include  card-flex-center($pdg: 3rem, $bg: $background-color2);
+		
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;

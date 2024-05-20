@@ -15,7 +15,7 @@ export const fetchExerciseDB = async (state) => {
 		const data = await response.json();
 		setExerciseInfo(data);
 		if (setFilteredExercise) setFilteredExercise(data.slice(0, 1));
-	} catch (err) {
-		console.log(err);
+	} catch (error) {
+		console.log('Error fetching data', error);
 	}
 };

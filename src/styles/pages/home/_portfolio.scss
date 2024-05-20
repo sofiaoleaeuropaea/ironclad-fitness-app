@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 
 .portfolio {
 	width: 100%;
@@ -42,15 +42,15 @@
 	}
 
 	&__card {
-		@include card;
-		background-color: $tertiary-color;
+		@include card-flex-center;
+		
 		@include breakpointMobile(390px) {
 			justify-content: flex-start;
 		}
 
 		@include md {
-			@include card($pdg: 3rem);
-			background-color: $tertiary-color;
+			@include card-flex-center($pdg: 3rem);
+			
 		}
 
 		.card {

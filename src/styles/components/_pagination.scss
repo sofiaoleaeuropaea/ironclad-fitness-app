@@ -1,0 +1,8 @@
+@use '../utils/' as *;
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-right: 1rem;
+}

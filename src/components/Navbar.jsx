@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
-import ironclad_logo from '../assets/ironclad_logo.png';
+import ironclad_logo from '../assets/images/ironclad_logo.png';
 import { navigation } from '../data';
 
 import NavbarLinks from './NavbarLinks';

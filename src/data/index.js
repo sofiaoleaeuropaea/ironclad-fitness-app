@@ -77,7 +77,7 @@ export const portfolio = [
 	{
 		title: 'Our Membership',
 		description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint commodi omnis, delectus deserunt consequuntur molestias.',
-		img: '/images/menSquat.png',
+		img: '/src/assets/images/menSquat.png',
 		className: 'membership',
 		id: 'membership__img',
 		url: '/membership',
@@ -97,7 +97,7 @@ export const portfolio = [
 	{
 		title: 'Personal Trainer',
 		description: 'Meet your next',
-		img: '/images/pt1.png',
+		img: '/src/assets/images/pt1.png',
 		className: 'pt',
 		id: 'pt__img',
 		url: '/about#team',
@@ -105,30 +105,24 @@ export const portfolio = [
 ];
 export const pricing = [
 	{
-		id: 0,
 		title: 'Basic',
-
 		price: '30€/Month',
 		features: ['Weekend Access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'basic',
 	},
 	{
-		id: 1,
 		title: 'Premium',
-
 		price: '40€/Month',
 		features: ['3 Times/week', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'premium',
 	},
 	{
-		id: 2,
 		title: 'Elite',
 		price: '55€/Month',
 		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
 		className: 'elite',
 	},
 	{
-		id: 2,
 		title: 'Family',
 		price: '45€/Month',
 		features: ['All access', 'Personal Trainer', 'Nutricionist', 'Weekly follow up'],
@@ -173,7 +167,7 @@ export const personalTrainers = [
 	{
 		id: 0,
 		name: 'David Lee',
-		img: '/images/pt2.jpg',
+		img: '/src/assets/images/pt2.jpg',
 		quote: "Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.",
 		modalities: ['Weightlifting', 'Bodybuilding', 'Nutrition'],
 		biography:
@@ -182,7 +176,7 @@ export const personalTrainers = [
 	{
 		id: 1,
 		name: 'Emily Harris',
-		img: '/images/pt3.jpg',
+		img: '/src/assets/images/pt3.jpg',
 		quote: "Find your strength, both inside and out. Let's push limits, break barriers, and achieve greatness together",
 		modalities: ['Group Fitness', 'Cardio Workouts'],
 		biography:
@@ -191,7 +185,7 @@ export const personalTrainers = [
 	{
 		id: 2,
 		name: 'Jessica Martinez',
-		img: '/images/pt4.jpg',
+		img: '/src/assets/images/pt4.jpg',
 		quote: "Success starts with the decision to try. Let's work together to make your fitness goals a reality.",
 		modalities: ['HIIT', 'Strength Training', 'Boxe'],
 		biography:
@@ -200,7 +194,7 @@ export const personalTrainers = [
 	{
 		id: 3,
 		name: 'Michael Nguyen',
-		img: '/images/pt5.jpg',
+		img: '/src/assets/images/pt5.jpg',
 		quote: "Every step forward is a step closer to your goals. Let's conquer obstacles and achieve greatness, one day at a time.",
 		modalities: ['Endurance Training', 'HIIT'],
 		biography:
@@ -209,7 +203,7 @@ export const personalTrainers = [
 	{
 		id: 4,
 		name: 'Rachel Garcia',
-		img: '/images/pt6.jpg',
+		img: '/src/assets/images/pt6.jpg',
 		quote: "Challenge yourself, and the results will follow. Let's embrace the journey and celebrate every milestone together.",
 		modalities: ['CrossFit', 'Functional Training', 'Bodybuilding'],
 		biography:
@@ -218,7 +212,7 @@ export const personalTrainers = [
 	{
 		id: 5,
 		name: 'Ryan Thompson',
-		img: '/images/pt7.jpg',
+		img: '/src/assets/images/pt7.jpg',
 		quote: "Your journey to a healthier you begins here. Together, we'll overcome obstacles and reach new heights.",
 		modalities: ['Functional Training', 'CrossFit'],
 		biography:
@@ -232,17 +226,17 @@ export const partners = [
 		title: 'Nutrition',
 		brands: [
 			{
-				logo: '/images/prozis.png',
+				logo: '/src/assets/images/prozis.png',
 				name: 'Prozis',
 				url: 'https://www.prozis.com',
 			},
 			{
-				logo: '/images/raw.png',
+				logo: '/src/assets/images/raw.png',
 				name: 'Raw',
 				url: 'https://getrawnutrition.com',
 			},
 			{
-				logo: '/images/eu-nutrition.png',
+				logo: '/src/assets/images/eu-nutrition.png',
 				name: 'EuNutrition',
 				url: 'https://eunutrition.com',
 			},
@@ -253,12 +247,12 @@ export const partners = [
 		title: 'Machines',
 		brands: [
 			{
-				logo: '/images/matrix.png',
+				logo: '/src/assets/images/matrix.png',
 				name: 'Matrix',
 				url: 'https://www.matrixfitness.com/',
 			},
 			{
-				logo: '/images/hammer-strength.png',
+				logo: '/src/assets/images/hammer-strength.png',
 				name: 'Hammer Strength',
 				url: 'https://www.lifefitness.com/en-eu/brands/hammer-strength',
 			},
@@ -269,7 +263,7 @@ export const partners = [
 		title: 'Wellness',
 		brands: [
 			{
-				logo: '/images/fisiogaspar.png',
+				logo: '/src/assets/images/fisiogaspar.png',
 				name: 'Fisiogaspar',
 				url: 'https://www.fisiogaspar.pt',
 			},
@@ -279,24 +273,32 @@ export const partners = [
 
 export const bmiDescription = [
 	{
+		min: 0,
+		max: 18.5,
 		scale: 'Underweight',
 		description:
 			'Being underweight may indicate insufficient body fat and muscle mass relative to height, potentially leading to health risks such as weakened immune function, nutrient deficiencies, and osteoporosis.',
 		classname: 'underweight',
 	},
 	{
+		min: 18.5,
+		max: 25,
 		scale: 'Normal weight',
 		description:
 			'Falling within the normal weight category generally suggests a balanced body composition relative to height, which is associated with reduced risk of chronic diseases and overall good health.',
 		classname: 'normal-weight',
 	},
 	{
+		min: 25,
+		max: 30,
 		scale: 'Overweight',
 		description:
 			'Obesity is characterized by excess body fat accumulation, which can lead to various health problems including heart disease, type 2 diabetes, stroke, and certain cancers. It is often associated with lifestyle factors such as poor diet and lack of physical activity.',
 		classname: 'overweight',
 	},
 	{
+		min: 30,
+		max: Infinity,
 		scale: 'Obese',
 		description:
 			'Being overweight indicates a higher-than-ideal amount of body fat relative to height, which can increase the risk of developing health issues such as hypertension, high cholesterol, and joint problems. However, it may not carry the same health risks as obesity and can often be managed through lifestyle changes like diet and exercise.',
@@ -308,108 +310,108 @@ export const trainingPlans = [
 	{
 		description: 'This training plan is designed for underweight individuals aiming to reduce body fat while maintaining muscle mass and improving overall health.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine.svg' },
 		],
 	},
 	{
 		description: 'This training plan is tailored for underweight individuals aiming to build muscle mass and increase strength while maintaining overall health.',
 		exercises: [
-			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Dumbbell Lunges', repetitions: '3 Sets . 10-12 Reps / Leg', img: '/images/dumbbells.svg' },
-			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine_cables.svg' },
-			{ name: 'Leg Press', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
+			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Dumbbell Lunges', repetitions: '3 Sets . 10-12 Reps / Leg', img: '/src/assets/svg/dumbbells.svg' },
+			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine_cables.svg' },
+			{ name: 'Leg Press', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/machine.svg' },
 		],
 	},
 	{
 		description: 'This training plan is aimed at underweight individuals looking to maximize muscle hypertrophy and increase muscle size and definition.',
 		exercises: [
-			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
-			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/images/machine.svg' },
-			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Assisted Pull-ups', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
+			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
+			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '//src/assetsimages/machine.svg' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
 		],
 	},
 	{
 		description: 'This training plan is suitable for individuals with a normal BMI aiming to reduce body fat and improve overall fitness levels.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Leg Extension Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Leg Extension Machine', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/machine.svg' },
 		],
 	},
 	{
 		description: 'This training plan is designed for individuals with a normal BMI aiming to build muscle mass and increase strength.',
 		exercises: [
-			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/images/machine.svg' },
-			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
-			{ name: 'Seated Cable Rows', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine_cables.svg' },
+			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
+			{ name: 'Seated Cable Rows', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine_cables.svg' },
 		],
 	},
 	{
 		description: 'This training plan is tailored for individuals with a normal BMI aiming to maximize muscle hypertrophy and increase muscle size and definition.',
 		exercises: [
-			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
-			{ name: 'Leg Press Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Assisted Pull-ups', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
-			{ name: 'Hamstring Curls', repetitions: '3 Sets . 10-12 Reps', img: '/images/dumbbells.svg' },
+			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
+			{ name: 'Leg Press Machine', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
+			{ name: 'Hamstring Curls', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/dumbbells.svg' },
 		],
 	},
 	{
 		description: 'This training plan is designed for overweight individuals aiming to reduce body fat and improve cardiovascular health while increasing physical activity levels.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Chest Press Machine', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine.svg' },
 		],
 	},
 	{
 		description: 'This training plan is tailored for overweight individuals aiming to build muscle mass and increase strength while promoting overall health.',
 		exercises: [
-			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine_cables.svg' },
-			{ name: 'Leg Press Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine_cables.svg' },
+			{ name: 'Leg Press Machine', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Plank', repetitions: '3 Sets . 30-60 Secs', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
 		],
 	},
 	{
 		description: 'This training plan is aimed at overweight individuals looking to maximize muscle hypertrophy and increase muscle size and definition.',
 		exercises: [
-			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
-			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/images/kettlebells.svg' },
-			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/dumbbells.svg' },
-			{ name: 'Seated Cable Rows', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine_cables.svg' },
+			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
+			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/src/assets/svg/kettlebells.svg' },
+			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/dumbbells.svg' },
+			{ name: 'Seated Cable Rows', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine_cables.svg' },
 		],
 	},
 	{
 		description: 'This training plan is designed for obese individuals aiming to reduce body weight, improve cardiovascular health, and increase physical activity levels.',
 		exercises: [
-			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/images/bodyweight.svg', id: 'bodyweight_svg' },
-			{ name: 'Leg Extension Machine', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Hamstring Curls', repetitions: '3 Sets . 10-12 Reps', img: '/images/machine_cables.svg' },
+			{ name: 'Elliptical Trainer', repetitions: '30 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Treadmill Jogging', repetitions: '20 Min', img: '/src/assets/svg/bodyweight.svg', id: 'bodyweight_svg' },
+			{ name: 'Leg Extension Machine', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Hamstring Curls', repetitions: '3 Sets . 10-12 Reps', img: '/src/assets/svg/machine_cables.svg' },
 		],
 	},
 	{
 		description: 'This training plan is tailored for obese individuals aiming to build muscle mass, increase strength, and promote overall health.',
 		exercises: [
-			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine.svg' },
-			{ name: 'Dumbbell Lunges', repetitions: '3 Sets . 10-12 Reps / Leg', img: '/images/dumbbells.svg' },
-			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/images/machine_cables.svg' },
-			{ name: 'Assisted Pull-ups', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
+			{ name: 'Barbell Bench Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine.svg' },
+			{ name: 'Dumbbell Lunges', repetitions: '3 Sets . 10-12 Reps / Leg', img: '/src/assets/svg/dumbbells.svg' },
+			{ name: 'Lat Pulldowns', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/machine_cables.svg' },
+			{ name: 'Assisted Pull-ups', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
 		],
 	},
 	{
 		description: 'This training plan is aimed at obese individuals looking to maximize muscle hypertrophy and increase muscle size and definition.',
 		exercises: [
-			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/images/smithmachine.svg' },
-			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/images/dumbbells.svg' },
-			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/images/dumbbells.svg' },
+			{ name: 'Back Squat', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/smithmachine.svg' },
+			{ name: 'Deadlifts', repetitions: '3 Sets . 8-10 Reps', img: '/src/assets/svg/dumbbells.svg' },
+			{ name: 'Military Press', repetitions: '3 Sets . 8-12 Reps', img: '/src/assets/svg/dumbbells.svg' },
 		],
 	},
 ];

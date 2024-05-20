@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 
 .mapboxgl-ctrl-directions {
 	max-width: 20%;
@@ -16,11 +16,11 @@
 	}
 }
 .mapbox-directions-origin .mapbox-form-label {
-	background-color: #e07a5f;
+	background-color:$primary-color;
 	color: $background-light;
 }
 .mapbox-directions-destination .mapbox-form-label {
-	background-color: #006e90;
+	background-color: $tertiary-color;
 	color: $background-light;
 }
 .mapbox-directions-instructions {

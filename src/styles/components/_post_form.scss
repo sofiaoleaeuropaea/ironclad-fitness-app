@@ -3,14 +3,10 @@
 .post {
 	min-height: $min-height;
 	display: flex;
-    margin: 5rem auto;
+	margin: 5rem auto;
 
 	&__wrapper {
-		@include card;
+		@include card-flex-center;
 		background: $tertiary-color;
-
-		h3 {
-			margin-bottom: 3rem;
-		}
 	}
 }

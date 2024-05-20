@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { SlSocialInstagram, SlSocialFacebook } from 'react-icons/sl';
 
 import { footer } from '../data';
-import ironclad_logo from '../assets/ironclad_logo.png';
+import ironclad_logo from '../assets/images/ironclad_logo.png';
 
 import FooterLinks from './FooterLinks';
 import ScrollReveal from './ScrollReveal';

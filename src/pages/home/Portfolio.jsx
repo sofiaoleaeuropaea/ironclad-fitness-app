@@ -5,6 +5,10 @@ import ScrollReveal from '../../components/ScrollReveal';
 import { portfolio } from '../../data';
 
 const Portfolio = () => {
+	const titlePortfolio = ' A different gym experience';
+	const paragraphPortfolio =
+		"We redefine what it means to train. Our state-of-the-art facilities and expert trainers are dedicated to your success. Whether you're aiming for peak performance or simply looking to get in shape, we provide a supportive and motivating environment. Our personalized programs cater to all fitness levels, ensuring you reach your goals with confidence. Join us and experience the difference that a truly dedicated gym can make. Transform your life at Ironclad, where your journey to strength and wellness begins.";
+
 	const PortFolios = () =>
 		portfolio.map((item, index) => {
 			return (
@@ -25,12 +29,7 @@ const Portfolio = () => {
 
 	return (
 		<section id="portfolio" className="portfolio">
-			<Heading
-				title=" A different gym experience"
-				paragraph="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod modi ad quisquam unde! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint
-							assumenda! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis quisquam sapiente quia sint assumenda! Dolores repellat quos fugiat reprehenderit, quaerat hic, facilis
-							quisquam sapiente quia sint assumenda!"
-			/>
+			<Heading title={titlePortfolio} paragraph={paragraphPortfolio} />
 
 			<div className="container ">
 				<ScrollReveal>

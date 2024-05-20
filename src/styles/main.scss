@@ -2,5 +2,12 @@
 @use 'theme/theme';
 @use 'utils';
 @use 'components';
-@use 'pages';
+@use 'pages/error_page/error_page';
+@use 'pages/home';
+@use 'pages/membership';
+@use 'pages/services';
+@use 'pages/blog/blog';
+@use 'pages/about';
+@use 'pages/contacts';
+@use 'pages/sign_up/sign_up';
 @use 'layout';

@@ -7,7 +7,7 @@ import ScrollToAnchor from './components/ScrollToAnchor';
 
 import Home from './pages/home/Home';
 import Membership from './pages/membership/Membership';
-import FitnessEvaluation from './pages/services/FitnessEvaluation';
+import Services from './pages/services/Services';
 import ExercisesInstructions from './pages/services/ExercisesInstructions';
 import Blog from './pages/blog/Blog';
 import About from './pages/about/About';
@@ -35,7 +35,7 @@ const App = () => {
 					<Routes>
 						<Route index element={<Home />} />
 						<Route path="/membership" element={<Membership />} />
-						<Route path="/services/*" element={<FitnessEvaluation />}>
+						<Route path="/services/*" element={<Services />}>
 							<Route path=":id" element={<ExercisesInstructions />} />
 						</Route>
 						<Route path="/services/blog" element={<Blog />}></Route>

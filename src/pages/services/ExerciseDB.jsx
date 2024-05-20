@@ -4,7 +4,7 @@ import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { fetchExerciseDB } from '../../data/exercisedbAPI';
-import SearchIcon from '../../assets/search_icon.svg';
+import SearchIcon from '../../assets/svg/search_icon.svg';
 import ScrollReveal from '../../components/ScrollReveal';
 
 const ExerciseDB = () => {
@@ -46,13 +46,34 @@ const ExerciseDB = () => {
 		setSearchQuery(event.target.value);
 	};
 
+	const FilteredExercise = () =>
+		filteredExercise.map((exercise, index) => {
+			return (
+				<SplideSlide key={index}>
+					<div className="exercises__card">
+						<Link to={`${exercise.id}`}>
+							<ScrollReveal>
+								<div className="exercises__img border-radius__theme">
+									<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
+								</div>
+								<div className="exercises__targets card-topics">
+									<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
+								</div>
+
+								<h3 className="card-subtitle">{exercise.name}</h3>
+							</ScrollReveal>
+						</Link>
+					</div>
+				</SplideSlide>
+			);
+		});
+
 	return (
 		<section id="exercises__info" className="exercises__info">
 			<div className="container">
 				<div className="exercises__wrapper">
 					<ScrollReveal>
 						<h2>Train like a pro</h2>
-
 						<form>
 							<div className="searchbar__wrapper">
 								<img src={SearchIcon} alt="Search Icon" />
@@ -63,24 +84,8 @@ const ExerciseDB = () => {
 					</ScrollReveal>
 
 					<Splide options={optionsSliderExercises}>
-						{filteredExercise.map((exercise, index) => (
-							<SplideSlide key={index}>
-								<div className="exercises__card">
-									<Link to={`${exercise.id}`}>
-										<ScrollReveal>
-											<div className="exercises__img">
-												<img src={exercise.gifUrl} alt={exercise.name} className="img-fluid" />
-											</div>
-											<div className="exercises__targets">
-												<span className="small-text-size">{exercise.bodyPart}</span> <span className="small-text-size">{exercise.target}</span>
-											</div>
-
-											<h4>{exercise.name}</h4>
-										</ScrollReveal>
-									</Link>
-								</div>
-							</SplideSlide>
-						))}
+						<FilteredExercise />
+						
 					</Splide>
 				</div>
 				<Outlet />

@@ -1,4 +1,4 @@
-// @use '../utils/variables';
+@use './variables'  as *;
 
 $breakpoints: (
 	'xs': 0,
@@ -48,23 +48,24 @@ $breakpoints: (
 	}
 }
 
-@mixin card($pdg: 2rem) {
+@mixin card-flex-center($pdg: 2rem, $bg: $tertiary-color) {
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background: rgba(#727272, 0.15);
+	background: $bg;
 	padding: $pdg;
 	border-radius: 10px;
 	border: 1px solid #727272;
 	overflow: hidden;
 }
 
-@mixin cardTransparent($pdg: 2rem) {
+@mixin card-noflex($pdg: 2rem, $bg: $tertiary-color) {
 	background: transparent;
 	padding: $pdg;
 	border-radius: 10px;
 	border: 1px solid #727272;
 	overflow: hidden;
+	background: $bg;
 }

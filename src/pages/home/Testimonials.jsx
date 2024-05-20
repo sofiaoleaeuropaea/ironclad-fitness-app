@@ -25,20 +25,42 @@ const Testimonials = () => {
 		const hasHalfStar = rating % 1 !== 0;
 
 		for (let i = 0; i < fullStars; i++) {
-			stars.push(<IoIosStar key={`full-${i}`} style={{ color: '#04a463', marginRight: mgRightRize }} />);
+			stars.push(<IoIosStar key={`full-${i}`} style={{ color: '#007e94', marginRight: mgRightRize }} />);
 		}
 
 		if (hasHalfStar) {
-			stars.push(<IoIosStarHalf key="half" style={{ color: '#04a463', marginRight: mgRightRize }} />);
+			stars.push(<IoIosStarHalf key="half" style={{ color: '#007e94', marginRight: mgRightRize }} />);
 		}
 
 		const remainingStars = 5 - stars.length;
 		for (let i = 0; i < remainingStars; i++) {
-			stars.push(<IoIosStar key={`empty-${i}`} style={{ color: '#727272', marginRight: mgRightRize }} />);
+			stars.push(<IoIosStar key={`empty-${i}`} style={{ color: '#302f26', marginRight: mgRightRize }} />);
 		}
 
 		return stars;
 	};
+
+	const Testimonial = () =>
+		testimonials.map((testimonial, index) => {
+			return (
+				<SplideSlide key={index}>
+					<div className="testimonials__card">
+						<ScrollReveal>
+							<blockquote className="testimonial__details">
+								<div className="testimonial__details__quote">
+									<p>{testimonial.description}</p>
+									<IoMdQuote className="quote__icon" />
+								</div>
+								<div className="testimonial__details__rating">
+									<cite>{testimonial.name}</cite>
+									<div>{renderStarRating(testimonial.rating, '4px')}</div>
+								</div>
+							</blockquote>
+						</ScrollReveal>
+					</div>
+				</SplideSlide>
+			);
+		});
 	return (
 		<section id="testimonials" className="testimonials">
 			<div className="container">
@@ -48,24 +70,7 @@ const Testimonials = () => {
 				<ScrollReveal>
 					<div className="testimonials__wrapper">
 						<Splide options={optionsSlideTestimonials}>
-							{testimonials.map((testimonial, index) => (
-								<SplideSlide key={index}>
-									<div className="testimonials__card">
-										<ScrollReveal>
-											<blockquote className="testimonial__details">
-												<div className="testimonial__details__quote">
-													<p>{testimonial.description}</p>
-													<IoMdQuote className="quote__icon" />
-												</div>
-												<div className="testimonial__details__rating">
-													<cite>{testimonial.name}</cite>
-													<div>{renderStarRating(testimonial.rating, '4px')}</div>
-												</div>
-											</blockquote>
-										</ScrollReveal>
-									</div>
-								</SplideSlide>
-							))}
+							<Testimonial />
 						</Splide>
 					</div>
 				</ScrollReveal>

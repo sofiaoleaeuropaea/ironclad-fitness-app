@@ -15,13 +15,7 @@ const Button = ({ href, onClick, children, className, type }) => {
 		</Link>
 	);
 
-	const renderComponent = () => {
-		if (href) {
-			return renderLink();
-		} else {
-			return renderButton();
-		}
-	};
+	const renderComponent = () => (href ? renderLink() : renderButton());
 
 	return renderComponent();
 };

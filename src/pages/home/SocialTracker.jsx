@@ -8,8 +8,8 @@ function SocialTracker() {
 			return (
 				<div key={index} className="social-tracker__list" style={{ width: `${100 / slide.length}%` }}>
 					<div className="social-tracker__item">
-						<p>
-							{slide.tracker} <span> {slide.category} </span>{' '}
+						<p className="small-heading">
+							{slide.tracker} <span className="small-heading"> {slide.category} </span>{' '}
 						</p>
 					</div>
 				</div>

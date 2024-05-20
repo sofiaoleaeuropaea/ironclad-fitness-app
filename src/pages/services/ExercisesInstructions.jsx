@@ -23,13 +23,23 @@ const ExercisesInstructions = () => {
 		return <Loader />;
 	}
 
+	const ExerciseInstructions = () =>
+		exerciseInstruction.instructions.map((instruction, index) => {
+			return (
+				<li key={index} className="instructions__wrapper">
+					<span className="instructions__number">{index + 1}</span>
+					<p>{instruction}</p>
+				</li>
+			);
+		});
+
 	return (
 		<div className="exercise__wrapper">
 			<div className="exercise-intro__card">
 				<ScrollReveal>
 					<h3>{exerciseInstruction.name}</h3>
 					<img src={exerciseInstruction.gifUrl} className="img-fluid " alt={exerciseInstruction.name} />
-					<div className="exercise-intro__targets">
+					<div className="exercise-intro__targets card-topics ">
 						<span className="small-text-size">{exerciseInstruction.bodyPart}</span> <span className="small-text-size">{exerciseInstruction.target}</span>
 					</div>
 				</ScrollReveal>
@@ -38,12 +48,7 @@ const ExercisesInstructions = () => {
 				<ScrollReveal>
 					<h4 className="exercise-instructions__title">Instructions</h4>
 					<ul className="exercise-instructions__description">
-						{exerciseInstruction.instructions.map((instruction, index) => (
-							<li key={index} className="instructions__wrapper">
-								<span className="instructions__number">{index + 1}</span>
-								<p>{instruction}</p>
-							</li>
-						))}
+						<ExerciseInstructions />
 					</ul>
 				</ScrollReveal>
 			</div>

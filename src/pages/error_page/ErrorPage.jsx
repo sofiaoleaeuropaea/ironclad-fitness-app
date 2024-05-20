@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import ironclad_logo_branco from '../../assets/ironclad_logo_branco.png';
+import ironclad_logo_branco from '../../assets/images/ironclad_logo_branco.png';
 
 const ErrorPage = () => {
 	return (

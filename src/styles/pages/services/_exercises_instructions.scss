@@ -1,4 +1,4 @@
-@use '../utils/' as *;
+@use '../../utils/' as *;
 .exercise {
 	&__wrapper {
 		margin-top: 10rem;
@@ -17,7 +17,7 @@
 	}
 	&-intro__card,
 	&-instructions__card {
-		@include cardTransparent;
+		@include card-noflex;
 	}
 	&-intro {
 		&__card {
@@ -26,20 +26,8 @@
 				width: 43%;
 			}
 		}
-		&__targets {
-			display: flex;
-			margin: 1rem 0 2rem 0;
-			display: flex;
-			flex-wrap: wrap;
-			row-gap: 0.5rem;
-			text-transform: capitalize;
-			span {
-				padding: 0.625rem 1.25rem;
-				margin-right: 0.5rem;
-
-				border: 1px solid $text-dark;
-				border-radius: 30px;
-			}
+		&__targets {	
+	margin: 1rem 0 2rem 0;
 		}
 	}
 	&-instructions__card {
