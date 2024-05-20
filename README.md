@@ -26,25 +26,19 @@ Welcome to Ironclad, a comprehensive gym webpage designed to help you achieve yo
 1. Install Dependencies
 
 <pre>
-
 npm install
-
 </pre>
 
 2. Run JSON server on http://localhost:5000
 
 <pre>
-
 npm run server
-
 </pre>
 
 3. Open your browser and visit http://localhost:5173 to see the Ironclad webpage in action.
 
 <pre>
-
 npm run dev
-
 </pre>
 
 ## Technologies Used
