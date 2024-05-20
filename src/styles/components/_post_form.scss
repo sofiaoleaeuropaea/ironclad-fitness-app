@@ -1,0 +1,16 @@
+@use '../utils/' as *;
+
+.post {
+	min-height: $min-height;
+	display: flex;
+    margin: 5rem auto;
+
+	&__wrapper {
+		@include card;
+		background: $tertiary-color;
+
+		h3 {
+			margin-bottom: 3rem;
+		}
+	}
+}

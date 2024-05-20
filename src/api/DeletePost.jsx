@@ -6,7 +6,7 @@ import PostForm from '../components/PostForm';
 
 const DeletePost = () => {
 	const { id: postId } = useParams();
-	const id = Number(postId);
+	const id = String(postId);
 	const navigate = useNavigate();
 	const { dispatch } = usePosts();
 	const [post, setPost] = useState(null);
@@ -19,7 +19,7 @@ const DeletePost = () => {
 
 				setPost(postData);
 			} catch (error) {
-				console.error('Erro ao buscar detalhes do post:', error);
+				console.error('An error as occured:', error);
 			}
 		};
 
@@ -34,22 +34,28 @@ const DeletePost = () => {
 
 			dispatch({ type: 'DELETE_POST', payload: id });
 
-			alert('post apagado');
-			navigate('/');
+			navigate('/services/blog');
 		} catch (error) {
-			console.error('Erro ao deletar post:', error);
+			console.error('Error deleting post:', error);
 		}
 	};
 
 	if (!post) return <div>Loading...</div>;
 
-	return <PostForm action='delete' title={post.title} body={post.body} onTitleChange={() => {}} onBodyChange={() => {}} onSubmit={handleDelete} />;
+	return (
+		<PostForm
+			action="delete"
+			title={post.title}
+			description={post.description}
+			photo={post.photo}
+			name={post.name}
+			onTitleChange={() => {}}
+			onDescriptionChange={() => {}}
+			onPhotoChange={() => {}}
+			onNameChange={() => {}}
+			onSubmit={handleDelete}
+		/>
+	);
 };
 
 export default DeletePost;
-
-/* Neste exemplo, adicionamos o uso do contexto de post, importado através do usePosts do PostContext. A função usePosts retorna o estado posts e a função dispatch do contexto. O estado posts contém todos os posts, e a função dispatch é usada para enviar a ação de adição ou remoção de post para o reducer.
-
-No useEffect, verificamos se o post já está presente no estado posts do contexto. Se não estiver presente, fazemos uma chamada para buscar o post no servidor e adicioná-lo ao estado posts através da ação ADD_POST.
-
-Após a exclusão do post, chamamos a função dispatch com a ação DELETE_POST e o ID do post a ser removido como payload. Isso atualiza o estado posts no contexto. */

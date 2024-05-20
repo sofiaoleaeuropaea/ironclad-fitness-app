@@ -9,7 +9,7 @@ import Home from './pages/home/Home';
 import Membership from './pages/membership/Membership';
 import FitnessEvaluation from './pages/services/FitnessEvaluation';
 import ExercisesInstructions from './pages/services/ExercisesInstructions';
-import Challenges from './pages/Challenges/Challenges';
+import Blog from './pages/blog/Blog';
 import About from './pages/about/About';
 import TeamMember from './pages/about/TeamMember';
 import Contacts from './pages/contacts/Contacts';
@@ -38,7 +38,7 @@ const App = () => {
 						<Route path="/services/*" element={<FitnessEvaluation />}>
 							<Route path=":id" element={<ExercisesInstructions />} />
 						</Route>
-						<Route path="/services/challenges" element={<Challenges />}></Route>
+						<Route path="/services/blog" element={<Blog />}></Route>
 						<Route path="/create" element={<CreatePost />} />
 						<Route path="/update/:id" element={<UpdatePost />} />
 						<Route path="/delete/:id" element={<DeletePost />} />

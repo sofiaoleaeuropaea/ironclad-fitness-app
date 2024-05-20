@@ -1,48 +1,43 @@
-/* eslint-disable react/prop-types */
-
 import { useNavigate } from 'react-router-dom';
+import Button from './Button';
+import PhotoUpload from './PhotoUpload';
 
-const PostForm = ({ action, title, body, onTitleChange, onBodyChange, onSubmit }) => {
+const PostForm = ({ action, title, name, description, onTitleChange, onDescriptionChange, onNameChange, onPhotoChange, onSubmit }) => {
 	const navigate = useNavigate();
 
 	return (
-		<section className='contacts'>
-			<div className='contacts__wrapper'>
-				<form onSubmit={onSubmit} className='contacts__form'>
-					<h3> {action === 'update' ? 'Update Post' : action === 'delete' ? 'Delete Post' : 'Create Post'}</h3>
+		<section className="post">
+			<div className="container">
+				<div className="post__wrapper">
+					<h3 id="post-title"> {action === 'update' ? 'Update Post' : action === 'delete' ? 'Delete Post' : 'Create Post'}</h3>
+					<form className="form" onSubmit={onSubmit}>
+						<PhotoUpload onPhotoChange={onPhotoChange} />
 
-					<div className='contacts__input'>
-						<label>Title</label>
-						<input type='text' value={title} onChange={e => onTitleChange(e.target.value)} required />
-					</div>
+						<input className="form__information" placeholder="Title" type="text" value={title} onChange={(e) => onTitleChange(e.target.value)} required />
+						<input className="form__information" placeholder="Name" type="text" value={name} onChange={(e) => onNameChange(e.target.value)} required />
+						<textarea className="form__information textarea__custom" placeholder="Description" maxLength={220} value={description} onChange={(e) => onDescriptionChange(e.target.value)} required />
 
-					<div className='contacts__input'>
-						<label>Body</label>
-						<textarea value={body} onChange={e => onBodyChange(e.target.value)} required />
-					</div>
-
-					<div className='contacts__input center'>
-						{action === 'delete' ? (
-							<>
-								<button className='form__btns' type='button' onClick={onSubmit}>
-									Delete
-								</button>
-								<button className='form__btns' type='button' onClick={() => navigate('/')}>
-									Cancel
-								</button>
-							</>
-						) : (
-							<>
-								<button className='form__btns' type='submit'>
-									{action === 'update' ? 'Update' : 'Submit'}
-								</button>
-								<button className='form__btns' type='button' onClick={() => navigate('/')}>
-									Cancel
-								</button>
-							</>
-						)}
-					</div>
-				</form>
+						<div className="form__btn">
+							{action === 'delete' ? (
+								<>
+									<Button type="button" onClick={onSubmit}>
+										Delete
+									</Button>
+									<Button type="button" onClick={() => navigate('/services/blog')}>
+										Cancel
+									</Button>
+								</>
+							) : (
+								<>
+									<Button type="submit">{action === 'update' ? 'Update' : 'Submit'}</Button>
+									<Button type="button" onClick={() => navigate('/services/blog')}>
+										Cancel
+									</Button>
+								</>
+							)}
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 	);

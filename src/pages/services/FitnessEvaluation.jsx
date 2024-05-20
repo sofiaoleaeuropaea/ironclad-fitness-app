@@ -5,6 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
 import WomanRunning from '../../assets/woman_running.jpg';
+import PackWeights from '../../assets/pack_weights.png';
 
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
@@ -15,7 +16,7 @@ import { bmiDescription, trainingPlans } from '../../data';
 import ButtonSave from '../../components/ButtonSave';
 import ExerciseDB from './ExerciseDB';
 import ScrollReveal from '../../components/ScrollReveal';
-import WorkoutPlanDownload from './WorkoutPlanDownload';
+import WorkoutPlanDownload from '../../components/WorkoutPlanDownload';
 
 const FitnessEvaluation = () => {
 	const [selectedFitnessGoal, setSelectedFitnessGoal] = useState('weight_reduction');
@@ -270,13 +271,17 @@ const FitnessEvaluation = () => {
 							</div>
 						</div>
 					</ScrollReveal>
-					<div className="challenges__wrapper">
+				</div>
+				<div className="blog-teaser__wrapper">
+					<div className="container">
 						<ScrollReveal>
-							<h3>Ready, set go!</h3>
-							<p>We have challenges created by our experts just waiting for you</p>
+							<h3>
+								Ready, set, <span className="span-heading">post</span>!
+							</h3>
+							<p>Share your evolution and workouts with our Ironclad community.</p>
 
-							<Button href="/services/challenges">Try now</Button>
-							{/* <img className="img-fluid faqs__wrapper__img" src="images/membership.png" alt="Woman lifting" /> */}
+							<Button href="/services/blog">Try now</Button>
+							{/* <img className="img-fluid blog-teaser__img" src={PackWeights} alt="Pack of Weights" /> */}
 						</ScrollReveal>
 					</div>
 				</div>

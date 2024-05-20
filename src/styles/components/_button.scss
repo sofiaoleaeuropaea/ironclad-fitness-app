@@ -16,18 +16,6 @@
 	position: relative;
 	z-index: 1;
 
-	& input[type='submit'] {
-		font-weight: 600;
-		font-size: 1rem;
-		background-color: transparent;
-		cursor: pointer;
-		border: none;
-		color: $text-dark;
-		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-	}
-
 	&::after {
 		content: '';
 		position: absolute;
@@ -52,7 +40,25 @@
 		transform: scale(100) translateX(2px);
 		z-index: -1;
 	}
-
+	&__inverse {
+		&::after {
+			background-color: $tertiary-color;
+		}
+		&:hover {
+			background-color: $tertiary-color;
+		}
+	}
+	&__round {
+		background-color: $tertiary-color;
+		border-radius: 50%;
+		padding: 0.8em 1.25em;
+		&::after {
+			background-color: $background-light;
+		}
+		&:hover {
+			background-color: $background-light;
+		}
+	}
 	&__hide {
 		@include breakpointMobile(960px) {
 			display: none;

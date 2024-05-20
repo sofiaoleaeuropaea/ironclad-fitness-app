@@ -1,7 +1,7 @@
 @use '../utils/' as *;
 
 .evaluation {
-	margin-bottom: 10rem;
+	// margin-bottom: 10rem;
 	.form {
 		&__wrapper,
 		&-output__wrapper {
@@ -146,5 +146,25 @@
 				}
 			}
 		}
+	}
+
+	.blog-teaser {
+		&__wrapper {
+			margin-top: 7rem;
+			padding: 7rem 0;
+			text-align: center;
+			border-top: $background-bd;
+			position: relative;
+			h3 {
+				text-transform: uppercase;
+			}
+			.span-heading {
+				font-size: 2.44rem;
+			}
+			p {
+				margin: 2rem 0 3rem 0;
+			}
+		}
+		
 	}
 }

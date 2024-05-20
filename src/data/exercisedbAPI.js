@@ -12,7 +12,6 @@ export const fetchExerciseDB = async (state) => {
 
 	try {
 		const response = await fetch(exercisedbURL, exerciseDBoptions);
-
 		const data = await response.json();
 		setExerciseInfo(data);
 		if (setFilteredExercise) setFilteredExercise(data.slice(0, 1));

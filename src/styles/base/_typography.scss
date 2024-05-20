@@ -12,14 +12,12 @@ body {
 	}
 }
 
-h1, .span-heading {
+h1 {
 	font-size: 3.82rem;
-	
 }
 
-h2{
+h2 {
 	font-size: 3.05rem;
-	
 }
 h3 {
 	font-size: 2.44rem;
@@ -41,46 +39,55 @@ h1,
 h2,
 h3,
 h4,
-h5, .span-heading{
+h5 {
 	font-family: $headings-font;
 	color: $text-dark;
 	font-weight: 700;
-
 }
-
+.span-heading {
+	font-family: $headings-font;
+	color: $primary-color;
+	font-weight: 700;
+}
 p,
 a,
 span,
-li, label, legend {
+li,
+label,
+legend {
 	font-size: 1rem;
 	font-family: $text-font;
 	color: $text-dark;
 }
-.small-text-size{
+.small-text-size {
 	font-size: 0.875rem;
 }
 cite,
 textarea,
-input, .form__error {
+input,
+.form__error {
 	font-size: 0.75rem;
 	font-family: $text-font;
 	color: $text-dark;
 }
 
 textarea,
-input, legend {
+input,
+legend {
 	text-transform: uppercase;
 }
 
-span, legend {
+span,
+legend {
 	font-weight: 600;
 }
 
 address,
-time, cite {
+time,
+cite {
 	font-style: normal;
 }
 
 p {
-	line-height: 1.5
+	line-height: 1.5;
 }
