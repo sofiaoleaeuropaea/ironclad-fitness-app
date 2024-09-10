@@ -22,6 +22,7 @@ function FormSignUp() {
 	return (
 		<div className="form" id="form-signup">
 			<form onSubmit={handleSubmit(submitForm)}>
+			
 				<input className="form__information" type="text" name="fullName" placeholder="Full name" {...register('fullName')} />
 				{errors && errors.fullName && (
 					<p className="form__error">

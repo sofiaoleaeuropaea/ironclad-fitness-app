@@ -25,8 +25,7 @@ const FitnessEvaluation = () => {
 	const [fitnessPlan, setFitnessPlan] = useState('');
 
 	const titleFitnessEvaluation = 'Fitness evaluation';
-	const paragraphFitnessEvaluation =
-		"We're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle. With our BMI calculator, you can gain insights into your body composition and make informed decisions about your fitness journey. Whether you're looking to shed pounds, gain muscle, or improve your overall well-being, here, you can have access to personalized fitness plans are tailored to meet your unique needs.";
+	const paragraphFitnessEvaluation = "We're dedicated to helping you achieve your fitness goals and lead a healthier lifestyle. With our BMI calculator, you can gain insights into your body composition and make informed decisions about your fitness journey. Whether you're looking to shed pounds, gain muscle, or improve your overall well-being, here, you can have access to personalized fitness plans are tailored to meet your unique needs.";
 
 	const handleRadioChange = (value) => {
 		setSelectedFitnessGoal(value);
