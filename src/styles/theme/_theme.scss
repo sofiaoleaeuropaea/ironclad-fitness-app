@@ -1,48 +1,48 @@
 @import '../utils/index';
 
 body {
-	background-color: $background-light;
+  background-color: $background-light;
 }
 main {
-	@include breakpointMobile(960px) {
-		margin-top: 65px;
-	}
+  @include breakpointMobile(960px) {
+    margin-top: 65px;
+  }
 }
 
 .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 
-	&__xl {
-		max-width: 1700px;
-	}
+  &__xl {
+    max-width: 1700px;
+  }
 
-	@include breakpointMobile(480px) {
-		padding: 0 1rem;
-	}
+  @include breakpointMobile(480px) {
+    padding: 0 1rem;
+  }
 }
 
 h2,
 h3,
 h4,
 h5 {
-	margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .border-radius__theme {
-	border-radius: 7px;
+  border-radius: 7px;
 }
 
 .card-topics {
-	display: flex;
-	flex-wrap: wrap;
-	row-gap: 0.5rem;
-	text-transform: capitalize;
-	span {
-		padding: 0.625rem 1.25rem;
-		margin-right: 0.5rem;
-		border: $prim-color1-border1;
-		border-radius: 30px;
-	}
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  text-transform: capitalize;
+  span {
+    padding: 0.625rem 1.25rem;
+    margin-right: 0.5rem;
+    border: $prim-color1-border1;
+    border-radius: 30px;
+  }
 }
