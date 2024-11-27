@@ -22,7 +22,7 @@ const Portfolio = () => {
 					<Button href={item.url} className="btn__mg-right__desktop btn__white-bg">
 						Know more
 					</Button>
-					{item.img && <img src={item.img} className="img-fluid card__img" id={item.id} alt={item.title} />}
+					{item.img && <img src={import.meta.env.BASE_URL + item.img} className="img-fluid card__img" id={item.id} alt={item.title} />}
 				</div>
 			);
 		});
