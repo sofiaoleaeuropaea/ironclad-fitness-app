@@ -50,7 +50,7 @@
 
 			.bmi {
 				&__wrapper {
-					@include card-flex-center($bg: $background-color2);
+					@include card-flex-center($bg: $background-light);
 					h3 {
 						text-align: center;
 					}
