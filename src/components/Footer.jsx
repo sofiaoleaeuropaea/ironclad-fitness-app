@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { SlSocialInstagram, SlSocialFacebook } from 'react-icons/sl';
 
 import { footer } from '../data';
-import ironclad_logo from '../assets/images/ironclad_logo.png';
 
 import FooterLinks from './FooterLinks';
 import ScrollReveal from './ScrollReveal';
@@ -15,7 +14,7 @@ const Footer = () => {
 					<div className="footer__wrapper_left">
 						<ScrollReveal>
 							<Link to="/">
-								<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
+								<img src="assets/images/ironclad_logo.png" className="img-fluid logo" alt="Ironclad Logo" />
 							</Link>
 						</ScrollReveal>
 						<ScrollReveal>

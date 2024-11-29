@@ -4,8 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { PDFDownloadLink } from '@react-pdf/renderer';
 
-import WomanRunning from '../../assets/images/woman_running.jpg';
-
 import { MdOutlineErrorOutline } from 'react-icons/md';
 
 import Heading from '../../components/Heading';
@@ -96,7 +94,7 @@ const FitnessEvaluation = () => {
 						{fitnessPlan.exercises.map((exercise, index) => (
 							<li key={index} className="workout-exercise__wrapper">
 								<figure className="workout-exercise__img border-radius__theme">
-									<img src={exercise.img} alt={exercise.name} id={exercise.id} />
+									<img src={`${import.meta.env.BASE_URL}${exercise.img}`} alt={exercise.name} id={exercise.id} />
 								</figure>
 								<div>
 									<p>{exercise.name}</p>
@@ -120,7 +118,7 @@ const FitnessEvaluation = () => {
 				<div className="container">
 					<ScrollReveal>
 						<div className="form__wrapper">
-							<img src={WomanRunning} alt="Woman running" className="img-fluid border-radius__theme" />
+							<img src="assets/images/woman_running.jpg" alt="Woman running" className="img-fluid border-radius__theme" />
 							<div className="form form__evaluation">
 								<ScrollReveal>
 									<p className="form__description">Enter your data for BMI calculation and a personalized fitness plan.</p>

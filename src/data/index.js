@@ -194,7 +194,7 @@ export const personalTrainers = [
   {
     id: 0,
     name: 'David Lee',
-    img: '/src/assets/images/pt2.jpg',
+    img: 'assets/images/pt2.jpg',
     quote:
       "Fitness isn't just about the body; it's about the mind and spirit too. Let's build a better you, inside and out.",
     modalities: ['Weightlifting', 'Bodybuilding', 'Nutrition'],
@@ -204,7 +204,7 @@ export const personalTrainers = [
   {
     id: 1,
     name: 'Emily Harris',
-    img: '/src/assets/images/pt3.jpg',
+    img: 'assets/images/pt3.jpg',
     quote:
       "Find your strength, both inside and out. Let's push limits, break barriers, and achieve greatness together",
     modalities: ['Group Fitness', 'Cardio Workouts'],
@@ -214,7 +214,7 @@ export const personalTrainers = [
   {
     id: 2,
     name: 'Jessica Martinez',
-    img: '/src/assets/images/pt4.jpg',
+    img: 'assets/images/pt4.jpg',
     quote:
       "Success starts with the decision to try. Let's work together to make your fitness goals a reality.",
     modalities: ['HIIT', 'Strength Training', 'Boxe'],
@@ -224,7 +224,7 @@ export const personalTrainers = [
   {
     id: 3,
     name: 'Michael Nguyen',
-    img: '/src/assets/images/pt5.jpg',
+    img: 'assets/images/pt5.jpg',
     quote:
       "Every step forward is a step closer to your goals. Let's conquer obstacles and achieve greatness, one day at a time.",
     modalities: ['Endurance Training', 'HIIT'],
@@ -234,7 +234,7 @@ export const personalTrainers = [
   {
     id: 4,
     name: 'Rachel Garcia',
-    img: '/src/assets/images/pt6.jpg',
+    img: 'assets/images/pt6.jpg',
     quote:
       "Challenge yourself, and the results will follow. Let's embrace the journey and celebrate every milestone together.",
     modalities: ['CrossFit', 'Functional Training', 'Bodybuilding'],
@@ -244,7 +244,7 @@ export const personalTrainers = [
   {
     id: 5,
     name: 'Ryan Thompson',
-    img: '/src/assets/images/pt7.jpg',
+    img: 'assets/images/pt7.jpg',
     quote:
       "Your journey to a healthier you begins here. Together, we'll overcome obstacles and reach new heights.",
     modalities: ['Functional Training', 'CrossFit'],
@@ -347,25 +347,25 @@ export const trainingPlans = [
       {
         name: 'Elliptical Trainer',
         repetitions: '30 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Treadmill Jogging',
         repetitions: '20 min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Plank',
         repetitions: '3 Sets . 30-60 Secs',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Chest Press Machine',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
     ],
   },
@@ -376,22 +376,22 @@ export const trainingPlans = [
       {
         name: 'Barbell Bench Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Dumbbell Lunges',
         repetitions: '3 Sets . 10-12 Reps / Leg',
-        img: '/src/assets/svg/dumbbells.svg',
+        img: 'assets/svg/dumbbells.svg',
       },
       {
         name: 'Lat Pulldowns',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine_cables.svg',
+        img: 'assets/svg/machine_cables.svg',
       },
       {
         name: 'Leg Press',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
     ],
   },
@@ -402,22 +402,22 @@ export const trainingPlans = [
       {
         name: 'Back Squat',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
       {
         name: 'Deadlifts',
         repetitions: '3 Sets . 8-10 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Military Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '//src/assetsimages/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Assisted Pull-ups',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
     ],
   },
@@ -428,25 +428,25 @@ export const trainingPlans = [
       {
         name: 'Elliptical Trainer',
         repetitions: '30 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Treadmill Jogging',
         repetitions: '20 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Plank',
         repetitions: '3 Sets . 30-60 Secs',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Leg Extension Machine',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
     ],
   },
@@ -457,22 +457,22 @@ export const trainingPlans = [
       {
         name: 'Barbell Bench Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Deadlifts',
         repetitions: '3 Sets . 8-10 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Military Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
       {
         name: 'Seated Cable Rows',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine_cables.svg',
+        img: 'assets/svg/machine_cables.svg',
       },
     ],
   },
@@ -483,22 +483,22 @@ export const trainingPlans = [
       {
         name: 'Back Squat',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
       {
         name: 'Leg Press Machine',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Assisted Pull-ups',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
       {
         name: 'Hamstring Curls',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/dumbbells.svg',
+        img: 'assets/svg/dumbbells.svg',
       },
     ],
   },
@@ -509,25 +509,25 @@ export const trainingPlans = [
       {
         name: 'Elliptical Trainer',
         repetitions: '30 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Treadmill Jogging',
         repetitions: '20 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: '/srcassets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Plank',
         repetitions: '3 Sets . 30-60 Secs',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Chest Press Machine',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
     ],
   },
@@ -538,22 +538,22 @@ export const trainingPlans = [
       {
         name: 'Barbell Bench Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Lat Pulldowns',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine_cables.svg',
+        img: 'assets/svg/machine_cables.svg',
       },
       {
         name: 'Leg Press Machine',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Plank',
         repetitions: '3 Sets . 30-60 Secs',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
     ],
@@ -565,22 +565,22 @@ export const trainingPlans = [
       {
         name: 'Back Squat',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
       {
         name: 'Deadlifts',
         repetitions: '3 Sets . 8-10 Reps',
-        img: '/src/assets/svg/kettlebells.svg',
+        img: 'assets/svg/kettlebells.svg',
       },
       {
         name: 'Military Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/dumbbells.svg',
+        img: 'assets/svg/dumbbells.svg',
       },
       {
         name: 'Seated Cable Rows',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine_cables.svg',
+        img: 'assets/svg/machine_cables.svg',
       },
     ],
   },
@@ -591,24 +591,24 @@ export const trainingPlans = [
       {
         name: 'Elliptical Trainer',
         repetitions: '30 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Treadmill Jogging',
         repetitions: '20 Min',
-        img: '/src/assets/svg/bodyweight.svg',
+        img: 'assets/svg/bodyweight.svg',
         id: 'bodyweight_svg',
       },
       {
         name: 'Leg Extension Machine',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Hamstring Curls',
         repetitions: '3 Sets . 10-12 Reps',
-        img: '/src/assets/svg/machine_cables.svg',
+        img: 'assets/svg/machine_cables.svg',
       },
     ],
   },
@@ -619,22 +619,22 @@ export const trainingPlans = [
       {
         name: 'Barbell Bench Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine.svg',
+        img: 'assets/svg/machine.svg',
       },
       {
         name: 'Dumbbell Lunges',
         repetitions: '3 Sets . 10-12 Reps / Leg',
-        img: '/src/assets/svg/dumbbells.svg',
+        img: 'assets/svg/dumbbells.svg',
       },
       {
         name: 'Lat Pulldowns',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/machine_cables.svg',
+        img: 'assets/svg/machine_cables.svg',
       },
       {
         name: 'Assisted Pull-ups',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
     ],
   },
@@ -645,17 +645,17 @@ export const trainingPlans = [
       {
         name: 'Back Squat',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/smithmachine.svg',
+        img: 'assets/svg/smithmachine.svg',
       },
       {
         name: 'Deadlifts',
         repetitions: '3 Sets . 8-10 Reps',
-        img: '/src/assets/svg/dumbbells.svg',
+        img: 'assets/svg/dumbbells.svg',
       },
       {
         name: 'Military Press',
         repetitions: '3 Sets . 8-12 Reps',
-        img: '/src/assets/svg/dumbbells.svg',
+        img: 'assets/svg/dumbbells.svg',
       },
     ],
   },

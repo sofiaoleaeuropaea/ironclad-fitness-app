@@ -4,7 +4,6 @@ import '@splidejs/splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 import { fetchExerciseDB } from '../../data/exercisedbAPI';
-import SearchIcon from '../../assets/svg/search_icon.svg';
 import ScrollReveal from '../../components/ScrollReveal';
 
 const ExerciseDB = () => {
@@ -76,7 +75,7 @@ const ExerciseDB = () => {
 						<h2>Train like a pro</h2>
 						<form>
 							<div className="searchbar__wrapper">
-								<img src={SearchIcon} alt="Search Icon" />
+								<img src="assets/svg/search_icon.svg" alt="Search Icon" />
 								<input type="text" name="searchExercises" id="searchbar__exercises" value={searchQuery} onChange={handleSearch} placeholder="Search your exercise" />
 								<span className="searchbar__underline"></span>
 							</div>

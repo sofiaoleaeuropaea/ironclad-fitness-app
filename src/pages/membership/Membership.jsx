@@ -1,6 +1,5 @@
 import { HiCheckCircle } from 'react-icons/hi';
 import { pricing } from '../../data';
-import GymWeights from '../../assets/images/gym-weights.png';
 import Heading from '../../components/Heading';
 import Faqs from './Faqs';
 import Button from '../../components/Button';
@@ -66,7 +65,7 @@ const Membership = () => {
 									Say hello
 								</Button>
 							</ScrollReveal>
-							<img className="img-fluid pt__content__img" src={GymWeights} alt="Gym weights" />
+							<img className="img-fluid pt__content__img" src="assets/images/gym-weights.png" alt="Gym weights" />
 						</div>
 					</ScrollReveal>
 				</div>

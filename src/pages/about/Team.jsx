@@ -11,7 +11,7 @@ const Trainers = () => {
 					<ScrollReveal>
 						<Link to={`/about/${personalTrainer.id}`}>
 							<div className="team__img effect">
-								<img src={personalTrainer.img} className="img-fluid border-radius__theme" alt={personalTrainer.name} />
+								<img src={`${import.meta.env.BASE_URL}${personalTrainer.img}`} className="img-fluid border-radius__theme" alt={personalTrainer.name} />
 							</div>
 							<h3>{personalTrainer.name}</h3>
 						</Link>

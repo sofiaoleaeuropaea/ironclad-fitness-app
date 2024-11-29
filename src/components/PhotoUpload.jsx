@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Button from './Button';
-import PostBackground from '../assets/images/post_background.jpg';
 
 const PhotoUpload = ({ onPhotoChange }) => {
 	const [previewSrc, setPreviewSrc] = useState('');
@@ -31,7 +30,7 @@ const PhotoUpload = ({ onPhotoChange }) => {
 				</div>
 			) : (
 				<div className="btn-upload__wrapper post-img-wrapper">
-					<img src={PostBackground} alt="White background" className="img-fluid post-img" />
+					<img src="/assets/images/post_background.jpg" alt="White background" className="img-fluid post-img" />
 					<Button onClick={() => document.getElementById('fileInput').click()}>Upload Photo</Button>
 				</div>
 			)}

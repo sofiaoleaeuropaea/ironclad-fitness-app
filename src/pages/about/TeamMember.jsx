@@ -32,7 +32,7 @@ const TeamMember = () => {
 								</div>
 							</ScrollReveal>
 							<ScrollReveal>
-								<img src={member.img} className="img-fluid" alt={member.name} />
+								<img src={`${import.meta.env.BASE_URL}${member.img}`} className="img-fluid" alt={member.name} />
 							</ScrollReveal>
 							<ScrollReveal>
 								<blockquote className="member__intro__quote">

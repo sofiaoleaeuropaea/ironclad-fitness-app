@@ -1,4 +1,3 @@
-import WomanLifting from '../../assets/images/membership.png';
 import Button from '../../components/Button';
 import ScrollReveal from '../../components/ScrollReveal';
 
@@ -13,7 +12,7 @@ function Faqs() {
 							Get in touch
 						</Button>
 
-						<img className="img-fluid faqs__wrapper__img" src={WomanLifting} alt="Woman lifting" />
+						<img className="img-fluid faqs__wrapper__img" src="assets/images/membership.png" alt="Woman lifting" />
 					</ScrollReveal>
 				</div>
 			</div>

@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
-import ironclad_logo from '../assets/images/ironclad_logo.png';
 import { navigation } from '../data';
 
 import NavbarLinks from './NavbarLinks';
@@ -36,7 +35,7 @@ const Navbar = () => {
 			<div className="container container__xl">
 				<div className="navbar__wrapper">
 					<Link to="/">
-						<img src={ironclad_logo} className="img-fluid logo" alt="Ironclad Logo" />
+						<img src="assets/images/ironclad_logo.png" className="img-fluid logo" alt="Ironclad Logo" />
 					</Link>
 
 					<nav>

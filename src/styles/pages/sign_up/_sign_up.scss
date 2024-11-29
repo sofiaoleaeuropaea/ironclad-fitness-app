@@ -1,53 +1,53 @@
 @use '../../utils/' as *;
 
 .sign-up {
-	min-height: $min-height;
-	&__wrapper {
-		position: relative;
-		#img-title {
-			position: absolute;
-			right: 10%;
-			bottom: 5%;
-			color: $background-light;
-			font-size: 3.82rem;
-		}
-	}
+  min-height: $min-height;
+  &__wrapper {
+    position: relative;
+    #img-title {
+      position: absolute;
+      right: 10%;
+      bottom: 5%;
+      color: $background-light;
+      font-size: 3.82rem;
+    }
+  }
 
-	&__form {
-		width: 90%;
-		margin: 5rem auto;
-	}
-	#form__title {
-		color: $tertiary-color;
-		text-transform: uppercase;
-		padding-left: 2rem;
-		@include md {
-			padding-left: unset;
-		}
-	}
+  &__form {
+    width: 90%;
+    margin: 5rem auto;
+  }
+  #form__title {
+    color: $tertiary-color;
+    text-transform: uppercase;
+    padding-left: 2rem;
+    @include md {
+      padding-left: unset;
+    }
+  }
 
-	@include md {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: auto;
+  @include md {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
 
-		&__img {
-			display: none;
-		}
+    &__img {
+      display: none;
+    }
 
-		&__wrapper {
-			background-image: url('/src/assets/images/gymforfun.jpg');
-			background-size: cover;
-			background-position: center;
-		}
+    &__wrapper {
+      background-image: url('/assets/images/gymforfun.jpg');
+      background-size: cover;
+      background-position: center;
+    }
 
-		#sign-title {
-			grid-column: 1 / 3;
-			object-fit: cover;
-		}
-		#sign-form {
-			grid-column: 3 / 5;
-			align-self: center;
-		}
-	}
+    #sign-title {
+      grid-column: 1 / 3;
+      object-fit: cover;
+    }
+    #sign-form {
+      grid-column: 3 / 5;
+      align-self: center;
+    }
+  }
 }
